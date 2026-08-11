@@ -105,14 +105,14 @@ export default function About() {
               </div>
               <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
                 <p>
-                  Based in Nashville, Tennessee, my career is rooted in the fast-paced industries of media production, marketing, and event execution. 
-                  Currently, I operate as the owner of <strong className="text-foreground">Pjs Media Co</strong> (founded in 2024), directing comprehensive digital production 
+                  Based in Nashville, Tennessee, our path is rooted in the fast-paced industries of media production, marketing, and event execution. 
+                  Currently, we operate as the owners of <strong className="text-foreground">Pjs Media Co</strong> (founded in 2024), directing comprehensive digital production 
                   and brand strategy, alongside <strong className="text-foreground">Ikonic Studio</strong> (launched in 2023), managing design collateral assets.
                 </p>
                 <p>
-                  Prior to leading my own agencies, I developed deep ground-level experience in managing client campaigns as a Manager at 
-                  <strong className="text-foreground"> Ikon Marketing</strong> (2022–2023). I began my career path coordinating logistics and stage productions 
-                  as the Assistant Director at <strong className="text-foreground">Red Mountain Events</strong> (2021–2022) and in day-of event operations at 
+                  Prior to leading our own agencies, we developed deep ground-level experience in managing client campaigns in management roles at 
+                  <strong className="text-foreground"> Ikon Marketing</strong> (2022–2023). We began our career path coordinating logistics and stage productions 
+                  in leadership roles at <strong className="text-foreground">Red Mountain Events</strong> (2021–2022) and in day-of event operations at 
                   <strong className="text-foreground">Coast To Coast Events</strong> (2020–2021).
                 </p>
               </div>
@@ -151,8 +151,8 @@ export default function About() {
               </div>
               <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
                 <p>
-                  Traditional event management is built on checklists, physical venues, and local attendance. While I loved the execution of physical events, 
-                  the catalyst that pivoted my path came from a very unexpected place: raising ducks.
+                  Traditional event management is built on checklists, physical venues, and local attendance. While we loved the execution of physical events, 
+                  the catalyst that pivoted our path came from a very unexpected place: raising ducks.
                 </p>
                 <p>
                   Caring for these birds led to founding the <strong className="text-foreground">Decent Ducks Sanctuary</strong>, a physical rescue project 
@@ -160,8 +160,8 @@ export default function About() {
                   <strong className="text-foreground">Decent Ducks NFT project</strong> on Web3. 
                 </p>
                 <p>
-                  Managing a digital ecosystem of art, community discord, and smart contract assets completely shifted my perspective. 
-                  It was the spark that proved to me that digital brand building and direct-to-consumer content creation could reach further 
+                  Managing a digital ecosystem of art, community discord, and smart contract assets completely shifted our perspective. 
+                  It was the spark that proved to us that digital brand building and direct-to-consumer content creation could reach further 
                   and scale faster than local, traditional marketing ever could. This spark led directly to founding Ikonic Studio and Pjs Media.
                 </p>
               </div>
@@ -178,12 +178,12 @@ export default function About() {
               </div>
               <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
                 <p>
-                  If Decent Ducks was the spark, partnering with **Doginal Dogs** represents the next level of my career. 
+                  If Decent Ducks was the spark, partnering with **Doginal Dogs** represents the next level of our career. 
                   Doginal Dogs is an active community built on the Dogecoin (DOGE) blockchain, utilizing raw witness transaction inscriptions 
                   to preserve digital art directly on-chain.
                 </p>
                 <p>
-                  Stepping into leadership and strategic partnership within the Doginal Dogs ecosystem has allowed me to apply my years of media production 
+                  Stepping into leadership and strategic partnership within the Doginal Dogs ecosystem has allowed us to apply our years of media production 
                   and event coordination directly to decentralized technology. By aligning community management, digital content, and on-chain mechanics, 
                   we have pushed the boundaries of what digital art communities can achieve in terms of engagement, utility, and value scaling.
                 </p>
@@ -202,12 +202,12 @@ export default function About() {
               <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
                 <p>
                   This journey comes to a massive milestone at **DDNYC (Doginal Dogs New York City)**. 
-                  I will be attending the summit and taking the stage as a featured speaker, presenting in front of an audience of 300+ founders, 
+                  We will be participating in the summit, with Kyle Kinkin taking the stage as a featured speaker, presenting in front of an audience of 300+ founders, 
                   creators, and digital asset builders.
                 </p>
                 <p>
-                  My speaking topic is **“Betting on Yourself.”** 
-                  It is a distillation of my career path: leaving the comfort of established, traditional event coordination, 
+                  Our speaking topic is **“Betting on Yourself.”** 
+                  It is a distillation of our career path: leaving the comfort of established, traditional event coordination, 
                   embracing the unexpected inspiration of Decent Ducks, navigating the complex world of Web3 inscriptions, 
                   and building agencies that empower creators. It’s a case study on why the biggest risk you can take is not taking a risk on your own vision.
                 </p>
@@ -225,13 +225,13 @@ export default function About() {
               </div>
               <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
                 <p>
-                  Today, I sit at the intersection of the physical and digital. My daily focus is scaling Pjs Media Co and Ikonic Studio, 
+                  Today, we sit at the intersection of the physical and digital. Our daily focus is scaling Pjs Media Co and Ikonic Studio, 
                   working with clients to build digital brands, and driving growth for on-chain ecosystems like Doginal Dogs.
                 </p>
                 <p>
                   By taking the rigorous details of physical events production and combining them with the global distribution of digital content, 
-                  I help brands build authentic connections that last. Whether it's through code, video, digital assets, or real-life events, 
-                  the mission remains: build things that matter, and never hesitate to bet on yourself.
+                  we help brands build authentic connections that last. Whether it's through code, video, digital assets, or real-life events, 
+                  our mission remains: build things that matter, and never hesitate to bet on yourself.
                 </p>
               </div>
             </section>

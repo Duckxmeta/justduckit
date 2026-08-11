@@ -36,9 +36,9 @@ export default function Home() {
           </h1>
 
           <p className="text-lg leading-8 text-muted-foreground max-w-3xl mx-auto">
-            I'm <strong className="text-foreground">Kyle Kinkin</strong>, a media and events professional based in Nashville, TN. 
-            I scale communities, run production agencies, and help creators take their brands to the next level. 
-            From local events to on-chain ecosystems, my journey is about stepping up and betting on yourself.
+            We represent <strong className="text-foreground">Kyle Kinkin</strong>, a media and events professional based in Nashville, TN. 
+            We scale communities, run production agencies, and help creators take their brands to the next level. 
+            From local events to on-chain ecosystems, our journey is about stepping up and betting on yourself.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4">
@@ -53,7 +53,7 @@ export default function Home() {
               href="/about"
               className="flex items-center gap-2 rounded-xl border border-border glass-panel text-sm px-6 py-3.5 hover:bg-white/5 active:scale-[0.98] transition-all cursor-pointer"
             >
-              <span>My Pivot Story</span>
+              <span>Our Pivot Story</span>
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
