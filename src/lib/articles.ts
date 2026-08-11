@@ -11,6 +11,8 @@ export interface Article {
   readTime: string;
   image: string;
   content: string;
+  source?: string;
+  sourceUrl?: string;
 }
 
 const articlesDirectory = path.join(process.cwd(), "content/articles");
@@ -41,6 +43,8 @@ export function getAllArticles(): Article[] {
         readTime: data.readTime || "5 min read",
         image: data.image || "/images/duck-sanctuary.jpg",
         content,
+        source: data.source || undefined,
+        sourceUrl: data.sourceUrl || undefined,
       };
     });
 
@@ -74,6 +78,8 @@ export function getArticleBySlug(slug: string): Article | null {
       readTime: data.readTime || "5 min read",
       image: data.image || "/images/duck-sanctuary.jpg",
       content,
+      source: data.source || undefined,
+      sourceUrl: data.sourceUrl || undefined,
     };
   } catch (error) {
     console.error(`Error reading article slug ${slug}:`, error);

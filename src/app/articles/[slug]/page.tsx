@@ -138,6 +138,11 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             <span className="px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">
               {article.category}
             </span>
+            {article.source === "x-article" && (
+              <span className="px-2.5 py-0.5 rounded bg-sky-500/10 text-sky-400 border border-sky-500/20">
+                X Article
+              </span>
+            )}
             <span className="flex items-center gap-1 text-muted-foreground">
               <Calendar className="h-3.5 w-3.5" />
               {article.date}
@@ -146,6 +151,17 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
               <Clock className="h-3.5 w-3.5" />
               {article.readTime}
             </span>
+            {article.sourceUrl && (
+              <a
+                href={article.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-primary hover:text-primary-hover font-semibold md:ml-auto"
+              >
+                <span>Original Post</span>
+                <span className="text-[10px]">&nearr;</span>
+              </a>
+            )}
           </div>
 
           <h1 className="text-3xl font-extrabold tracking-tight sm:text-5xl text-foreground leading-tight">
