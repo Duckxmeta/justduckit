@@ -22,8 +22,8 @@ export const metadata: Metadata = {
     default: "Kyle Kinkin | Media, Events & Digital Brand Builder",
     template: "%s | Kyle Kinkin",
   },
-  description: "Personal brand of Kyle Kinkin, a media and events professional based in Tinley Park, IL. Owner of Pjs Media Co & Ikonic Studio, and leader within the Doginal Dogs community. Speaking at DDNYC on Betting on Yourself.",
-  keywords: ["Kyle Kinkin", "Pjs Media", "Ikonic Studio", "Decent Ducks", "Doginal Dogs", "DDNYC", "Betting on Yourself", "Tinley Park Illinois", "Events Management", "Digital Art"],
+  description: "Personal brand of Kyle Kinkin, a media and events professional based in Nashville, TN. Owner of Pjs Media Co & Ikonic Studio, and leader within the Doginal Dogs community. Speaking at DDNYC on Betting on Yourself.",
+  keywords: ["Kyle Kinkin", "Pjs Media", "Ikonic Studio", "Decent Ducks", "Doginal Dogs", "DDNYC", "Betting on Yourself", "Nashville Tennessee", "Events Management", "Digital Art"],
   authors: [{ name: "Kyle Kinkin" }],
   creator: "Kyle Kinkin",
   openGraph: {
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     url: "https://justduckit.xyz",
     siteName: "Kyle Kinkin",
     title: "Kyle Kinkin | Media, Events & Digital Brand Builder",
-    description: "Personal brand of Kyle Kinkin, a media and events professional based in Tinley Park, IL. Owner of Pjs Media Co & Ikonic Studio. Speaking at DDNYC on Betting on Yourself.",
+    description: "Personal brand of Kyle Kinkin, a media and events professional based in Nashville, TN. Owner of Pjs Media Co & Ikonic Studio. Speaking at DDNYC on Betting on Yourself.",
     images: [
       {
         url: "/logo.jpg",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Kyle Kinkin | Media, Events & Digital Brand Builder",
-    description: "Personal brand of Kyle Kinkin, a media and events professional based in Tinley Park, IL. Owner of Pjs Media Co & Ikonic Studio. Speaking at DDNYC on Betting on Yourself.",
+    description: "Personal brand of Kyle Kinkin, a media and events professional based in Nashville, TN. Owner of Pjs Media Co & Ikonic Studio. Speaking at DDNYC on Betting on Yourself.",
     images: ["/logo.jpg"],
     creator: "@kylekinkin",
   },
@@ -75,7 +75,7 @@ export default function RootLayout({
     "image": "https://justduckit.xyz/images/avatar.jpg",
     "homeLocation": {
       "@type": "Place",
-      "name": "Tinley Park, Illinois"
+      "name": "Greater Nashville area, Tennessee"
     },
     "sameAs": [
       "https://x.com",

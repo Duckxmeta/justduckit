@@ -39,6 +39,12 @@ export default function About() {
       period: "2020 – 2021",
       description: "Assisted in day-of coordination, live events setups, and local promotional distributions.",
     },
+    {
+      role: "Intern",
+      company: "BeMarketable",
+      period: "2018 – 2020",
+      description: "Gained foundational experience in marketing coordination, campaign tracking, and digital outreach.",
+    },
   ];
 
   return (
@@ -64,7 +70,7 @@ export default function About() {
             <div className="text-center lg:text-left space-y-2">
               <h2 className="text-2xl font-bold text-foreground">Kyle Kinkin</h2>
               <p className="text-sm font-mono text-primary font-semibold">Media & Events Builder</p>
-              <p className="text-xs text-muted-foreground">Tinley Park, Illinois</p>
+              <p className="text-xs text-muted-foreground">Greater Nashville area, Tennessee</p>
             </div>
 
             <div className="w-full max-w-sm rounded-2xl border border-border bg-card/20 p-6 space-y-4">
@@ -99,7 +105,7 @@ export default function About() {
               </div>
               <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
                 <p>
-                  Based in Tinley Park, Illinois, my career is rooted in the fast-paced industries of media production, marketing, and event execution. 
+                  Based in Nashville, Tennessee, my career is rooted in the fast-paced industries of media production, marketing, and event execution. 
                   Currently, I operate as the owner of <strong className="text-foreground">Pjs Media Co</strong> (founded in 2024), directing comprehensive digital production 
                   and brand strategy, alongside <strong className="text-foreground">Ikonic Studio</strong> (launched in 2023), managing design collateral assets.
                 </p>

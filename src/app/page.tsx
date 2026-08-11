@@ -36,7 +36,7 @@ export default function Home() {
           </h1>
 
           <p className="text-lg leading-8 text-muted-foreground max-w-3xl mx-auto">
-            I'm <strong className="text-foreground">Kyle Kinkin</strong>, a media and events professional based in Tinley Park, IL. 
+            I'm <strong className="text-foreground">Kyle Kinkin</strong>, a media and events professional based in Nashville, TN. 
             I scale communities, run production agencies, and help creators take their brands to the next level. 
             From local events to on-chain ecosystems, my journey is about stepping up and betting on yourself.
           </p>
