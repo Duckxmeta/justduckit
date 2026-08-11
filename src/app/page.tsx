@@ -30,16 +30,19 @@ export default function Home() {
             <span>Speaking Live at DDNYC: "Betting on Yourself"</span>
           </div>
 
-          <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl text-foreground">
-            Betting on Yourself: Building{" "}
-            <span className="text-gradient-gold">Media & Digital Brands</span>
+          <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl text-foreground animate-in fade-in zoom-in duration-500">
+            It started with a <span className="text-gradient-gold">duck.</span>
           </h1>
-
-          <p className="text-lg leading-8 text-muted-foreground max-w-3xl mx-auto">
-            We represent <strong className="text-foreground">Kyle Kinkin</strong>, a media and events professional based in Nashville, TN. 
-            We scale communities, run production agencies, and help creators take their brands to the next level. 
-            From local events to on-chain ecosystems, our journey is about stepping up and betting on yourself.
-          </p>
+ 
+          <div className="space-y-4 max-w-3xl mx-auto">
+            <p className="text-lg leading-8 text-muted-foreground">
+              We turned a real-life rescue into a media company, digital brands, and an on-chain community. 
+              From live events to building in public, everything we do comes back to one idea: <strong className="text-foreground">bet on yourself</strong>.
+            </p>
+            <p className="text-sm font-mono text-primary font-semibold tracking-wider uppercase">
+              Next up — speaking at DDNYC in front of 300+ people.
+            </p>
+          </div>
 
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link
