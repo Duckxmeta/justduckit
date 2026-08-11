@@ -1,0 +1,36 @@
+name: X Content Sync
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'   # every 6 hours
+  workflow_dispatch:        # allows manual run
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: |
+          npm install playwright
+          npx playwright install chromium
+
+      - name: Run X Scraper
+        env:
+          X_COOKIES: ${{ secrets.X_COOKIES }}
+          X_USERNAME: ${{ secrets.X_USERNAME }}
+        run: node scripts/x-scraper/sync.js
+
+      - name: Commit changes
+        run: |
+          git config user.name "X Sync Bot"
+          git config user.email "bot@justduckit.xyz"
+          git add content/articles/ public/media/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: sync new X articles & media" && git push)
