@@ -15,7 +15,6 @@ try {
 
 // Normalize cookies for Playwright
 const COOKIES = rawCookies.map(cookie => {
-  // Fix sameSite
   let sameSite = cookie.sameSite || cookie.same_site || 'Lax';
   if (!['Strict', 'Lax', 'None'].includes(sameSite)) {
     sameSite = 'Lax';
@@ -67,9 +66,12 @@ async function main() {
   }
 
   const page = await context.newPage();
+  
+  // Pipe browser console.logs to Node stdout
+  page.on('console', msg => console.log('BROWSER CONSOLE:', msg.text()));
 
   // Go to profile to test login
-  console.log('Navigating to profile...');
+  console.log('Navigating to profile to check login state...');
   await page.goto(`https://x.com/${USERNAME}`, { waitUntil: 'domcontentloaded', timeout: 60000 });
   await page.waitForTimeout(5000);
 
@@ -77,56 +79,140 @@ async function main() {
   const isLoggedIn = await page.locator('[data-testid="SideNav_AccountSwitcher_Button"], [aria-label*="Profile"]').count() > 0;
   console.log('Logged in:', isLoggedIn);
 
-  // ============================================
-  // 1. BACKFILL X ARTICLES
-  // ============================================
-  console.log('Looking for existing X Articles...');
+  const foundArticles = [];
 
+  // ============================================
+  // Strategy A: Scrape from the dedicated Articles tab
+  // ============================================
+  console.log('Navigating to Articles tab...');
   await page.goto(`https://x.com/${USERNAME}/articles`, { waitUntil: 'domcontentloaded', timeout: 60000 });
   await page.waitForTimeout(5000);
 
-  // Scroll to load more
+  // Scroll to load articles
   for (let i = 0; i < 5; i++) {
     await page.mouse.wheel(0, 3000);
     await page.waitForTimeout(2000);
   }
 
-  const articles = await page.evaluate(() => {
+  console.log('Extracting from Articles tab...');
+  const tabArticles = await page.evaluate(() => {
     const items = [];
-    document.querySelectorAll('article, [data-testid="cellInnerDiv"]').forEach(el => {
-      const linkEl = el.querySelector('a[href*="/status/"], a[href*="/articles/"]');
-      const titleEl = el.querySelector('[data-testid="tweetText"], h2, span');
-      const timeEl = el.querySelector('time');
+    
+    // Log DOM state for debugging
+    const articles = document.querySelectorAll('article');
+    const cells = document.querySelectorAll('[data-testid="cellInnerDiv"]');
+    console.log(`Articles tab DOM: articles count = ${articles.length}, cellInnerDiv count = ${cells.length}`);
 
-      if (linkEl && titleEl) {
-        const title = titleEl.innerText.trim().slice(0, 120);
-        if (title.length > 10) {
+    // Scan all links on page looking for /articles/
+    const allLinks = Array.from(document.querySelectorAll('a'));
+    const articleLinks = allLinks.filter(a => a.href && a.href.includes('/articles/'));
+    console.log(`Total links with '/articles/' on page: ${articleLinks.length}`);
+
+    articleLinks.forEach((link, idx) => {
+      console.log(`Found article link: ${link.href}`);
+      // Try to find title in closest parent container
+      const container = link.closest('article, [data-testid="cellInnerDiv"]') || link.parentElement;
+      let title = "";
+      if (container) {
+        const titleEl = container.querySelector('h1, h2, h3, [data-testid="tweetText"], [style*="font-weight"]');
+        if (titleEl) title = titleEl.innerText.trim();
+      }
+      if (!title) title = link.innerText.trim() || "X Article";
+      
+      // Clean up title string
+      title = title.split('\n')[0];
+
+      if (title.length > 5) {
+        items.push({
+          title,
+          url: link.href,
+          date: new Date().toISOString()
+        });
+      }
+    });
+
+    // Fallback: If no direct /articles/ links, check for status links with h2/long texts
+    if (items.length === 0) {
+      console.log('No direct article links found, attempting fallback scan of cells...');
+      document.querySelectorAll('article, [data-testid="cellInnerDiv"]').forEach(el => {
+        const linkEl = el.querySelector('a[href*="/status/"]');
+        const h2El = el.querySelector('h2');
+        const textEl = el.querySelector('[data-testid="tweetText"]');
+
+        if (linkEl && (h2El || (textEl && textEl.innerText.length > 150))) {
+          const title = h2El ? h2El.innerText.trim() : textEl.innerText.trim().slice(0, 80);
           items.push({
             title,
             url: linkEl.href,
-            date: timeEl ? timeEl.getAttribute('datetime') : new Date().toISOString(),
+            date: new Date().toISOString()
           });
         }
-      }
-    });
-    // Remove duplicates
-    const unique = [];
-    const seen = new Set();
-    for (const item of items) {
-      if (!seen.has(item.url)) {
-        seen.add(item.url);
-        unique.push(item);
-      }
+      });
     }
-    return unique;
+
+    return items;
   });
 
-  console.log(`Found ${articles.length} potential articles`);
+  foundArticles.push(...tabArticles);
+  console.log(`Articles tab scraping returned ${tabArticles.length} items`);
 
-  for (const article of articles) {
+  // ============================================
+  // Strategy B: Scrape from main profile feed
+  // ============================================
+  console.log('Navigating to main profile feed to check for inline articles...');
+  await page.goto(`https://x.com/${USERNAME}`, { waitUntil: 'domcontentloaded', timeout: 60000 });
+  await page.waitForTimeout(5000);
+
+  // Scroll to load tweets
+  for (let i = 0; i < 4; i++) {
+    await page.mouse.wheel(0, 3000);
+    await page.waitForTimeout(2000);
+  }
+
+  const feedArticles = await page.evaluate(() => {
+    const items = [];
+    
+    // Look for links with /articles/ inside the main timeline cells
+    document.querySelectorAll('article, [data-testid="tweet"]').forEach(el => {
+      const linkEl = el.querySelector('a[href*="/articles/"]');
+      if (linkEl) {
+        console.log(`Found inline article link in profile feed: ${linkEl.href}`);
+        const titleEl = el.querySelector('[data-testid="tweetText"], h2, span');
+        let title = titleEl ? titleEl.innerText.trim() : "X Article";
+        title = title.split('\n')[0];
+
+        items.push({
+          title,
+          url: linkEl.href,
+          date: new Date().toISOString()
+        });
+      }
+    });
+    return items;
+  });
+
+  foundArticles.push(...feedArticles);
+  console.log(`Main profile feed scraping returned ${feedArticles.length} items`);
+
+  // ============================================
+  // Deduplicate and process found articles
+  // ============================================
+  const uniqueArticles = [];
+  const seenUrls = new Set();
+
+  for (const article of foundArticles) {
+    if (!seenUrls.has(article.url)) {
+      seenUrls.add(article.url);
+      uniqueArticles.push(article);
+    }
+  }
+
+  console.log(`Total unique articles located: ${uniqueArticles.length}`);
+
+  for (const article of uniqueArticles) {
     const id = article.url.split('/').pop().split('?')[0];
     if (alreadyExists(id)) {
-      console.log('Skipping existing:', article.title);
+      console.log('Skipping existing article:', article.title);
       continue;
     }
 
@@ -147,18 +233,15 @@ ${article.title}
 `;
 
     fs.writeFileSync(filepath, content);
-    console.log('Created article:', filename);
+    console.log('Created mdx article:', filename);
   }
 
   // ============================================
   // 2. PHOTO TWEETS → MEDIA
   // ============================================
   console.log('Checking recent tweets for photos...');
-
-  await page.goto(`https://x.com/${USERNAME}`, { waitUntil: 'domcontentloaded', timeout: 60000 });
-  await page.waitForTimeout(4000);
-
-  for (let i = 0; i < 4; i++) {
+  // We are already on the profile page, just scroll to gather tweets
+  for (let i = 0; i < 3; i++) {
     await page.mouse.wheel(0, 2500);
     await page.waitForTimeout(1500);
   }
