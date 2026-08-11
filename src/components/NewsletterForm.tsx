@@ -26,18 +26,37 @@ export default function NewsletterForm({ compact = false }: NewsletterFormProps)
 
     setStatus("loading");
 
-    // Mock API Call delay
-    setTimeout(() => {
+    try {
+      const response = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        setStatus("error");
+        setMessage(data.error || "Failed to subscribe. Please try again.");
+        return;
+      }
+
       setStatus("success");
       setMessage("Thank you! You've been subscribed to the JustDuckIt newsletter.");
       setEmail("");
-      // Store locally to persist state if desired
+      
       try {
         localStorage.setItem("justduckit_subscribed", "true");
       } catch (err) {
         console.error("Local storage error:", err);
       }
-    }, 1500);
+    } catch (err) {
+      console.error("Newsletter submission error:", err);
+      setStatus("error");
+      setMessage("Failed to connect to the server. Please check your network and try again.");
+    }
   };
 
   if (status === "success") {
