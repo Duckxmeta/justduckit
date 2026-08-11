@@ -80,7 +80,7 @@ export default function NewsletterPage() {
           </div>
 
           {/* Form Container */}
-          <div className="glass-panel border border-border rounded-3xl p-8 sm:p-10 shadow-2xl shadow-black/40 space-y-6 animate-in zoom-in-95 duration-300">
+          <div className="space-y-6 animate-in zoom-in-95 duration-300">
             <div className="space-y-2">
               <h2 className="text-xl font-bold text-foreground">Join the Flock</h2>
               <p className="text-xs text-muted-foreground">

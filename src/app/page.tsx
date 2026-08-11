@@ -240,7 +240,7 @@ export default function Home() {
           </div>
 
           {/* Newsletter Panel */}
-          <div className="flex flex-col justify-center rounded-3xl border border-border bg-card/30 p-8 glass-panel h-fit space-y-6 lg:sticky lg:top-24">
+          <div className="flex flex-col justify-center h-fit space-y-6 lg:sticky lg:top-24">
             <div className="space-y-2">
               <span className="px-2 py-0.5 rounded bg-primary/10 text-primary text-xs font-mono border border-primary/20">
                 Direct Updates
