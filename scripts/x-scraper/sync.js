@@ -9,8 +9,20 @@ const COOKIES = JSON.parse(process.env.X_COOKIES || '[]');
 const ARTICLES_DIR = path.join(process.cwd(), 'content/articles');
 const MEDIA_DIR = path.join(process.cwd(), 'public/media');
 
+function slugify(text) {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '')
+    .slice(0, 80);
+}
+
+function alreadyExists(id) {
+  const files = fs.readdirSync(ARTICLES_DIR);
+  return files.some(file => file.includes(id));
+}
+
 async function main() {
-  // Ensure folders exist
   fs.mkdirSync(ARTICLES_DIR, { recursive: true });
   fs.mkdirSync(MEDIA_DIR, { recursive: true });
 
@@ -20,56 +32,113 @@ async function main() {
 
   const page = await context.newPage();
 
-  // Go to profile
+  // ============================================
+  // 1. BACKFILL X ARTICLES
+  // ============================================
+  console.log('Looking for existing X Articles...');
+
+  // Go to the Articles tab
+  await page.goto(`https://x.com/${USERNAME}/articles`, { waitUntil: 'networkidle' });
+  await page.waitForTimeout(5000);
+
+  // Scroll a few times to load more articles
+  for (let i = 0; i < 4; i++) {
+    await page.mouse.wheel(0, 3000);
+    await page.waitForTimeout(2000);
+  }
+
+  // Extract articles (selectors may need small adjustments after first run)
+  const articles = await page.evaluate(() => {
+    const items = [];
+    // Try common patterns X uses for Articles
+    document.querySelectorAll('article, [data-testid="cellInnerDiv"]').forEach(el => {
+      const linkEl = el.querySelector('a[href*="/articles/"], a[href*="/status/"]');
+      const titleEl = el.querySelector('h2, [data-testid="tweetText"], span');
+      const timeEl = el.querySelector('time');
+
+      if (linkEl && titleEl) {
+        items.push({
+          title: titleEl.innerText.trim().slice(0, 120),
+          url: linkEl.href,
+          date: timeEl ? timeEl.getAttribute('datetime') : new Date().toISOString(),
+        });
+      }
+    });
+    return items;
+  });
+
+  console.log(`Found ${articles.length} potential articles`);
+
+  for (const article of articles) {
+    const id = article.url.split('/').pop();
+    if (alreadyExists(id)) {
+      console.log('Skipping existing article:', article.title);
+      continue;
+    }
+
+    const slug = slugify(article.title) || id;
+    const filename = `${slug}-${id}.mdx`;
+    const filepath = path.join(ARTICLES_DIR, filename);
+
+    const content = `---
+title: "${article.title.replace(/"/g, '\\"')}"
+date: "${article.date}"
+source: "x-article"
+sourceUrl: "${article.url}"
+---
+
+${article.title}
+
+[Read original on X](${article.url})
+`;
+
+    fs.writeFileSync(filepath, content);
+    console.log('Created article:', filename);
+  }
+
+  // ============================================
+  // 2. PHOTO TWEETS → MEDIA FOLDER
+  // ============================================
+  console.log('Checking recent tweets for photos...');
+
   await page.goto(`https://x.com/${USERNAME}`, { waitUntil: 'networkidle' });
   await page.waitForTimeout(4000);
 
-  // === 1. Handle X Articles ===
-  // X Articles usually appear under the "Articles" tab or have specific markers
-  // This section will need slight selector tuning once we see the live page
-  console.log('Checking for X Articles...');
-  
-  // Placeholder logic – we will refine selectors together
-  // For now it looks for long-form style posts
+  // Scroll to load more tweets
+  for (let i = 0; i < 3; i++) {
+    await page.mouse.wheel(0, 2500);
+    await page.waitForTimeout(1500);
+  }
 
-  // === 2. Handle tweets that contain photos ===
-  console.log('Checking for photo tweets...');
-
-  // Get recent tweets
   const tweets = await page.$$eval('article[data-testid="tweet"]', (nodes) => {
-    return nodes.slice(0, 20).map(node => {
-      const text = node.querySelector('[data-testid="tweetText"]')?.innerText || '';
-      const time = node.querySelector('time')?.getAttribute('datetime') || '';
-      const images = Array.from(node.querySelectorAll('img[src*="media"]')).map(img => img.src);
-      const link = node.querySelector('a[href*="/status/"]')?.href || '';
-      return { text, time, images, link };
+    return nodes.slice(0, 30).map(node => {
+      const images = Array.from(node.querySelectorAll('img[src*="pbs.twimg.com/media"]'))
+        .map(img => img.src.replace(/&name=\w+/, '&name=large')); // get higher quality
+      return { images };
     });
   });
 
   for (const tweet of tweets) {
-    if (tweet.images.length === 0) continue;
-
-    // Download images
     for (const imgUrl of tweet.images) {
       try {
-        const response = await page.request.get(imgUrl);
-        const buffer = await response.body();
-        const hash = crypto.createHash('md5').update(imgUrl).digest('hex').slice(0, 10);
+        const hash = crypto.createHash('md5').update(imgUrl).digest('hex').slice(0, 12);
         const filename = `${hash}.jpg`;
         const filepath = path.join(MEDIA_DIR, filename);
 
-        if (!fs.existsSync(filepath)) {
-          fs.writeFileSync(filepath, buffer);
-          console.log('Saved media:', filename);
-        }
+        if (fs.existsSync(filepath)) continue;
+
+        const response = await page.request.get(imgUrl);
+        const buffer = await response.body();
+        fs.writeFileSync(filepath, buffer);
+        console.log('Saved media:', filename);
       } catch (err) {
-        console.log('Failed to download image:', imgUrl);
+        console.log('Failed image:', imgUrl);
       }
     }
   }
 
   await browser.close();
-  console.log('Sync finished');
+  console.log('Sync complete');
 }
 
 main().catch(err => {
