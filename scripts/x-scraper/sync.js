@@ -108,8 +108,17 @@ async function main() {
     const articleLinks = allLinks.filter(a => a.href && a.href.includes('/articles/'));
     console.log(`Total links with '/articles/' on page: ${articleLinks.length}`);
 
+    const uiKeywords = ['cookie', 'cookies', 'terms', 'privacy', 'log in', 'sign up', 'x corp', 'twitter', 'something went wrong', 'try reloading'];
+
     articleLinks.forEach((link, idx) => {
-      console.log(`Found article link: ${link.href}`);
+      console.log(`Found article link candidate: ${link.href}`);
+      
+      // Strict rule: URL must contain '/articles/'
+      if (!link.href.includes('/articles/')) {
+        console.log(`Skipping link: URL does not contain /articles/: ${link.href}`);
+        return;
+      }
+
       // Try to find title in closest parent container
       const container = link.closest('article, [data-testid="cellInnerDiv"]') || link.parentElement;
       let title = "";
@@ -122,33 +131,25 @@ async function main() {
       // Clean up title string
       title = title.split('\n')[0];
 
+      // Check against UI keywords
+      const titleLower = title.toLowerCase();
+      const isUiText = uiKeywords.some(keyword => titleLower.includes(keyword));
+
+      if (isUiText) {
+        console.log(`Skipping link: title looks like UI text (${title}): ${link.href}`);
+        return;
+      }
+
       if (title.length > 5) {
         items.push({
           title,
           url: link.href,
           date: new Date().toISOString()
         });
+      } else {
+        console.log(`Skipping link: title too short (${title}): ${link.href}`);
       }
     });
-
-    // Fallback: If no direct /articles/ links, check for status links with h2/long texts
-    if (items.length === 0) {
-      console.log('No direct article links found, attempting fallback scan of cells...');
-      document.querySelectorAll('article, [data-testid="cellInnerDiv"]').forEach(el => {
-        const linkEl = el.querySelector('a[href*="/status/"]');
-        const h2El = el.querySelector('h2');
-        const textEl = el.querySelector('[data-testid="tweetText"]');
-
-        if (linkEl && (h2El || (textEl && textEl.innerText.length > 150))) {
-          const title = h2El ? h2El.innerText.trim() : textEl.innerText.trim().slice(0, 80);
-          items.push({
-            title,
-            url: linkEl.href,
-            date: new Date().toISOString()
-          });
-        }
-      });
-    }
 
     return items;
   });
@@ -171,15 +172,25 @@ async function main() {
 
   const feedArticles = await page.evaluate(() => {
     const items = [];
+    const uiKeywords = ['cookie', 'cookies', 'terms', 'privacy', 'log in', 'sign up', 'x corp', 'twitter', 'something went wrong', 'try reloading'];
     
     // Look for links with /articles/ inside the main timeline cells
     document.querySelectorAll('article, [data-testid="tweet"]').forEach(el => {
       const linkEl = el.querySelector('a[href*="/articles/"]');
       if (linkEl) {
         console.log(`Found inline article link in profile feed: ${linkEl.href}`);
+        
         const titleEl = el.querySelector('[data-testid="tweetText"], h2, span');
         let title = titleEl ? titleEl.innerText.trim() : "X Article";
         title = title.split('\n')[0];
+
+        const titleLower = title.toLowerCase();
+        const isUiText = uiKeywords.some(keyword => titleLower.includes(keyword));
+
+        if (isUiText) {
+          console.log(`Skipping inline link: title looks like UI text (${title}): ${linkEl.href}`);
+          return;
+        }
 
         items.push({
           title,
