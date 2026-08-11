@@ -102,7 +102,14 @@ export default function Footer() {
                 <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider">Projects & Sanctuary</h3>
                 <ul className="mt-4 space-y-2">
                   <li className="text-sm text-muted-foreground">
-                    <span className="hover:text-primary transition-colors cursor-pointer">Duck Sanctuary</span>
+                    <a
+                      href="https://adoptaduck.org"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-primary transition-colors cursor-pointer inline-flex items-center gap-1"
+                    >
+                      <span>Duck Sanctuary ↗</span>
+                    </a>
                   </li>
                   <li className="text-sm text-muted-foreground">
                     <span className="hover:text-primary transition-colors cursor-pointer">DDNYC Photos</span>

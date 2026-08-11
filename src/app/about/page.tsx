@@ -164,6 +164,16 @@ export default function About() {
                   It was the spark that proved to us that digital brand building and direct-to-consumer content creation could reach further 
                   and scale faster than local, traditional marketing ever could. This spark led directly to founding Ikonic Studio and Pjs Media.
                 </p>
+                <div className="pt-1">
+                  <a
+                    href="https://adoptaduck.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1"
+                  >
+                    <span>Decent Ducks Sanctuary ↗</span>
+                  </a>
+                </div>
               </div>
             </section>
 
