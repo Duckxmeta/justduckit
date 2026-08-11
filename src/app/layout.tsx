@@ -72,7 +72,7 @@ export default function RootLayout({
     "@type": "Person",
     "name": "Kyle Kinkin",
     "url": "https://justduckit.xyz",
-    "image": "https://justduckit.xyz/images/avatar.jpg",
+    "image": "https://justduckit.xyz/media/kyle-profile.jpg",
     "homeLocation": {
       "@type": "Place",
       "name": "Greater Nashville area, Tennessee"

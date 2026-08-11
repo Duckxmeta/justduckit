@@ -58,7 +58,7 @@ export default function About() {
           <div className="lg:col-span-4 flex flex-col items-center lg:items-start space-y-6">
             <div className="relative h-80 w-80 overflow-hidden rounded-3xl border border-border shadow-2xl shadow-amber-500/5 group">
               <Image
-                src="/images/avatar.jpg"
+                src="/media/kyle-profile.jpg"
                 alt="Kyle Kinkin Portrait"
                 fill
                 className="object-cover group-hover:scale-102 transition-transform duration-300"
