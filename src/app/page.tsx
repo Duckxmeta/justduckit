@@ -161,10 +161,10 @@ export default function Home() {
               </div>
               <div className="p-6 flex flex-col flex-grow space-y-2">
                 <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
-                  Doginal Dogs Leadership
+                  Doginal Dogs Partnership
                 </h3>
                 <p className="text-xs leading-relaxed text-muted-foreground flex-grow">
-                  Representing the next stage of brand building. Partnering with the Dogecoin inscription community to lead operations, coordinate live activations, and take brand value to the next level.
+                  Partnering with the Doginal Dogs community to add value through fresh ideas, video production support for creators, and future real-world collaborations — including a possible retreat on the water and an IRL DDL tournament.
                 </p>
                 <div className="pt-3">
                   <Link href="/about#doginals" className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1">
