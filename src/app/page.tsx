@@ -184,7 +184,7 @@ export default function Home() {
             <div className="border-b border-border pb-4 flex justify-between items-baseline">
               <h2 className="text-xl font-bold text-foreground flex items-center gap-2">
                 <BookOpen className="h-5 w-5 text-primary" />
-                <span>Professional Essays</span>
+                <span>Published Articles</span>
               </h2>
               <Link href="/articles" className="text-xs font-semibold text-primary hover:underline">
                 View all articles
