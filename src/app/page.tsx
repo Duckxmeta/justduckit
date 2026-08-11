@@ -146,7 +146,7 @@ export default function Home() {
             <div className="group overflow-hidden rounded-2xl border border-border bg-card/40 backdrop-blur-md hover:border-primary/20 transition-all flex flex-col">
               <div className="relative h-48 w-full overflow-hidden">
                 <Image
-                  src="/images/doginal-dog.jpg"
+                  src="/media/doginal-dogs-pool-thumbnail.png"
                   alt="Doginal Dogs Asset"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
