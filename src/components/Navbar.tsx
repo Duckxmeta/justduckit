@@ -26,8 +26,8 @@ export default function Navbar() {
             <Link href="/" className="flex flex-shrink-0 items-center gap-3 group">
               <div className="relative h-9 w-9 overflow-hidden rounded-lg border border-border group-hover:border-primary transition-colors">
                 <Image
-                  src="/logo.jpg"
-                  alt="JustDuckIt Logo"
+                  src="/media/decent-duck-logo.png"
+                  alt="Decent Duck Logo"
                   fill
                   className="object-cover"
                   sizes="36px"
