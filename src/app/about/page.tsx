@@ -151,10 +151,21 @@ export default function About() {
             <section id="pivot" className="space-y-6 scroll-mt-24">
               <div className="space-y-2">
                 <span className="text-xs font-mono text-primary uppercase tracking-widest font-semibold">Part 2</span>
-                <h2 className="text-2xl font-bold text-foreground flex items-center gap-2 border-b border-border pb-2">
-                  <Heart className="h-5 w-5 text-rose-500 fill-rose-500/10" />
-                  <span>The Duck Pivot</span>
-                </h2>
+                <div className="flex items-center gap-3 border-b border-border pb-2">
+                  <h2 className="text-2xl font-bold text-foreground flex items-center gap-2">
+                    <Heart className="h-5 w-5 text-rose-500 fill-rose-500/10" />
+                    <span>The Duck Pivot</span>
+                  </h2>
+                  <div className="relative h-7 w-7 overflow-hidden rounded-md border border-border/50">
+                    <Image
+                      src="/media/decent-duck-logo.png"
+                      alt="Decent Duck Logo"
+                      fill
+                      className="object-cover"
+                      sizes="28px"
+                    />
+                  </div>
+                </div>
               </div>
               <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
                 <p>
@@ -188,10 +199,21 @@ export default function About() {
             <section id="doginals" className="space-y-6 scroll-mt-24">
               <div className="space-y-2">
                 <span className="text-xs font-mono text-primary uppercase tracking-widest font-semibold">Part 3</span>
-                <h2 className="text-2xl font-bold text-foreground flex items-center gap-2 border-b border-border pb-2">
-                  <Sparkles className="h-5 w-5 text-primary" />
-                  <span>The Doginal Dogs Chapter</span>
-                </h2>
+                <div className="flex items-center gap-3 border-b border-border pb-2">
+                  <h2 className="text-2xl font-bold text-foreground flex items-center gap-2">
+                    <Sparkles className="h-5 w-5 text-primary" />
+                    <span>The Doginal Dogs Chapter</span>
+                  </h2>
+                  <div className="relative h-7 w-7 overflow-hidden rounded-md border border-border/50">
+                    <Image
+                      src="/media/doginal-dog-4199.png"
+                      alt="Doginal Dog #4199"
+                      fill
+                      className="object-cover"
+                      sizes="28px"
+                    />
+                  </div>
+                </div>
               </div>
               <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
                 <p>
