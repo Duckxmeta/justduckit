@@ -27,7 +27,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-3">
               <div className="relative h-7 w-7 overflow-hidden rounded-lg border border-border">
                 <Image
-                  src="/logo.jpg"
+                  src="/media/decent-duck-logo.png"
                   alt="JustDuckIt Logo"
                   fill
                   className="object-cover"
@@ -108,7 +108,14 @@ export default function Footer() {
                     <span className="hover:text-primary transition-colors cursor-pointer">DDNYC Photos</span>
                   </li>
                   <li className="text-sm text-muted-foreground">
-                    <span className="hover:text-primary transition-colors cursor-pointer">Doginal Dogs</span>
+                    <a
+                      href="https://doginaldogs.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-primary transition-colors cursor-pointer inline-flex items-center gap-1"
+                    >
+                      <span>Doginal Dogs ↗</span>
+                    </a>
                   </li>
                 </ul>
               </div>

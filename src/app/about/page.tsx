@@ -187,6 +187,16 @@ export default function About() {
                   and event coordination directly to decentralized technology. By aligning community management, digital content, and on-chain mechanics, 
                   we have pushed the boundaries of what digital art communities can achieve in terms of engagement, utility, and value scaling.
                 </p>
+                <div className="pt-1">
+                  <a
+                    href="https://doginaldogs.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1"
+                  >
+                    <span>Doginal Dogs ↗</span>
+                  </a>
+                </div>
               </div>
             </section>
 
