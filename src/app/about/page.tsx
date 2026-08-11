@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Mail, Calendar, Mic, Sparkles, Heart, Building, Award, Target } from "lucide-react";
+import { MessageSquare, Calendar, Mic, Sparkles, Heart, Building, Award, Target } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -77,8 +77,15 @@ export default function About() {
               <h3 className="text-sm font-bold text-foreground uppercase tracking-wider">Professional Info</h3>
               <div className="space-y-3 text-sm text-muted-foreground font-sans">
                 <div className="flex items-center gap-2">
-                  <Mail className="h-4 w-4 text-primary" />
-                  <span>hello@justduckit.xyz</span>
+                  <MessageSquare className="h-4 w-4 text-primary" />
+                  <a
+                    href="https://discord.gg/Ry8zBm5Yvb"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors hover:underline"
+                  >
+                    Discord Server ↗
+                  </a>
                 </div>
                 <div className="flex items-center gap-2">
                   <Building className="h-4 w-4 text-primary" />
