@@ -245,7 +245,7 @@ export default function Home() {
               <span className="px-2 py-0.5 rounded bg-primary/10 text-primary text-xs font-mono border border-primary/20">
                 Direct Updates
               </span>
-              <h2 className="text-xl font-bold text-foreground">The Pivot Digest</h2>
+              <h2 className="text-xl font-bold text-foreground">The Duck Digest</h2>
               <p className="text-sm text-muted-foreground">
                 Get behind-the-scenes essays on digital brand building, live event activations, and Dogecoin community updates.
               </p>
