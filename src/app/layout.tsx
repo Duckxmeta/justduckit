@@ -19,35 +19,35 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://justduckit.xyz"),
   title: {
-    default: "JustDuckIt | Builder, Writer & Duck Enthusiast",
-    template: "%s | JustDuckIt",
+    default: "Kyle Kinkin | Media, Events & Digital Brand Builder",
+    template: "%s | Kyle Kinkin",
   },
-  description: "Personal brand and projects of JustDuckIt. Building cool products, writing articles, sharing DDNYC updates, and documenting the duck sanctuary story.",
-  keywords: ["JustDuckIt", "DDNYC", "Doginal Dogs", "Duck Sanctuary", "Personal Brand", "Web Development", "Blockchain", "Blogging"],
-  authors: [{ name: "JustDuckIt" }],
-  creator: "JustDuckIt",
+  description: "Personal brand of Kyle Kinkin, a media and events professional based in Tinley Park, IL. Owner of Pjs Media Co & Ikonic Studio, and leader within the Doginal Dogs community. Speaking at DDNYC on Betting on Yourself.",
+  keywords: ["Kyle Kinkin", "Pjs Media", "Ikonic Studio", "Decent Ducks", "Doginal Dogs", "DDNYC", "Betting on Yourself", "Tinley Park Illinois", "Events Management", "Digital Art"],
+  authors: [{ name: "Kyle Kinkin" }],
+  creator: "Kyle Kinkin",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://justduckit.xyz",
-    siteName: "JustDuckIt",
-    title: "JustDuckIt | Builder, Writer & Duck Enthusiast",
-    description: "Personal brand and projects of JustDuckIt. Building cool products, writing articles, sharing DDNYC updates, and documenting the duck sanctuary story.",
+    siteName: "Kyle Kinkin",
+    title: "Kyle Kinkin | Media, Events & Digital Brand Builder",
+    description: "Personal brand of Kyle Kinkin, a media and events professional based in Tinley Park, IL. Owner of Pjs Media Co & Ikonic Studio. Speaking at DDNYC on Betting on Yourself.",
     images: [
       {
         url: "/logo.jpg",
         width: 800,
         height: 800,
-        alt: "JustDuckIt Logo",
+        alt: "Kyle Kinkin Brand Logo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "JustDuckIt | Builder, Writer & Duck Enthusiast",
-    description: "Personal brand and projects of JustDuckIt. Building cool products, writing articles, sharing DDNYC updates, and documenting the duck sanctuary story.",
+    title: "Kyle Kinkin | Media, Events & Digital Brand Builder",
+    description: "Personal brand of Kyle Kinkin, a media and events professional based in Tinley Park, IL. Owner of Pjs Media Co & Ikonic Studio. Speaking at DDNYC on Betting on Yourself.",
     images: ["/logo.jpg"],
-    creator: "@justduckit",
+    creator: "@kylekinkin",
   },
   robots: {
     index: true,
@@ -70,15 +70,29 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "JustDuckIt",
+    "name": "Kyle Kinkin",
     "url": "https://justduckit.xyz",
-    "image": "https://justduckit.xyz/logo.jpg",
+    "image": "https://justduckit.xyz/images/avatar.jpg",
+    "homeLocation": {
+      "@type": "Place",
+      "name": "Tinley Park, Illinois"
+    },
     "sameAs": [
       "https://x.com",
       "https://github.com"
     ],
-    "jobTitle": "Builder, Writer, Sanctuary Founder",
-    "knowsAbout": ["Duck Sanctuary", "Doginal Dogs", "Software Engineering", "Technical Writing"]
+    "jobTitle": "Media & Events Professional, Owner",
+    "worksFor": [
+      {
+        "@type": "Organization",
+        "name": "Pjs Media Co"
+      },
+      {
+        "@type": "Organization",
+        "name": "Ikonic Studio"
+      }
+    ],
+    "knowsAbout": ["Media Production", "Events Management", "Digital Marketing", "Doginal Dogs", "Decent Ducks Sanctuary", "Blockchain Communities"]
   };
 
   return (

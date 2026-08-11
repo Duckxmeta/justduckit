@@ -1,31 +1,43 @@
 import Image from "next/image";
-import { Mail, Calendar, Mic, Sparkles, Heart } from "lucide-react";
+import { Mail, Calendar, Mic, Sparkles, Heart, Building, Award, Target } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Learn more about JustDuckIt — professional path, media and events history, and the founding story of the DDNYC Duck Sanctuary.",
+  description: "Kyle Kinkin's professional path in media and events, the pivot story of Decent Ducks, Doginal Dogs community leadership, and his speaking engagement at DDNYC.",
 };
 
 export default function About() {
-  const mediaEvents = [
+  const eventTimeline = [
     {
-      year: "2025",
-      title: "Panel Speaker: Web3 & Decentralized Art",
-      event: "Digital Arts Conference, NYC",
-      description: "Discussed the future of retro pixel art, digital assets, and building active on-chain creator communities.",
+      role: "Owner",
+      company: "Pjs Media Co",
+      period: "2024 – Present",
+      description: "Directing full-service media production and digital brand building, transitioning client stories into high-growth social assets.",
     },
     {
-      year: "2024",
-      title: "Feature Article: Modern Wildlife Havens",
-      event: "Urban Conservation Magazine",
-      description: "Profiled the sanctuary's work in building sustainable urban sanctuaries for native duck species.",
+      role: "Owner",
+      company: "Ikonic Studio",
+      period: "2023 – Present",
+      description: "Managing creative design resources and physical brand collateral assets for growth companies.",
     },
     {
-      year: "2023",
-      title: "Podcast Guest: Scaling Niche Passion Projects",
-      event: "The Tech & Hobbyist Podcast",
-      description: "Shared insights on launching and funding independent animal rescue projects through digital art communities.",
+      role: "Manager",
+      company: "Ikon Marketing",
+      period: "2022 – 2023",
+      description: "Led local and regional campaign execution, handling brand placements and direct-to-consumer events.",
+    },
+    {
+      role: "Assistant Director",
+      company: "Red Mountain Events",
+      period: "2021 – 2022",
+      description: "Coordinated logistics, stage production, and vendor systems for medium-to-large-scale events.",
+    },
+    {
+      role: "Events Associate",
+      company: "Coast To Coast Events",
+      period: "2020 – 2021",
+      description: "Assisted in day-of coordination, live events setups, and local promotional distributions.",
     },
   ];
 
@@ -33,15 +45,15 @@ export default function About() {
     <div className="relative isolate overflow-hidden min-h-screen">
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
         
-        {/* Intro Grid: Avatar & Story */}
+        {/* Main Grid: Info Sidebar & rest of copy */}
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16 items-start">
           
-          {/* Avatar side */}
-          <div className="lg:col-span-5 flex flex-col items-center lg:items-start space-y-6">
+          {/* Left Sidebar: Avatar + Contact Block */}
+          <div className="lg:col-span-4 flex flex-col items-center lg:items-start space-y-6">
             <div className="relative h-80 w-80 overflow-hidden rounded-3xl border border-border shadow-2xl shadow-amber-500/5 group">
               <Image
                 src="/images/avatar.jpg"
-                alt="JustDuckIt Owner Portrait"
+                alt="Kyle Kinkin Portrait"
                 fill
                 className="object-cover group-hover:scale-102 transition-transform duration-300"
                 sizes="320px"
@@ -50,90 +62,171 @@ export default function About() {
               <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent" />
             </div>
             <div className="text-center lg:text-left space-y-2">
-              <h2 className="text-2xl font-bold text-foreground">JustDuckIt</h2>
-              <p className="text-sm font-mono text-primary font-semibold">Founder, Writer & Builder</p>
-              <p className="text-xs text-muted-foreground">Based in New York City, NY</p>
+              <h2 className="text-2xl font-bold text-foreground">Kyle Kinkin</h2>
+              <p className="text-sm font-mono text-primary font-semibold">Media & Events Builder</p>
+              <p className="text-xs text-muted-foreground">Tinley Park, Illinois</p>
             </div>
 
             <div className="w-full max-w-sm rounded-2xl border border-border bg-card/20 p-6 space-y-4">
-              <h3 className="text-sm font-bold text-foreground uppercase tracking-wider">Quick Info</h3>
-              <div className="space-y-3 text-sm text-muted-foreground">
+              <h3 className="text-sm font-bold text-foreground uppercase tracking-wider">Professional Info</h3>
+              <div className="space-y-3 text-sm text-muted-foreground font-sans">
                 <div className="flex items-center gap-2">
                   <Mail className="h-4 w-4 text-primary" />
                   <span>hello@justduckit.xyz</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Heart className="h-4 w-4 text-primary" />
-                  <span>Animal Rights Advocate</span>
+                  <Building className="h-4 w-4 text-primary" />
+                  <span>Pjs Media Co & Ikonic Studio</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Sparkles className="h-4 w-4 text-primary" />
-                  <span>Doginals Tech Contributor</span>
+                  <Award className="h-4 w-4 text-primary" />
+                  <span>Web3 Communities Leader</span>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Text Story side */}
-          <div className="lg:col-span-7 space-y-12">
-            <div className="space-y-4">
-              <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl text-foreground">
-                Hi, I'm <span className="text-gradient-gold">JustDuckIt</span>.
-              </h1>
-              <p className="text-lg leading-8 text-muted-foreground">
-                I'm a builder and writer focused on software engineering, decentralization, and physical-world ecological impact. I believe in combining tech-enabled systems with direct, ground-level conservation work.
-              </p>
-            </div>
-
-            {/* Duck Sanctuary Origin Story */}
-            <section id="sanctuary" className="space-y-4 scroll-mt-24">
-              <h2 className="text-2xl font-bold text-foreground flex items-center gap-2 border-b border-border pb-2">
-                <Heart className="h-5 w-5 text-rose-500 fill-rose-500/10" />
-                <span>The Duck Sanctuary Story</span>
-              </h2>
+          {/* Right Main Content: 5-Part Narrative Structure */}
+          <div className="lg:col-span-8 space-y-16">
+            
+            {/* Section 1: Professional Bio */}
+            <section id="bio" className="space-y-6">
+              <div className="space-y-2">
+                <span className="text-xs font-mono text-primary uppercase tracking-widest font-semibold">Part 1</span>
+                <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl text-foreground">
+                  Professional <span className="text-gradient-gold">Identity</span>
+                </h1>
+              </div>
               <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
                 <p>
-                  It all started in 2022 when I came across an injured mallard near a concrete waterfront in Brooklyn. In a bustling metropolis like NYC, wildlife is frequently pushed to the absolute margins, struggling with pollution, habitat degradation, and lack of clean water.
+                  Based in Tinley Park, Illinois, my career is rooted in the fast-paced industries of media production, marketing, and event execution. 
+                  Currently, I operate as the owner of <strong className="text-foreground">Pjs Media Co</strong> (founded in 2024), directing comprehensive digital production 
+                  and brand strategy, alongside <strong className="text-foreground">Ikonic Studio</strong> (launched in 2023), managing design collateral assets.
                 </p>
                 <p>
-                  I realized that talking about environmental preservation wasn't enough. We needed active, local steps. That’s how the **DDNYC (Duck Sanctuary Project NYC)** was born. What began as helping a single bird has blossomed into building small-scale urban sanctuaries.
+                  Prior to leading my own agencies, I developed deep ground-level experience in managing client campaigns as a Manager at 
+                  <strong className="text-foreground"> Ikon Marketing</strong> (2022–2023). I began my career path coordinating logistics and stage productions 
+                  as the Assistant Director at <strong className="text-foreground">Red Mountain Events</strong> (2021–2022) and in day-of event operations at 
+                  <strong className="text-foreground">Coast To Coast Events</strong> (2020–2021).
+                </p>
+              </div>
+
+              {/* Career Timeline */}
+              <div className="mt-8 border-t border-border/50 pt-8">
+                <h3 className="text-base font-bold text-foreground mb-6">Career Timeline</h3>
+                <div className="space-y-6 relative before:absolute before:inset-y-0 before:left-3 before:w-0.5 before:bg-border">
+                  {eventTimeline.map((item, idx) => (
+                    <div key={idx} className="relative pl-8">
+                      <div className="absolute left-1.5 top-1.5 h-3.5 w-3.5 rounded-full bg-primary border-4 border-background" />
+                      <div className="space-y-1">
+                        <div className="flex flex-wrap items-baseline gap-2">
+                          <span className="text-sm font-bold text-foreground">{item.role}</span>
+                          <span className="text-xs text-primary font-mono font-semibold">at {item.company}</span>
+                          <span className="text-[10px] text-muted-foreground font-mono ml-auto">{item.period}</span>
+                        </div>
+                        <p className="text-xs text-muted-foreground leading-relaxed">
+                          {item.description}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            {/* Section 2: The Pivot Story */}
+            <section id="pivot" className="space-y-6 scroll-mt-24">
+              <div className="space-y-2">
+                <span className="text-xs font-mono text-primary uppercase tracking-widest font-semibold">Part 2</span>
+                <h2 className="text-2xl font-bold text-foreground flex items-center gap-2 border-b border-border pb-2">
+                  <Heart className="h-5 w-5 text-rose-500 fill-rose-500/10" />
+                  <span>The Duck Pivot</span>
+                </h2>
+              </div>
+              <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
+                <p>
+                  Traditional event management is built on checklists, physical venues, and local attendance. While I loved the execution of physical events, 
+                  the catalyst that pivoted my path came from a very unexpected place: raising ducks.
                 </p>
                 <p>
-                  Our mission is to establish sustainable sanctuaries equipped with custom, eco-friendly viewing shelters, solar-powered aeration systems for ponds, and nesting environments that protect native ducks from predators. Through this work, we aim to bridge the gap between urban citizens and natural wildlife.
+                  Caring for these birds led to founding the <strong className="text-foreground">Decent Ducks Sanctuary</strong>, a physical rescue project 
+                  that we quickly realized had a global story to tell. To fund and build a community around the sanctuary, we launched the 
+                  <strong className="text-foreground">Decent Ducks NFT project</strong> on Web3. 
+                </p>
+                <p>
+                  Managing a digital ecosystem of art, community discord, and smart contract assets completely shifted my perspective. 
+                  It was the spark that proved to me that digital brand building and direct-to-consumer content creation could reach further 
+                  and scale faster than local, traditional marketing ever could. This spark led directly to founding Ikonic Studio and Pjs Media.
                 </p>
               </div>
             </section>
 
-            {/* Media & Events Timeline */}
-            <section className="space-y-6">
-              <h2 className="text-2xl font-bold text-foreground flex items-center gap-2 border-b border-border pb-2">
-                <Mic className="h-5 w-5 text-primary" />
-                <span>Media & Events History</span>
-              </h2>
-              
-              <div className="space-y-8 relative before:absolute before:inset-y-0 before:left-3 before:w-0.5 before:bg-border">
-                {mediaEvents.map((media, idx) => (
-                  <div key={idx} className="relative pl-8 animate-in fade-in slide-in-from-left-4 duration-500">
-                    {/* Timeline Node */}
-                    <div className="absolute left-1.5 top-1.5 h-3.5 w-3.5 rounded-full bg-primary border-4 border-background" />
-                    
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-3">
-                        <span className="px-2 py-0.5 rounded bg-primary/10 text-primary text-xs font-mono border border-primary/20">
-                          {media.year}
-                        </span>
-                        <span className="text-xs text-muted-foreground flex items-center gap-1 font-mono">
-                          <Calendar className="h-3 w-3" />
-                          {media.event}
-                        </span>
-                      </div>
-                      <h3 className="text-base font-bold text-foreground">{media.title}</h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
-                        {media.description}
-                      </p>
-                    </div>
-                  </div>
-                ))}
+            {/* Section 3: Doginal Dogs Chapter */}
+            <section id="doginals" className="space-y-6 scroll-mt-24">
+              <div className="space-y-2">
+                <span className="text-xs font-mono text-primary uppercase tracking-widest font-semibold">Part 3</span>
+                <h2 className="text-2xl font-bold text-foreground flex items-center gap-2 border-b border-border pb-2">
+                  <Sparkles className="h-5 w-5 text-primary" />
+                  <span>The Doginal Dogs Chapter</span>
+                </h2>
+              </div>
+              <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
+                <p>
+                  If Decent Ducks was the spark, partnering with **Doginal Dogs** represents the next level of my career. 
+                  Doginal Dogs is an active community built on the Dogecoin (DOGE) blockchain, utilizing raw witness transaction inscriptions 
+                  to preserve digital art directly on-chain.
+                </p>
+                <p>
+                  Stepping into leadership and strategic partnership within the Doginal Dogs ecosystem has allowed me to apply my years of media production 
+                  and event coordination directly to decentralized technology. By aligning community management, digital content, and on-chain mechanics, 
+                  we have pushed the boundaries of what digital art communities can achieve in terms of engagement, utility, and value scaling.
+                </p>
+              </div>
+            </section>
+
+            {/* Section 4: DDNYC Speaking Engagement */}
+            <section id="ddnyc" className="space-y-6 scroll-mt-24">
+              <div className="space-y-2">
+                <span className="text-xs font-mono text-primary uppercase tracking-widest font-semibold">Part 4</span>
+                <h2 className="text-2xl font-bold text-foreground flex items-center gap-2 border-b border-border pb-2">
+                  <Mic className="h-5 w-5 text-primary" />
+                  <span>Speaking Live at DDNYC</span>
+                </h2>
+              </div>
+              <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
+                <p>
+                  This journey comes to a massive milestone at **DDNYC (Doginal Dogs New York City)**. 
+                  I will be attending the summit and taking the stage as a featured speaker, presenting in front of an audience of 300+ founders, 
+                  creators, and digital asset builders.
+                </p>
+                <p>
+                  My speaking topic is **“Betting on Yourself.”** 
+                  It is a distillation of my career path: leaving the comfort of established, traditional event coordination, 
+                  embracing the unexpected inspiration of Decent Ducks, navigating the complex world of Web3 inscriptions, 
+                  and building agencies that empower creators. It’s a case study on why the biggest risk you can take is not taking a risk on your own vision.
+                </p>
+              </div>
+            </section>
+
+            {/* Section 5: Current Focus */}
+            <section id="focus" className="space-y-6 scroll-mt-24">
+              <div className="space-y-2">
+                <span className="text-xs font-mono text-primary uppercase tracking-widest font-semibold">Part 5</span>
+                <h2 className="text-2xl font-bold text-foreground flex items-center gap-2 border-b border-border pb-2">
+                  <Target className="h-5 w-5 text-primary" />
+                  <span>Current Focus</span>
+                </h2>
+              </div>
+              <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
+                <p>
+                  Today, I sit at the intersection of the physical and digital. My daily focus is scaling Pjs Media Co and Ikonic Studio, 
+                  working with clients to build digital brands, and driving growth for on-chain ecosystems like Doginal Dogs.
+                </p>
+                <p>
+                  By taking the rigorous details of physical events production and combining them with the global distribution of digital content, 
+                  I help brands build authentic connections that last. Whether it's through code, video, digital assets, or real-life events, 
+                  the mission remains: build things that matter, and never hesitate to bet on yourself.
+                </p>
               </div>
             </section>
 
