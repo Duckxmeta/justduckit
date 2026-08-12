@@ -35,7 +35,7 @@ export default function About() {
       description: "Managing creative design resources and physical brand collateral assets for growth companies.",
     },
     {
-      role: "Manager",
+      role: "Director of Operations",
       company: "Ikon Marketing",
       period: "2022 – 2023",
       description: "Led local and regional campaign execution, handling brand placements and direct-to-consumer events.",
