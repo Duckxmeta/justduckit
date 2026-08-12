@@ -110,6 +110,45 @@ export default function About() {
                 </div>
               </div>
             </div>
+
+            <div className="w-full max-w-sm rounded-2xl border border-border bg-card/20 p-6 space-y-4">
+              <h3 className="text-sm font-bold text-foreground uppercase tracking-wider">Ecosystem / Featured</h3>
+              <div className="space-y-3 text-sm text-muted-foreground font-sans">
+                <div className="flex items-center gap-2">
+                  <span className="text-xs font-mono text-primary font-bold w-6">X</span>
+                  <a
+                    href="https://x.com/i/articles/1817887317765103616"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors hover:underline"
+                  >
+                    X Published Article ↗
+                  </a>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-xs font-mono text-primary font-bold w-6">ME</span>
+                  <a
+                    href="https://magiceden.io/marketplace/decent_ducks"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors hover:underline"
+                  >
+                    Decent Ducks Magic Eden ↗
+                  </a>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-xs font-mono text-primary font-bold w-6">YT</span>
+                  <a
+                    href="https://www.youtube.com/@justduckit"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors hover:underline"
+                  >
+                    YouTube Channel ↗
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Right Main Content: 5-Part Narrative Structure */}
