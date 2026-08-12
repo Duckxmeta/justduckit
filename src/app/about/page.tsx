@@ -10,6 +10,13 @@ export const metadata: Metadata = {
 export default function About() {
   const eventTimeline = [
     {
+      role: "Creative Consultants",
+      company: "ZEN AI Co.",
+      companyUrl: "https://zenai.world/",
+      period: "Present",
+      description: "Providing strategic creative direction and advisory services on brand development and digital art systems.",
+    },
+    {
       role: "Owner",
       company: "Pjs Media Co",
       period: "2024 – Present",
@@ -134,7 +141,21 @@ export default function About() {
                       <div className="space-y-1">
                         <div className="flex flex-wrap items-baseline gap-2">
                           <span className="text-sm font-bold text-foreground">{item.role}</span>
-                          <span className="text-xs text-primary font-mono font-semibold">at {item.company}</span>
+                          <span className="text-xs text-primary font-mono font-semibold">
+                            at{" "}
+                            {item.companyUrl ? (
+                              <a
+                                href={item.companyUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="underline hover:text-primary-hover"
+                              >
+                                {item.company}
+                              </a>
+                            ) : (
+                              item.company
+                            )}
+                          </span>
                           <span className="text-[10px] text-muted-foreground font-mono ml-auto">{item.period}</span>
                         </div>
                         <p className="text-xs text-muted-foreground leading-relaxed">
