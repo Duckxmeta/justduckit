@@ -71,28 +71,28 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Kyle Kinkin",
+    "alternateName": ["DucksOnX", "JustDuckit"],
     "url": "https://justduckit.xyz",
-    "image": "https://justduckit.xyz/media/kyle-profile.jpg",
-    "homeLocation": {
-      "@type": "Place",
-      "name": "Greater Nashville area, Tennessee"
-    },
     "sameAs": [
-      "https://x.com",
-      "https://github.com"
+      "https://kylekinkin.com",
+      "https://ducksonx.com",
+      "https://x.com/Ducksonx",
+      "https://www.tiktok.com/@just.duckit",
+      "https://www.instagram.com/justduckits",
+      "https://www.amazon.com/shop/justtduckit"
     ],
-    "jobTitle": "Media & Events Professional, Owner",
-    "worksFor": [
-      {
-        "@type": "Organization",
-        "name": "Pjs Media Co"
-      },
-      {
-        "@type": "Organization",
-        "name": "Ikonic Studio"
-      }
-    ],
-    "knowsAbout": ["Media Production", "Events Management", "Digital Marketing", "Doginal Dogs", "Decent Ducks Sanctuary", "Blockchain Communities"]
+    "jobTitle": "Founder & Content Creator",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "JustDuckit"
+    },
+    "knowsAbout": [
+      "Web3",
+      "Solana NFTs",
+      "Waterfowl Sanctuary Operations",
+      "Digital Marketing",
+      "Doginal Dogs"
+    ]
   };
 
   return (
