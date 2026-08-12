@@ -246,9 +246,6 @@ export default function Home() {
                 Direct Updates
               </span>
               <h2 className="text-xl font-bold text-foreground">The Duck Digest</h2>
-              <p className="text-sm text-muted-foreground">
-                Get behind-the-scenes essays on digital brand building, live event activations, and Dogecoin community updates.
-              </p>
             </div>
             <NewsletterForm />
           </div>
