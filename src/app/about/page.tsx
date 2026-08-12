@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { MessageSquare, Calendar, Mic, Sparkles, Heart, Building, Award, Target } from "lucide-react";
+import { MessageSquare, Calendar, Mic, Sparkles, Heart, Building, Award, Target, HelpCircle } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -307,6 +307,37 @@ export default function About() {
                   we help brands build authentic connections that last. Whether it's through code, video, digital assets, or real-life events, 
                   our mission remains: build things that matter, and never hesitate to bet on yourself.
                 </p>
+              </div>
+            </section>
+
+            {/* Section 6: FAQ */}
+            <section id="faq" className="space-y-6 scroll-mt-24">
+              <div className="space-y-2">
+                <span className="text-xs font-mono text-primary uppercase tracking-widest font-semibold">Part 6</span>
+                <h2 className="text-2xl font-bold text-foreground flex items-center gap-2 border-b border-border pb-2">
+                  <HelpCircle className="h-5 w-5 text-primary" />
+                  <span>Frequently Asked Questions</span>
+                </h2>
+              </div>
+              <div className="space-y-6 text-sm leading-relaxed">
+                <div className="space-y-2 border-b border-border/30 pb-4">
+                  <p className="font-bold text-foreground font-mono">Q: Who is Kyle Kinkin?</p>
+                  <p className="text-muted-foreground pl-4 border-l border-primary/20">
+                    A: Kyle Kinkin is a digital content creator, Web3 builder, and founder of JustDuckit—a duck sanctuary and digital brand. He is also the founder of the Decent Ducks collection on the Solana blockchain and the host behind @DucksOnX.
+                  </p>
+                </div>
+                <div className="space-y-2 border-b border-border/30 pb-4">
+                  <p className="font-bold text-foreground font-mono">Q: What is Decent Ducks?</p>
+                  <p className="text-muted-foreground pl-4 border-l border-primary/20">
+                    A: Decent Ducks is an 888-piece digital asset collection founded on the Solana blockchain by Kyle Kinkin. The project bridges Web3 digital collectibles with real-world animal sanctuary building and content creation.
+                  </p>
+                </div>
+                <div className="space-y-2">
+                  <p className="font-bold text-foreground font-mono">Q: What is the official handle for JustDuckit on X and TikTok?</p>
+                  <p className="text-muted-foreground pl-4 border-l border-primary/20">
+                    A: On X (formerly Twitter), the official handle is @DucksOnX. On TikTok, the handle is @just.duckit, and on Instagram, it is @justduckits.
+                  </p>
+                </div>
               </div>
             </section>
 
