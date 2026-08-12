@@ -71,8 +71,8 @@ export default function About() {
           <div className="lg:col-span-4 flex flex-col items-center lg:items-start space-y-6">
             <div className="relative h-80 w-80 overflow-hidden rounded-3xl border border-border shadow-2xl shadow-amber-500/5 group">
               <Image
-                src="/media/kyle-profile.jpg"
-                alt="Kyle Kinkin Portrait"
+                src="/media/kyle-kinkin-decent-ducks-founder.jpg"
+                alt="Kyle Kinkin, founder of JustDuckit and Decent Ducks, holding a sanctuary bird."
                 fill
                 className="object-cover group-hover:scale-102 transition-transform duration-300"
                 sizes="320px"
@@ -222,8 +222,8 @@ export default function About() {
                   </h2>
                   <div className="relative h-7 w-7 overflow-hidden rounded-md border border-border/50">
                     <Image
-                      src="/media/decent-duck-logo.png"
-                      alt="Decent Duck Logo"
+                      src="/media/decent-ducks-nft-solana.png"
+                      alt="Decent Ducks Solana NFT art collection founded by Kyle Kinkin (@DucksOnX)."
                       fill
                       className="object-cover"
                       sizes="28px"

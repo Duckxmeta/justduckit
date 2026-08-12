@@ -35,10 +35,10 @@ export const metadata: Metadata = {
     description: "Personal brand of Kyle Kinkin, a media and events professional based in Nashville, TN. Owner of Pjs Media Co & Ikonic Studio. Speaking at DDNYC on Betting on Yourself.",
     images: [
       {
-        url: "/media/decent-duck-logo.png",
+        url: "/media/decent-ducks-nft-solana.png",
         width: 800,
         height: 800,
-        alt: "Kyle Kinkin Brand Logo",
+        alt: "Decent Ducks Solana NFT art collection founded by Kyle Kinkin (@DucksOnX).",
       },
     ],
   },
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Kyle Kinkin | Media, Events & Digital Brand Builder",
     description: "Personal brand of Kyle Kinkin, a media and events professional based in Nashville, TN. Owner of Pjs Media Co & Ikonic Studio. Speaking at DDNYC on Betting on Yourself.",
-    images: ["/media/decent-duck-logo.png"],
+    images: ["/media/decent-ducks-nft-solana.png"],
     creator: "@kylekinkin",
   },
   robots: {
