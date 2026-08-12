@@ -13,8 +13,14 @@ export default function About() {
       role: "Creative Consultants",
       company: "ZEN AI Co.",
       companyUrl: "https://zenai.world/",
-      period: "Present",
+      period: "2025 – Present",
       description: "Providing strategic creative direction and advisory services on brand development and digital art systems.",
+    },
+    {
+      role: "Founder",
+      company: "Decent Ducks",
+      period: "2025 – Present",
+      description: "Merging the gap between blockchain community and real-life duck care.",
     },
     {
       role: "Owner",
@@ -117,17 +123,15 @@ export default function About() {
                   Professional <span className="text-gradient-gold">Identity</span>
                 </h1>
               </div>
-              <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
+              <div className="space-y-4 text-sm text-muted-foreground leading-relaxed font-sans">
                 <p>
-                  Based in Nashville, Tennessee, our path is rooted in the fast-paced industries of media production, marketing, and event execution. 
-                  Currently, we operate as the owners of <strong className="text-foreground">Pjs Media Co</strong> (founded in 2024), directing comprehensive digital production 
-                  and brand strategy, alongside <strong className="text-foreground">Ikonic Studio</strong> (launched in 2023), managing design collateral assets.
+                  Based in Nashville, Tennessee, we have built a career across media production, brand development, marketing, and live events. Over the years this path has expanded into digital brand building, on-chain communities, and AI-driven creative work.
                 </p>
                 <p>
-                  Prior to leading our own agencies, we developed deep ground-level experience in managing client campaigns in management roles at 
-                  <strong className="text-foreground"> Ikon Marketing</strong> (2022–2023). We began our career path coordinating logistics and stage productions 
-                  in leadership roles at <strong className="text-foreground">Red Mountain Events</strong> (2021–2022) and in day-of event operations at 
-                  <strong className="text-foreground">Coast To Coast Events</strong> (2020–2021).
+                  We currently operate as Creative Consultants at ZEN AI Co., Founders of Decent Ducks — merging the gap between blockchain community and real-life duck care — and owners of Pjs Media Co and Ikonic Studio.
+                </p>
+                <p>
+                  Earlier in our career we held leadership and management roles across the country in marketing, sales, brand development, and event production. This real-world foundation continues to shape how we approach digital and on-chain work today.
                 </p>
               </div>
 
