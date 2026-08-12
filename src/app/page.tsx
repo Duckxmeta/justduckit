@@ -25,11 +25,6 @@ export default function Home() {
         
         {/* Hero Section */}
         <div className="text-center max-w-4xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-6 duration-700">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-mono">
-            <Mic className="h-3.5 w-3.5" />
-            <span>Speaking Live at DDNYC: "Betting on Yourself"</span>
-          </div>
-
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl text-foreground animate-in fade-in zoom-in duration-500">
             It started with a <span className="text-gradient-gold">duck.</span>
           </h1>
@@ -40,7 +35,7 @@ export default function Home() {
               From live events to building in public, everything we do comes back to one idea: <strong className="text-foreground">bet on yourself</strong>.
             </p>
             <p className="text-sm font-mono text-primary font-semibold tracking-wider uppercase">
-              Next up — speaking at DDNYC in front of 300+ people.
+              Next up — speaking at DDNYC.
             </p>
           </div>
 
