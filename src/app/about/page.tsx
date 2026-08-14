@@ -19,6 +19,7 @@ export default function About() {
     {
       role: "Founder",
       company: "Decent Ducks",
+      companyUrl: "https://adoptaduck.org",
       period: "2025 – Present",
       description: "Merging the gap between blockchain community and real-life duck care.",
     },
@@ -200,7 +201,7 @@ export default function About() {
                   Based in Nashville, Tennessee, we have built a career across media production, brand development, marketing, and live events. Over the years this path has expanded into digital brand building, on-chain communities, and AI-driven creative work.
                 </p>
                 <p>
-                  We currently operate as Creative Consultants at ZEN AI Co., Founders of Decent Ducks — merging the gap between blockchain community and real-life duck care — and owners of Pjs Media Co and Ikonic Studio.
+                  We currently operate as Creative Consultants at <a href="https://zenai.world/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">ZEN AI Co.</a>, Founders of <a href="https://adoptaduck.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">Decent Ducks</a> — merging the gap between blockchain community and real-life duck care — and owners of Pjs Media Co and Ikonic Studio.
                 </p>
                 <p>
                   Earlier in our career we held leadership and management roles across the country in marketing, sales, brand development, and event production. This real-world foundation continues to shape how we approach digital and on-chain work today.
