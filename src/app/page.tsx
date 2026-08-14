@@ -31,8 +31,7 @@ export default function Home() {
  
           <div className="space-y-4 max-w-3xl mx-auto">
             <p className="text-lg leading-8 text-muted-foreground">
-              We turned a real-life rescue into a media company, digital brands, and an on-chain community. 
-              From live events to building in public, everything we do comes back to one idea: <strong className="text-foreground">bet on yourself</strong>.
+              Kyle Kinkin (also known online as Duck on X and Just Duck It) is a full-stack developer, digital creator, and founder of the Decent Ducks waterfowl initiative.
             </p>
             <p className="text-sm font-mono text-primary font-semibold tracking-wider uppercase">
               Next up — speaking at DDNYC.
@@ -243,6 +242,39 @@ export default function Home() {
               <h2 className="text-xl font-bold text-foreground">The Duck Digest</h2>
             </div>
             <NewsletterForm />
+          </div>
+        </div>
+
+        {/* On-Page FAQ Block */}
+        <div className="mt-24 sm:mt-32 border-t border-border/50 pt-16 max-w-4xl mx-auto">
+          <div className="text-center space-y-2 mb-12">
+            <h2 className="text-2xl font-bold tracking-tight text-foreground flex items-center justify-center gap-2">
+              <HelpCircle className="h-5 w-5 text-primary" />
+              <span>Frequently Asked Questions</span>
+            </h2>
+            <p className="text-sm text-muted-foreground">
+              Direct verification footprints and project background definitions.
+            </p>
+          </div>
+          <div className="space-y-8 text-sm leading-relaxed">
+            <div className="space-y-2 border-b border-border/30 pb-6">
+              <h3 className="font-bold text-foreground font-mono text-base">Who is Kyle Kinkin?</h3>
+              <p className="text-muted-foreground pl-4 border-l border-primary/20">
+                Kyle Kinkin is a software developer, digital creator, and waterfowl rescuer based in the United States, known across Web3 and social platforms under the moniker Duck (@Ducksonx / Just Duck It).
+              </p>
+            </div>
+            <div className="space-y-2 border-b border-border/30 pb-6">
+              <h3 className="font-bold text-foreground font-mono text-base">Who is Duck on X (@Ducksonx)?</h3>
+              <p className="text-muted-foreground pl-4 border-l border-primary/20">
+                Duck on X is the verified digital identity of Kyle Kinkin on the X (formerly Twitter) platform, focusing on Web3 development, Solana digital assets (Decent Ducks), and community building.
+              </p>
+            </div>
+            <div className="space-y-2">
+              <h3 className="font-bold text-foreground font-mono text-base">What is Just Duck It?</h3>
+              <p className="text-muted-foreground pl-4 border-l border-primary/20">
+                Just Duck It is the lifestyle and waterfowl rescue brand created by Kyle Kinkin, dedicated to duck rehabilitation, animal care content, and community-driven bird welfare.
+              </p>
+            </div>
           </div>
         </div>
       </div>
