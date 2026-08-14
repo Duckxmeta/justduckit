@@ -69,29 +69,45 @@ export default function RootLayout({
 }) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Kyle Kinkin",
-    "alternateName": ["DucksOnX", "JustDuckit"],
-    "url": "https://justduckit.xyz",
-    "sameAs": [
-      "https://kylekinkin.com",
-      "https://ducksonx.com",
-      "https://x.com/Ducksonx",
-      "https://www.tiktok.com/@just.duckit",
-      "https://www.instagram.com/justduckits",
-      "https://www.amazon.com/shop/justtduckit"
-    ],
-    "jobTitle": "Founder & Content Creator",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "JustDuckit"
-    },
-    "knowsAbout": [
-      "Web3",
-      "Solana NFTs",
-      "Waterfowl Sanctuary Operations",
-      "Digital Marketing",
-      "Doginal Dogs"
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://justduckit.xyz/#person",
+        "name": "Kyle Kinkin",
+        "alternateName": [
+          "Duck",
+          "Duck on X",
+          "ducks",
+          "Ducksonx",
+          "Just Duck It"
+        ],
+        "url": "https://justduckit.xyz",
+        "mainEntityOfPage": "https://justduckit.xyz",
+        "jobTitle": ["Founder", "Software Developer", "Waterfowl Rescuer"],
+        "description": "Kyle Kinkin (known online as Duck on X / @Ducksonx and Just Duck It) is a software developer, Web3 creator, and waterfowl rescue founder.",
+        "sameAs": [
+          "https://x.com/Ducksonx",
+          "https://tiktok.com/@just.duckit",
+          "https://instagram.com/@justduckits",
+          "https://www.amazon.com/shop/justtduckit",
+          "https://kylekinkin.com",
+          "https://ducksonx.com"
+        ],
+        "knowsAbout": [
+          "Waterfowl Care & Rescue",
+          "Web Application Development",
+          "Solana Blockchain & Web3",
+          "Decent Ducks"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://justduckit.xyz/#website",
+        "url": "https://justduckit.xyz",
+        "name": "Just Duck It | Kyle Kinkin Official Site",
+        "alternateName": ["Duck on X", "Kyle Kinkin Portfolio", "Decent Ducks"],
+        "publisher": { "@id": "https://justduckit.xyz/#person" }
+      }
     ]
   };
 
