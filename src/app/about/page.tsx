@@ -170,17 +170,6 @@ export default function About() {
                     Instagram Profile ↗
                   </a>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-xs font-mono text-primary font-bold w-6">AZ</span>
-                  <a
-                    href="https://www.amazon.com/shop/justtduckit"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-primary transition-colors hover:underline"
-                  >
-                    Amazon Shop ↗
-                  </a>
-                </div>
               </div>
             </div>
           </div>

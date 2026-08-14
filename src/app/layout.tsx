@@ -89,7 +89,6 @@ export default function RootLayout({
           "https://x.com/Ducksonx",
           "https://tiktok.com/@just.duckit",
           "https://instagram.com/@justduckits",
-          "https://www.amazon.com/shop/justtduckit",
           "https://kylekinkin.com",
           "https://ducksonx.com"
         ],
