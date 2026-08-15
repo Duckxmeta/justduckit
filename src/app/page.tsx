@@ -68,7 +68,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {/* DDNYC Speaking */}
             <div className="group overflow-hidden rounded-2xl border border-border bg-card/40 backdrop-blur-md hover:border-primary/20 transition-all flex flex-col">
               <div className="relative h-48 w-full overflow-hidden">
@@ -77,7 +77,7 @@ export default function Home() {
                   alt="DDNYC Stage Inspiration"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-w-768px) 100vw, 33vw"
+                  sizes="(max-w-768px) 100vw, 25vw"
                   priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
@@ -111,7 +111,7 @@ export default function Home() {
                   alt="Decent Ducks Sanctuary Brand"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-w-768px) 100vw, 33vw"
+                  sizes="(max-w-768px) 100vw, 25vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
                 <div className="absolute bottom-3 left-3">
@@ -144,7 +144,7 @@ export default function Home() {
                   alt="Doginal Dogs Asset"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-w-768px) 100vw, 33vw"
+                  sizes="(max-w-768px) 100vw, 25vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
                 <div className="absolute bottom-3 left-3">
@@ -165,6 +165,47 @@ export default function Home() {
                     <span>Doginal Lessons</span>
                     <ArrowRight className="h-3 w-3" />
                   </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Crypto Spaces Network */}
+            <div className="group overflow-hidden rounded-2xl border border-border bg-card/40 backdrop-blur-md hover:border-primary/20 transition-all flex flex-col">
+              <div className="relative h-48 w-full overflow-hidden">
+                <Image
+                  src="/media/crypto-spaces-network.jpg"
+                  alt="Crypto Spaces Network Logo"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-w-768px) 100vw, 25vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+                <div className="absolute bottom-3 left-3">
+                  <span className="px-2 py-0.5 rounded bg-amber-500/10 text-primary text-xs font-mono border border-primary/20 backdrop-blur-md">
+                    Web3 Audio Network
+                  </span>
+                </div>
+              </div>
+              <div className="p-6 flex flex-col flex-grow space-y-2">
+                <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
+                  Crypto Spaces Network (CSN)
+                </h3>
+                <p className="text-xs leading-relaxed text-muted-foreground flex-grow">
+                  The largest and most trusted live audio network dedicated to Web3. Connecting projects, builders, and communities through daily X Spaces that consistently rank at the top. Let them know Duck sent ya!
+                </p>
+                <div className="pt-3 flex flex-col space-y-2">
+                  <span className="text-[10px] font-mono text-primary italic">
+                    "Alone you go fast, together we go far"
+                  </span>
+                  <a
+                    href="https://cryptospaces.net"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1"
+                  >
+                    <span>Visit CSN Network ↗</span>
+                    <ArrowRight className="h-3 w-3" />
+                  </a>
                 </div>
               </div>
             </div>
