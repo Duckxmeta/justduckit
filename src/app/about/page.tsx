@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { MessageSquare, Calendar, Mic, Sparkles, Heart, Building, Award, Target, HelpCircle } from "lucide-react";
+import { MessageSquare, Calendar, Mic, Sparkles, Heart, Building, Award, Target, HelpCircle, Users } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -372,10 +372,37 @@ export default function About() {
               </div>
             </section>
 
-            {/* Section 6: FAQ */}
-            <section id="faq" className="space-y-6 scroll-mt-24">
+            {/* Section 6: Sanctuary Collaboration & Digital Advocacy */}
+            <section id="collaboration" className="space-y-6 scroll-mt-24">
               <div className="space-y-2">
                 <span className="text-xs font-mono text-primary uppercase tracking-widest font-semibold">Part 6</span>
+                <h2 className="text-2xl font-bold text-foreground flex items-center gap-2 border-b border-border pb-2">
+                  <Users className="h-5 w-5 text-primary" />
+                  <span>"JustDuckit" Sanctuary Collaboration & Digital Advocacy</span>
+                </h2>
+              </div>
+              <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
+                <p>
+                  True advocacy goes beyond our own backyard. I travel to volunteer with animal rescues and sanctuaries across the country, learning firsthand about different species' care needs while using my background in web development, content creation, and digital strategy to help amplify their stories and expand their reach.
+                </p>
+                <div className="pt-1">
+                  <span className="text-sm font-semibold text-foreground block sm:inline mr-2">
+                    Running a sanctuary or rescue organization?
+                  </span>
+                  <a
+                    href="mailto:decentducksorg@gmail.com"
+                    className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1"
+                  >
+                    <span>Get in Touch / Let’s Collaborate ✉</span>
+                  </a>
+                </div>
+              </div>
+            </section>
+
+            {/* Section 7: FAQ */}
+            <section id="faq" className="space-y-6 scroll-mt-24">
+              <div className="space-y-2">
+                <span className="text-xs font-mono text-primary uppercase tracking-widest font-semibold">Part 7</span>
                 <h2 className="text-2xl font-bold text-foreground flex items-center gap-2 border-b border-border pb-2">
                   <HelpCircle className="h-5 w-5 text-primary" />
                   <span>Frequently Asked Questions</span>
