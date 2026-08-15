@@ -146,6 +146,16 @@ export default function Footer() {
                       <span>Doginal Dogs ↗</span>
                     </a>
                   </li>
+                  <li className="text-sm text-muted-foreground">
+                    <a
+                      href="https://cryptospaces.net"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-primary transition-colors cursor-pointer inline-flex items-center gap-1"
+                    >
+                      <span>Crypto Spaces Network ↗</span>
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
