@@ -95,11 +95,11 @@ export default function NewsletterPage() {
               <div className="grid grid-cols-2 gap-4 text-center">
                 <div className="p-3 rounded-xl bg-background/50 border border-border">
                   <div className="text-lg font-bold text-primary">500+</div>
-                  <div className="text-[10px] text-muted-foreground">Flock Members</div>
+                  <div className="text-xs text-muted-foreground">Flock Members</div>
                 </div>
                 <div className="p-3 rounded-xl bg-background/50 border border-border">
                   <div className="text-lg font-bold text-primary">100%</div>
-                  <div className="text-[10px] text-muted-foreground">Spam-free Guarantee</div>
+                  <div className="text-xs text-muted-foreground">Spam-free Guarantee</div>
                 </div>
               </div>
             </div>

@@ -91,11 +91,11 @@ export default function Home() {
                 <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
                   DDNYC: Speaking Live
                 </h3>
-                <p className="text-xs leading-relaxed text-muted-foreground flex-grow">
+                <p className="text-sm leading-relaxed text-muted-foreground flex-grow">
                   A milestone moment presenting in front of 300+ industry builders in New York. Discussing the core strategy of betting on your own ideas, building networks, and scaling digital asset ecosystems.
                 </p>
                 <div className="pt-3">
-                  <Link href="/about#ddnyc" className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1">
+                  <Link href="/about#ddnyc" className="text-sm font-semibold text-primary hover:underline inline-flex items-center gap-1">
                     <span>Speaking Details</span>
                     <ArrowRight className="h-3 w-3" />
                   </Link>
@@ -124,11 +124,11 @@ export default function Home() {
                 <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
                   The Sanctuary Pivot
                 </h3>
-                <p className="text-xs leading-relaxed text-muted-foreground flex-grow">
+                <p className="text-sm leading-relaxed text-muted-foreground flex-grow">
                   How starting the Decent Ducks Sanctuary (and Web3 NFT project) broke the mold of traditional marketing management, sparking a full pivot into digital media production and active brand building.
                 </p>
                 <div className="pt-3">
-                  <Link href="/about#pivot" className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1">
+                  <Link href="/about#pivot" className="text-sm font-semibold text-primary hover:underline inline-flex items-center gap-1">
                     <span>The Pivot Story</span>
                     <ArrowRight className="h-3 w-3" />
                   </Link>
@@ -157,11 +157,11 @@ export default function Home() {
                 <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
                   Doginal Dogs Partnership
                 </h3>
-                <p className="text-xs leading-relaxed text-muted-foreground flex-grow">
+                <p className="text-sm leading-relaxed text-muted-foreground flex-grow">
                   Partnering with the Doginal Dogs community to add value through fresh ideas, video production support for creators, and future real-world collaborations — including a possible retreat on the water and an IRL DDL tournament.
                 </p>
                 <div className="pt-3">
-                  <Link href="/about#doginals" className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1">
+                  <Link href="/about#doginals" className="text-sm font-semibold text-primary hover:underline inline-flex items-center gap-1">
                     <span>Doginal Lessons</span>
                     <ArrowRight className="h-3 w-3" />
                   </Link>
@@ -190,18 +190,18 @@ export default function Home() {
                 <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
                   Crypto Spaces Network (CSN)
                 </h3>
-                <p className="text-xs leading-relaxed text-muted-foreground flex-grow">
+                <p className="text-sm leading-relaxed text-muted-foreground flex-grow">
                   The largest and most trusted live audio network dedicated to Web3. Connecting projects, builders, and communities through daily X Spaces that consistently rank at the top. Let them know Duck sent ya!
                 </p>
                 <div className="pt-3 flex flex-col space-y-2">
-                  <span className="text-[10px] font-mono text-primary italic">
+                  <span className="text-xs font-mono text-primary italic">
                     "Alone you go fast, together we go far"
                   </span>
                   <a
                     href="https://cryptospaces.net"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1"
+                    className="text-sm font-semibold text-primary hover:underline inline-flex items-center gap-1"
                   >
                     <span>Visit CSN Network ↗</span>
                     <ArrowRight className="h-3 w-3" />
@@ -221,7 +221,7 @@ export default function Home() {
                 <BookOpen className="h-5 w-5 text-primary" />
                 <span>Published Articles</span>
               </h2>
-              <Link href="/articles" className="text-xs font-semibold text-primary hover:underline">
+              <Link href="/articles" className="text-sm font-semibold text-primary hover:underline">
                 View all articles
               </Link>
             </div>
@@ -229,42 +229,42 @@ export default function Home() {
             <div className="space-y-6">
               {recentArticles.length > 0 ? (
                 recentArticles.map((article) => (
-                  <article
+                  <Link
                     key={article.slug}
-                    className="p-6 rounded-2xl border border-border bg-card/20 hover:bg-card/45 hover:border-primary/10 transition-all flex flex-col sm:flex-row gap-6"
+                    href={`/articles/${article.slug}`}
+                    className="group p-6 rounded-2xl border border-border bg-card/20 hover:bg-card/45 hover:border-primary/10 transition-all flex flex-col sm:flex-row gap-6 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                   >
                     <div className="relative h-32 w-full sm:w-44 overflow-hidden rounded-xl flex-shrink-0">
                       <Image
                         src={article.image}
-                        alt={article.title}
+                        alt=""
                         fill
                         className="object-cover"
                         sizes="(max-w-640px) 100vw, 176px"
                       />
                     </div>
-                    <div className="flex flex-col justify-between space-y-2">
+                    <div className="flex flex-col justify-between space-y-2 flex-grow">
                       <div>
-                        <div className="flex items-center gap-2 text-[10px] text-muted-foreground font-mono">
+                        <div className="flex items-center gap-2 text-xs text-muted-foreground font-mono">
                           <span className="text-primary">{article.category}</span>
                           <span>&bull;</span>
                           <span>{article.date}</span>
                         </div>
-                        <h3 className="text-base font-bold text-foreground mt-1 hover:text-primary transition-colors">
-                          <Link href={`/articles/${article.slug}`}>{article.title}</Link>
+                        <h3 className="text-base font-bold text-foreground mt-1 group-hover:text-primary transition-colors">
+                          {article.title}
                         </h3>
-                        <p className="text-xs text-muted-foreground line-clamp-2 mt-1 leading-relaxed">
+                        <p className="text-sm text-muted-foreground line-clamp-2 mt-1 leading-relaxed">
                           {article.description}
                         </p>
                       </div>
-                      <Link
-                        href={`/articles/${article.slug}`}
-                        className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1 mt-1"
+                      <span
+                        className="text-sm font-semibold text-primary group-hover:underline inline-flex items-center gap-1 mt-1"
                       >
                         <span>Read full article</span>
-                        <ArrowRight className="h-3 w-3" />
-                      </Link>
+                        <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
+                      </span>
                     </div>
-                  </article>
+                  </Link>
                 ))
               ) : (
                 <div className="text-center py-12 border border-dashed border-border rounded-2xl text-muted-foreground">
@@ -277,7 +277,7 @@ export default function Home() {
           {/* Newsletter Panel */}
           <div className="flex flex-col justify-center h-fit space-y-6 lg:sticky lg:top-24">
             <div className="space-y-2">
-              <span className="px-2 py-0.5 rounded bg-primary/10 text-primary text-xs font-mono border border-primary/20">
+              <span className="px-2.5 py-1 rounded bg-primary/10 text-primary text-sm font-mono border border-primary/20">
                 Direct Updates
               </span>
               <h2 className="text-xl font-bold text-foreground">The Duck Digest</h2>

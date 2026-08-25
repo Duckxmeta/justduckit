@@ -95,7 +95,7 @@ export default function Footer() {
           {/* Navigation links */}
           <div className="mt-8 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
+              <nav aria-label="Footer Navigation">
                 <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider">Navigation</h3>
                 <ul className="mt-4 space-y-2">
                   <li>
@@ -119,8 +119,8 @@ export default function Footer() {
                     </Link>
                   </li>
                 </ul>
-              </div>
-              <div className="mt-8 md:mt-0">
+              </nav>
+              <nav aria-label="Footer Projects" className="mt-8 md:mt-0">
                 <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider">Projects & Sanctuary</h3>
                 <ul className="mt-4 space-y-2">
                   <li className="text-sm text-muted-foreground">
@@ -157,7 +157,7 @@ export default function Footer() {
                     </a>
                   </li>
                 </ul>
-              </div>
+              </nav>
             </div>
             <div>
               <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider">Contact</h3>
@@ -177,10 +177,10 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-12 border-t border-border pt-8 flex items-center justify-between flex-wrap gap-4">
-          <p className="text-xs text-muted-foreground">
+          <p className="text-sm text-muted-foreground">
             &copy; {currentYear} JustDuckIt. All rights reserved.
           </p>
-          <p className="text-xs text-muted-foreground font-mono">
+          <p className="text-sm text-muted-foreground font-mono">
             Designed for <a href="https://justduckit.xyz" className="text-primary hover:underline">justduckit.xyz</a>
           </p>
         </div>

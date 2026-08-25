@@ -21,8 +21,8 @@
     --card: rgba(255, 255, 255, 0.85);
     --card-foreground: #111827;
     --border: rgba(0, 0, 0, 0.06);
-    --primary: #d97706;
-    --primary-hover: #b45309;
+    --primary: #b45309;
+    --primary-hover: #92400e;
     --muted: #4b5563;
     --muted-foreground: #6b7280;
   }
@@ -77,4 +77,13 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary);
+}
+
+/* Global visible focus indicator for accessibility */
+a:focus-visible,
+button:focus-visible,
+[tabindex="0"]:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+  border-radius: 4px;
 }

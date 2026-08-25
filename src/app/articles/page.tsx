@@ -42,15 +42,16 @@ export default function ArticlesPage() {
           {articles.length > 0 ? (
             <div className="grid grid-cols-1 gap-12">
               {articles.map((article, idx) => (
-                <article
+                <Link
                   key={article.slug}
-                  className="group relative flex flex-col md:flex-row gap-8 rounded-3xl border border-border bg-card/25 p-6 hover:bg-card/45 hover:border-primary/15 transition-all duration-300"
+                  href={`/articles/${article.slug}`}
+                  className="group relative flex flex-col md:flex-row gap-8 rounded-3xl border border-border bg-card/25 p-6 hover:bg-card/45 hover:border-primary/15 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                 >
                   {/* Image wrapper */}
                   <div className="relative h-56 w-full md:w-80 overflow-hidden rounded-2xl flex-shrink-0">
                     <Image
                       src={article.image}
-                      alt={article.title}
+                      alt=""
                       fill
                       className="object-cover group-hover:scale-103 transition-transform duration-500"
                       sizes="(max-w-768px) 100vw, 320px"
@@ -75,8 +76,8 @@ export default function ArticlesPage() {
                         </span>
                       </div>
                       
-                      <h2 className="text-2xl font-bold tracking-tight text-foreground hover:text-primary transition-colors">
-                        <Link href={`/articles/${article.slug}`}>{article.title}</Link>
+                      <h2 className="text-2xl font-bold tracking-tight text-foreground group-hover:text-primary transition-colors">
+                        {article.title}
                       </h2>
                       
                       <p className="text-sm leading-relaxed text-muted-foreground">
@@ -85,16 +86,15 @@ export default function ArticlesPage() {
                     </div>
 
                     <div className="pt-4 border-t border-border/50 flex justify-between items-center">
-                      <Link
-                        href={`/articles/${article.slug}`}
-                        className="text-sm font-semibold text-primary hover:underline flex items-center gap-1.5"
+                      <span
+                        className="text-sm font-semibold text-primary group-hover:underline flex items-center gap-1.5"
                       >
                         <span>Read full post</span>
-                        <ArrowRight className="h-4 w-4" />
-                      </Link>
+                        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      </span>
                     </div>
                   </div>
-                </article>
+                </Link>
               ))}
             </div>
           ) : (

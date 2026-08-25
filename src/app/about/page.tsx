@@ -222,9 +222,9 @@ export default function About() {
                               item.company
                             )}
                           </span>
-                          <span className="text-[10px] text-muted-foreground font-mono ml-auto">{item.period}</span>
+                          <span className="text-xs text-muted-foreground font-mono ml-auto">{item.period}</span>
                         </div>
-                        <p className="text-xs text-muted-foreground leading-relaxed">
+                        <p className="text-sm text-muted-foreground leading-relaxed">
                           {item.description}
                         </p>
                       </div>
@@ -274,7 +274,7 @@ export default function About() {
                     href="https://adoptaduck.org"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1"
+                    className="text-sm font-semibold text-primary hover:underline inline-flex items-center gap-1"
                   >
                     <span>Decent Ducks Sanctuary ↗</span>
                   </a>
@@ -318,7 +318,7 @@ export default function About() {
                     href="https://doginaldogs.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1"
+                    className="text-sm font-semibold text-primary hover:underline inline-flex items-center gap-1"
                   >
                     <span>Doginal Dogs ↗</span>
                   </a>
@@ -391,7 +391,7 @@ export default function About() {
                   </span>
                   <a
                     href="mailto:decentducksorg@gmail.com"
-                    className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1"
+                    className="text-sm font-semibold text-primary hover:underline inline-flex items-center gap-1"
                   >
                     <span>Get in Touch / Let’s Collaborate ✉</span>
                   </a>

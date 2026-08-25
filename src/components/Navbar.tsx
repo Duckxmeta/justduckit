@@ -40,7 +40,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-1">
+          <nav aria-label="Main Navigation" className="hidden md:flex space-x-1">
             {navigation.map((item) => {
               const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
               return (
@@ -63,10 +63,10 @@ export default function Navbar() {
           <div className="flex md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center rounded-md p-2 text-muted-foreground hover:bg-white/5 hover:text-foreground focus:outline-none"
+              className="inline-flex items-center justify-center rounded-md p-2 text-muted-foreground hover:bg-white/5 hover:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
               aria-label="Toggle navigation menu"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <X className="h-6 w-6" aria-hidden="true" /> : <Menu className="h-6 w-6" aria-hidden="true" />}
             </button>
           </div>
         </div>
@@ -74,7 +74,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer Menu */}
       {isOpen && (
-        <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-md">
+        <nav aria-label="Mobile Navigation" className="md:hidden border-t border-border bg-background/95 backdrop-blur-md">
           <div className="space-y-1 px-2 pb-3 pt-2">
             {navigation.map((item) => {
               const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
@@ -94,7 +94,7 @@ export default function Navbar() {
               );
             })}
           </div>
-        </div>
+        </nav>
       )}
     </header>
   );
