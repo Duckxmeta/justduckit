@@ -63,7 +63,7 @@ export default function Footer() {
                 <TwitterIcon className="h-5 w-5" />
               </a>
               <a
-                href="https://www.instagram.com/ducksonx?utm_source=qr"
+                href="https://www.instagram.com/justduckits?utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"

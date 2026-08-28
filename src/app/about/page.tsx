@@ -162,7 +162,7 @@ export default function About() {
                 <div className="flex items-center gap-2">
                   <span className="text-xs font-mono text-primary font-bold w-6">IG</span>
                   <a
-                    href="https://www.instagram.com/justduckits"
+                    href="https://www.instagram.com/justduckits?utm_source=qr"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-primary transition-colors hover:underline"
