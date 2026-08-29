@@ -24,40 +24,10 @@ export default function About() {
       description: "Merging the gap between blockchain community and real-life duck care.",
     },
     {
-      role: "Owner",
-      company: "Pjs Media Co",
-      period: "2024 – Present",
-      description: "Directing full-service media production and digital brand building, transitioning client stories into high-growth social assets.",
-    },
-    {
-      role: "Owner",
-      company: "Ikonic Studio",
-      period: "2023 – Present",
-      description: "Managing creative design resources and physical brand collateral assets for growth companies.",
-    },
-    {
-      role: "Director of Operations",
-      company: "Ikon Marketing",
-      period: "2022 – 2023",
-      description: "Led local and regional campaign execution, handling brand placements and direct-to-consumer events.",
-    },
-    {
-      role: "Assistant Director",
-      company: "Red Mountain Events",
-      period: "2021 – 2022",
-      description: "Coordinated logistics, stage production, and vendor systems for medium-to-large-scale events.",
-    },
-    {
-      role: "Events Associate",
-      company: "Coast To Coast Events",
-      period: "2020 – 2021",
-      description: "Assisted in day-of coordination, live events setups, and local promotional distributions.",
-    },
-    {
-      role: "Intern",
-      company: "BeMarketable",
-      period: "2018 – 2020",
-      description: "Gained foundational experience in marketing coordination, campaign tracking, and digital outreach.",
+      role: "Speaking at DDNYC",
+      company: "New York",
+      period: "2026",
+      description: "“Betting on Yourself”",
     },
   ];
 
@@ -103,7 +73,7 @@ export default function About() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Building className="h-4 w-4 text-primary" />
-                  <span>Pjs Media Co & Ikonic Studio</span>
+                  <span>ZEN AI Co. & Decent Ducks</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Award className="h-4 w-4 text-primary" />
@@ -187,13 +157,16 @@ export default function About() {
               </div>
               <div className="space-y-4 text-sm text-muted-foreground leading-relaxed font-sans">
                 <p>
-                  Based in Nashville, Tennessee, we have built a career across media production, brand development, marketing, and live events. Over the years this path has expanded into digital brand building, on-chain communities, and AI-driven creative work.
+                  Based in Nashville, Tennessee, we build media, brands, and communities — from live events and content production to on-chain culture and AI-driven creative work.
                 </p>
                 <p>
-                  We currently operate as Creative Consultants at <a href="https://zenai.world/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">ZEN AI Co.</a>, Founders of <a href="https://adoptaduck.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">Decent Ducks</a> — merging the gap between blockchain community and real-life duck care — and owners of Pjs Media Co and Ikonic Studio.
+                  We currently work as Creative Consultants at <a href="https://zenai.world/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">ZEN AI Co.</a> and as Founders of <a href="https://adoptaduck.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">Decent Ducks</a>, merging blockchain community with real-life duck care. Additional creative, media, and brand work is done directly under our name.
                 </p>
                 <p>
-                  Earlier in our career we held leadership and management roles across the country in marketing, sales, brand development, and event production. This real-world foundation continues to shape how we approach digital and on-chain work today.
+                  We are also public speakers. Next up: speaking at DDNYC in New York on “Betting on Yourself.”
+                </p>
+                <p>
+                  Before this, we spent years in marketing, brand development, and live events. That operating background still shapes how we build today.
                 </p>
               </div>
 
