@@ -34,17 +34,17 @@ export default function Home() {
               Kyle Kinkin (also known online as Duck on X and Just Duck It) is a full-stack developer, digital creator, and founder of the Decent Ducks waterfowl initiative.
             </p>
             <p className="text-sm font-mono text-primary font-semibold tracking-wider uppercase">
-              Next up — speaking at DDNYC.
+              Just locked in — DDNYC with the pack.
             </p>
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link
-              href="/articles/betting-on-yourself-ddnyc"
+              href="/articles/ddnyc-2026-recap"
               className="flex items-center gap-2 rounded-xl bg-primary text-black font-semibold text-sm px-6 py-3.5 hover:bg-primary-hover active:scale-[0.98] transition-all cursor-pointer shadow-lg shadow-primary/10"
             >
               <Mic className="h-4 w-4" />
-              <span>Read the Speaking Preview</span>
+              <span>Read the DDNYC Recap</span>
             </Link>
             <Link
               href="/about"
@@ -69,12 +69,12 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {/* DDNYC Speaking */}
+            {/* DDNYC */}
             <div className="group overflow-hidden rounded-2xl border border-border bg-card/40 backdrop-blur-md hover:border-primary/20 transition-all flex flex-col">
               <div className="relative h-48 w-full overflow-hidden">
                 <Image
                   src="/media/ddnyc-2026-thumbnail.png"
-                  alt="DDNYC Stage Inspiration"
+                  alt="DDNYC with the pack"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                   sizes="(max-w-768px) 100vw, 25vw"
@@ -89,14 +89,14 @@ export default function Home() {
               </div>
               <div className="p-6 flex flex-col flex-grow space-y-2">
                 <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
-                  DDNYC: Speaking Live
+                  DDNYC: The Bet Went Live
                 </h3>
                 <p className="text-sm leading-relaxed text-muted-foreground flex-grow">
-                  A milestone moment presenting in front of 300+ industry builders in New York. Discussing the core strategy of betting on your own ideas, building networks, and scaling digital asset ecosystems.
+                  Discussing the pivotal moment of when betting on yourself changes from just an idea to a reality.
                 </p>
                 <div className="pt-3">
-                  <Link href="/about#ddnyc" className="text-sm font-semibold text-primary hover:underline inline-flex items-center gap-1">
-                    <span>Speaking Details</span>
+                  <Link href="/articles/ddnyc-2026-recap" className="text-sm font-semibold text-primary hover:underline inline-flex items-center gap-1">
+                    <span>Read the Recap</span>
                     <ArrowRight className="h-3 w-3" />
                   </Link>
                 </div>
