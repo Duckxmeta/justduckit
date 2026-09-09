@@ -134,7 +134,9 @@ export default function Footer() {
                     </a>
                   </li>
                   <li className="text-sm text-muted-foreground">
-                    <span className="hover:text-primary transition-colors cursor-pointer">DDNYC Photos</span>
+                    <Link href="/ddnyc-photos" className="hover:text-primary transition-colors cursor-pointer">
+                      DDNYC Photos
+                    </Link>
                   </li>
                   <li className="text-sm text-muted-foreground">
                     <a

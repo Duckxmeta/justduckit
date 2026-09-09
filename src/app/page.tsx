@@ -91,9 +91,13 @@ export default function Home() {
                 <p className="text-sm leading-relaxed text-muted-foreground flex-grow">
                   A milestone moment presenting in front of 300+ industry builders in New York. Discussing the core strategy of betting on your own ideas, building networks, and scaling digital asset ecosystems.
                 </p>
-                <div className="pt-3">
+                <div className="pt-3 flex items-center justify-between gap-2">
                   <Link href="/about#ddnyc" className="text-sm font-semibold text-primary hover:underline inline-flex items-center gap-1">
                     <span>Speaking Details</span>
+                    <ArrowRight className="h-3 w-3" />
+                  </Link>
+                  <Link href="/ddnyc-photos" className="text-sm font-semibold text-primary hover:underline inline-flex items-center gap-1">
+                    <span>View Photos</span>
                     <ArrowRight className="h-3 w-3" />
                   </Link>
                 </div>
