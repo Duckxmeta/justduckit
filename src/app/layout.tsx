@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     description: "Kyle Kinkin — known as Duck and JustDuckIt — builds media, events, and Decent Ducks. Spoke at DDNYC 2026 in New York on Betting on Yourself.",
     images: [
       {
-        url: "/media/decent-duck-logo.png",
+        url: "/media/decent-ducks-nft-solana.png",
         width: 788,
         height: 788,
         alt: "JustDuckIt black duck logo",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Kyle Kinkin | JustDuckIt",
     description: "Kyle Kinkin — known as Duck and JustDuckIt — builds media, events, and Decent Ducks. Spoke at DDNYC 2026 in New York on Betting on Yourself.",
-    images: ["/media/decent-duck-logo.png"],
+    images: ["/media/decent-ducks-nft-solana.png"],
     creator: "@kylekinkin",
   },
   robots: {

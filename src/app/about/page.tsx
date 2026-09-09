@@ -38,7 +38,7 @@ export default function About() {
     "name": "Kyle Kinkin",
     "alternateName": ["Duck", "JustDuckIt", "Ducksonx"],
     "url": "https://justduckit.xyz",
-    "image": "https://justduckit.xyz/media/ddnyc-stage-closeup.jpg",
+    "image": "https://justduckit.xyz/media/ddnyc-speaking-thumbnail.jpg",
     "jobTitle": "Media and events builder",
     "address": {
       "@type": "PostalAddress",
@@ -87,7 +87,7 @@ export default function About() {
           <div className="lg:col-span-4 flex flex-col items-center lg:items-start space-y-6">
             <div className="relative h-80 w-80 overflow-hidden rounded-3xl border border-border shadow-2xl shadow-amber-500/5 group">
               <Image
-                src="/media/ddnyc-stage-closeup.jpg"
+                src="/media/ddnyc-speaking-thumbnail.jpg"
                 alt="Kyle Kinkin speaking on the DDNYC 2026 panel in New York"
                 fill
                 className="object-cover object-top group-hover:scale-102 transition-transform duration-300"
@@ -271,7 +271,7 @@ export default function About() {
                   </h2>
                   <div className="relative h-7 w-7 overflow-hidden rounded-md border border-border/50">
                     <Image
-                      src="/media/decent-duck-logo.png"
+                      src="/media/decent-ducks-logo-thumbnail.png"
                       alt="JustDuckIt black duck logo"
                       fill
                       className="object-cover"
