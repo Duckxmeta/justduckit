@@ -38,8 +38,8 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-3">
               <div className="relative h-7 w-7 overflow-hidden rounded-lg border border-border">
                 <Image
-                  src="/media/decent-ducks-nft-solana.png"
-                  alt="Decent Ducks Solana NFT art collection founded by Kyle Kinkin (@DucksOnX)."
+                  src="/media/decent-duck-logo.png"
+                  alt="Decent Ducks logo"
                   fill
                   className="object-cover"
                   sizes="28px"
