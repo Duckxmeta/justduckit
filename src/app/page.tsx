@@ -104,7 +104,7 @@ export default function Home() {
             <div className="group overflow-hidden rounded-2xl border border-border bg-card/40 backdrop-blur-md hover:border-primary/20 transition-all flex flex-col">
               <div className="relative h-48 w-full overflow-hidden">
                 <Image
-                  src="/media/decent-ducks-logo-thumbnail.png"
+                  src="/media/decent-ducks-nft-solana.png"
                   alt="JustDuckIt black duck logo"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"

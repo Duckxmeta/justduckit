@@ -39,7 +39,7 @@ export default function Footer() {
               <div className="relative h-7 w-7 overflow-hidden rounded-lg border border-border">
                 <Image
                   src="/media/decent-ducks-nft-solana.png"
-                  alt="Decent Ducks Solana NFT art collection founded by Kyle Kinkin (@DucksOnX)."
+                  alt="JustDuckIt black duck logo"
                   fill
                   className="object-cover"
                   sizes="28px"

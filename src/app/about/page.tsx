@@ -173,7 +173,7 @@ export default function About() {
             <div className="rounded-2xl border border-primary/20 bg-primary/5 p-6 space-y-2">
               <h2 className="text-lg font-bold text-foreground">Who is Kyle Kinkin?</h2>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Kyle Kinkin is a Nashville-based media and events builder, founder of Decent Ducks, and a DDNYC 2026 speaker. Online he is known as Duck and JustDuckIt.
+                Kyle Kinkin is a Nashville-based media and events builder, founder of <a href="https://adoptaduck.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">Decent Ducks</a>, and a DDNYC 2026 speaker. Online he is known as Duck and JustDuckIt.
               </p>
             </div>
 
@@ -205,7 +205,9 @@ export default function About() {
                 <h3 className="text-base font-bold text-foreground">Active Work</h3>
                 <div className="space-y-6 text-sm leading-relaxed">
                   <div className="space-y-1">
-                    <h4 className="font-bold text-foreground text-base">Decent Ducks</h4>
+                    <h4 className="font-bold text-foreground text-base">
+                      <a href="https://adoptaduck.org" target="_blank" rel="noopener noreferrer" className="hover:text-primary underline">Decent Ducks</a>
+                    </h4>
                     <p className="text-muted-foreground">On-chain project that supports a real-life duck sanctuary.</p>
                   </div>
                   <div className="space-y-1">
@@ -231,7 +233,7 @@ export default function About() {
                   </h2>
                   <div className="relative h-7 w-7 overflow-hidden rounded-md border border-border/50">
                     <Image
-                      src="/media/decent-ducks-logo-thumbnail.png"
+                      src="/media/decent-ducks-nft-solana.png"
                       alt="JustDuckIt black duck logo"
                       fill
                       className="object-cover"

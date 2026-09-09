@@ -27,7 +27,7 @@ export default function Navbar() {
               <div className="relative h-9 w-9 overflow-hidden rounded-lg border border-border group-hover:border-primary transition-colors">
                 <Image
                   src="/media/decent-ducks-nft-solana.png"
-                  alt="Decent Ducks Solana NFT art collection founded by Kyle Kinkin (@DucksOnX)."
+                  alt="JustDuckIt black duck logo"
                   fill
                   className="object-cover"
                   sizes="36px"
