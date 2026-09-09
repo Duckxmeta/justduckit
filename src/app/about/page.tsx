@@ -15,7 +15,7 @@ export default function About() {
     "name": "Kyle Kinkin",
     "alternateName": ["Duck", "JustDuckIt", "Ducksonx"],
     "url": "https://justduckit.xyz",
-    "image": "https://justduckit.xyz/media/ddnyc-speaking-thumbnail.jpg",
+    "image": "https://justduckit.xyz/media/ddnyc-speaking-upclose.jpeg",
     "jobTitle": "Media and events builder",
     "address": {
       "@type": "PostalAddress",
@@ -64,7 +64,7 @@ export default function About() {
           <div className="lg:col-span-4 flex flex-col items-center lg:items-start space-y-6">
             <div className="relative h-80 w-80 overflow-hidden rounded-3xl border border-border shadow-2xl shadow-amber-500/5 group">
               <Image
-                src="/media/ddnyc-speaking-thumbnail.jpg"
+                src="/media/ddnyc-speaking-upclose.jpeg"
                 alt="Kyle Kinkin speaking on the DDNYC 2026 panel in New York"
                 fill
                 className="object-cover object-top group-hover:scale-102 transition-transform duration-300"

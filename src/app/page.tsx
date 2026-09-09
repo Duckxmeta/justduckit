@@ -70,7 +70,7 @@ export default function Home() {
             <div className="group overflow-hidden rounded-2xl border border-border bg-card/40 backdrop-blur-md hover:border-primary/20 transition-all flex flex-col">
               <div className="relative h-48 w-full overflow-hidden">
                 <Image
-                  src="/media/ddnyc-2026-thumbnail.png"
+                  src="/media/ddnyc-speaking-panel.JPG"
                   alt="Kyle Kinkin speaking on the DDNYC 2026 panel in New York"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
