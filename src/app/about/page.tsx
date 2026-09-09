@@ -45,7 +45,7 @@ export default function About() {
                 src="/media/ddnyc-stage-closeup.jpg"
                 alt="Kyle Kinkin speaking on stage at the DDNYC panel."
                 fill
-                className="object-cover group-hover:scale-102 transition-transform duration-300"
+                className="object-cover object-top group-hover:scale-102 transition-transform duration-300"
                 sizes="320px"
                 priority
               />
