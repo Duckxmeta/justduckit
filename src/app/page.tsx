@@ -31,20 +31,17 @@ export default function Home() {
  
           <div className="space-y-4 max-w-3xl mx-auto">
             <p className="text-lg leading-8 text-muted-foreground">
-              Kyle Kinkin (also known online as Duck on X and Just Duck It) is a full-stack developer, digital creator, and founder of the Decent Ducks waterfowl initiative.
-            </p>
-            <p className="text-sm font-mono text-primary font-semibold tracking-wider uppercase">
-              Just locked in — DDNYC with the pack.
+              Kyle Kinkin — known as Duck and JustDuckIt — builds media, events, and Decent Ducks, a real waterfowl sanctuary tied to on-chain community. Spoke at DDNYC 2026 in New York.
             </p>
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link
-              href="/articles/ddnyc-2026-recap"
+              href="/articles/betting-on-yourself-ddnyc"
               className="flex items-center gap-2 rounded-xl bg-primary text-black font-semibold text-sm px-6 py-3.5 hover:bg-primary-hover active:scale-[0.98] transition-all cursor-pointer shadow-lg shadow-primary/10"
             >
               <Mic className="h-4 w-4" />
-              <span>Read the DDNYC Recap</span>
+              <span>Read Speaking Essay</span>
             </Link>
             <Link
               href="/about"
@@ -69,12 +66,12 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {/* DDNYC */}
+            {/* DDNYC Speaking */}
             <div className="group overflow-hidden rounded-2xl border border-border bg-card/40 backdrop-blur-md hover:border-primary/20 transition-all flex flex-col">
               <div className="relative h-48 w-full overflow-hidden">
                 <Image
-                  src="/media/ddnyc-2026-thumbnail.png"
-                  alt="DDNYC with the pack"
+                  src="/media/ddnyc-panel.jpg"
+                  alt="Kyle Kinkin speaking on the DDNYC 2026 panel in New York"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                   sizes="(max-w-768px) 100vw, 25vw"
@@ -89,14 +86,14 @@ export default function Home() {
               </div>
               <div className="p-6 flex flex-col flex-grow space-y-2">
                 <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
-                  DDNYC: The Bet Went Live
+                  DDNYC 2026 Speaker
                 </h3>
                 <p className="text-sm leading-relaxed text-muted-foreground flex-grow">
-                  Discussing the pivotal moment of when betting on yourself changes from just an idea to a reality.
+                  A milestone moment presenting in front of 300+ industry builders in New York. Discussing the core strategy of betting on your own ideas, building networks, and scaling digital asset ecosystems.
                 </p>
                 <div className="pt-3">
-                  <Link href="/articles/ddnyc-2026-recap" className="text-sm font-semibold text-primary hover:underline inline-flex items-center gap-1">
-                    <span>Read the Recap</span>
+                  <Link href="/about#ddnyc" className="text-sm font-semibold text-primary hover:underline inline-flex items-center gap-1">
+                    <span>Speaking Details</span>
                     <ArrowRight className="h-3 w-3" />
                   </Link>
                 </div>
@@ -107,8 +104,8 @@ export default function Home() {
             <div className="group overflow-hidden rounded-2xl border border-border bg-card/40 backdrop-blur-md hover:border-primary/20 transition-all flex flex-col">
               <div className="relative h-48 w-full overflow-hidden">
                 <Image
-                  src="/media/decent-ducks-logo-thumbnail.png"
-                  alt="Decent Ducks Sanctuary Brand"
+                  src="/media/decent-duck-logo.png"
+                  alt="JustDuckIt black duck logo"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                   sizes="(max-w-768px) 100vw, 25vw"

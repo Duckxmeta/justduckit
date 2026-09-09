@@ -3,8 +3,8 @@ import { MessageSquare, Calendar, Mic, Sparkles, Heart, Building, Award, Target,
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About",
-  description: "Kyle Kinkin's professional path in media and events, the pivot story of Decent Ducks, Doginal Dogs community leadership, and his speaking engagement at DDNYC.",
+  title: "About Kyle Kinkin — Duck, Decent Ducks, DDNYC",
+  description: "Kyle Kinkin is a Nashville-based media and events builder, founder of Decent Ducks, and a DDNYC 2026 speaker. Online he is known as Duck and JustDuckIt.",
 };
 
 export default function About() {
@@ -24,15 +24,60 @@ export default function About() {
       description: "Merging the gap between blockchain community and real-life duck care.",
     },
     {
-      role: "Speaking at DDNYC",
+      role: "Speaking at DDNYC 2026",
       company: "New York",
       period: "2026",
       description: "“Betting on Yourself”",
     },
   ];
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://justduckit.xyz/about/#person",
+    "name": "Kyle Kinkin",
+    "alternateName": ["Duck", "JustDuckIt", "Ducksonx"],
+    "url": "https://justduckit.xyz",
+    "image": "https://justduckit.xyz/media/ddnyc-stage-closeup.jpg",
+    "jobTitle": "Media and events builder",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Nashville",
+      "addressRegion": "Tennessee"
+    },
+    "sameAs": [
+      "https://x.com/Ducksonx",
+      "https://www.instagram.com/justduckits?utm_source=qr",
+      "https://www.tiktok.com/@just.duckit",
+      "https://discord.gg/Ry8zBm5Yvb",
+      "https://adoptaduck.org",
+      "https://zenai.world"
+    ],
+    "performerIn": [
+      {
+        "@type": "Event",
+        "name": "DDNYC 2026 (Doginal Dogs New York City)",
+        "startDate": "2026-09-02",
+        "endDate": "2026-09-04",
+        "location": {
+          "@type": "Place",
+          "name": "Dream Downtown",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "New York",
+            "addressRegion": "NY"
+          }
+        }
+      }
+    ]
+  };
+
   return (
     <div className="relative isolate overflow-hidden min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
         
         {/* Main Grid: Info Sidebar & rest of copy */}
@@ -42,10 +87,10 @@ export default function About() {
           <div className="lg:col-span-4 flex flex-col items-center lg:items-start space-y-6">
             <div className="relative h-80 w-80 overflow-hidden rounded-3xl border border-border shadow-2xl shadow-amber-500/5 group">
               <Image
-                src="/media/kyle-kinkin-decent-ducks-founder.jpg"
-                alt="Kyle Kinkin, founder of JustDuckit and Decent Ducks, holding a sanctuary bird."
+                src="/media/ddnyc-stage-closeup.jpg"
+                alt="Kyle Kinkin speaking on the DDNYC 2026 panel in New York"
                 fill
-                className="object-cover group-hover:scale-102 transition-transform duration-300"
+                className="object-cover object-top group-hover:scale-102 transition-transform duration-300"
                 sizes="320px"
                 priority
               />
@@ -147,6 +192,14 @@ export default function About() {
           {/* Right Main Content: 5-Part Narrative Structure */}
           <div className="lg:col-span-8 space-y-16">
             
+            {/* Answer Box: Who is Kyle Kinkin? */}
+            <div className="rounded-2xl border border-primary/20 bg-primary/5 p-6 space-y-2">
+              <h2 className="text-lg font-bold text-foreground">Who is Kyle Kinkin?</h2>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Kyle Kinkin is a Nashville-based media and events builder, founder of Decent Ducks, and a DDNYC 2026 speaker. Online he is known as Duck and JustDuckIt.
+              </p>
+            </div>
+
             {/* Section 1: Professional Bio */}
             <section id="bio" className="space-y-6">
               <div className="space-y-2">
@@ -163,7 +216,7 @@ export default function About() {
                   We currently work as Creative Consultants at <a href="https://zenai.world/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">ZEN AI Co.</a> and as Founders of <a href="https://adoptaduck.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">Decent Ducks</a>, merging blockchain community with real-life duck care. Additional creative, media, and brand work is done directly under our name.
                 </p>
                 <p>
-                  We are also public speakers. Next up: speaking at DDNYC in New York on “Betting on Yourself.”
+                  We are also public speakers. Spoke at DDNYC 2026 in New York on “Betting on Yourself.”
                 </p>
                 <p>
                   Before this, we spent years in marketing, brand development, and live events. That operating background still shapes how we build today.
@@ -218,8 +271,8 @@ export default function About() {
                   </h2>
                   <div className="relative h-7 w-7 overflow-hidden rounded-md border border-border/50">
                     <Image
-                      src="/media/decent-ducks-nft-solana.png"
-                      alt="Decent Ducks Solana NFT art collection founded by Kyle Kinkin (@DucksOnX)."
+                      src="/media/decent-duck-logo.png"
+                      alt="JustDuckIt black duck logo"
                       fill
                       className="object-cover"
                       sizes="28px"
@@ -310,12 +363,12 @@ export default function About() {
               </div>
               <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
                 <p>
-                  This journey comes to a massive milestone at **DDNYC (Doginal Dogs New York City)**. 
-                  We will be participating in the summit, with Kyle Kinkin taking the stage as a featured speaker, presenting in front of an audience of 300+ founders, 
+                  This journey reached a massive milestone at **DDNYC (Doginal Dogs New York City)**. 
+                  Kyle Kinkin took the stage as a featured speaker, presenting in front of an audience of 300+ founders, 
                   creators, and digital asset builders.
                 </p>
                 <p>
-                  Our speaking topic is **“Betting on Yourself.”** 
+                  Our speaking topic was **“Betting on Yourself.”** 
                   It is a distillation of our career path: leaving the comfort of established, traditional event coordination, 
                   embracing the unexpected inspiration of Decent Ducks, navigating the complex world of Web3 inscriptions, 
                   and building agencies that empower creators. It’s a case study on why the biggest risk you can take is not taking a risk on your own vision.
