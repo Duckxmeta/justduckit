@@ -8,29 +8,6 @@ export const metadata: Metadata = {
 };
 
 export default function About() {
-  const eventTimeline = [
-    {
-      role: "Creative Consultants",
-      company: "ZEN AI Co.",
-      companyUrl: "https://zenai.world/",
-      period: "2025 – Present",
-      description: "Providing strategic creative direction and advisory services on brand development and digital art systems.",
-    },
-    {
-      role: "Founder",
-      company: "Decent Ducks",
-      companyUrl: "https://adoptaduck.org",
-      period: "2025 – Present",
-      description: "Merging the gap between blockchain community and real-life duck care.",
-    },
-    {
-      role: "Speaking at DDNYC 2026",
-      company: "New York",
-      period: "2026",
-      description: "“Betting on Yourself”",
-    },
-  ];
-
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -216,46 +193,29 @@ export default function About() {
                   We currently work as Creative Consultants at <a href="https://zenai.world/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">ZEN AI Co.</a> and as Founders of <a href="https://adoptaduck.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">Decent Ducks</a>, merging blockchain community with real-life duck care. Additional creative, media, and brand work is done directly under our name.
                 </p>
                 <p>
-                  We are also public speakers. Spoke at DDNYC 2026 in New York on “Betting on Yourself.”
+                  Spoke at DDNYC 2026 in New York on ‘Betting on Yourself.’
                 </p>
                 <p>
                   Before this, we spent years in marketing, brand development, and live events. That operating background still shapes how we build today.
                 </p>
               </div>
 
-              {/* Career Timeline */}
-              <div className="mt-8 border-t border-border/50 pt-8">
-                <h3 className="text-base font-bold text-foreground mb-6">Career Timeline</h3>
-                <div className="space-y-6 relative before:absolute before:inset-y-0 before:left-3 before:w-0.5 before:bg-border">
-                  {eventTimeline.map((item, idx) => (
-                    <div key={idx} className="relative pl-8">
-                      <div className="absolute left-1.5 top-1.5 h-3.5 w-3.5 rounded-full bg-primary border-4 border-background" />
-                      <div className="space-y-1">
-                        <div className="flex flex-wrap items-baseline gap-2">
-                          <span className="text-sm font-bold text-foreground">{item.role}</span>
-                          <span className="text-xs text-primary font-mono font-semibold">
-                            at{" "}
-                            {item.companyUrl ? (
-                              <a
-                                href={item.companyUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="underline hover:text-primary-hover"
-                              >
-                                {item.company}
-                              </a>
-                            ) : (
-                              item.company
-                            )}
-                          </span>
-                          <span className="text-xs text-muted-foreground font-mono ml-auto">{item.period}</span>
-                        </div>
-                        <p className="text-sm text-muted-foreground leading-relaxed">
-                          {item.description}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
+              {/* Active Work */}
+              <div className="mt-8 border-t border-border/50 pt-8 space-y-6">
+                <h3 className="text-base font-bold text-foreground">Active Work</h3>
+                <div className="space-y-6 text-sm leading-relaxed">
+                  <div className="space-y-1">
+                    <h4 className="font-bold text-foreground text-base">Decent Ducks</h4>
+                    <p className="text-muted-foreground">On-chain project that supports a real-life duck sanctuary.</p>
+                  </div>
+                  <div className="space-y-1">
+                    <h4 className="font-bold text-foreground text-base">
+                      <a href="https://zenai.world/" target="_blank" rel="noopener noreferrer" className="hover:text-primary underline">ZEN AI Co.</a>
+                    </h4>
+                    <p className="text-muted-foreground">
+                      Creative consultants at <a href="https://zenai.world/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">ZEN AI Co.</a> Combines custom agentic systems and the Arsenal platform — an intelligent operations system designed to build, connect, and automate business workflows.
+                    </p>
+                  </div>
                 </div>
               </div>
             </section>
@@ -358,7 +318,7 @@ export default function About() {
                 <span className="text-xs font-mono text-primary uppercase tracking-widest font-semibold">Part 4</span>
                 <h2 className="text-2xl font-bold text-foreground flex items-center gap-2 border-b border-border pb-2">
                   <Mic className="h-5 w-5 text-primary" />
-                  <span>Speaking Live at DDNYC</span>
+                  <span>Spoke Live at DDNYC 2026</span>
                 </h2>
               </div>
               <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
