@@ -6,7 +6,16 @@ import NewsletterForm from "@/components/NewsletterForm";
 
 export default function Home() {
   const articles = getAllArticles();
-  const recentArticles = articles.slice(0, 2);
+  // Filter out any promotional posts for Doginal or ZEN from homepage featured articles
+  const recentArticles = articles
+    .filter(
+      (article) =>
+        !article.slug.toLowerCase().includes("doginal") &&
+        !article.slug.toLowerCase().includes("zen") &&
+        !article.title.toLowerCase().includes("doginal") &&
+        !article.title.toLowerCase().includes("zen")
+    )
+    .slice(0, 2);
 
   return (
     <div className="relative isolate overflow-hidden min-h-screen">
@@ -61,11 +70,11 @@ export default function Home() {
               <span>Featured Initiatives</span>
             </h2>
             <p className="text-sm text-muted-foreground mt-2">
-              The pivot from traditional event management to digital brand building and on-chain communities.
+              The pivot from traditional event management to digital brand building, waterfowl rescue, and building in public.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             {/* DDNYC Speaking */}
             <div className="group overflow-hidden rounded-2xl border border-border bg-card/40 backdrop-blur-md hover:border-primary/20 transition-all flex flex-col">
               <div className="relative h-48 w-full overflow-hidden">
@@ -74,7 +83,7 @@ export default function Home() {
                   alt="Kyle Kinkin speaking on the DDNYC 2026 panel in New York"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-w-768px) 100vw, 25vw"
+                  sizes="(max-w-768px) 100vw, 33vw"
                   priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
@@ -112,7 +121,7 @@ export default function Home() {
                   alt="JustDuckIt black duck logo"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-w-768px) 100vw, 25vw"
+                  sizes="(max-w-768px) 100vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
                 <div className="absolute bottom-3 left-3">
@@ -137,76 +146,35 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Doginal Dogs Partnership */}
+            {/* Building in Public & Media */}
             <div className="group overflow-hidden rounded-2xl border border-border bg-card/40 backdrop-blur-md hover:border-primary/20 transition-all flex flex-col">
               <div className="relative h-48 w-full overflow-hidden">
                 <Image
-                  src="/media/doginal-dogs-pool-thumbnail.png"
-                  alt="Doginal Dogs Asset"
+                  src="/media/ddnyc-2026-thumbnail.png"
+                  alt="Building in public and media journey"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-w-768px) 100vw, 25vw"
+                  sizes="(max-w-768px) 100vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
                 <div className="absolute bottom-3 left-3">
                   <span className="px-2 py-0.5 rounded bg-amber-500/10 text-primary text-xs font-mono border border-primary/20 backdrop-blur-md">
-                    DOGE Blockchain
+                    Media & Content
                   </span>
                 </div>
               </div>
               <div className="p-6 flex flex-col flex-grow space-y-2">
                 <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
-                  Doginal Dogs Partnership
+                  Building in Public
                 </h3>
                 <p className="text-sm leading-relaxed text-muted-foreground flex-grow">
-                  Partnering with the Doginal Dogs community to add value through fresh ideas, video production support for creators, and future real-world collaborations — including a possible retreat on the water and an IRL DDL tournament.
+                  Documenting the journey of scaling Decent Ducks, content creation, and media production — sharing real-world lessons from waterfowl rescue to digital brand building.
                 </p>
                 <div className="pt-3">
-                  <Link href="/about#doginals" className="text-sm font-semibold text-primary hover:underline inline-flex items-center gap-1">
-                    <span>Doginal Lessons</span>
+                  <Link href="/articles" className="text-sm font-semibold text-primary hover:underline inline-flex items-center gap-1">
+                    <span>Read Essays</span>
                     <ArrowRight className="h-3 w-3" />
                   </Link>
-                </div>
-              </div>
-            </div>
-
-            {/* Crypto Spaces Network */}
-            <div className="group overflow-hidden rounded-2xl border border-border bg-card/40 backdrop-blur-md hover:border-primary/20 transition-all flex flex-col">
-              <div className="relative h-48 w-full overflow-hidden">
-                <Image
-                  src="/media/crypto-spaces-network.jpg"
-                  alt="Crypto Spaces Network Logo"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-w-768px) 100vw, 25vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
-                <div className="absolute bottom-3 left-3">
-                  <span className="px-2 py-0.5 rounded bg-amber-500/10 text-primary text-xs font-mono border border-primary/20 backdrop-blur-md">
-                    Web3 Audio Network
-                  </span>
-                </div>
-              </div>
-              <div className="p-6 flex flex-col flex-grow space-y-2">
-                <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
-                  Crypto Spaces Network (CSN)
-                </h3>
-                <p className="text-sm leading-relaxed text-muted-foreground flex-grow">
-                  The largest and most trusted live audio network dedicated to Web3. Connecting projects, builders, and communities through daily X Spaces that consistently rank at the top. Let them know Duck sent ya!
-                </p>
-                <div className="pt-3 flex flex-col space-y-2">
-                  <span className="text-xs font-mono text-primary italic">
-                    "Alone you go fast, together we go far"
-                  </span>
-                  <a
-                    href="https://cryptospaces.net"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm font-semibold text-primary hover:underline inline-flex items-center gap-1"
-                  >
-                    <span>Visit CSN Network ↗</span>
-                    <ArrowRight className="h-3 w-3" />
-                  </a>
                 </div>
               </div>
             </div>

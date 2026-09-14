@@ -33,7 +33,7 @@ export default function About() {
     "performerIn": [
       {
         "@type": "Event",
-        "name": "DDNYC 2026 (Doginal Dogs New York City)",
+        "name": "DDNYC 2026",
         "startDate": "2026-09-02",
         "endDate": "2026-09-04",
         "location": {
@@ -95,27 +95,49 @@ export default function About() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Building className="h-4 w-4 text-primary" />
-                  <span>ZEN AI Co. & Decent Ducks</span>
+                  <span>Decent Ducks & ZEN AI Co.</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Award className="h-4 w-4 text-primary" />
-                  <span>Web3 Communities Leader</span>
+                  <span>DDNYC 2026 Speaker</span>
                 </div>
               </div>
             </div>
 
             <div className="w-full max-w-sm rounded-2xl border border-border bg-card/20 p-6 space-y-4">
-              <h3 className="text-sm font-bold text-foreground uppercase tracking-wider">Ecosystem / Featured</h3>
+              <h3 className="text-sm font-bold text-foreground uppercase tracking-wider">Links & Community</h3>
               <div className="space-y-3 text-sm text-muted-foreground font-sans">
                 <div className="flex items-center gap-2">
-                  <span className="text-xs font-mono text-primary font-bold w-6">X</span>
+                  <span className="text-xs font-mono text-primary font-bold w-6">DD</span>
                   <a
-                    href="https://x.com/i/articles/1817887317765103616"
+                    href="https://adoptaduck.org"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-primary transition-colors hover:underline"
                   >
-                    X Published Article ↗
+                    Decent Ducks Sanctuary ↗
+                  </a>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-xs font-mono text-primary font-bold w-6">ZN</span>
+                  <a
+                    href="https://zenai.world/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors hover:underline"
+                  >
+                    ZEN AI Co. ↗
+                  </a>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-xs font-mono text-primary font-bold w-6">DG</span>
+                  <a
+                    href="https://doginaldogs.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors hover:underline"
+                  >
+                    Doginal Dogs ↗
                   </a>
                 </div>
                 <div className="flex items-center gap-2">
@@ -166,7 +188,7 @@ export default function About() {
             </div>
           </div>
 
-          {/* Right Main Content: 5-Part Narrative Structure */}
+          {/* Right Main Content: Structured Narrative */}
           <div className="lg:col-span-8 space-y-16">
             
             {/* Answer Box: Who is Kyle Kinkin? */}
@@ -187,10 +209,7 @@ export default function About() {
               </div>
               <div className="space-y-4 text-sm text-muted-foreground leading-relaxed font-sans">
                 <p>
-                  Based in Nashville, Tennessee, we build media, brands, and communities — from live events and content production to on-chain culture and AI-driven creative work.
-                </p>
-                <p>
-                  We currently work as Creative Consultants at <a href="https://zenai.world/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">ZEN AI Co.</a> and as Founders of <a href="https://adoptaduck.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">Decent Ducks</a>, merging blockchain community with real-life duck care. Additional creative, media, and brand work is done directly under our name.
+                  Based in Nashville, Tennessee, we build media, brands, and communities — from live events and content production to on-chain culture and waterfowl rescue.
                 </p>
                 <p>
                   Spoke at DDNYC 2026 in New York on ‘Betting on Yourself.’
@@ -215,7 +234,7 @@ export default function About() {
                       <a href="https://zenai.world/" target="_blank" rel="noopener noreferrer" className="hover:text-primary underline">ZEN AI Co.</a>
                     </h4>
                     <p className="text-muted-foreground">
-                      Creative consultants at <a href="https://zenai.world/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">ZEN AI Co.</a> Combines custom agentic systems and the Arsenal platform — an intelligent operations system designed to build, connect, and automate business workflows.
+                      Creative consultants at <a href="https://zenai.world/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">ZEN AI Co.</a>
                     </p>
                   </div>
                 </div>
@@ -244,18 +263,13 @@ export default function About() {
               </div>
               <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
                 <p>
-                  Traditional event management is built on checklists, physical venues, and local attendance. While we loved the execution of physical events, 
-                  the catalyst that pivoted our path came from a very unexpected place: raising ducks.
+                  Traditional event management is built on physical venues, local logistics, and scheduled programming. While we loved the execution of physical events, the catalyst that pivoted our path came from an unexpected place: raising ducks.
                 </p>
                 <p>
-                  Caring for these birds led to founding the <strong className="text-foreground">Decent Ducks Sanctuary</strong>, a physical rescue project 
-                  that we quickly realized had a global story to tell. To fund and build a community around the sanctuary, we launched the 
-                  <strong className="text-foreground">Decent Ducks NFT project</strong> on Web3. 
+                  Caring for these birds led to founding the <strong className="text-foreground">Decent Ducks Sanctuary</strong>, a physical rescue project with a story to share globally. To fund and build a community around the sanctuary, we launched the <strong className="text-foreground">Decent Ducks NFT project</strong> on Solana.
                 </p>
                 <p>
-                  Managing a digital ecosystem of art, community discord, and smart contract assets completely shifted our perspective. 
-                  It was the spark that proved to us that digital brand building and direct-to-consumer content creation could reach further 
-                  and scale faster than local, traditional marketing ever could. This spark led directly to founding Ikonic Studio and Pjs Media.
+                  Managing a digital ecosystem of art, community Discord, and smart contract assets completely shifted our perspective. It proved that digital brand building and direct content creation could scale faster and reach further than traditional marketing.
                 </p>
                 <div className="pt-1">
                   <a
@@ -270,54 +284,10 @@ export default function About() {
               </div>
             </section>
 
-            {/* Section 3: Doginal Dogs Chapter */}
-            <section id="doginals" className="space-y-6 scroll-mt-24">
-              <div className="space-y-2">
-                <span className="text-xs font-mono text-primary uppercase tracking-widest font-semibold">Part 3</span>
-                <div className="flex items-center gap-3 border-b border-border pb-2">
-                  <h2 className="text-2xl font-bold text-foreground flex items-center gap-2">
-                    <Sparkles className="h-5 w-5 text-primary" />
-                    <span>The Doginal Dogs Chapter</span>
-                  </h2>
-                  <div className="relative h-7 w-7 overflow-hidden rounded-md border border-border/50">
-                    <Image
-                      src="/media/doginal-dog-4199.png"
-                      alt="Doginal Dog #4199"
-                      fill
-                      className="object-cover"
-                      sizes="28px"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
-                <p>
-                  If Decent Ducks was the spark, partnering with **Doginal Dogs** represents the next level of our career. 
-                  Doginal Dogs is an active community built on the Dogecoin (DOGE) blockchain, utilizing raw witness transaction inscriptions 
-                  to preserve digital art directly on-chain.
-                </p>
-                <p>
-                  Stepping into leadership and strategic partnership within the Doginal Dogs ecosystem has allowed us to apply our years of media production 
-                  and event coordination directly to decentralized technology. By aligning community management, digital content, and on-chain mechanics, 
-                  we have pushed the boundaries of what digital art communities can achieve in terms of engagement, utility, and value scaling.
-                </p>
-                <div className="pt-1">
-                  <a
-                    href="https://doginaldogs.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm font-semibold text-primary hover:underline inline-flex items-center gap-1"
-                  >
-                    <span>Doginal Dogs ↗</span>
-                  </a>
-                </div>
-              </div>
-            </section>
-
-            {/* Section 4: DDNYC Speaking Engagement */}
+            {/* Section 3: DDNYC Speaking Engagement */}
             <section id="ddnyc" className="space-y-6 scroll-mt-24">
               <div className="space-y-2">
-                <span className="text-xs font-mono text-primary uppercase tracking-widest font-semibold">Part 4</span>
+                <span className="text-xs font-mono text-primary uppercase tracking-widest font-semibold">Part 3</span>
                 <h2 className="text-2xl font-bold text-foreground flex items-center gap-2 border-b border-border pb-2">
                   <Mic className="h-5 w-5 text-primary" />
                   <span>Spoke Live at DDNYC 2026</span>
@@ -325,23 +295,18 @@ export default function About() {
               </div>
               <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
                 <p>
-                  This journey reached a massive milestone at **DDNYC (Doginal Dogs New York City)**. 
-                  Kyle Kinkin took the stage as a featured speaker, presenting in front of an audience of 300+ founders, 
-                  creators, and digital asset builders.
+                  This journey reached a key milestone at **DDNYC** in New York City. Kyle Kinkin took the stage as a featured speaker, presenting in front of an audience of 300+ founders, creators, and digital asset builders.
                 </p>
                 <p>
-                  Our speaking topic was **“Betting on Yourself.”** 
-                  It is a distillation of our career path: leaving the comfort of established, traditional event coordination, 
-                  embracing the unexpected inspiration of Decent Ducks, navigating the complex world of Web3 inscriptions, 
-                  and building agencies that empower creators. It’s a case study on why the biggest risk you can take is not taking a risk on your own vision.
+                  The presentation, titled **“Betting on Yourself,”** distilled our career path: stepping away from traditional event coordination, embracing the unexpected inspiration of Decent Ducks, and taking bold risks on our own vision.
                 </p>
               </div>
             </section>
 
-            {/* Section 5: Current Focus */}
+            {/* Section 4: Current Focus */}
             <section id="focus" className="space-y-6 scroll-mt-24">
               <div className="space-y-2">
-                <span className="text-xs font-mono text-primary uppercase tracking-widest font-semibold">Part 5</span>
+                <span className="text-xs font-mono text-primary uppercase tracking-widest font-semibold">Part 4</span>
                 <h2 className="text-2xl font-bold text-foreground flex items-center gap-2 border-b border-border pb-2">
                   <Target className="h-5 w-5 text-primary" />
                   <span>Current Focus</span>
@@ -349,29 +314,26 @@ export default function About() {
               </div>
               <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
                 <p>
-                  Today, we sit at the intersection of the physical and digital. Our daily focus is scaling Pjs Media Co and Ikonic Studio, 
-                  working with clients to build digital brands, and driving growth for on-chain ecosystems like Doginal Dogs.
+                  Today, our focus is centered on three core pillars: media production, scaling the Decent Ducks sanctuary and on-chain project, and building in public on the JustDuckIt journey.
                 </p>
                 <p>
-                  By taking the rigorous details of physical events production and combining them with the global distribution of digital content, 
-                  we help brands build authentic connections that last. Whether it's through code, video, digital assets, or real-life events, 
-                  our mission remains: build things that matter, and never hesitate to bet on yourself.
+                  By taking the execution principles of physical events and combining them with direct digital storytelling, we build authentic brand connections and share every step of the journey with our community.
                 </p>
               </div>
             </section>
 
-            {/* Section 6: Sanctuary Collaboration & Digital Advocacy */}
+            {/* Section 5: Sanctuary Collaboration & Digital Advocacy */}
             <section id="collaboration" className="space-y-6 scroll-mt-24">
               <div className="space-y-2">
-                <span className="text-xs font-mono text-primary uppercase tracking-widest font-semibold">Part 6</span>
+                <span className="text-xs font-mono text-primary uppercase tracking-widest font-semibold">Part 5</span>
                 <h2 className="text-2xl font-bold text-foreground flex items-center gap-2 border-b border-border pb-2">
                   <Users className="h-5 w-5 text-primary" />
-                  <span>"JustDuckit" Sanctuary Collaboration & Digital Advocacy</span>
+                  <span>Sanctuary Collaboration & Digital Advocacy</span>
                 </h2>
               </div>
               <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
                 <p>
-                  True advocacy goes beyond our own backyard. I travel to volunteer with animal rescues and sanctuaries across the country, learning firsthand about different species' care needs while using my background in web development, content creation, and digital strategy to help amplify their stories and expand their reach.
+                  True advocacy goes beyond our own backyard. We travel to volunteer with animal rescues and sanctuaries across the country, learning firsthand about species care while using web development, content creation, and digital strategy to amplify their stories.
                 </p>
                 <div className="pt-1">
                   <span className="text-sm font-semibold text-foreground block sm:inline mr-2">
@@ -387,10 +349,10 @@ export default function About() {
               </div>
             </section>
 
-            {/* Section 7: FAQ */}
+            {/* Section 6: FAQ */}
             <section id="faq" className="space-y-6 scroll-mt-24">
               <div className="space-y-2">
-                <span className="text-xs font-mono text-primary uppercase tracking-widest font-semibold">Part 7</span>
+                <span className="text-xs font-mono text-primary uppercase tracking-widest font-semibold">Part 6</span>
                 <h2 className="text-2xl font-bold text-foreground flex items-center gap-2 border-b border-border pb-2">
                   <HelpCircle className="h-5 w-5 text-primary" />
                   <span>Frequently Asked Questions</span>
@@ -400,7 +362,7 @@ export default function About() {
                 <div className="space-y-2 border-b border-border/30 pb-4">
                   <p className="font-bold text-foreground font-mono">Q: Who is Kyle Kinkin?</p>
                   <p className="text-muted-foreground pl-4 border-l border-primary/20">
-                    A: Kyle Kinkin is a digital content creator, Web3 builder, and founder of JustDuckit—a duck sanctuary and digital brand. He is also the founder of the Decent Ducks collection on the Solana blockchain and the host behind @DucksOnX.
+                    A: Kyle Kinkin is a digital content creator, Web3 builder, and founder of JustDuckIt—a duck sanctuary and digital brand. He is also the founder of the Decent Ducks collection on the Solana blockchain and the host behind @DucksOnX.
                   </p>
                 </div>
                 <div className="space-y-2 border-b border-border/30 pb-4">
@@ -410,7 +372,7 @@ export default function About() {
                   </p>
                 </div>
                 <div className="space-y-2">
-                  <p className="font-bold text-foreground font-mono">Q: What is the official handle for JustDuckit on X and TikTok?</p>
+                  <p className="font-bold text-foreground font-mono">Q: What is the official handle for JustDuckIt on X and TikTok?</p>
                   <p className="text-muted-foreground pl-4 border-l border-primary/20">
                     A: On X (formerly Twitter), the official handle is @DucksOnX. On TikTok, the handle is @just.duckit, and on Instagram, it is @justduckits.
                   </p>

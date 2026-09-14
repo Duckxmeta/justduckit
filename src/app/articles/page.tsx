@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Articles",
-  description: "Read long-form writing by JustDuckIt. Exploring modern software development, duck sanctuary logs, and Doge blockchain art.",
+  description: "Read long-form writing by JustDuckIt. Exploring media production, duck sanctuary logs, and building in public.",
 };
 
 export default function ArticlesPage() {
