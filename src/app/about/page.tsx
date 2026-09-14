@@ -15,7 +15,7 @@ export default function About() {
     "name": "Kyle Kinkin",
     "alternateName": ["Duck", "JustDuckIt", "Ducksonx"],
     "url": "https://justduckit.xyz",
-    "image": "https://justduckit.xyz/media/Banditselfie.jpg",
+    "image": "https://justduckit.xyz/media/kyle-bandit-sanctuary.jpg",
     "jobTitle": "Media and events builder",
     "address": {
       "@type": "PostalAddress",
@@ -64,8 +64,8 @@ export default function About() {
           <div className="lg:col-span-4 flex flex-col items-center lg:items-start space-y-6">
             <div className="relative h-80 w-80 overflow-hidden rounded-3xl border border-border shadow-2xl shadow-amber-500/5 group">
               <Image
-                src="/media/Banditselfie.jpg"
-                alt="Kyle Kinkin holding Bandit the duck at Decent Ducks Sanctuary"
+                src="/media/kyle-bandit-sanctuary.jpg"
+                alt="Kyle Kinkin holding a duck at Decent Ducks Sanctuary"
                 fill
                 className="object-cover object-top group-hover:scale-102 transition-transform duration-300"
                 sizes="320px"
