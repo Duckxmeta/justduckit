@@ -295,10 +295,10 @@ export default function About() {
               </div>
               <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
                 <p>
-                  This journey reached a key milestone at **DDNYC** in New York City. Kyle Kinkin took the stage as a featured speaker, presenting in front of an audience of 300+ founders, creators, and digital asset builders.
+                  DDNYC in New York City was a milestone: on stage with 300+ founders, creators, and builders, talking through what “betting on yourself” actually looked like.
                 </p>
                 <p>
-                  The presentation, titled **“Betting on Yourself,”** distilled our career path: stepping away from traditional event coordination, embracing the unexpected inspiration of Decent Ducks, and taking bold risks on our own vision.
+                  It wasn’t a polished presentation. It was the real path — turning the camera on, making videos, live streaming, pivoting to X after the TikTok ban, meeting people in the room, and keeping the brand moving the hard way.
                 </p>
               </div>
             </section>
