@@ -74,45 +74,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            {/* DDNYC Speaking */}
-            <div className="group overflow-hidden rounded-2xl border border-border bg-card/40 backdrop-blur-md hover:border-primary/20 transition-all flex flex-col">
-              <div className="relative h-48 w-full overflow-hidden">
-                <Image
-                  src="/media/ddnyc-speaking-panel.JPG"
-                  alt="Kyle Kinkin speaking on the DDNYC 2026 panel in New York"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-w-768px) 100vw, 33vw"
-                  priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
-                <div className="absolute bottom-3 left-3">
-                  <span className="px-2 py-0.5 rounded bg-amber-500/10 text-primary text-xs font-mono border border-primary/20 backdrop-blur-md">
-                    Milestone Event
-                  </span>
-                </div>
-              </div>
-              <div className="p-6 flex flex-col flex-grow space-y-2">
-                <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
-                  DDNYC 2026 Speaker
-                </h3>
-                <p className="text-sm leading-relaxed text-muted-foreground flex-grow">
-                  A milestone moment presenting in front of 300+ industry builders in New York. Discussing the core strategy of betting on your own ideas, building networks, and scaling digital asset ecosystems.
-                </p>
-                <div className="pt-3 flex items-center justify-between gap-2">
-                  <Link href="/about#ddnyc" className="text-sm font-semibold text-primary hover:underline inline-flex items-center gap-1">
-                    <span>Speaking Details</span>
-                    <ArrowRight className="h-3 w-3" />
-                  </Link>
-                  <Link href="/ddnyc-photos" className="text-sm font-semibold text-primary hover:underline inline-flex items-center gap-1">
-                    <span>View Photos</span>
-                    <ArrowRight className="h-3 w-3" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {/* Decent Ducks Pivot */}
             <div className="group overflow-hidden rounded-2xl border border-border bg-card/40 backdrop-blur-md hover:border-primary/20 transition-all flex flex-col">
               <div className="relative h-48 w-full overflow-hidden">
@@ -121,7 +83,7 @@ export default function Home() {
                   alt="JustDuckIt black duck logo"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-w-768px) 100vw, 33vw"
+                  sizes="(max-w-768px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
                 <div className="absolute bottom-3 left-3">
@@ -150,11 +112,11 @@ export default function Home() {
             <div className="group overflow-hidden rounded-2xl border border-border bg-card/40 backdrop-blur-md hover:border-primary/20 transition-all flex flex-col">
               <div className="relative h-48 w-full overflow-hidden">
                 <Image
-                  src="/media/ddnyc-2026-thumbnail.png"
-                  alt="Building in public and media journey"
+                  src="/media/Banditselfie.jpg"
+                  alt="Kyle with Bandit selfie"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-w-768px) 100vw, 33vw"
+                  sizes="(max-w-768px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
                 <div className="absolute bottom-3 left-3">
