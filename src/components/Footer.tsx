@@ -133,11 +133,7 @@ export default function Footer() {
                       <span>Duck Sanctuary ↗</span>
                     </a>
                   </li>
-                  <li className="text-sm text-muted-foreground">
-                    <Link href="/ddnyc-photos" className="hover:text-primary transition-colors cursor-pointer">
-                      DDNYC Photos
-                    </Link>
-                  </li>
+
                   <li className="text-sm text-muted-foreground">
                     <a
                       href="https://doginaldogs.com"
