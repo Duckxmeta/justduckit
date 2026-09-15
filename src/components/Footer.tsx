@@ -33,7 +33,6 @@ export default function Footer() {
     <footer className="border-t border-border bg-background/50 backdrop-blur-sm mt-auto">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          {/* Logo and Brand tagline */}
           <div className="space-y-4 xl:col-span-1">
             <Link href="/" className="flex items-center gap-3">
               <div className="relative h-7 w-7 overflow-hidden rounded-lg border border-border">
@@ -53,104 +52,48 @@ export default function Footer() {
               Personal brand of a builder, writer, and duck enthusiast. Scaling ideas from zero to production.
             </p>
             <div className="flex space-x-4">
-              <a
-                href="https://x.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
-                aria-label="Twitter Profile"
-              >
+              <a href="https://x.com/Ducksonx" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Twitter Profile">
                 <TwitterIcon className="h-5 w-5" />
               </a>
-              <a
-                href="https://www.instagram.com/justduckits?utm_source=qr"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
-                aria-label="Instagram Profile"
-              >
+              <a href="https://www.instagram.com/justduckits?utm_source=qr" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Instagram Profile">
                 <InstagramIcon className="h-5 w-5" />
               </a>
-              <a
-                href="https://www.tiktok.com/@ducksontiktok?_r=1&_t=ZP-98nrNNydKBy"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
-                aria-label="TikTok Profile"
-              >
+              <a href="https://www.tiktok.com/@ducksontiktok?_r=1&_t=ZP-98nrNNydKBy" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="TikTok Profile">
                 <TikTokIcon className="h-5 w-5" />
               </a>
-              <a
-                href="https://discord.gg/Ry8zBm5Yvb"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
-                aria-label="Discord Server"
-              >
+              <a href="https://discord.gg/Ry8zBm5Yvb" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Discord Server">
                 <DiscordIcon className="h-5 w-5" />
               </a>
             </div>
           </div>
 
-          {/* Navigation links */}
           <div className="mt-8 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <nav aria-label="Footer Navigation">
                 <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider">Navigation</h3>
                 <ul className="mt-4 space-y-2">
-                  <li>
-                    <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                      Home
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                      About
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/articles" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                      Articles
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/newsletter" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                      Newsletter
-                    </Link>
-                  </li>
+                  <li><Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Home</Link></li>
+                  <li><Link href="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">About</Link></li>
+                  <li><Link href="/work" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Work with me</Link></li>
+                  <li><Link href="/articles" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Articles</Link></li>
+                  <li><Link href="/newsletter" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Newsletter</Link></li>
                 </ul>
               </nav>
               <nav aria-label="Footer Projects" className="mt-8 md:mt-0">
                 <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider">Projects & Sanctuary</h3>
                 <ul className="mt-4 space-y-2">
                   <li className="text-sm text-muted-foreground">
-                    <a
-                      href="https://adoptaduck.org"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-primary transition-colors cursor-pointer inline-flex items-center gap-1"
-                    >
+                    <a href="https://adoptaduck.org" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors cursor-pointer inline-flex items-center gap-1">
                       <span>Duck Sanctuary ↗</span>
                     </a>
                   </li>
-
                   <li className="text-sm text-muted-foreground">
-                    <a
-                      href="https://doginaldogs.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-primary transition-colors cursor-pointer inline-flex items-center gap-1"
-                    >
+                    <a href="https://doginaldogs.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors cursor-pointer inline-flex items-center gap-1">
                       <span>Doginal Dogs ↗</span>
                     </a>
                   </li>
                   <li className="text-sm text-muted-foreground">
-                    <a
-                      href="https://cryptospaces.net"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-primary transition-colors cursor-pointer inline-flex items-center gap-1"
-                    >
+                    <a href="https://cryptospaces.net" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors cursor-pointer inline-flex items-center gap-1">
                       <span>Crypto Spaces Network ↗</span>
                     </a>
                   </li>
@@ -160,16 +103,15 @@ export default function Footer() {
             <div>
               <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider">Contact</h3>
               <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
-                Want to get in touch? Send us a message on{" "}
-                <a
-                  href="https://discord.gg/Ry8zBm5Yvb"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary hover:underline font-semibold"
-                >
-                  Discord ↗
-                </a>
-                .
+                Kyle Kinkin · Liberty / Smithville<br />
+                <a href="tel:+18156414809" className="text-primary hover:underline font-semibold">(815) 641-4809</a><br />
+                <a href="mailto:ducksonx@duck.com" className="text-primary hover:underline font-semibold">ducksonx@duck.com</a>
+              </p>
+              <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                Local shops: start at{" "}
+                <Link href="/work" className="text-primary hover:underline font-semibold">Work with me</Link>.
+                Web3 / community:{" "}
+                <a href="https://discord.gg/Ry8zBm5Yvb" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">Discord ↗</a>.
               </p>
             </div>
           </div>
