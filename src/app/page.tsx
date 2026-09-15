@@ -43,7 +43,7 @@ export default function Home() {
       href: "https://cryptospaces.net",
       cta: "Visit CSN",
       external: true,
-      image: "/media/crypto-spaces-network.jpg",
+      image: "/media/CSNsquare.png",
       alt: "Crypto Spaces Network",
     },
     {
@@ -53,7 +53,7 @@ export default function Home() {
       href: "https://doginaldogs.com",
       cta: "Doginal Dogs",
       external: true,
-      image: "/media/doginal-dogs-thumbnail.png",
+      image: "/media/DDlogo.png",
       alt: "Doginal Dogs",
     },
   ];
