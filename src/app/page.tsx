@@ -29,12 +29,12 @@ export default function Home() {
     },
     {
       badge: "DDNYC 2026",
-      title: "Spoke at Duck Day NYC",
-      body: "On stage in New York for DDNYC 2026 — Betting on Yourself. The talk, the room, and why showing up in person still moves a digital pack.",
+      title: "Spoke at Doginal Dogs NYC",
+      body: "On stage in New York for DDNYC 2026 — Doginal Dogs NYC. Betting on Yourself. The talk, the room, and why showing up in person still moves a digital pack.",
       href: "/articles/betting-on-yourself-ddnyc",
       cta: "Read the speaking essay",
       image: "/media/ddnyc-speaking-upclose.jpeg",
-      alt: "Kyle speaking at DDNYC 2026",
+      alt: "Kyle speaking at Doginal Dogs NYC 2026",
     },
     {
       badge: "CSN",
@@ -78,7 +78,7 @@ export default function Home() {
 
           <div className="space-y-4 max-w-3xl mx-auto">
             <p className="text-lg leading-8 text-muted-foreground">
-              Kyle Kinkin — known as Duck and JustDuckIt — builds media, events, and Decent Ducks, a real waterfowl sanctuary tied to on-chain community. Spoke at DDNYC 2026 in New York.
+              Kyle Kinkin — known as Duck and JustDuckIt — builds media, events, and Decent Ducks, a real waterfowl sanctuary tied to on-chain community. Spoke at DDNYC 2026 (Doginal Dogs NYC) in New York.
             </p>
           </div>
 
