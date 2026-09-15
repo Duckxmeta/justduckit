@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Work with me | Kyle Kinkin",
   description:
-    "Kyle Kinkin builds simple websites and Google listings for small businesses. Fair pricing. Free photos if you need them.",
+    "Kyle Kinkin builds sites you own. No rented templates, no upcharges, no ticket queue. Domain in your name. Code in your hands.",
   alternates: { canonical: "https://justduckit.xyz/work" },
 };
 
@@ -29,7 +29,8 @@ export default function WorkPage() {
           <li>Hours, menu or services, photos, map, tap-to-call</li>
           <li>Google Business Profile cleaned up</li>
           <li>If you don’t have photos, I’ll come take them. No extra charge.</li>
-          <li>About two weeks. You own it. No 12-month contract.</li>
+          <li>You own the code. All you need is the domain.</li>
+          <li>About two weeks. No 12-month contract.</li>
         </ul>
         <p className="mt-6 text-sm text-muted-foreground">
           Extra pages $75 each. Hosting and small edits $29/month. If $497 is tight, say so — the Google listing cleanup can still start at $0.
@@ -37,11 +38,29 @@ export default function WorkPage() {
       </section>
 
       <section className="mt-12">
+        <h2 className="text-2xl font-bold text-foreground">Why me, not a generic builder</h2>
+        <ul className="mt-4 space-y-4 text-muted-foreground">
+          <li>
+            <span className="font-semibold text-foreground">You own it.</span> Most “website guys” rent you a page inside their system. Leave and the site leaves with them. I build the real thing. The code is yours. Forever. Bring a domain. That’s it.
+          </li>
+          <li>
+            <span className="font-semibold text-foreground">No upcharge menu.</span> Photos, Google cleanup, tap-to-call, map — in the price. Not $79 add-ons stacked until the invoice looks like Nashville.
+          </li>
+          <li>
+            <span className="font-semibold text-foreground">A real person.</span> No ticket queue. No “we’ll get back to you.” You text or call me. I answer.
+          </li>
+          <li>
+            <span className="font-semibold text-foreground">Built to beat the shop next door.</span> Fast on a phone, clean on Google, easy to tap. Not a template that looks like every other $29/month page.
+          </li>
+        </ul>
+      </section>
+
+      <section className="mt-12">
         <h2 className="text-2xl font-bold text-foreground">How it works</h2>
         <ol className="mt-4 space-y-3 text-muted-foreground list-decimal pl-5">
           <li>I look at your Google listing the way a customer would. Fifteen minutes. Free.</li>
           <li>You send hours. If photos are missing, I shoot them on site — included.</li>
-          <li>I build the page. You approve it. Done.</li>
+          <li>I build the page. You approve it. You own it.</li>
         </ol>
       </section>
 
