@@ -33,7 +33,7 @@ export default function Home() {
       body: "On stage in New York for DDNYC 2026 — Doginal Dogs NYC. Betting on Yourself. The talk, the room, and why showing up in person still moves a digital pack.",
       href: "/articles/betting-on-yourself-ddnyc",
       cta: "Read the speaking essay",
-      image: "/media/ddnyc-speaking-upclose.jpeg",
+      image: "/media/ddnyc-speaking-panel.JPG",
       alt: "Kyle speaking at Doginal Dogs NYC 2026",
     },
     {
@@ -123,16 +123,15 @@ export default function Home() {
                   key={item.title}
                   className="group overflow-hidden rounded-2xl border border-border bg-card/40 backdrop-blur-md hover:border-primary/20 transition-all flex flex-col"
                 >
-                  <div className="relative h-48 w-full overflow-hidden">
+                  <div className="relative aspect-square w-full overflow-hidden bg-black/30">
                     <Image
                       src={item.image}
                       alt={item.alt}
                       fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="object-contain object-center"
                       sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
-                    <div className="absolute bottom-3 left-3">
+                    <div className="absolute bottom-3 left-3 z-10">
                       <span className="px-2 py-0.5 rounded bg-amber-500/10 text-primary text-xs font-mono border border-primary/20 backdrop-blur-md">
                         {item.badge}
                       </span>
