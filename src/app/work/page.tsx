@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Work with me | Kyle Kinkin",
   description:
-    "Kyle Kinkin builds simple websites and Google listings for small businesses. Fair pricing. No agency invoice.",
+    "Kyle Kinkin builds simple websites and Google listings for small businesses. Fair pricing. Free photos if you need them.",
   alternates: { canonical: "https://justduckit.xyz/work" },
 };
 
@@ -28,6 +28,7 @@ export default function WorkPage() {
           <li>One-page site that works on a phone</li>
           <li>Hours, menu or services, photos, map, tap-to-call</li>
           <li>Google Business Profile cleaned up</li>
+          <li>If you don’t have photos, I’ll come take them. No extra charge.</li>
           <li>About two weeks. You own it. No 12-month contract.</li>
         </ul>
         <p className="mt-6 text-sm text-muted-foreground">
@@ -39,7 +40,7 @@ export default function WorkPage() {
         <h2 className="text-2xl font-bold text-foreground">How it works</h2>
         <ol className="mt-4 space-y-3 text-muted-foreground list-decimal pl-5">
           <li>I look at your Google listing the way a customer would. Fifteen minutes. Free.</li>
-          <li>You send 5–10 photos and your real hours.</li>
+          <li>You send hours. If photos are missing, I shoot them on site — included.</li>
           <li>I build the page. You approve it. Done.</li>
         </ol>
       </section>
