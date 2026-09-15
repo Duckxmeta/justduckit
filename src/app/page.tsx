@@ -1,25 +1,65 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, BookOpen, Star, Sparkles, Mic, HelpCircle } from "lucide-react";
+import { ArrowRight, BookOpen, Star, Mic, HelpCircle } from "lucide-react";
 import { getAllArticles } from "@/lib/articles";
 import NewsletterForm from "@/components/NewsletterForm";
 
 export default function Home() {
   const articles = getAllArticles();
-  // Filter out any promotional posts for Doginal or ZEN from homepage featured articles
-  const recentArticles = articles
-    .filter(
-      (article) =>
-        !article.slug.toLowerCase().includes("doginal") &&
-        !article.slug.toLowerCase().includes("zen") &&
-        !article.title.toLowerCase().includes("doginal") &&
-        !article.title.toLowerCase().includes("zen")
-    )
-    .slice(0, 2);
+  const recentArticles = articles.slice(0, 2);
+
+  const initiatives = [
+    {
+      badge: "Decent Ducks",
+      title: "The Sanctuary Pivot",
+      body: "How starting the Decent Ducks Sanctuary (and Web3 NFT project) broke the mold of traditional marketing management, sparking a full pivot into digital media production and active brand building.",
+      href: "/about#pivot",
+      cta: "The Pivot Story",
+      image: "/media/decent-ducks-nft-solana.png",
+      alt: "JustDuckIt black duck logo",
+    },
+    {
+      badge: "Media & Content",
+      title: "Building in Public",
+      body: "Documenting the journey of scaling Decent Ducks, content creation, and media production — sharing real-world lessons from waterfowl rescue to digital brand building.",
+      href: "/articles",
+      cta: "Read Essays",
+      image: "/media/Banditselfie.jpg",
+      alt: "Kyle with Bandit selfie",
+    },
+    {
+      badge: "DDNYC 2026",
+      title: "Spoke at Duck Day NYC",
+      body: "On stage in New York for DDNYC 2026 — Betting on Yourself. The talk, the room, and why showing up in person still moves a digital pack.",
+      href: "/articles/betting-on-yourself-ddnyc",
+      cta: "Read the speaking essay",
+      image: "/media/ddnyc-speaking-upclose.jpeg",
+      alt: "Kyle speaking at DDNYC 2026",
+    },
+    {
+      badge: "CSN",
+      title: "Crypto Spaces Network",
+      body: "Building and showing up inside CSN — live rooms, culture, and the network layer that keeps Pack conversations on the air instead of trapped in a group chat.",
+      href: "https://cryptospaces.net",
+      cta: "Visit CSN",
+      external: true,
+      image: "/media/crypto-spaces-network.jpg",
+      alt: "Crypto Spaces Network",
+    },
+    {
+      badge: "Doginal Dogs",
+      title: "Doginal Partnership",
+      body: "In the pack: Rise of the Pack / Legends TCG, community lead work, and the IRL-to-on-chain loop that started as inscriptions and now lives on kitchen tables.",
+      href: "https://doginaldogs.com",
+      cta: "Doginal Dogs",
+      external: true,
+      image: "/media/doginal-dogs-thumbnail.png",
+      alt: "Doginal Dogs",
+    },
+  ];
 
   return (
     <div className="relative isolate overflow-hidden min-h-screen">
-      {/* Background glow effects */}
       <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
         <div
           className="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-amber-500/20 to-orange-500/20 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72rem]"
@@ -31,13 +71,11 @@ export default function Home() {
       </div>
 
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
-        
-        {/* Hero Section */}
         <div className="text-center max-w-4xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-6 duration-700">
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl text-foreground animate-in fade-in zoom-in duration-500">
             It started with a <span className="text-gradient-gold">duck.</span>
           </h1>
- 
+
           <div className="space-y-4 max-w-3xl mx-auto">
             <p className="text-lg leading-8 text-muted-foreground">
               Kyle Kinkin — known as Duck and JustDuckIt — builds media, events, and Decent Ducks, a real waterfowl sanctuary tied to on-chain community. Spoke at DDNYC 2026 in New York.
@@ -53,16 +91,15 @@ export default function Home() {
               <span>Read Speaking Essay</span>
             </Link>
             <Link
-              href="/about"
+              href="/work"
               className="flex items-center gap-2 rounded-xl border border-border glass-panel text-sm px-6 py-3.5 hover:bg-white/5 active:scale-[0.98] transition-all cursor-pointer"
             >
-              <span>Our Pivot Story</span>
+              <span>Work with me</span>
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
 
-        {/* Featured Pillars Section */}
         <div className="mt-24 sm:mt-32">
           <div className="border-b border-border pb-6 mb-12 text-center sm:text-left">
             <h2 className="text-2xl font-bold tracking-tight text-foreground flex items-center justify-center sm:justify-start gap-2">
@@ -70,82 +107,64 @@ export default function Home() {
               <span>Featured Initiatives</span>
             </h2>
             <p className="text-sm text-muted-foreground mt-2">
-              The pivot from traditional event management to digital brand building, waterfowl rescue, and building in public.
+              Sanctuary, Pack, CSN, and the stage — plus the local work that pays the feed bill.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-            {/* Decent Ducks Pivot */}
-            <div className="group overflow-hidden rounded-2xl border border-border bg-card/40 backdrop-blur-md hover:border-primary/20 transition-all flex flex-col">
-              <div className="relative h-48 w-full overflow-hidden">
-                <Image
-                  src="/media/decent-ducks-nft-solana.png"
-                  alt="JustDuckIt black duck logo"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-w-768px) 100vw, 50vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
-                <div className="absolute bottom-3 left-3">
-                  <span className="px-2 py-0.5 rounded bg-amber-500/10 text-primary text-xs font-mono border border-primary/20 backdrop-blur-md">
-                    Decent Ducks
-                  </span>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+            {initiatives.map((item) => {
+              const linkClass =
+                "text-sm font-semibold text-primary hover:underline inline-flex items-center gap-1";
+              const cta = (
+                <>
+                  <span>{item.cta}</span>
+                  <ArrowRight className="h-3 w-3" />
+                </>
+              );
+              return (
+                <div
+                  key={item.title}
+                  className="group overflow-hidden rounded-2xl border border-border bg-card/40 backdrop-blur-md hover:border-primary/20 transition-all flex flex-col"
+                >
+                  <div className="relative h-48 w-full overflow-hidden">
+                    <Image
+                      src={item.image}
+                      alt={item.alt}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+                    <div className="absolute bottom-3 left-3">
+                      <span className="px-2 py-0.5 rounded bg-amber-500/10 text-primary text-xs font-mono border border-primary/20 backdrop-blur-md">
+                        {item.badge}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="p-6 flex flex-col flex-grow space-y-2">
+                    <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm leading-relaxed text-muted-foreground flex-grow">{item.body}</p>
+                    <div className="pt-3">
+                      {item.external ? (
+                        <a href={item.href} target="_blank" rel="noopener noreferrer" className={linkClass}>
+                          {cta}
+                        </a>
+                      ) : (
+                        <Link href={item.href} className={linkClass}>
+                          {cta}
+                        </Link>
+                      )}
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div className="p-6 flex flex-col flex-grow space-y-2">
-                <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
-                  The Sanctuary Pivot
-                </h3>
-                <p className="text-sm leading-relaxed text-muted-foreground flex-grow">
-                  How starting the Decent Ducks Sanctuary (and Web3 NFT project) broke the mold of traditional marketing management, sparking a full pivot into digital media production and active brand building.
-                </p>
-                <div className="pt-3">
-                  <Link href="/about#pivot" className="text-sm font-semibold text-primary hover:underline inline-flex items-center gap-1">
-                    <span>The Pivot Story</span>
-                    <ArrowRight className="h-3 w-3" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            {/* Building in Public & Media */}
-            <div className="group overflow-hidden rounded-2xl border border-border bg-card/40 backdrop-blur-md hover:border-primary/20 transition-all flex flex-col">
-              <div className="relative h-48 w-full overflow-hidden">
-                <Image
-                  src="/media/Banditselfie.jpg"
-                  alt="Kyle with Bandit selfie"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-w-768px) 100vw, 50vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
-                <div className="absolute bottom-3 left-3">
-                  <span className="px-2 py-0.5 rounded bg-amber-500/10 text-primary text-xs font-mono border border-primary/20 backdrop-blur-md">
-                    Media & Content
-                  </span>
-                </div>
-              </div>
-              <div className="p-6 flex flex-col flex-grow space-y-2">
-                <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
-                  Building in Public
-                </h3>
-                <p className="text-sm leading-relaxed text-muted-foreground flex-grow">
-                  Documenting the journey of scaling Decent Ducks, content creation, and media production — sharing real-world lessons from waterfowl rescue to digital brand building.
-                </p>
-                <div className="pt-3">
-                  <Link href="/articles" className="text-sm font-semibold text-primary hover:underline inline-flex items-center gap-1">
-                    <span>Read Essays</span>
-                    <ArrowRight className="h-3 w-3" />
-                  </Link>
-                </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
 
-        {/* Blog and Newsletter Grid */}
         <div className="mt-24 sm:mt-32 grid grid-cols-1 gap-12 lg:grid-cols-3">
-          {/* Recent Articles */}
           <div className="lg:col-span-2 space-y-8">
             <div className="border-b border-border pb-4 flex justify-between items-baseline">
               <h2 className="text-xl font-bold text-foreground flex items-center gap-2">
@@ -171,7 +190,7 @@ export default function Home() {
                         alt=""
                         fill
                         className="object-cover"
-                        sizes="(max-w-640px) 100vw, 176px"
+                        sizes="(max-width: 640px) 100vw, 176px"
                       />
                     </div>
                     <div className="flex flex-col justify-between space-y-2 flex-grow">
@@ -188,9 +207,7 @@ export default function Home() {
                           {article.description}
                         </p>
                       </div>
-                      <span
-                        className="text-sm font-semibold text-primary group-hover:underline inline-flex items-center gap-1 mt-1"
-                      >
+                      <span className="text-sm font-semibold text-primary group-hover:underline inline-flex items-center gap-1 mt-1">
                         <span>Read full article</span>
                         <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
                       </span>
@@ -205,7 +222,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Newsletter Panel */}
           <div className="flex flex-col justify-center h-fit space-y-6 lg:sticky lg:top-24">
             <div className="space-y-2">
               <span className="px-2.5 py-1 rounded bg-primary/10 text-primary text-sm font-mono border border-primary/20">
@@ -217,7 +233,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* On-Page FAQ Block */}
         <div className="mt-24 sm:mt-32 border-t border-border/50 pt-16 max-w-4xl mx-auto">
           <div className="text-center space-y-2 mb-12">
             <h2 className="text-2xl font-bold tracking-tight text-foreground flex items-center justify-center gap-2">
