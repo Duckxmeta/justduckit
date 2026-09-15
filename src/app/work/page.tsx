@@ -4,26 +4,26 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Work with me | Kyle Kinkin",
   description:
-    "Kyle Kinkin builds simple websites and Google listings for shops in Liberty, Smithville, and DeKalb County, Tennessee. Neighbor pricing. No Nashville invoice.",
+    "Kyle Kinkin builds simple websites and Google listings for small businesses. Fair pricing. No agency invoice.",
   alternates: { canonical: "https://justduckit.xyz/work" },
 };
 
 export default function WorkPage() {
   return (
     <main id="main-content" className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
-      <p className="text-sm font-semibold uppercase tracking-wider text-primary">Liberty · Smithville · 37095</p>
+      <p className="text-sm font-semibold uppercase tracking-wider text-primary">Websites that get called</p>
       <h1 className="mt-3 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
         Work with me.
       </h1>
       <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-        I live in 37095. Most of this site is for search engines and the work I already do in public.
-        This page is for neighbors who need a website that actually gets the phone to ring — without a Nashville price tag.
+        Most of this site is for search engines and the work already happening in public.
+        This page is for owners who need a site that actually gets the phone to ring — without an agency price tag.
       </p>
 
       <section className="mt-12 rounded-2xl border border-border bg-white/5 p-6 sm:p-8">
-        <p className="text-sm font-semibold uppercase tracking-wider text-primary">The neighbor package</p>
+        <p className="text-sm font-semibold uppercase tracking-wider text-primary">The starter package</p>
         <p className="mt-2 text-3xl font-bold text-foreground">$497</p>
-        <p className="mt-1 text-sm text-muted-foreground">Agencies in town charge $2,500–$6,000 for the same stack.</p>
+        <p className="mt-1 text-sm text-muted-foreground">Agencies often charge $2,500–$6,000 for the same stack.</p>
         <ul className="mt-6 space-y-3 text-muted-foreground">
           <li>One-page site that works on a phone</li>
           <li>Hours, menu or services, photos, map, tap-to-call</li>
@@ -31,7 +31,7 @@ export default function WorkPage() {
           <li>About two weeks. You own it. No 12-month contract.</li>
         </ul>
         <p className="mt-6 text-sm text-muted-foreground">
-          Extra pages $75 each. Hosting and small edits $29/month. If $497 is tight, say so — I’ll still fix the Google listing for free.
+          Extra pages $75 each. Hosting and small edits $29/month. If $497 is tight, say so — the Google listing cleanup can still start at $0.
         </p>
       </section>
 
@@ -57,7 +57,6 @@ export default function WorkPage() {
             ducksonx@duck.com
           </a>
         </p>
-        <p className="mt-4 text-sm text-muted-foreground">Liberty / Smithville · DeKalb County, Tennessee</p>
       </section>
 
       <p className="mt-10 text-sm text-muted-foreground">

@@ -22,8 +22,8 @@ export const metadata: Metadata = {
     default: "Kyle Kinkin | JustDuckIt",
     template: "%s | Kyle Kinkin",
   },
-  description: "Kyle Kinkin — known as Duck and JustDuckIt — builds media, events, and Decent Ducks. Spoke at DDNYC 2026 in New York on Betting on Yourself.",
-  keywords: ["Kyle Kinkin", "JustDuckIt", "Duck", "Decent Ducks", "Doginal Dogs", "DDNYC 2026", "Betting on Yourself", "Nashville Tennessee", "Events Management", "Digital Art"],
+  description: "Kyle Kinkin — known as Duck and JustDuckIt — builds media, community, and Decent Ducks.",
+  keywords: ["Kyle Kinkin", "JustDuckIt", "Duck", "Decent Ducks", "Doginal Dogs", "DDNYC 2026", "Events Management", "Digital Art"],
   authors: [{ name: "Kyle Kinkin" }],
   creator: "Kyle Kinkin",
   openGraph: {
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     url: "https://justduckit.xyz",
     siteName: "Kyle Kinkin | JustDuckIt",
     title: "Kyle Kinkin | JustDuckIt",
-    description: "Kyle Kinkin — known as Duck and JustDuckIt — builds media, events, and Decent Ducks. Spoke at DDNYC 2026 in New York on Betting on Yourself.",
+    description: "Kyle Kinkin — known as Duck and JustDuckIt — builds media, community, and Decent Ducks.",
     images: [
       {
         url: "/media/decent-ducks-nft-solana.png",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Kyle Kinkin | JustDuckIt",
-    description: "Kyle Kinkin — known as Duck and JustDuckIt — builds media, events, and Decent Ducks. Spoke at DDNYC 2026 in New York on Betting on Yourself.",
+    description: "Kyle Kinkin — known as Duck and JustDuckIt — builds media, community, and Decent Ducks.",
     images: ["/media/decent-ducks-nft-solana.png"],
     creator: "@kylekinkin",
   },

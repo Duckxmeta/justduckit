@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, BookOpen, Star, Mic, HelpCircle } from "lucide-react";
+import { ArrowRight, BookOpen, Star, HelpCircle } from "lucide-react";
 import { getAllArticles } from "@/lib/articles";
 import NewsletterForm from "@/components/NewsletterForm";
 
@@ -71,24 +71,21 @@ export default function Home() {
       </div>
 
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
-        <div className="text-center max-w-4xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-6 duration-700">
+        <div className="text-center max-w-3xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-6 duration-700">
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl text-foreground animate-in fade-in zoom-in duration-500">
             It started with a <span className="text-gradient-gold">duck.</span>
           </h1>
 
-          <div className="space-y-4 max-w-3xl mx-auto">
-            <p className="text-lg leading-8 text-muted-foreground">
-              Kyle Kinkin — known as Duck and JustDuckIt — builds media, events, and Decent Ducks, a real waterfowl sanctuary tied to on-chain community. Spoke at DDNYC 2026 (Doginal Dogs NYC) in New York.
-            </p>
-          </div>
+          <p className="text-lg leading-8 text-muted-foreground">
+            Kyle Kinkin — Duck, JustDuckIt. Builder, writer, and founder of Decent Ducks. Media, community, and a real sanctuary.
+          </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link
-              href="/articles/betting-on-yourself-ddnyc"
+              href="/about"
               className="flex items-center gap-2 rounded-xl bg-primary text-black font-semibold text-sm px-6 py-3.5 hover:bg-primary-hover active:scale-[0.98] transition-all cursor-pointer shadow-lg shadow-primary/10"
             >
-              <Mic className="h-4 w-4" />
-              <span>Read Speaking Essay</span>
+              <span>About</span>
             </Link>
             <Link
               href="/work"
@@ -107,7 +104,7 @@ export default function Home() {
               <span>Featured Initiatives</span>
             </h2>
             <p className="text-sm text-muted-foreground mt-2">
-              Sanctuary, Pack, CSN, and the stage — plus the local work that pays the feed bill.
+              Sanctuary, Pack, CSN, and the stage.
             </p>
           </div>
 

@@ -103,14 +103,14 @@ export default function Footer() {
             <div>
               <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider">Contact</h3>
               <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
-                Kyle Kinkin · Liberty / Smithville<br />
+                Kyle Kinkin<br />
                 <a href="tel:+18156414809" className="text-primary hover:underline font-semibold">(815) 641-4809</a><br />
                 <a href="mailto:ducksonx@duck.com" className="text-primary hover:underline font-semibold">ducksonx@duck.com</a>
               </p>
               <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-                Local shops: start at{" "}
+                Sites and listings:{" "}
                 <Link href="/work" className="text-primary hover:underline font-semibold">Work with me</Link>.
-                Web3 / community:{" "}
+                Community:{" "}
                 <a href="https://discord.gg/Ry8zBm5Yvb" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">Discord ↗</a>.
               </p>
             </div>
