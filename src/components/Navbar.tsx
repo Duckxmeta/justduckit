@@ -13,6 +13,7 @@ export default function Navbar() {
   const navigation = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
+    { name: "Work with me", href: "/work" },
     { name: "Articles", href: "/articles" },
     { name: "Newsletter", href: "/newsletter" },
   ];
@@ -21,7 +22,6 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-border glass-panel transition-all duration-300">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          {/* Logo and Brand */}
           <div className="flex">
             <Link href="/" className="flex flex-shrink-0 items-center gap-3 group">
               <div className="relative h-9 w-9 overflow-hidden rounded-lg border border-border group-hover:border-primary transition-colors">
@@ -39,7 +39,6 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
           <nav aria-label="Main Navigation" className="hidden md:flex space-x-1">
             {navigation.map((item) => {
               const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
@@ -59,7 +58,6 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Mobile Menu Button */}
           <div className="flex md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -72,7 +70,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Drawer Menu */}
       {isOpen && (
         <nav aria-label="Mobile Navigation" className="md:hidden border-t border-border bg-background/95 backdrop-blur-md">
           <div className="space-y-1 px-2 pb-3 pt-2">
