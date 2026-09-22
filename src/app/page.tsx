@@ -30,11 +30,11 @@ export default function Home() {
     {
       badge: "Next Event",
       title: "DDMiami",
-      body: "Dec 7–8. Duck will be there. Next stop after New York. More soon.",
+      body: "Dec 7–8. Duck will be there.\nNext stop after New York. More soon.",
       href: "/about",
       cta: "About the journey",
-      image: "/media/decent-ducks-logo-thumbnail.png",
-      alt: "DDMiami next event teaser",
+      image: "/media/DDMiami.gif",
+      alt: "DDMiami 2026",
     },
     {
       badge: "CSN",
@@ -141,7 +141,7 @@ export default function Home() {
                     <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
                       {item.title}
                     </h3>
-                    <p className="text-sm leading-relaxed text-muted-foreground flex-grow">{item.body}</p>
+                    <p className="text-sm leading-relaxed text-muted-foreground flex-grow whitespace-pre-line">{item.body}</p>
                     <div className="pt-3">
                       {item.external ? (
                         <a href={item.href} target="_blank" rel="noopener noreferrer" className={linkClass}>
