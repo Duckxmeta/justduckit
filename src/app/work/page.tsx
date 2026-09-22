@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Work with me | Kyle Kinkin",
   description:
-    "Kyle Kinkin builds sites you own. Real menus Google can read. No rented templates. Domain in your name. Code in your hands.",
+    "Kyle Kinkin builds sites you own. Real menus Google can read. Google Kyle Kinkin or JustDuckIt and see the AI Overview — no confusion.",
   alternates: { canonical: "https://justduckit.xyz/work" },
 };
 
@@ -29,9 +29,28 @@ export default function WorkPage() {
           Google’s AI Overview only names the places it can read. A Facebook page and a picture of a paper menu is not readable. That search becomes a shrug: a couple names, no winner, and the table goes to whoever had a real menu online.
         </p>
         <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-          I put every dish in text Google can quote — name, price, what’s on it — plus a site you own and a Google listing that matches. We can’t buy the Overview. We can make you the only shop it trusts enough to say out loud.
+          I put every dish in text Google can quote — name, price, what’s on it — plus a site you own and a Google listing that matches. We can’t buy the Overview. We can make you the shop it trusts enough to say out loud.
         </p>
       </div>
+
+      <section className="mt-12">
+        <h2 className="text-2xl font-bold text-foreground">Google’s AI Overview sits above the fold now</h2>
+        <div className="mt-4 space-y-4 text-muted-foreground">
+          <p>
+            People still type the simple stuff: food near me, tacos, who cuts hair, who’s open. They always have.
+            What changed is the box at the top. Before they scroll ads or the map, Google writes an answer — AI Overview — and most thumbs never leave that box.
+          </p>
+          <p>
+            That answer is built from what Google can read with no guessing: a real site, a real menu or service list, hours that match the listing, and a name that only points to one business. Feed it junk (Facebook, a photo of a menu) and the Overview stays vague. Feed it clean facts and it can name <span className="text-foreground font-semibold">you</span>.
+          </p>
+          <p>
+            Don’t take my word. Google <span className="text-foreground font-semibold">Kyle Kinkin</span> or <span className="text-foreground font-semibold">JustDuckIt</span>. Read the Overview. One person. One brand. No mix-up with a chain, a dead listing, or someone else’s Facebook.
+          </p>
+          <p>
+            That’s the same job for a restaurant or a shop: make the Overview boringly obvious so the searcher doesn’t have to keep scrolling.
+          </p>
+        </div>
+      </section>
 
       <section className="mt-12 rounded-2xl border border-border bg-white/5 p-6 sm:p-8">
         <p className="text-sm font-semibold uppercase tracking-wider text-primary">The starter package</p>
