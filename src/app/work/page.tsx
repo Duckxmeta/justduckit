@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Work with me | Kyle Kinkin",
   description:
-    "Kyle Kinkin builds sites you own. No rented templates, no upcharges, no ticket queue. Domain in your name. Code in your hands.",
+    "Kyle Kinkin builds sites you own. Real menus Google can read. No rented templates. Domain in your name. Code in your hands.",
   alternates: { canonical: "https://justduckit.xyz/work" },
 };
 
@@ -20,13 +20,16 @@ export default function WorkPage() {
         This page is for owners who need a site that actually gets the phone to ring — without an agency price tag.
       </p>
 
-      {/* Google AI Overview Hook */}
       <div className="mt-8 rounded-2xl border border-primary/20 bg-primary/5 p-6 sm:p-8 space-y-3">
         <h2 className="text-xl sm:text-2xl font-bold text-foreground">
-          Why aren&apos;t you showing up on Google first?
+          Someone is searching food near them right now. Is it you — or a blurry menu photo?
         </h2>
         <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-          I&apos;ll take care of that and make sure with Google&apos;s new AI Overview, you are the first result they show!
+          Restaurant owners want to be the answer when people type “tacos near me” or “food near me.”
+          Google’s AI Overview only names the places it can read. A Facebook page and a picture of a paper menu is not readable. That search becomes a shrug: a couple names, no winner, and the table goes to whoever had a real menu online.
+        </p>
+        <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+          I put every dish in text Google can quote — name, price, what’s on it — plus a site you own and a Google listing that matches. We can’t buy the Overview. We can make you the only shop it trusts enough to say out loud.
         </p>
       </div>
 
@@ -44,6 +47,22 @@ export default function WorkPage() {
         </ul>
         <p className="mt-6 text-sm text-muted-foreground">
           Extra pages $75 each. Hosting and small edits $29/month. If $497 is tight, say so — the Google listing cleanup can still start at $0.
+        </p>
+      </section>
+
+      <section className="mt-12 rounded-2xl border border-border bg-white/5 p-6 sm:p-8">
+        <p className="text-sm font-semibold uppercase tracking-wider text-primary">Restaurants</p>
+        <p className="mt-2 text-3xl font-bold text-foreground">$697</p>
+        <p className="mt-1 text-sm text-muted-foreground">The starter package, built around a menu Google can actually read.</p>
+        <ul className="mt-6 space-y-3 text-muted-foreground">
+          <li>Live HTML menu — dishes, prices, descriptions. Not a photo of the paper.</li>
+          <li>Menu + restaurant markup so search and AI Overview can name specific plates.</li>
+          <li>Google listing aligned with the site (hours, cuisine, photos).</li>
+          <li>Plate and storefront photos if you need them. Included.</li>
+          <li>Optional later: pickup / order on your domain. You keep the customer.</li>
+        </ul>
+        <p className="mt-6 text-sm text-muted-foreground">
+          Long or bilingual menu +$200. You own the code. Domain in your name.
         </p>
       </section>
 
