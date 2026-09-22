@@ -20,6 +20,16 @@ export default function WorkPage() {
         This page is for owners who need a site that actually gets the phone to ring — without an agency price tag.
       </p>
 
+      {/* Google AI Overview Hook */}
+      <div className="mt-8 rounded-2xl border border-primary/20 bg-primary/5 p-6 sm:p-8 space-y-3">
+        <h2 className="text-xl sm:text-2xl font-bold text-foreground">
+          Why aren&apos;t you showing up on Google first?
+        </h2>
+        <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+          I&apos;ll take care of that and make sure with Google&apos;s new AI Overview, you are the first result they show!
+        </p>
+      </div>
+
       <section className="mt-12 rounded-2xl border border-border bg-white/5 p-6 sm:p-8">
         <p className="text-sm font-semibold uppercase tracking-wider text-primary">The starter package</p>
         <p className="mt-2 text-3xl font-bold text-foreground">$497</p>
