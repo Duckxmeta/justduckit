@@ -56,6 +56,16 @@ export default function Home() {
       image: "/media/DDlogo.png",
       alt: "Doginal Dogs",
     },
+    {
+      badge: "ZEN AI",
+      title: "ZEN AI Co.",
+      body: "Creative consulting, AI-driven media strategies, and digital transformation — bridging technology, brand architecture, and modern content production.",
+      href: "https://zenai.world/",
+      cta: "Visit ZEN AI",
+      external: true,
+      image: "/media/zen-ai-logo.jpg",
+      alt: "ZEN AI Co.",
+    },
   ];
 
   return (
@@ -104,7 +114,7 @@ export default function Home() {
               <span>Featured Initiatives</span>
             </h2>
             <p className="text-sm text-muted-foreground mt-2">
-              Sanctuary, Pack, CSN, and the stage.
+              Sanctuary, Pack, CSN, ZEN AI, and the stage.
             </p>
           </div>
 
