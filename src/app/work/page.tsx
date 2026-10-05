@@ -60,14 +60,14 @@ export default function WorkPage() {
       external: false,
     },
     {
-      name: "Custom",
+      name: "Enterprise",
       price: "call first",
       description: "For larger clients who need more than one piece of software working together. This is a consulting call, not a fixed site package. We scope it on the phone, then quote it.",
       delivery: "Scoped on call",
       features: [
         "Multi-software integrations",
         "Scoped on phone call",
-        "Custom scope & enterprise quote",
+        "Enterprise scope & quote",
       ],
       paymentPlan: null,
       linkText: "consulting through ZEN AI Co.",
