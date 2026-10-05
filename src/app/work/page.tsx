@@ -57,19 +57,6 @@ export default function WorkPage() {
     },
   ];
 
-  const videoAddons = [
-    {
-      title: "3 Short Clips",
-      price: "$400",
-      detail: "Quick shoot for 3 post-ready vertical social clips.",
-    },
-    {
-      title: "Half Day (6 Clips)",
-      price: "$750",
-      detail: "Half-day shoot for 6 post-ready vertical social clips.",
-    },
-  ];
-
   const portfolio = [
     {
       name: "Relentless Mobile Details",
@@ -248,30 +235,18 @@ export default function WorkPage() {
           </div>
         </section>
 
-        {/* Local Video Add-on */}
-        <section className="rounded-3xl border border-primary/20 bg-primary/5 p-8 space-y-6">
-          <div className="space-y-2">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-mono font-semibold">
-              <Video className="h-3.5 w-3.5" />
-              <span>On-Location Content</span>
-            </div>
-            <h2 className="text-2xl font-bold text-foreground">Local Video Add-on</h2>
-            <p className="text-sm text-muted-foreground max-w-2xl">
-              Available only if close enough to shoot in person. Delivered as post-ready vertical files for social media — not a monthly social retainer.
-            </p>
+        {/* Local Video Section */}
+        <section className="rounded-3xl border border-primary/20 bg-primary/5 p-8 space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-mono font-semibold w-fit">
+            <Video className="h-3.5 w-3.5" />
+            <span>On-Site Video</span>
           </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
-            {videoAddons.map((item) => (
-              <div key={item.title} className="rounded-2xl border border-border bg-card/50 p-6 space-y-2">
-                <div className="flex justify-between items-baseline">
-                  <h3 className="text-lg font-bold text-foreground">{item.title}</h3>
-                  <span className="text-xl font-extrabold text-primary font-mono">{item.price}</span>
-                </div>
-                <p className="text-sm text-muted-foreground">{item.detail}</p>
-              </div>
-            ))}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <h2 className="text-2xl font-bold text-foreground">Local video — $50 value</h2>
           </div>
+          <p className="text-base text-muted-foreground leading-relaxed">
+            If the business is close enough to drive to, I’ll come film a short vlog on site. <span className="text-foreground font-semibold">$50 value</span>
+          </p>
         </section>
 
         {/* Portfolio Section */}
