@@ -1,12 +1,24 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Check, ArrowUpRight, Video, Globe, Shield, Sparkles, Clock, CreditCard } from "lucide-react";
+import { Check, ArrowUpRight, Video, Globe, Shield, Sparkles, Clock, CreditCard, Cpu, Layers, ArrowRight, Phone, Code2 } from "lucide-react";
 import WorkContactForm from "@/components/WorkContactForm";
 
 export const metadata: Metadata = {
-  title: "Work with me | Kyle Kinkin — JustDuckIt",
+  title: "Custom Web Development, Automation & Technical Infrastructure | Kyle Kinkin — JustDuckIt",
   description:
-    "Kyle Kinkin (JustDuckIt) builds websites for local businesses and shoots short social videos. Fixed price, one person, no agency layer.",
+    "From clean, high-speed websites for Middle Tennessee businesses (Smithville, DeKalb County, Murfreesboro, Cookeville) to proprietary AI workflows and Web3 architecture.",
+  keywords: [
+    "Middle Tennessee web developer",
+    "Smithville TN web design",
+    "DeKalb County IT solutions",
+    "Murfreesboro web developer",
+    "Cookeville custom software",
+    "Kyle Kinkin",
+    "JustDuckIt",
+    "Duck on X",
+    "Zen AI Co",
+    "Solana Web3 developer",
+  ],
   alternates: { canonical: "https://justduckit.xyz/work" },
 };
 
@@ -20,7 +32,7 @@ export default function WorkPage() {
       features: [
         "Up to 5 pages",
         "Mobile layout & contact form",
-        "Basic SEO",
+        "Basic SEO titles & schema",
         "2 revision rounds",
       ],
       paymentPlan: "$450 now, then $150/mo for 3 months",
@@ -36,10 +48,10 @@ export default function WorkPage() {
       delivery: "about 2–3 days",
       features: [
         "Up to 10 pages",
-        "Service pages",
-        "Gallery & reviews",
+        "Service pages & package listings",
+        "Gallery & reviews section",
         "Google listing and map links",
-        "Analytics",
+        "Analytics integration",
       ],
       paymentPlan: "$800 now, then $200/mo for 4 months",
       highlight: true,
@@ -55,7 +67,7 @@ export default function WorkPage() {
       features: [
         "Multi-software integrations",
         "Scoped on phone call",
-        "Custom scope & quote",
+        "Custom scope & enterprise quote",
       ],
       paymentPlan: null,
       linkText: "consulting through ZEN AI Co.",
@@ -70,28 +82,59 @@ export default function WorkPage() {
   const portfolio = [
     {
       name: "Relentless Mobile Details",
-      category: "Auto Detailing",
+      category: "Local Service & Auto Detailing",
+      challenge: "Local auto detailer needed a high-speed booking site to capture search traffic and replace lost phone inquiries.",
+      architecture: "Next.js, Tailwind CSS, Local Business Schema.org, Formspree API.",
+      result: "Sub-second mobile load time with direct tap-to-call and form conversions.",
       url: "https://relentlessmobiledetails.com",
     },
     {
       name: "Kit Kat Alley Rescue",
-      category: "Animal Rescue",
+      category: "Non-Profit Animal Rescue",
+      challenge: "Regional cat rescue required an intuitive adoption portal and streamlined donor intake system.",
+      architecture: "Next.js, React, Tailwind CSS, Stripe integration, Vercel Edge.",
+      result: "Simplified adoption intake workflows and zero-friction donor routing.",
       url: "https://kitkatalleyrescue.org",
     },
     {
       name: "Beauty by Rilee",
       category: "Stylist & Salon",
+      challenge: "Independent salon stylist needed a mobile-first service menu and appointment booking hub.",
+      architecture: "Next.js, Vercel, Tailwind CSS, Google Business Profile alignment.",
+      result: "Delivered in 2 days with automated client booking and high local search rank.",
       url: "https://beautyby-rilee-bol99850f-flowmarket1-3159s-projects.vercel.app/",
     },
     {
       name: "Hidden Harbor Marina",
-      category: "Marina & Boating",
+      category: "Marina & Marine Services",
+      challenge: "Regional marina needed a modern web portal for slip reservations and service inquiries.",
+      architecture: "Next.js, Tailwind CSS, Dynamic Google Maps API, Vercel Analytics.",
+      result: "High-converting landing surface for regional boaters across Middle Tennessee.",
       url: "https://hidden-harbor-8j3ysrtkj-flowmarket1-3159s-projects.vercel.app/",
     },
     {
       name: "Vee",
       category: "Personal brand",
+      challenge: "Digital content creator needed a lightweight, high-impact personal brand landing hub.",
+      architecture: "Next.js, Vercel Edge, Tailwind CSS, Glassmorphic UI design.",
+      result: "Sub-second mobile rendering with unified social & portfolio links.",
       url: "https://veesite-rgkyo2lpo-flowmarket1-3159s-projects.vercel.app/",
+    },
+    {
+      name: "ZEN AI Co. / Arsenal OS",
+      category: "Enterprise AI & Automation",
+      challenge: "Growing organizations needing proprietary AI intake agents, custom web apps, and automated workflows.",
+      architecture: "Arsenal Agent OS, Multi-model AI routing (OpenAI/Anthropic/Gemini), Next.js, Supabase.",
+      result: "Unified agentic execution environment that automates repetitive back-office operations.",
+      url: "https://zenai.world/",
+    },
+    {
+      name: "Decent Ducks Sanctuary",
+      category: "Web3 & Wildlife Sanctuary",
+      challenge: "On-chain digital asset project bridging digital collectibles with physical sanctuary operations.",
+      architecture: "Solana Smart Contracts, Next.js, Waterfowl Rescue Infrastructure, Stripe Merch Rails.",
+      result: "888-piece sold-out collection funding real-world animal care & digital advocacy.",
+      url: "https://adoptaduck.org",
     },
   ];
 
@@ -99,34 +142,84 @@ export default function WorkPage() {
     <div className="relative isolate overflow-hidden min-h-screen">
       <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 space-y-20">
         
-        {/* Hero Section */}
-        <div className="text-center max-w-3xl mx-auto space-y-6 animate-in fade-in slide-in-from-bottom-6 duration-700">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-mono font-semibold">
-            <Globe className="h-3.5 w-3.5" />
-            <span>Local Web & Video</span>
+        {/* Universal Hero & Router */}
+        <div className="text-center max-w-4xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-6 duration-700">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-mono font-semibold">
+            <Code2 className="h-3.5 w-3.5" />
+            <span>Middle Tennessee & Enterprise Tech</span>
           </div>
 
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl text-foreground leading-tight">
-            Sites for local businesses. <span className="text-gradient-gold">One person, fixed price, no agency layer.</span>
+            Custom Web Development, Automation & <span className="text-gradient-gold">Technical Infrastructure</span>
           </h1>
 
-          <p className="text-lg leading-8 text-muted-foreground">
-            Kyle Kinkin (JustDuckIt) builds websites for local businesses and can shoot short social videos when the job is close enough to drive to. Half to start. The rest before launch, or on a short monthly plan.
+          <p className="text-lg leading-8 text-muted-foreground max-w-3xl mx-auto">
+            From clean, high-speed websites for Middle Tennessee businesses to proprietary AI workflows and Web3 architecture.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-            <a
-              href="#packages"
-              className="flex items-center gap-2 rounded-xl bg-primary text-black font-semibold text-sm px-6 py-3.5 hover:bg-primary-hover active:scale-[0.98] transition-all cursor-pointer shadow-lg shadow-primary/10"
-            >
-              <span>View Packages</span>
-            </a>
-            <a
-              href="#contact"
-              className="flex items-center gap-2 rounded-xl border border-border glass-panel text-sm px-6 py-3.5 hover:bg-white/5 active:scale-[0.98] transition-all cursor-pointer"
-            >
-              <span>Get in Touch</span>
-            </a>
+          {/* Audience Router Cards (3 Direct Action Tiles) */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 text-left">
+            
+            {/* Tile 1: Local Businesses */}
+            <div className="rounded-2xl border border-border bg-card/40 backdrop-blur-md p-6 flex flex-col justify-between space-y-4 hover:border-primary/40 transition-all">
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 text-primary font-bold text-base">
+                  <Globe className="h-5 w-5" />
+                  <span>Local Businesses</span>
+                </div>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  Fast, modern sites, booking engines, and local search visibility.
+                </p>
+              </div>
+              <a
+                href="#packages"
+                className="inline-flex items-center justify-between w-full rounded-xl bg-primary text-black font-semibold text-xs px-4 py-3 hover:bg-primary-hover transition-all"
+              >
+                <span>Get a Website / Discovery Call</span>
+                <ArrowRight className="h-3.5 w-3.5" />
+              </a>
+            </div>
+
+            {/* Tile 2: Custom Systems & Enterprise AI */}
+            <div className="rounded-2xl border border-border bg-card/40 backdrop-blur-md p-6 flex flex-col justify-between space-y-4 hover:border-primary/40 transition-all">
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 text-primary font-bold text-base">
+                  <Cpu className="h-5 w-5" />
+                  <span>Custom Systems & AI</span>
+                </div>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  Proprietary AI intake agents, custom web apps, and automated operations.
+                </p>
+              </div>
+              <a
+                href="#enterprise"
+                className="inline-flex items-center justify-between w-full rounded-xl border border-border bg-white/5 text-foreground font-semibold text-xs px-4 py-3 hover:bg-white/10 transition-all"
+              >
+                <span>Explore Custom Software</span>
+                <ArrowRight className="h-3.5 w-3.5" />
+              </a>
+            </div>
+
+            {/* Tile 3: Web3 & Digital Ecosystem */}
+            <div className="rounded-2xl border border-border bg-card/40 backdrop-blur-md p-6 flex flex-col justify-between space-y-4 hover:border-primary/40 transition-all">
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 text-primary font-bold text-base">
+                  <Layers className="h-5 w-5" />
+                  <span>Web3 & Digital Ecosystem</span>
+                </div>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  Interactive browser builds, Solana smart contracts, and sanctuary initiatives.
+                </p>
+              </div>
+              <a
+                href="#portfolio"
+                className="inline-flex items-center justify-between w-full rounded-xl border border-border bg-white/5 text-foreground font-semibold text-xs px-4 py-3 hover:bg-white/10 transition-all"
+              >
+                <span>View Ecosystem & Projects</span>
+                <ArrowRight className="h-3.5 w-3.5" />
+              </a>
+            </div>
+
           </div>
         </div>
 
@@ -138,7 +231,7 @@ export default function WorkPage() {
               <span>Website Packages</span>
             </h2>
             <p className="text-sm text-muted-foreground">
-              Clear scope, fixed pricing, and flexible payment terms. Domain and hosting are client costs.
+              Clear scope, fixed pricing, and fast turnarounds for local businesses across Middle Tennessee (Smithville, DeKalb County, Murfreesboro, Cookeville).
             </p>
           </div>
 
@@ -161,7 +254,7 @@ export default function WorkPage() {
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-xl font-bold text-foreground">{pkg.name}</h3>
-                    <p className="text-xs text-muted-foreground mt-1">{pkg.description}</p>
+                    <p className="text-xs text-muted-foreground mt-1 leading-relaxed">{pkg.description}</p>
                   </div>
 
                   <div className="border-y border-border/50 py-4 space-y-1">
@@ -280,42 +373,120 @@ export default function WorkPage() {
           </p>
         </section>
 
-        {/* Portfolio Section */}
-        <section className="space-y-8">
-          <div className="border-b border-border pb-4">
-            <h2 className="text-2xl font-bold text-foreground">Completed Work</h2>
-            <p className="text-sm text-muted-foreground mt-1">Recent client sites and live builds.</p>
+        {/* Enterprise Systems & Custom Software (ZEN AI Co) */}
+        <section id="enterprise" className="scroll-mt-24 rounded-3xl border border-border bg-card/30 p-8 sm:p-12 space-y-6">
+          <div className="space-y-2">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-mono font-semibold">
+              <Cpu className="h-3.5 w-3.5" />
+              <span>Enterprise & Custom Systems</span>
+            </div>
+            <h2 className="text-3xl font-bold text-foreground">Enterprise Software & Custom AI Workflows</h2>
+            <p className="text-sm text-muted-foreground max-w-3xl leading-relaxed">
+              For growing organizations and regional enterprises that outgrow off-the-shelf software. In collaboration with Alexander Leschik at ZEN AI Co., we design and build unified agentic systems.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {portfolio.map((site) => (
-              <a
-                key={site.name}
-                href={site.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group rounded-2xl border border-border bg-card/30 p-6 hover:border-primary/40 hover:bg-card/60 transition-all flex flex-col justify-between"
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+            <div className="rounded-2xl border border-border bg-background/50 p-6 space-y-2">
+              <h3 className="text-base font-bold text-foreground">Proprietary AI Agents</h3>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                Custom-trained internal systems designed to handle repetitive customer touchpoints, lead sorting, intake, and back-office operations.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-border bg-background/50 p-6 space-y-2">
+              <h3 className="text-base font-bold text-foreground">Bespoke Full-Stack Dev</h3>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                Scalable database architecture, private API integrations, multi-tenant spaces, and secure web application environments.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-border bg-background/50 p-6 space-y-2">
+              <h3 className="text-base font-bold text-foreground">Automation Infrastructure</h3>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                Transitioning legacy operations into unified, intelligent systems built to scale without forcing employees to be the manual wire between tabs.
+              </p>
+            </div>
+          </div>
+
+          <div className="pt-2">
+            <a
+              href="https://zenai.world/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-xl bg-primary text-black font-semibold text-sm px-6 py-3.5 hover:bg-primary-hover transition-all shadow-md shadow-primary/10"
+            >
+              <span>Schedule Custom Software Scope Call (ZEN AI Co.) ↗</span>
+            </a>
+          </div>
+        </section>
+
+        {/* Proof & Portfolio Section (Structured 3-Part Cards) */}
+        <section id="portfolio" className="space-y-8 scroll-mt-24">
+          <div className="border-b border-border pb-4">
+            <h2 className="text-3xl font-bold text-foreground">Proof & Portfolio</h2>
+            <p className="text-sm text-muted-foreground mt-1">
+              Scannable case studies across local business sites, custom software, and Web3 builds.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {portfolio.map((item) => (
+              <div
+                key={item.name}
+                className="rounded-2xl border border-border bg-card/30 p-6 sm:p-8 flex flex-col justify-between space-y-6 hover:border-primary/30 transition-all"
               >
-                <div className="space-y-2">
-                  <div className="flex justify-between items-start">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between gap-2">
                     <span className="text-xs font-mono font-semibold text-primary px-2.5 py-0.5 rounded bg-primary/10 border border-primary/20">
-                      {site.category}
+                      {item.category}
                     </span>
-                    <ArrowUpRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1 font-mono"
+                    >
+                      <span>Visit Live</span>
+                      <ArrowUpRight className="h-3.5 w-3.5" />
+                    </a>
                   </div>
-                  <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
-                    {site.name}
-                  </h3>
+
+                  <h3 className="text-xl font-bold text-foreground">{item.name}</h3>
+
+                  <div className="space-y-3 text-xs leading-relaxed">
+                    <div className="bg-background/60 p-3 rounded-xl border border-border/40">
+                      <strong className="text-foreground block mb-0.5">The Client / Challenge:</strong>
+                      <span className="text-muted-foreground">{item.challenge}</span>
+                    </div>
+
+                    <div className="bg-background/60 p-3 rounded-xl border border-border/40">
+                      <strong className="text-foreground block mb-0.5">The Architecture:</strong>
+                      <span className="text-primary font-mono">{item.architecture}</span>
+                    </div>
+
+                    <div className="bg-background/60 p-3 rounded-xl border border-border/40">
+                      <strong className="text-foreground block mb-0.5">The Result / Live Link:</strong>
+                      <span className="text-muted-foreground">{item.result}</span>
+                    </div>
+                  </div>
                 </div>
-                <div className="mt-6 pt-4 border-t border-border/40 text-xs font-mono text-muted-foreground truncate">
-                  {site.url.replace(/^https?:\/\//, "")}
+
+                <div className="pt-2 border-t border-border/40">
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1"
+                  >
+                    <span>{item.url.replace(/^https?:\/\//, "")}</span>
+                    <ArrowUpRight className="h-3 w-3" />
+                  </a>
                 </div>
-              </a>
+              </div>
             ))}
           </div>
         </section>
 
-        {/* Simple Lead Form Contact Section */}
+        {/* Direct Universal Lead Form Section */}
         <WorkContactForm />
 
       </div>
