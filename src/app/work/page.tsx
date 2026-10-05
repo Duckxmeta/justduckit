@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Check, ArrowUpRight, Video, Globe, Shield, Sparkles, MessageSquare, Clock, CreditCard } from "lucide-react";
+import { Check, ArrowUpRight, Video, Globe, Shield, Sparkles, Clock, CreditCard } from "lucide-react";
+import WorkContactForm from "@/components/WorkContactForm";
 
 export const metadata: Metadata = {
   title: "Work with me | Kyle Kinkin — JustDuckIt",
@@ -308,105 +309,8 @@ export default function WorkPage() {
           </div>
         </section>
 
-        {/* Contact Section */}
-        <section id="contact" className="scroll-mt-24 rounded-3xl border border-border bg-card/30 p-8 sm:p-12 space-y-8">
-          <div className="max-w-2xl space-y-3">
-            <h2 className="text-3xl font-bold text-foreground">Start Your Build</h2>
-            <p className="text-sm text-muted-foreground">
-              Have a project in mind? Connect via Discord or send a message below to kick off your project.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            <div className="lg:col-span-5 rounded-2xl border border-border bg-background/50 p-6 space-y-4">
-              <h3 className="text-base font-bold text-foreground">Direct Discord Contact</h3>
-              <p className="text-xs text-muted-foreground leading-relaxed">
-                Join the official Discord server to chat directly about scope, timeline, and questions.
-              </p>
-              <a
-                href="https://discord.gg/Ry8zBm5Yvb"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl bg-primary text-black font-semibold text-sm px-5 py-3 hover:bg-primary-hover transition-all shadow-md shadow-primary/10"
-              >
-                <MessageSquare className="h-4 w-4" />
-                <span>Join Discord Server ↗</span>
-              </a>
-            </div>
-
-            <form
-              action="https://formspree.io/f/xbjnqpyz"
-              method="POST"
-              className="lg:col-span-7 space-y-4"
-            >
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="name" className="block text-xs font-medium text-muted-foreground mb-1">
-                    Your Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    placeholder="Jane Doe"
-                    className="w-full rounded-xl border border-border bg-background/80 px-4 py-2.5 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="business" className="block text-xs font-medium text-muted-foreground mb-1">
-                    Business / Project
-                  </label>
-                  <input
-                    type="text"
-                    id="business"
-                    name="business"
-                    required
-                    placeholder="Local Shop / Marina"
-                    className="w-full rounded-xl border border-border bg-background/80 px-4 py-2.5 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="package" className="block text-xs font-medium text-muted-foreground mb-1">
-                  Interested Package
-                </label>
-                <select
-                  id="package"
-                  name="package"
-                  className="w-full rounded-xl border border-border bg-background/80 px-4 py-2.5 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
-                >
-                  <option value="Starter ($900)">Starter Package ($900)</option>
-                  <option value="Business ($1,600)">Business Package ($1,600)</option>
-                  <option value="Custom ($2,800)">Custom Package ($2,800)</option>
-                  <option value="Local Video Add-on">Local Video Add-on</option>
-                </select>
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-xs font-medium text-muted-foreground mb-1">
-                  Project Details
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={4}
-                  required
-                  placeholder="Tell me about your business and what you need on your site..."
-                  className="w-full rounded-xl border border-border bg-background/80 px-4 py-2.5 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="w-full sm:w-auto rounded-xl border border-border glass-panel text-foreground font-semibold text-sm px-6 py-3 hover:bg-white/10 transition-all cursor-pointer"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
-        </section>
+        {/* Simple Lead Form Contact Section */}
+        <WorkContactForm />
 
       </div>
     </div>
