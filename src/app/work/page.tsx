@@ -81,6 +81,14 @@ export default function WorkPage() {
 
   const portfolio = [
     {
+      name: "Glow's Haven",
+      category: "Local Service & Custom Web",
+      challenge: "Client: Glow's Haven (glowshaven.com) needed a modern, mobile-first design with reliable DNS architecture.",
+      architecture: "Custom Web Design, Mobile Layout & Domain Architecture",
+      result: "Responsive mobile navigation, custom CSS layout, fast DNS/static deployment.",
+      url: "https://glowshaven.com",
+    },
+    {
       name: "Relentless Mobile Details",
       category: "Local Service & Auto Detailing",
       challenge: "Local auto detailer needed a high-speed booking site to capture search traffic and replace lost phone inquiries.",
@@ -374,7 +382,7 @@ export default function WorkPage() {
         </section>
 
         {/* Enterprise Systems & Custom Software (ZEN AI Co) */}
-        <section id="enterprise" className="scroll-mt-24 rounded-3xl border border-border bg-card/30 p-8 sm:p-12 space-y-6">
+        <section id="enterprise" className="scroll-mt-24 rounded-3xl border border-border bg-card/30 p-8 sm:p-12 space-y-10">
           <div className="space-y-2">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-mono font-semibold">
               <Cpu className="h-3.5 w-3.5" />
@@ -386,7 +394,7 @@ export default function WorkPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="rounded-2xl border border-border bg-background/50 p-6 space-y-2">
               <h3 className="text-base font-bold text-foreground">Proprietary AI Agents</h3>
               <p className="text-xs text-muted-foreground leading-relaxed">
@@ -404,6 +412,118 @@ export default function WorkPage() {
               <p className="text-xs text-muted-foreground leading-relaxed">
                 Transitioning legacy operations into unified, intelligent systems built to scale without forcing employees to be the manual wire between tabs.
               </p>
+            </div>
+          </div>
+
+          {/* Dedicated Partner Subsection */}
+          <div className="pt-6 border-t border-border/60 space-y-6">
+            <div className="space-y-2">
+              <h3 className="text-2xl font-bold text-foreground">Enterprise & Automation Systems (via Zen AI Co)</h3>
+              <p className="text-sm text-muted-foreground max-w-3xl leading-relaxed">
+                Collaborative systems engineering, custom AI pipelines, and internal tools delivered in partnership with Zen AI Co.
+              </p>
+            </div>
+
+            {/* 3 Structured Project Proof Blocks */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* Proof Block 1 */}
+              <div className="rounded-2xl border border-border bg-background/60 p-6 space-y-4 flex flex-col justify-between">
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-mono font-semibold text-primary px-2.5 py-0.5 rounded bg-primary/10 border border-primary/20">
+                      Engineering & Automation Partner
+                    </span>
+                  </div>
+                  <h4 className="text-lg font-bold text-foreground">Thinkrr.ai</h4>
+                  <div className="space-y-2 text-xs leading-relaxed">
+                    <div>
+                      <strong className="text-foreground block">Problem Solved:</strong>
+                      <span className="text-muted-foreground">Automating complex AI intake, document reasoning, and multi-model agent execution pipelines.</span>
+                    </div>
+                    <div>
+                      <strong className="text-foreground block">Technical Stack:</strong>
+                      <span className="text-primary font-mono">Next.js, TypeScript, Arsenal Agent OS, Multi-Model AI Router, Supabase</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="pt-2 border-t border-border/40">
+                  <a
+                    href="https://thinkrr.ai"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1"
+                  >
+                    <span>thinkrr.ai</span>
+                    <ArrowUpRight className="h-3 w-3" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Proof Block 2 */}
+              <div className="rounded-2xl border border-border bg-background/60 p-6 space-y-4 flex flex-col justify-between">
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-mono font-semibold text-primary px-2.5 py-0.5 rounded bg-primary/10 border border-primary/20">
+                      Engineering & Automation Partner
+                    </span>
+                  </div>
+                  <h4 className="text-lg font-bold text-foreground">Inspect Canada</h4>
+                  <div className="space-y-2 text-xs leading-relaxed">
+                    <div>
+                      <strong className="text-foreground block">Problem Solved:</strong>
+                      <span className="text-muted-foreground">Streamlining field inspection intake, automated report dispatching, and client communication workflows.</span>
+                    </div>
+                    <div>
+                      <strong className="text-foreground block">Technical Stack:</strong>
+                      <span className="text-primary font-mono">Next.js, Node.js, Custom CRM Integrations, Automated SMS/Email Dispatch, Vercel Edge</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="pt-2 border-t border-border/40">
+                  <a
+                    href="https://inspectcanada.info"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1"
+                  >
+                    <span>inspectcanada.info</span>
+                    <ArrowUpRight className="h-3 w-3" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Proof Block 3 */}
+              <div className="rounded-2xl border border-border bg-background/60 p-6 space-y-4 flex flex-col justify-between">
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-mono font-semibold text-primary px-2.5 py-0.5 rounded bg-primary/10 border border-primary/20">
+                      Technical Lead & Automation Partner
+                    </span>
+                  </div>
+                  <h4 className="text-lg font-bold text-foreground">Pastry Popup Fundraiser</h4>
+                  <div className="space-y-2 text-xs leading-relaxed">
+                    <div>
+                      <strong className="text-foreground block">Problem Solved:</strong>
+                      <span className="text-muted-foreground">High-volume flash sale order management with automated inventory locking and real-time payment validation.</span>
+                    </div>
+                    <div>
+                      <strong className="text-foreground block">Technical Stack:</strong>
+                      <span className="text-primary font-mono">Next.js, Stripe Payments, Webhooks Engine, Tailwind CSS, Vercel Infrastructure</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="pt-2 border-t border-border/40">
+                  <a
+                    href="https://pastrypopupfundraiser.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1"
+                  >
+                    <span>pastrypopupfundraiser.org</span>
+                    <ArrowUpRight className="h-3 w-3" />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 
