@@ -5,17 +5,17 @@ import { MessageSquare, Phone, Send, CheckCircle } from "lucide-react";
 
 export default function WorkContactForm() {
   const [name, setName] = useState("");
-  const [businessName, setBusinessName] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [whatTheyWant, setWhatTheyWant] = useState("");
+  const [contactInfo, setContactInfo] = useState("");
+  const [projectType, setProjectType] = useState("Local Small Business Site");
+  const [notes, setNotes] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
   const nameVal = name.trim() || "[Name]";
-  const busVal = businessName.trim() || "[Business]";
-  const phoneVal = phoneNumber.trim() || "[Return number]";
-  const wantVal = whatTheyWant.trim() || "[What they want]";
+  const contactVal = contactInfo.trim() || "[Email / Phone]";
+  const projectVal = projectType;
+  const notesVal = notes.trim() || "[Notes]";
 
-  const prefilledSmsText = `JustDuckIt site: ${nameVal} / ${busVal} / ${phoneVal} / ${wantVal}`;
+  const prefilledSmsText = `JustDuckIt site: ${nameVal} / ${contactVal} / ${projectVal} / ${notesVal}`;
   const smsUrl = `sms:+16156694135?body=${encodeURIComponent(prefilledSmsText)}`;
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -59,7 +59,7 @@ export default function WorkContactForm() {
         <input
           type="hidden"
           name="_subject"
-          value={`JustDuckIt site lead — ${businessName.trim() || "New Business Lead"}`}
+          value={`JustDuckIt site lead — ${projectType} (${name.trim() || "New Lead"})`}
         />
         <input
           type="hidden"
@@ -85,50 +85,52 @@ export default function WorkContactForm() {
           </div>
 
           <div>
-            <label htmlFor="businessName" className="block text-xs font-medium text-muted-foreground mb-1">
-              Business name
+            <label htmlFor="contactInfo" className="block text-xs font-medium text-muted-foreground mb-1">
+              Email / Phone
             </label>
             <input
               type="text"
-              id="businessName"
-              name="Business name"
+              id="contactInfo"
+              name="Email or Phone"
               required
-              value={businessName}
-              onChange={(e) => setBusinessName(e.target.value)}
-              placeholder="Business Name"
+              value={contactInfo}
+              onChange={(e) => setContactInfo(e.target.value)}
+              placeholder="email@example.com or (615) 555-0123"
               className="w-full rounded-xl border border-border bg-background/80 px-4 py-2.5 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
             />
           </div>
         </div>
 
         <div>
-          <label htmlFor="phoneNumber" className="block text-xs font-medium text-muted-foreground mb-1">
-            Return phone number
+          <label htmlFor="projectType" className="block text-xs font-medium text-muted-foreground mb-1">
+            Project Type
           </label>
-          <input
-            type="tel"
-            id="phoneNumber"
-            name="Return phone number"
-            required
-            value={phoneNumber}
-            onChange={(e) => setPhoneNumber(e.target.value)}
-            placeholder="(615) 555-0123"
+          <select
+            id="projectType"
+            name="Project Type"
+            value={projectType}
+            onChange={(e) => setProjectType(e.target.value)}
             className="w-full rounded-xl border border-border bg-background/80 px-4 py-2.5 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
-          />
+          >
+            <option value="Local Small Business Site">Local Small Business Site</option>
+            <option value="Custom Software / AI Automation">Custom Software / AI Automation</option>
+            <option value="Web3 / Custom Dev">Web3 / Custom Dev</option>
+            <option value="Other">Other</option>
+          </select>
         </div>
 
         <div>
-          <label htmlFor="whatTheyWant" className="block text-xs font-medium text-muted-foreground mb-1">
-            What you want
+          <label htmlFor="notes" className="block text-xs font-medium text-muted-foreground mb-1">
+            Notes
           </label>
           <textarea
-            id="whatTheyWant"
-            name="What they want"
+            id="notes"
+            name="Notes"
             rows={4}
             required
-            value={whatTheyWant}
-            onChange={(e) => setWhatTheyWant(e.target.value)}
-            placeholder="Tell me about your site or project..."
+            value={notes}
+            onChange={(e) => setNotes(e.target.value)}
+            placeholder="Tell me about your business, goal, or technical needs..."
             className="w-full rounded-xl border border-border bg-background/80 px-4 py-2.5 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
           />
         </div>
@@ -137,7 +139,7 @@ export default function WorkContactForm() {
         <input
           type="hidden"
           name="Lead Summary"
-          value={`Name: ${name}\nBusiness: ${businessName}\nReturn number: ${phoneNumber}\nWhat they want: ${whatTheyWant}\nSource: justduckit.xyz`}
+          value={`Name: ${name}\nContact: ${contactInfo}\nProject Type: ${projectType}\nNotes: ${notes}\nSource: justduckit.xyz`}
         />
 
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 pt-2">
@@ -154,7 +156,7 @@ export default function WorkContactForm() {
           <div className="mt-4 rounded-2xl border border-primary/30 bg-primary/10 p-5 space-y-3">
             <div className="flex items-center gap-2 text-primary font-bold text-sm">
               <CheckCircle className="h-5 w-5" />
-              <span>Form submitted! Tap below to send as a text message as well:</span>
+              <span>Form submitted! Tap below to text me directly:</span>
             </div>
             <a
               href={smsUrl}
