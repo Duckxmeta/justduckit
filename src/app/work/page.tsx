@@ -15,45 +15,55 @@ export default function WorkPage() {
     {
       name: "Starter",
       price: "$900",
-      description: "Best for a simple local service page.",
-      delivery: "2–3 week delivery",
+      description: "Up to 5 pages. Mobile, contact form, basic SEO, 2 revision rounds.",
+      delivery: "2–3 days",
       features: [
-        "Up to 5 pages (home, about, services, contact, one extra)",
+        "Up to 5 pages",
         "Mobile layout & contact form",
-        "Basic SEO titles",
+        "Basic SEO",
         "2 revision rounds",
       ],
       paymentPlan: "$450 now, then $150/mo for 3 months",
       highlight: false,
+      ctaText: "Select Starter",
+      ctaHref: "#contact",
+      external: false,
     },
     {
       name: "Business",
       price: "$1,600",
-      description: "Best for detailers, stylists, marinas, and shops.",
-      delivery: "3–5 week delivery",
+      description: "Up to 10 pages. Service pages, gallery, reviews, Google listing and map links, analytics.",
+      delivery: "about 2–3 days",
       features: [
         "Up to 10 pages",
-        "Service or package pages",
-        "Gallery & reviews section",
+        "Service pages",
+        "Gallery & reviews",
         "Google listing and map links",
-        "Analytics integration",
-        "3 revision rounds",
+        "Analytics",
       ],
       paymentPlan: "$800 now, then $200/mo for 4 months",
       highlight: true,
+      ctaText: "Select Business",
+      ctaHref: "#contact",
+      external: false,
     },
     {
       name: "Custom",
-      price: "$2,800",
-      description: "Best for rescues, booking businesses, or anything beyond a brochure.",
-      delivery: "Scoped on a call",
+      price: "call first",
+      description: "For larger clients who need more than one piece of software working together. This is a consulting call, not a fixed site package. We scope it on the phone, then quote it.",
+      delivery: "Scoped on call",
       features: [
-        "Booking, payments, listings, or donate flow",
-        "Scoped on a kick-off call",
-        "Extra features quoted separately",
+        "Multi-software integrations",
+        "Scoped on phone call",
+        "Custom scope & quote",
       ],
-      paymentPlan: "$1,400 now, then $200/mo for 7 months",
+      paymentPlan: null,
+      linkText: "consulting through ZEN AI Co.",
+      linkUrl: "https://zenai.world/",
       highlight: false,
+      ctaText: "Consulting through ZEN AI Co. ↗",
+      ctaHref: "https://zenai.world/",
+      external: true,
     },
   ];
 
@@ -175,22 +185,40 @@ export default function WorkPage() {
                 </div>
 
                 <div className="mt-8 pt-6 border-t border-border/40 space-y-4">
-                  <div className="bg-background/60 rounded-xl p-3.5 border border-border/40 text-xs">
-                    <span className="font-semibold text-foreground block mb-0.5 flex items-center gap-1">
-                      <CreditCard className="h-3.5 w-3.5 text-primary" />
-                      Payment Plan Option:
-                    </span>
-                    <span className="text-muted-foreground font-mono">{pkg.paymentPlan}</span>
-                  </div>
+                  {pkg.paymentPlan ? (
+                    <div className="bg-background/60 rounded-xl p-3.5 border border-border/40 text-xs">
+                      <span className="font-semibold text-foreground block mb-0.5 flex items-center gap-1">
+                        <CreditCard className="h-3.5 w-3.5 text-primary" />
+                        Payment Plan Option:
+                      </span>
+                      <span className="text-muted-foreground font-mono">{pkg.paymentPlan}</span>
+                    </div>
+                  ) : (
+                    <div className="bg-background/60 rounded-xl p-3.5 border border-border/40 text-xs">
+                      <span className="font-semibold text-foreground block mb-0.5">
+                        Consulting Partner:
+                      </span>
+                      <a
+                        href={pkg.linkUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary hover:underline font-mono"
+                      >
+                        {pkg.linkText} ↗
+                      </a>
+                    </div>
+                  )}
                   <a
-                    href="#contact"
+                    href={pkg.ctaHref}
+                    target={pkg.external ? "_blank" : undefined}
+                    rel={pkg.external ? "noopener noreferrer" : undefined}
                     className={`block w-full text-center rounded-xl py-3 px-4 text-sm font-semibold transition-all ${
                       pkg.highlight
                         ? "bg-primary text-black hover:bg-primary-hover shadow-md shadow-primary/10"
                         : "border border-border bg-white/5 hover:bg-white/10 text-foreground"
                     }`}
                   >
-                    Select {pkg.name}
+                    {pkg.ctaText}
                   </a>
                 </div>
               </div>
@@ -207,10 +235,13 @@ export default function WorkPage() {
             </h3>
             <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
               <p>
-                <strong className="text-foreground">Starter package:</strong> Full payment up front preferred, or use the 3-month payment plan ($450 now, then $150/mo for 3 months).
+                <strong className="text-foreground">Payment Terms:</strong> 50% to start, 50% before launch.
               </p>
               <p>
-                <strong className="text-foreground">Business & Custom packages:</strong> 50% to start, 50% before the site goes live. Monthly payment plans are also available on both options.
+                <strong className="text-foreground">Starter plan:</strong> $450 now, then $150/mo for 3 months.
+              </p>
+              <p>
+                <strong className="text-foreground">Business plan:</strong> $800 now, then $200/mo for 4 months.
               </p>
               <p className="text-xs bg-background/50 p-3 rounded-lg border border-border/50 font-mono text-muted-foreground">
                 Note: Sites stay on a staging link until the payment plan is current. Domain and hosting are the client’s responsibility.
