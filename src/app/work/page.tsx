@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Check, ArrowUpRight, Video, Globe, Shield, Sparkles, Clock, CreditCard, Cpu, Layers, ArrowRight, Phone, Code2 } from "lucide-react";
+import { Check, ArrowUpRight, Video, Globe, Shield, Sparkles, Clock, CreditCard, Cpu, Layers, ArrowRight, Phone, Code2, MapPin } from "lucide-react";
 import WorkContactForm from "@/components/WorkContactForm";
+import ValueContrast from "@/components/ValueContrast";
+import AuditLeadForm from "@/components/AuditLeadForm";
+import ManagedCareRetainers from "@/components/ManagedCareRetainers";
 
 export const metadata: Metadata = {
   title: "Custom Web Development, Automation & Technical Infrastructure | Kyle Kinkin — JustDuckIt",
@@ -379,6 +382,56 @@ export default function WorkPage() {
           <p className="text-base text-muted-foreground leading-relaxed">
             If the business is close enough to drive to, I’ll come film a short vlog on site. <span className="text-foreground font-semibold">$50 value</span>
           </p>
+        </section>
+
+        {/* Value Contrast Section (Enterprise Engineering vs Legacy CMS) */}
+        <ValueContrast />
+
+        {/* Productized Audit Lead Capture */}
+        <AuditLeadForm />
+
+        {/* Managed Retainer Care Tiers */}
+        <ManagedCareRetainers />
+
+        {/* Local Middle Tennessee Geo Target Markets */}
+        <section className="rounded-2xl border border-border bg-card/20 p-6 sm:p-8 space-y-4">
+          <div className="flex items-center gap-2 text-primary font-bold text-sm">
+            <MapPin className="h-4.5 w-4.5" />
+            <span>Middle Tennessee Local Market Services:</span>
+          </div>
+          <p className="text-xs text-muted-foreground">
+            Dedicated engineering & web automation landing hubs for regional business owners across Middle Tennessee:
+          </p>
+          <div className="flex flex-wrap gap-3 pt-1">
+            <Link
+              href="/work/web-design-smithville-tn"
+              className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-background/60 border border-border text-xs font-semibold hover:border-primary/50 text-foreground transition-all"
+            >
+              <span>Smithville, TN Web Design</span>
+              <ArrowRight className="h-3.5 w-3.5 text-primary" />
+            </Link>
+            <Link
+              href="/work/web-design-liberty-tn"
+              className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-background/60 border border-border text-xs font-semibold hover:border-primary/50 text-foreground transition-all"
+            >
+              <span>Liberty, TN Web Design</span>
+              <ArrowRight className="h-3.5 w-3.5 text-primary" />
+            </Link>
+            <Link
+              href="/work/web-design-mcminnville-tn"
+              className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-background/60 border border-border text-xs font-semibold hover:border-primary/50 text-foreground transition-all"
+            >
+              <span>McMinnville, TN Web Design</span>
+              <ArrowRight className="h-3.5 w-3.5 text-primary" />
+            </Link>
+            <Link
+              href="/work/web-design-cookeville-tn"
+              className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-background/60 border border-border text-xs font-semibold hover:border-primary/50 text-foreground transition-all"
+            >
+              <span>Cookeville, TN Web Engineering</span>
+              <ArrowRight className="h-3.5 w-3.5 text-primary" />
+            </Link>
+          </div>
         </section>
 
         {/* Enterprise Systems & Custom Software (ZEN AI Co) */}
