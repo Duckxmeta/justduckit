@@ -37,7 +37,7 @@ export default function AuditLeadForm() {
       </div>
 
       <form
-        action="https://formspree.io/f/ducksonx@duck.com"
+        action="https://formspree.io/f/xgaookvk"
         method="POST"
         onSubmit={handleSubmit}
         className="rounded-2xl border border-border bg-background/70 p-6 sm:p-8 space-y-4"
