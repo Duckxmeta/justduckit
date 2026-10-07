@@ -87,7 +87,7 @@ export default function Home() {
           </h1>
 
           <p className="text-base sm:text-lg leading-relaxed text-foreground font-medium max-w-2xl mx-auto">
-            JustDuckIt is Kyle Kinkin (Duck)’s brand. He films Middle Tennessee spots and builds the sites, search, and software behind local businesses, from Smithville and DeKalb County out to Cookeville and Nashville. The sanctuary is one project under the brand, not the definition.
+            JustDuckIt is Kyle Kinkin (Duck)’s brand. Based in Smithville, Tennessee, he films real places and builds the sites, search, and software behind businesses. Tennessee is the home market. Clients can be local or anywhere.
           </p>
 
           <p className="text-sm text-muted-foreground font-mono">
@@ -257,19 +257,25 @@ export default function Home() {
             <div className="space-y-2 border-b border-border/30 pb-6">
               <h3 className="font-bold text-foreground font-mono text-base">Who is Kyle Kinkin?</h3>
               <p className="text-muted-foreground pl-4 border-l border-primary/20">
-                Kyle Kinkin (Duck) films Middle Tennessee spots and builds the sites, search, and software behind local businesses, from Smithville and DeKalb County out to Cookeville and Nashville. He is also the founder of Decent Ducks.
+                Kyle Kinkin (Duck) is based in Smithville, Tennessee, where he films real places and builds the sites, search, and software behind businesses. He is also the founder of Decent Ducks.
               </p>
             </div>
             <div className="space-y-2 border-b border-border/30 pb-6">
               <h3 className="font-bold text-foreground font-mono text-base">Who is Duck on X (@ducksonx)?</h3>
               <p className="text-muted-foreground pl-4 border-l border-primary/20">
-                Duck on X (@ducksonx) is the personal X identity of Kyle Kinkin, focusing on software engineering, Middle Tennessee local business tech, and community building.
+                Duck on X (@ducksonx) is the personal X account of Kyle Kinkin, focusing on software development, web engineering, and community building.
+              </p>
+            </div>
+            <div className="space-y-2 border-b border-border/30 pb-6">
+              <h3 className="font-bold text-foreground font-mono text-base">What is JustDuckIt?</h3>
+              <p className="text-muted-foreground pl-4 border-l border-primary/20">
+                JustDuckIt is Kyle Kinkin (Duck)’s brand. Based in Smithville, Tennessee, he films real places and builds the sites, search, and software behind businesses. Tennessee is the home market. Clients can be local or anywhere. The sanctuary is one project under the brand, not the definition.
               </p>
             </div>
             <div className="space-y-2">
-              <h3 className="font-bold text-foreground font-mono text-base">What is JustDuckIt?</h3>
+              <h3 className="font-bold text-foreground font-mono text-base">Where are services offered?</h3>
               <p className="text-muted-foreground pl-4 border-l border-primary/20">
-                JustDuckIt is Kyle Kinkin (Duck)’s brand. He films Middle Tennessee spots and builds the sites, search, and software behind local businesses, from Smithville and DeKalb County out to Cookeville and Nashville. The sanctuary is one project under the brand, not the definition.
+                JustDuckIt is based in Smithville, Tennessee. Tennessee is the home market, and services are available to clients locally or anywhere.
               </p>
             </div>
           </div>

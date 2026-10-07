@@ -23,8 +23,8 @@ export const metadata: Metadata = {
     default: "Kyle Kinkin | JustDuckIt",
     template: "%s | Kyle Kinkin",
   },
-  description: "JustDuckIt is Kyle Kinkin (Duck)’s brand. He films Middle Tennessee spots and builds the sites, search, and software behind local businesses, from Smithville and DeKalb County out to Cookeville and Nashville. The sanctuary is one project under the brand, not the definition.",
-  keywords: ["Kyle Kinkin", "JustDuckIt", "Duck", "Middle Tennessee web developer", "Smithville TN web design", "DeKalb County IT", "Decent Ducks"],
+  description: "JustDuckIt is Kyle Kinkin (Duck)’s brand. Based in Smithville, Tennessee, he films real places and builds the sites, search, and software behind businesses. Tennessee is the home market. Clients can be local or anywhere.",
+  keywords: ["Kyle Kinkin", "JustDuckIt", "Duck", "Tennessee web developer", "Smithville TN web design", "Custom Software", "Decent Ducks"],
   authors: [{ name: "Kyle Kinkin" }],
   creator: "Kyle Kinkin",
   openGraph: {
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     url: "https://justduckit.xyz",
     siteName: "Kyle Kinkin | JustDuckIt",
     title: "Kyle Kinkin | JustDuckIt",
-    description: "JustDuckIt is Kyle Kinkin (Duck)’s brand. He films Middle Tennessee spots and builds the sites, search, and software behind local businesses, from Smithville and DeKalb County out to Cookeville and Nashville. The sanctuary is one project under the brand, not the definition.",
+    description: "JustDuckIt is Kyle Kinkin (Duck)’s brand. Based in Smithville, Tennessee, he films real places and builds the sites, search, and software behind businesses. Tennessee is the home market. Clients can be local or anywhere.",
     images: [
       {
         url: "/media/decent-ducks-nft-solana.png",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Kyle Kinkin | JustDuckIt",
-    description: "JustDuckIt is Kyle Kinkin (Duck)’s brand. He films Middle Tennessee spots and builds the sites, search, and software behind local businesses, from Smithville and DeKalb County out to Cookeville and Nashville. The sanctuary is one project under the brand, not the definition.",
+    description: "JustDuckIt is Kyle Kinkin (Duck)’s brand. Based in Smithville, Tennessee, he films real places and builds the sites, search, and software behind businesses. Tennessee is the home market. Clients can be local or anywhere.",
     images: ["/media/decent-ducks-nft-solana.png"],
     creator: "@ducksonx",
   },
@@ -84,7 +84,7 @@ export default function RootLayout({
         "url": "https://justduckit.xyz",
         "mainEntityOfPage": "https://justduckit.xyz",
         "jobTitle": ["Founder", "Software Developer", "Media Creator"],
-        "description": "JustDuckIt is Kyle Kinkin (Duck)’s brand. He films Middle Tennessee spots and builds the sites, search, and software behind local businesses, from Smithville and DeKalb County out to Cookeville and Nashville. The sanctuary is one project under the brand, not the definition.",
+        "description": "JustDuckIt is Kyle Kinkin (Duck)’s brand. Based in Smithville, Tennessee, he films real places and builds the sites, search, and software behind businesses. Tennessee is the home market. Clients can be local or anywhere.",
         "sameAs": [
           "https://x.com/ducksonx",
           "https://www.instagram.com/justduckits",

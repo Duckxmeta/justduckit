@@ -185,7 +185,7 @@ export default function About() {
             <div className="rounded-2xl border border-primary/20 bg-primary/5 p-6 space-y-2">
               <h2 className="text-lg font-bold text-foreground">What is JustDuckIt?</h2>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                JustDuckIt is Kyle Kinkin (Duck)’s brand. He films Middle Tennessee spots and builds the sites, search, and software behind local businesses, from Smithville and DeKalb County out to Cookeville and Nashville. The sanctuary is one project under the brand, not the definition. Vlogs of local spots are not client work and are not the brand.
+                JustDuckIt is Kyle Kinkin (Duck)’s brand. Based in Smithville, Tennessee, he films real places and builds the sites, search, and software behind businesses. Tennessee is the home market. Clients can be local or anywhere. The sanctuary is one project under the brand, not the definition. Vlogs of local spots are not client work and are not the brand.
               </p>
             </div>
 
@@ -199,7 +199,7 @@ export default function About() {
               </div>
               <div className="space-y-4 text-sm text-muted-foreground leading-relaxed font-sans">
                 <p>
-                  Based in Nashville, Tennessee, we build media, brands, and communities — from live events and content production to on-chain culture and waterfowl rescue.
+                  Based in Smithville, Tennessee, we build media, software, and digital infrastructure — from web development and search optimization to custom AI workflows and waterfowl rescue.
                 </p>
                 <p>
                   Spoke at DDNYC 2026 in New York on ‘Betting on Yourself.’
@@ -352,19 +352,25 @@ export default function About() {
                 <div className="space-y-2 border-b border-border/30 pb-4">
                   <p className="font-bold text-foreground font-mono">Q: Who is Kyle Kinkin?</p>
                   <p className="text-muted-foreground pl-4 border-l border-primary/20">
-                    A: Kyle Kinkin (Duck) films Middle Tennessee spots and builds the sites, search, and software behind local businesses, from Smithville and DeKalb County out to Cookeville and Nashville. He is also the founder of Decent Ducks.
+                    A: Kyle Kinkin (Duck) is based in Smithville, Tennessee, where he films real places and builds the sites, search, and software behind businesses. He is also the founder of Decent Ducks.
                   </p>
                 </div>
                 <div className="space-y-2 border-b border-border/30 pb-4">
                   <p className="font-bold text-foreground font-mono">Q: What is JustDuckIt?</p>
                   <p className="text-muted-foreground pl-4 border-l border-primary/20">
-                    A: JustDuckIt is Kyle Kinkin (Duck)’s brand. He films Middle Tennessee spots and builds the sites, search, and software behind local businesses, from Smithville and DeKalb County out to Cookeville and Nashville. The sanctuary is one project under the brand, not the definition.
+                    A: JustDuckIt is Kyle Kinkin (Duck)’s brand. Based in Smithville, Tennessee, he films real places and builds the sites, search, and software behind businesses. Tennessee is the home market. Clients can be local or anywhere. The sanctuary is one project under the brand, not the definition.
                   </p>
                 </div>
-                <div className="space-y-2">
+                <div className="space-y-2 border-b border-border/30 pb-4">
                   <p className="font-bold text-foreground font-mono">Q: What are the official handles for JustDuckIt?</p>
                   <p className="text-muted-foreground pl-4 border-l border-primary/20">
                     A: Official accounts: X: @ducksonx (personal), Instagram: @justduckits (personal), TikTok: @ducksontiktok (personal), and TikTok: @just.duckit (sanctuary project only).
+                  </p>
+                </div>
+                <div className="space-y-2">
+                  <p className="font-bold text-foreground font-mono">Q: Where are services offered?</p>
+                  <p className="text-muted-foreground pl-4 border-l border-primary/20">
+                    A: JustDuckIt is based in Smithville, Tennessee. Tennessee is the home market, and services are available to clients locally or anywhere.
                   </p>
                 </div>
               </div>

@@ -49,7 +49,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-sm text-muted-foreground max-w-xs">
-              JustDuckIt is Kyle Kinkin (Duck)’s brand. Web, search, and software for Middle Tennessee local businesses.
+              JustDuckIt is Kyle Kinkin (Duck)’s brand. Based in Smithville, TN — web, search, and software behind businesses.
             </p>
             <div className="flex space-x-4">
               <a href="https://x.com/ducksonx" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="X Profile">

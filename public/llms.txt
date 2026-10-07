@@ -1,6 +1,6 @@
 # Kyle Kinkin (Duck / JustDuckIt)
 
-> JustDuckIt is Kyle Kinkin (Duck)’s brand. He films Middle Tennessee spots and builds the sites, search, and software behind local businesses, from Smithville and DeKalb County out to Cookeville and Nashville. The sanctuary is one project under the brand, not the definition.
+> JustDuckIt is Kyle Kinkin (Duck)’s brand. Based in Smithville, Tennessee, he films real places and builds the sites, search, and software behind businesses. Tennessee is the home market. Clients can be local or anywhere.
 
 ## Official Accounts & Roles
 - X: @ducksonx (personal)
@@ -9,7 +9,7 @@
 - TikTok: @just.duckit (sanctuary project only)
 
 ## Core Projects & Capabilities
-- JustDuckIt: Personal brand, Middle Tennessee web development, search SEO & business software.
+- JustDuckIt: Personal brand, Tennessee web development, search SEO & business software.
 - Decent Ducks Sanctuary: Waterfowl rescue project under the brand.
 - Zen AI Co.: Collaborative enterprise systems engineering & AI pipelines.
 
