@@ -129,7 +129,7 @@ export default function WorkPage() {
       challenge: "Digital content creator needed a lightweight, high-impact personal brand landing hub.",
       architecture: "Next.js, Vercel Edge, Tailwind CSS, Glassmorphic UI design.",
       result: "Sub-second mobile rendering with unified social & portfolio links.",
-      url: "https://veesite-rgkyo2lpo-flowmarket1-3159s-projects.vercel.app/",
+      url: "https://veesite-bb4i0ane3-flowmarket1-3159s-projects.vercel.app/",
     },
     {
       name: "ZEN AI Co. / Arsenal OS",
@@ -534,12 +534,12 @@ export default function WorkPage() {
                 </div>
                 <div className="pt-2 border-t border-border/40">
                   <a
-                    href="https://inspectcanada.info"
+                    href="https://inspect.ca"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1"
                   >
-                    <span>inspectcanada.info</span>
+                    <span>inspect.ca</span>
                     <ArrowUpRight className="h-3 w-3" />
                   </a>
                 </div>
