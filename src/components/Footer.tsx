@@ -104,7 +104,7 @@ export default function Footer() {
               <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider">Contact</h3>
               <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
                 Kyle Kinkin<br />
-                <a href="tel:+18156414809" className="text-primary hover:underline font-semibold">(815) 641-4809</a><br />
+                <a href="tel:+16156694135" className="text-primary hover:underline font-semibold">(615) 669-4135</a><br />
                 <a href="mailto:ducksonx@duck.com" className="text-primary hover:underline font-semibold">ducksonx@duck.com</a>
               </p>
               <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
