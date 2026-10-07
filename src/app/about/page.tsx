@@ -23,8 +23,9 @@ export default function About() {
       "addressRegion": "Tennessee"
     },
     "sameAs": [
-      "https://x.com/Ducksonx",
-      "https://www.instagram.com/justduckits?utm_source=qr",
+      "https://x.com/ducksonx",
+      "https://www.instagram.com/justduckits",
+      "https://www.tiktok.com/@ducksontiktok",
       "https://www.tiktok.com/@just.duckit",
       "https://discord.gg/Ry8zBm5Yvb",
       "https://adoptaduck.org",
@@ -105,9 +106,53 @@ export default function About() {
             </div>
 
             <div className="w-full max-w-sm rounded-2xl border border-border bg-card/20 p-6 space-y-4">
-              <h3 className="text-sm font-bold text-foreground uppercase tracking-wider">Links & Community</h3>
+              <h3 className="text-sm font-bold text-foreground uppercase tracking-wider">Official Handles & Accounts</h3>
               <div className="space-y-3 text-sm text-muted-foreground font-sans">
                 <div className="flex items-center gap-2">
+                  <span className="text-xs font-mono text-primary font-bold w-6">X</span>
+                  <a
+                    href="https://x.com/ducksonx"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors hover:underline"
+                  >
+                    @ducksonx (personal) ↗
+                  </a>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-xs font-mono text-primary font-bold w-6">IG</span>
+                  <a
+                    href="https://www.instagram.com/justduckits"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors hover:underline"
+                  >
+                    @justduckits (personal) ↗
+                  </a>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-xs font-mono text-primary font-bold w-6">TT</span>
+                  <a
+                    href="https://www.tiktok.com/@ducksontiktok"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors hover:underline"
+                  >
+                    @ducksontiktok (personal) ↗
+                  </a>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-xs font-mono text-primary font-bold w-6">TT</span>
+                  <a
+                    href="https://www.tiktok.com/@just.duckit"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors hover:underline"
+                  >
+                    @just.duckit (sanctuary project only) ↗
+                  </a>
+                </div>
+                <div className="flex items-center gap-2 border-t border-border/40 pt-3">
                   <span className="text-xs font-mono text-primary font-bold w-6">DD</span>
                   <a
                     href="https://adoptaduck.org"
@@ -129,61 +174,6 @@ export default function About() {
                     ZEN AI Co. ↗
                   </a>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-xs font-mono text-primary font-bold w-6">DG</span>
-                  <a
-                    href="https://doginaldogs.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-primary transition-colors hover:underline"
-                  >
-                    Doginal Dogs ↗
-                  </a>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-xs font-mono text-primary font-bold w-6">ME</span>
-                  <a
-                    href="https://magiceden.io/marketplace/decent_ducks"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-primary transition-colors hover:underline"
-                  >
-                    Decent Ducks Magic Eden ↗
-                  </a>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-xs font-mono text-primary font-bold w-6">YT</span>
-                  <a
-                    href="https://www.youtube.com/@justduckit"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-primary transition-colors hover:underline"
-                  >
-                    YouTube Channel ↗
-                  </a>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-xs font-mono text-primary font-bold w-6">TT</span>
-                  <a
-                    href="https://www.tiktok.com/@just.duckit"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-primary transition-colors hover:underline"
-                  >
-                    TikTok Profile ↗
-                  </a>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-xs font-mono text-primary font-bold w-6">IG</span>
-                  <a
-                    href="https://www.instagram.com/justduckits?utm_source=qr"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-primary transition-colors hover:underline"
-                  >
-                    Instagram Profile ↗
-                  </a>
-                </div>
               </div>
             </div>
           </div>
@@ -191,11 +181,11 @@ export default function About() {
           {/* Right Main Content: Structured Narrative */}
           <div className="lg:col-span-8 space-y-16">
             
-            {/* Answer Box: Who is Kyle Kinkin? */}
+            {/* Answer Box: What is JustDuckIt? */}
             <div className="rounded-2xl border border-primary/20 bg-primary/5 p-6 space-y-2">
-              <h2 className="text-lg font-bold text-foreground">Who is Kyle Kinkin?</h2>
+              <h2 className="text-lg font-bold text-foreground">What is JustDuckIt?</h2>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Kyle Kinkin is a Nashville-based media and events builder, founder of <a href="https://adoptaduck.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">Decent Ducks</a>, and a DDNYC 2026 speaker. Online he is known as Duck and JustDuckIt.
+                JustDuckIt is Kyle Kinkin (Duck)’s brand. He films Middle Tennessee spots and builds the sites, search, and software behind local businesses, from Smithville and DeKalb County out to Cookeville and Nashville. The sanctuary is one project under the brand, not the definition. Videos of local spots, including Twisted Oaks in Dowelltown, are not client work and are not the brand.
               </p>
             </div>
 
@@ -362,19 +352,19 @@ export default function About() {
                 <div className="space-y-2 border-b border-border/30 pb-4">
                   <p className="font-bold text-foreground font-mono">Q: Who is Kyle Kinkin?</p>
                   <p className="text-muted-foreground pl-4 border-l border-primary/20">
-                    A: Kyle Kinkin is a digital content creator, Web3 builder, and founder of JustDuckIt—a duck sanctuary and digital brand. He is also the founder of the Decent Ducks collection on the Solana blockchain and the host behind @DucksOnX.
+                    A: Kyle Kinkin (Duck) films Middle Tennessee spots and builds the sites, search, and software behind local businesses, from Smithville and DeKalb County out to Cookeville and Nashville. He is also the founder of Decent Ducks.
                   </p>
                 </div>
                 <div className="space-y-2 border-b border-border/30 pb-4">
-                  <p className="font-bold text-foreground font-mono">Q: What is Decent Ducks?</p>
+                  <p className="font-bold text-foreground font-mono">Q: What is JustDuckIt?</p>
                   <p className="text-muted-foreground pl-4 border-l border-primary/20">
-                    A: Decent Ducks is an 888-piece digital asset collection founded on the Solana blockchain by Kyle Kinkin. The project bridges Web3 digital collectibles with real-world animal sanctuary building and content creation.
+                    A: JustDuckIt is Kyle Kinkin (Duck)’s brand. He films Middle Tennessee spots and builds the sites, search, and software behind local businesses, from Smithville and DeKalb County out to Cookeville and Nashville. The sanctuary is one project under the brand, not the definition.
                   </p>
                 </div>
                 <div className="space-y-2">
-                  <p className="font-bold text-foreground font-mono">Q: What is the official handle for JustDuckIt on X and TikTok?</p>
+                  <p className="font-bold text-foreground font-mono">Q: What are the official handles for JustDuckIt?</p>
                   <p className="text-muted-foreground pl-4 border-l border-primary/20">
-                    A: On X (formerly Twitter), the official handle is @DucksOnX. On TikTok, the handle is @just.duckit, and on Instagram, it is @justduckits.
+                    A: Official accounts: X: @ducksonx (personal), Instagram: @justduckits (personal), TikTok: @ducksontiktok (personal), and TikTok: @just.duckit (sanctuary project only).
                   </p>
                 </div>
               </div>

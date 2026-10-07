@@ -49,16 +49,16 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-sm text-muted-foreground max-w-xs">
-              Personal brand of a builder, writer, and duck enthusiast. Scaling ideas from zero to production.
+              JustDuckIt is Kyle Kinkin (Duck)’s brand. Web, search, and software for Middle Tennessee local businesses.
             </p>
             <div className="flex space-x-4">
-              <a href="https://x.com/Ducksonx" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Twitter Profile">
+              <a href="https://x.com/ducksonx" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="X Profile">
                 <TwitterIcon className="h-5 w-5" />
               </a>
-              <a href="https://www.instagram.com/justduckits?utm_source=qr" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Instagram Profile">
+              <a href="https://www.instagram.com/justduckits" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Instagram Profile">
                 <InstagramIcon className="h-5 w-5" />
               </a>
-              <a href="https://www.tiktok.com/@ducksontiktok?_r=1&_t=ZP-98nrNNydKBy" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="TikTok Profile">
+              <a href="https://www.tiktok.com/@ducksontiktok" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="TikTok Profile">
                 <TikTokIcon className="h-5 w-5" />
               </a>
               <a href="https://discord.gg/Ry8zBm5Yvb" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Discord Server">

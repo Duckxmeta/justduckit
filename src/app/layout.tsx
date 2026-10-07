@@ -23,8 +23,8 @@ export const metadata: Metadata = {
     default: "Kyle Kinkin | JustDuckIt",
     template: "%s | Kyle Kinkin",
   },
-  description: "Kyle Kinkin — known as Duck and JustDuckIt — builds media, community, and Decent Ducks.",
-  keywords: ["Kyle Kinkin", "JustDuckIt", "Duck", "Decent Ducks", "Doginal Dogs", "DDNYC 2026", "Events Management", "Digital Art"],
+  description: "JustDuckIt is Kyle Kinkin (Duck)’s brand. He films Middle Tennessee spots and builds the sites, search, and software behind local businesses, from Smithville and DeKalb County out to Cookeville and Nashville. The sanctuary is one project under the brand, not the definition.",
+  keywords: ["Kyle Kinkin", "JustDuckIt", "Duck", "Middle Tennessee web developer", "Smithville TN web design", "DeKalb County IT", "Decent Ducks"],
   authors: [{ name: "Kyle Kinkin" }],
   creator: "Kyle Kinkin",
   openGraph: {
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     url: "https://justduckit.xyz",
     siteName: "Kyle Kinkin | JustDuckIt",
     title: "Kyle Kinkin | JustDuckIt",
-    description: "Kyle Kinkin — known as Duck and JustDuckIt — builds media, community, and Decent Ducks.",
+    description: "JustDuckIt is Kyle Kinkin (Duck)’s brand. He films Middle Tennessee spots and builds the sites, search, and software behind local businesses, from Smithville and DeKalb County out to Cookeville and Nashville. The sanctuary is one project under the brand, not the definition.",
     images: [
       {
         url: "/media/decent-ducks-nft-solana.png",
@@ -46,9 +46,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Kyle Kinkin | JustDuckIt",
-    description: "Kyle Kinkin — known as Duck and JustDuckIt — builds media, community, and Decent Ducks.",
+    description: "JustDuckIt is Kyle Kinkin (Duck)’s brand. He films Middle Tennessee spots and builds the sites, search, and software behind local businesses, from Smithville and DeKalb County out to Cookeville and Nashville. The sanctuary is one project under the brand, not the definition.",
     images: ["/media/decent-ducks-nft-solana.png"],
-    creator: "@kylekinkin",
+    creator: "@ducksonx",
   },
   robots: {
     index: true,
@@ -78,26 +78,25 @@ export default function RootLayout({
         "alternateName": [
           "Duck",
           "Duck on X",
-          "ducks",
-          "Ducksonx",
-          "Just Duck It"
+          "ducksonx",
+          "JustDuckIt"
         ],
         "url": "https://justduckit.xyz",
         "mainEntityOfPage": "https://justduckit.xyz",
-        "jobTitle": ["Founder", "Software Developer", "Waterfowl Rescuer"],
-        "description": "Kyle Kinkin (known online as Duck on X / @Ducksonx and Just Duck It) is a software developer, Web3 creator, and waterfowl rescue founder.",
+        "jobTitle": ["Founder", "Software Developer", "Media Creator"],
+        "description": "JustDuckIt is Kyle Kinkin (Duck)’s brand. He films Middle Tennessee spots and builds the sites, search, and software behind local businesses, from Smithville and DeKalb County out to Cookeville and Nashville. The sanctuary is one project under the brand, not the definition.",
         "sameAs": [
-          "https://x.com/Ducksonx",
-          "https://tiktok.com/@just.duckit",
-          "https://www.instagram.com/justduckits?utm_source=qr",
-          "https://kylekinkin.com",
-          "https://ducksonx.com"
+          "https://x.com/ducksonx",
+          "https://www.instagram.com/justduckits",
+          "https://www.tiktok.com/@ducksontiktok",
+          "https://www.tiktok.com/@just.duckit",
+          "https://kylekinkin.com"
         ],
         "knowsAbout": [
-          "Waterfowl Care & Rescue",
+          "Middle Tennessee Web Development",
+          "Local Business Automation & Search",
           "Web Application Development",
-          "Solana Blockchain & Web3",
-          "Decent Ducks"
+          "Decent Ducks Sanctuary"
         ]
       },
       {

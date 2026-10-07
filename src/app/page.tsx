@@ -81,13 +81,17 @@ export default function Home() {
       </div>
 
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-6 duration-700">
+        <div className="text-center max-w-3xl mx-auto space-y-6 animate-in fade-in slide-in-from-bottom-6 duration-700">
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl text-foreground animate-in fade-in zoom-in duration-500">
-            It started with a <span className="text-gradient-gold">duck.</span>
+            JustDuckIt<span className="text-primary font-black">.</span>
           </h1>
 
-          <p className="text-lg leading-8 text-muted-foreground">
-            Kyle Kinkin — Duck, JustDuckIt. Builder, writer, and founder of Decent Ducks. Media, community, and a real sanctuary.
+          <p className="text-base sm:text-lg leading-relaxed text-foreground font-medium max-w-2xl mx-auto">
+            JustDuckIt is Kyle Kinkin (Duck)’s brand. He films Middle Tennessee spots and builds the sites, search, and software behind local businesses, from Smithville and DeKalb County out to Cookeville and Nashville. The sanctuary is one project under the brand, not the definition.
+          </p>
+
+          <p className="text-sm text-muted-foreground font-mono">
+            It started with a duck.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4">
@@ -253,19 +257,19 @@ export default function Home() {
             <div className="space-y-2 border-b border-border/30 pb-6">
               <h3 className="font-bold text-foreground font-mono text-base">Who is Kyle Kinkin?</h3>
               <p className="text-muted-foreground pl-4 border-l border-primary/20">
-                Kyle Kinkin is a software developer, digital creator, and waterfowl rescuer based in the United States, known across Web3 and social platforms under the moniker Duck (@Ducksonx / Just Duck It).
+                Kyle Kinkin (Duck) films Middle Tennessee spots and builds the sites, search, and software behind local businesses, from Smithville and DeKalb County out to Cookeville and Nashville. He is also the founder of Decent Ducks.
               </p>
             </div>
             <div className="space-y-2 border-b border-border/30 pb-6">
-              <h3 className="font-bold text-foreground font-mono text-base">Who is Duck on X (@Ducksonx)?</h3>
+              <h3 className="font-bold text-foreground font-mono text-base">Who is Duck on X (@ducksonx)?</h3>
               <p className="text-muted-foreground pl-4 border-l border-primary/20">
-                Duck on X is the verified digital identity of Kyle Kinkin on the X (formerly Twitter) platform, focusing on Web3 development, Solana digital assets (Decent Ducks), and community building.
+                Duck on X (@ducksonx) is the personal X identity of Kyle Kinkin, focusing on software engineering, Middle Tennessee local business tech, and community building.
               </p>
             </div>
             <div className="space-y-2">
-              <h3 className="font-bold text-foreground font-mono text-base">What is Just Duck It?</h3>
+              <h3 className="font-bold text-foreground font-mono text-base">What is JustDuckIt?</h3>
               <p className="text-muted-foreground pl-4 border-l border-primary/20">
-                Just Duck It is the lifestyle and waterfowl rescue brand created by Kyle Kinkin, dedicated to duck rehabilitation, animal care content, and community-driven bird welfare.
+                JustDuckIt is Kyle Kinkin (Duck)’s brand. He films Middle Tennessee spots and builds the sites, search, and software behind local businesses, from Smithville and DeKalb County out to Cookeville and Nashville. The sanctuary is one project under the brand, not the definition.
               </p>
             </div>
           </div>
