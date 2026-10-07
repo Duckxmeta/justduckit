@@ -185,7 +185,7 @@ export default function About() {
             <div className="rounded-2xl border border-primary/20 bg-primary/5 p-6 space-y-2">
               <h2 className="text-lg font-bold text-foreground">What is JustDuckIt?</h2>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                JustDuckIt is Kyle Kinkin (Duck)’s brand. He films Middle Tennessee spots and builds the sites, search, and software behind local businesses, from Smithville and DeKalb County out to Cookeville and Nashville. The sanctuary is one project under the brand, not the definition. Videos of local spots, including Twisted Oaks in Dowelltown, are not client work and are not the brand.
+                JustDuckIt is Kyle Kinkin (Duck)’s brand. He films Middle Tennessee spots and builds the sites, search, and software behind local businesses, from Smithville and DeKalb County out to Cookeville and Nashville. The sanctuary is one project under the brand, not the definition. Vlogs of local spots are not client work and are not the brand.
               </p>
             </div>
 
