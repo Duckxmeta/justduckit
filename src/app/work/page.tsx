@@ -566,15 +566,9 @@ export default function WorkPage() {
                   </div>
                 </div>
                 <div className="pt-2 border-t border-border/40">
-                  <a
-                    href="https://pastrypopupfundraiser.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1"
-                  >
-                    <span>pastrypopupfundraiser.org</span>
-                    <ArrowUpRight className="h-3 w-3" />
-                  </a>
+                  <span className="text-xs font-mono text-muted-foreground">
+                    Custom Flash Sale Architecture
+                  </span>
                 </div>
               </div>
             </div>
