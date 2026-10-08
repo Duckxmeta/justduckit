@@ -5,11 +5,13 @@ import WorkContactForm from "@/components/WorkContactForm";
 import ValueContrast from "@/components/ValueContrast";
 import AuditLeadForm from "@/components/AuditLeadForm";
 import ManagedCareRetainers from "@/components/ManagedCareRetainers";
+import ProjectScopeQuiz from "@/components/ProjectScopeQuiz";
+import OperatorMatrix from "@/components/OperatorMatrix";
 
 export const metadata: Metadata = {
-  title: "Custom Web Development, Automation & Technical Infrastructure | Kyle Kinkin — JustDuckIt",
+  title: "High-Performance Systems & Web Engineering | Kyle Kinkin — JustDuckIt",
   description:
-    "From clean, high-speed websites for Middle Tennessee businesses (Smithville, DeKalb County, Murfreesboro, Cookeville) to proprietary AI workflows and Web3 architecture.",
+    "High-performance websites, custom SaaS architecture, and lead automation systems. Built directly with Kyle Kinkin — zero agency fluff.",
   keywords: [
     "Middle Tennessee web developer",
     "Smithville TN web design",
@@ -153,334 +155,198 @@ export default function WorkPage() {
     <div className="relative isolate overflow-hidden min-h-screen">
       <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 space-y-20">
         
-        {/* Universal Hero & Router */}
+        {/* 1. HERO SECTION */}
         <div className="text-center max-w-4xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-6 duration-700">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-mono font-semibold">
             <Code2 className="h-3.5 w-3.5" />
-            <span>Middle Tennessee & Enterprise Tech</span>
+            <span>High-Performance Systems & Web Engineering</span>
           </div>
 
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl text-foreground leading-tight">
-            Custom Web Development, Automation & <span className="text-gradient-gold">Technical Infrastructure</span>
+            High-Performance Systems & Web Engineering for <span className="text-gradient-gold">Modern Brands</span>
           </h1>
 
           <p className="text-lg leading-8 text-muted-foreground max-w-3xl mx-auto">
-            From clean, high-speed websites for Middle Tennessee businesses to proprietary AI workflows and Web3 architecture.
+            From high-converting local business footprints and custom SaaS architecture to high-volume lead automation and Web3 platforms. Built directly with Kyle Kinkin — zero agency fluff.
           </p>
 
-          {/* Audience Router Cards (3 Direct Action Tiles) */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 text-left">
-            
-            {/* Tile 1: Local Businesses */}
-            <div className="rounded-2xl border border-border bg-card/40 backdrop-blur-md p-6 flex flex-col justify-between space-y-4 hover:border-primary/40 transition-all">
-              <div className="space-y-2">
-                <div className="flex items-center gap-2 text-primary font-bold text-base">
-                  <Globe className="h-5 w-5" />
-                  <span>Local Businesses</span>
-                </div>
-                <p className="text-xs text-muted-foreground leading-relaxed">
-                  Fast, modern sites, booking engines, and local search visibility.
-                </p>
+          <div className="pt-2">
+            <a
+              href="#diagnostic"
+              className="inline-flex items-center gap-2 rounded-xl bg-primary text-black font-bold text-sm px-8 py-4 hover:bg-primary-hover active:scale-[0.98] transition-all shadow-xl shadow-primary/20 cursor-pointer"
+            >
+              <Sparkles className="h-4 w-4" />
+              <span>Run 60-Second System Scope</span>
+            </a>
+          </div>
+
+          {/* Quick Category Badges */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 text-left">
+            <div className="rounded-2xl border border-border bg-card/40 backdrop-blur-md p-6 space-y-2 hover:border-primary/40 transition-all">
+              <div className="flex items-center gap-2 text-primary font-bold text-base">
+                <Globe className="h-5 w-5" />
+                <span>Local & Regional Platforms</span>
               </div>
-              <a
-                href="#packages"
-                className="inline-flex items-center justify-between w-full rounded-xl bg-primary text-black font-semibold text-xs px-4 py-3 hover:bg-primary-hover transition-all"
-              >
-                <span>Get a Website / Discovery Call</span>
-                <ArrowRight className="h-3.5 w-3.5" />
-              </a>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                Fast, mobile-first sites, local search ranking, and instant SMS lead dispatch.
+              </p>
             </div>
 
-            {/* Tile 2: Custom Systems & Enterprise AI */}
-            <div className="rounded-2xl border border-border bg-card/40 backdrop-blur-md p-6 flex flex-col justify-between space-y-4 hover:border-primary/40 transition-all">
-              <div className="space-y-2">
-                <div className="flex items-center gap-2 text-primary font-bold text-base">
-                  <Cpu className="h-5 w-5" />
-                  <span>Custom Systems & AI</span>
-                </div>
-                <p className="text-xs text-muted-foreground leading-relaxed">
-                  Proprietary AI intake agents, custom web apps, and automated operations.
-                </p>
+            <div className="rounded-2xl border border-border bg-card/40 backdrop-blur-md p-6 space-y-2 hover:border-primary/40 transition-all">
+              <div className="flex items-center gap-2 text-primary font-bold text-base">
+                <Cpu className="h-5 w-5" />
+                <span>Custom SaaS & AI Workflows</span>
               </div>
-              <a
-                href="#enterprise"
-                className="inline-flex items-center justify-between w-full rounded-xl border border-border bg-white/5 text-foreground font-semibold text-xs px-4 py-3 hover:bg-white/10 transition-all"
-              >
-                <span>Explore Custom Software</span>
-                <ArrowRight className="h-3.5 w-3.5" />
-              </a>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                Bespoke web applications, AI agent integration, and database pipelines via Zen AI Co.
+              </p>
             </div>
 
-            {/* Tile 3: Web3 & Digital Ecosystem */}
-            <div className="rounded-2xl border border-border bg-card/40 backdrop-blur-md p-6 flex flex-col justify-between space-y-4 hover:border-primary/40 transition-all">
-              <div className="space-y-2">
-                <div className="flex items-center gap-2 text-primary font-bold text-base">
-                  <Layers className="h-5 w-5" />
-                  <span>Web3 & Digital Ecosystem</span>
-                </div>
-                <p className="text-xs text-muted-foreground leading-relaxed">
-                  Interactive browser builds, Solana smart contracts, and sanctuary initiatives.
-                </p>
+            <div className="rounded-2xl border border-border bg-card/40 backdrop-blur-md p-6 space-y-2 hover:border-primary/40 transition-all">
+              <div className="flex items-center gap-2 text-primary font-bold text-base">
+                <Layers className="h-5 w-5" />
+                <span>Web3 & Digital Systems</span>
               </div>
-              <a
-                href="#portfolio"
-                className="inline-flex items-center justify-between w-full rounded-xl border border-border bg-white/5 text-foreground font-semibold text-xs px-4 py-3 hover:bg-white/10 transition-all"
-              >
-                <span>View Ecosystem & Projects</span>
-                <ArrowRight className="h-3.5 w-3.5" />
-              </a>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                High-throughput on-chain assets, Solana smart contracts, and sanctuary rails.
+              </p>
             </div>
-
           </div>
         </div>
 
-        {/* Website Packages Section */}
-        <section id="packages" className="space-y-12 scroll-mt-24">
-          <div className="text-center max-w-2xl mx-auto space-y-3">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground flex items-center justify-center gap-2">
-              <Sparkles className="h-6 w-6 text-primary" />
-              <span>Website Packages</span>
-            </h2>
-            <p className="text-sm text-muted-foreground">
-              Clear scope, fixed pricing, and fast turnarounds for local businesses across Middle Tennessee (Smithville, DeKalb County, Murfreesboro, Cookeville).
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-            {packages.map((pkg) => (
-              <div
-                key={pkg.name}
-                className={`relative rounded-3xl border ${
-                  pkg.highlight
-                    ? "border-primary/50 bg-primary/5 shadow-2xl shadow-primary/10"
-                    : "border-border bg-card/40"
-                } backdrop-blur-md p-8 flex flex-col justify-between transition-all hover:border-primary/40`}
-              >
-                {pkg.highlight && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-primary text-black text-xs font-bold font-mono shadow-md">
-                    Most Popular
-                  </div>
-                )}
-
-                <div className="space-y-6">
-                  <div>
-                    <h3 className="text-xl font-bold text-foreground">{pkg.name}</h3>
-                    <p className="text-xs text-muted-foreground mt-1 leading-relaxed">{pkg.description}</p>
-                  </div>
-
-                  <div className="border-y border-border/50 py-4 space-y-1">
-                    <div className="flex items-baseline gap-1">
-                      <span className="text-4xl font-extrabold text-foreground">{pkg.price}</span>
-                    </div>
-                    <div className="flex items-center gap-1.5 text-xs text-primary font-mono font-medium">
-                      <Clock className="h-3.5 w-3.5" />
-                      <span>{pkg.delivery}</span>
-                    </div>
-                  </div>
-
-                  <ul className="space-y-3 text-sm text-muted-foreground">
-                    {pkg.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-2.5">
-                        <Check className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="mt-8 pt-6 border-t border-border/40 space-y-4">
-                  {pkg.paymentPlan ? (
-                    <div className="bg-background/60 rounded-xl p-3.5 border border-border/40 text-xs">
-                      <span className="font-semibold text-foreground block mb-0.5 flex items-center gap-1">
-                        <CreditCard className="h-3.5 w-3.5 text-primary" />
-                        Payment Plan Option:
-                      </span>
-                      <span className="text-muted-foreground font-mono">{pkg.paymentPlan}</span>
-                    </div>
-                  ) : (
-                    <div className="bg-background/60 rounded-xl p-3.5 border border-border/40 text-xs">
-                      <span className="font-semibold text-foreground block mb-0.5">
-                        Consulting Partner:
-                      </span>
-                      <a
-                        href={pkg.linkUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-primary hover:underline font-mono"
-                      >
-                        {pkg.linkText} ↗
-                      </a>
-                    </div>
-                  )}
-                  <a
-                    href={pkg.ctaHref}
-                    target={pkg.external ? "_blank" : undefined}
-                    rel={pkg.external ? "noopener noreferrer" : undefined}
-                    className={`block w-full text-center rounded-xl py-3 px-4 text-sm font-semibold transition-all ${
-                      pkg.highlight
-                        ? "bg-primary text-black hover:bg-primary-hover shadow-md shadow-primary/10"
-                        : "border border-border bg-white/5 hover:bg-white/10 text-foreground"
-                    }`}
-                  >
-                    {pkg.ctaText}
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
+        {/* 2. INTERACTIVE DIAGNOSTIC (The Bridge) */}
+        <section id="diagnostic" className="scroll-mt-24">
+          <ProjectScopeQuiz />
         </section>
 
-        {/* Payment Terms & Post-Launch Care */}
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="rounded-2xl border border-border bg-card/20 p-6 sm:p-8 space-y-4">
-            <h3 className="text-xl font-bold text-foreground flex items-center gap-2">
-              <Shield className="h-5 w-5 text-primary" />
-              <span>Payment & Staging Terms</span>
-            </h3>
-            <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
-              <p>
-                <strong className="text-foreground">Payment Terms:</strong> 50% to start, 50% before launch.
-              </p>
-              <p>
-                <strong className="text-foreground">Starter plan:</strong> $450 now, then $150/mo for 3 months.
-              </p>
-              <p>
-                <strong className="text-foreground">Business plan:</strong> $800 now, then $200/mo for 4 months.
-              </p>
-              <p className="text-xs bg-background/50 p-3 rounded-lg border border-border/50 font-mono text-muted-foreground">
-                Note: Sites stay on a staging link until the payment plan is current. Domain and hosting are the client’s responsibility.
-              </p>
-            </div>
-          </div>
-
-          <div className="rounded-2xl border border-border bg-card/20 p-6 sm:p-8 space-y-4">
-            <h3 className="text-xl font-bold text-foreground flex items-center gap-2">
-              <Sparkles className="h-5 w-5 text-primary" />
-              <span>Optional Post-Launch Care</span>
-            </h3>
-            <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
-              <p className="text-2xl font-bold text-foreground">$75 / mo</p>
-              <p>
-                Ongoing support for small text updates, photo swaps, and keeping your site fresh after launch.
-              </p>
-              <p className="text-xs text-muted-foreground">
-                No long-term locks — cancel or pause anytime.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Local Video Section */}
-        <section className="rounded-3xl border border-primary/20 bg-primary/5 p-8 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-mono font-semibold w-fit">
-            <Video className="h-3.5 w-3.5" />
-            <span>On-Site Video</span>
-          </div>
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-            <h2 className="text-2xl font-bold text-foreground">Local video — $50 value</h2>
-          </div>
-          <p className="text-base text-muted-foreground leading-relaxed">
-            If the business is close enough to drive to, I’ll come film a short vlog on site. <span className="text-foreground font-semibold">$50 value</span>
-          </p>
-        </section>
-
-        {/* Value Contrast Section (Enterprise Engineering vs Legacy CMS) */}
+        {/* 3. THE CONTRAST MATRIX (Operator A vs Operator B) */}
+        <OperatorMatrix />
         <ValueContrast />
 
-        {/* Productized Audit Lead Capture */}
-        <AuditLeadForm />
-
-        {/* Managed Retainer Care Tiers */}
-        <ManagedCareRetainers />
-
-        {/* Local Middle Tennessee Geo Target Markets */}
-        <section className="rounded-2xl border border-border bg-card/20 p-6 sm:p-8 space-y-4">
-          <div className="flex items-center gap-2 text-primary font-bold text-sm">
-            <MapPin className="h-4.5 w-4.5" />
-            <span>Middle Tennessee Local Market Services:</span>
-          </div>
-          <p className="text-xs text-muted-foreground">
-            Dedicated engineering & web automation landing hubs for regional business owners across Middle Tennessee:
-          </p>
-          <div className="flex flex-wrap gap-3 pt-1">
-            <Link
-              href="/work/web-design-smithville-tn"
-              className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-background/60 border border-border text-xs font-semibold hover:border-primary/50 text-foreground transition-all"
-            >
-              <span>Smithville, TN Web Design</span>
-              <ArrowRight className="h-3.5 w-3.5 text-primary" />
-            </Link>
-            <Link
-              href="/work/web-design-liberty-tn"
-              className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-background/60 border border-border text-xs font-semibold hover:border-primary/50 text-foreground transition-all"
-            >
-              <span>Liberty, TN Web Design</span>
-              <ArrowRight className="h-3.5 w-3.5 text-primary" />
-            </Link>
-            <Link
-              href="/work/web-design-mcminnville-tn"
-              className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-background/60 border border-border text-xs font-semibold hover:border-primary/50 text-foreground transition-all"
-            >
-              <span>McMinnville, TN Web Design</span>
-              <ArrowRight className="h-3.5 w-3.5 text-primary" />
-            </Link>
-            <Link
-              href="/work/web-design-cookeville-tn"
-              className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-background/60 border border-border text-xs font-semibold hover:border-primary/50 text-foreground transition-all"
-            >
-              <span>Cookeville, TN Web Engineering</span>
-              <ArrowRight className="h-3.5 w-3.5 text-primary" />
-            </Link>
-          </div>
-        </section>
-
-        {/* Enterprise Systems & Custom Software (ZEN AI Co) */}
-        <section id="enterprise" className="scroll-mt-24 rounded-3xl border border-border bg-card/30 p-8 sm:p-12 space-y-10">
-          <div className="space-y-2">
+        {/* 4. STREAMLINED PROOF */}
+        <section id="proof" className="space-y-16 scroll-mt-24">
+          
+          {/* Proof Section Header */}
+          <div className="border-b border-border pb-6 text-center sm:text-left space-y-2">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-mono font-semibold">
-              <Cpu className="h-3.5 w-3.5" />
-              <span>Enterprise & Custom Systems</span>
+              <Shield className="h-3.5 w-3.5" />
+              <span>Proven Architecture</span>
             </div>
-            <h2 className="text-3xl font-bold text-foreground">Enterprise Software & Custom AI Workflows</h2>
-            <p className="text-sm text-muted-foreground max-w-3xl leading-relaxed">
-              For growing organizations and regional enterprises that outgrow off-the-shelf software. In collaboration with Alexander Leschik at ZEN AI Co., we design and build unified agentic systems.
+            <h2 className="text-3xl font-bold tracking-tight text-foreground">
+              Streamlined Proof & Capabilities
+            </h2>
+            <p className="text-sm text-muted-foreground max-w-2xl">
+              Scannable proof blocks across local business platforms, custom enterprise engineering, and Web3 infrastructure.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="rounded-2xl border border-border bg-background/50 p-6 space-y-2">
-              <h3 className="text-base font-bold text-foreground">Proprietary AI Agents</h3>
-              <p className="text-xs text-muted-foreground leading-relaxed">
-                Custom-trained internal systems designed to handle repetitive customer touchpoints, lead sorting, intake, and back-office operations.
-              </p>
+          {/* Category A: Local & Regional Business Platforms */}
+          <div id="packages" className="space-y-8 scroll-mt-24">
+            <div className="space-y-1">
+              <h3 className="text-2xl font-bold text-foreground flex items-center gap-2">
+                <Globe className="h-5 w-5 text-primary" />
+                <span>1. Local & Regional Business Platforms</span>
+              </h3>
+              <p className="text-xs text-muted-foreground">Fixed-scope website packages and high-converting local footprints.</p>
             </div>
-            <div className="rounded-2xl border border-border bg-background/50 p-6 space-y-2">
-              <h3 className="text-base font-bold text-foreground">Bespoke Full-Stack Dev</h3>
-              <p className="text-xs text-muted-foreground leading-relaxed">
-                Scalable database architecture, private API integrations, multi-tenant spaces, and secure web application environments.
-              </p>
-            </div>
-            <div className="rounded-2xl border border-border bg-background/50 p-6 space-y-2">
-              <h3 className="text-base font-bold text-foreground">Automation Infrastructure</h3>
-              <p className="text-xs text-muted-foreground leading-relaxed">
-                Transitioning legacy operations into unified, intelligent systems built to scale without forcing employees to be the manual wire between tabs.
-              </p>
+
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+              {packages.map((pkg) => (
+                <div
+                  key={pkg.name}
+                  className={`relative rounded-3xl border ${
+                    pkg.highlight
+                      ? "border-primary/50 bg-primary/5 shadow-2xl shadow-primary/10"
+                      : "border-border bg-card/40"
+                  } backdrop-blur-md p-8 flex flex-col justify-between transition-all hover:border-primary/40`}
+                >
+                  {pkg.highlight && (
+                    <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-primary text-black text-xs font-bold font-mono shadow-md">
+                      Most Popular
+                    </div>
+                  )}
+
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="text-xl font-bold text-foreground">{pkg.name}</h4>
+                      <p className="text-xs text-muted-foreground mt-1 leading-relaxed">{pkg.description}</p>
+                    </div>
+
+                    <div className="border-y border-border/50 py-4 space-y-1">
+                      <div className="flex items-baseline gap-1">
+                        <span className="text-4xl font-extrabold text-foreground">{pkg.price}</span>
+                      </div>
+                      <div className="flex items-center gap-1.5 text-xs text-primary font-mono font-medium">
+                        <Clock className="h-3.5 w-3.5" />
+                        <span>{pkg.delivery}</span>
+                      </div>
+                    </div>
+
+                    <ul className="space-y-3 text-sm text-muted-foreground">
+                      {pkg.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-start gap-2.5">
+                          <Check className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mt-8 pt-6 border-t border-border/40 space-y-4">
+                    {pkg.paymentPlan ? (
+                      <div className="bg-background/60 rounded-xl p-3.5 border border-border/40 text-xs">
+                        <span className="font-semibold text-foreground block mb-0.5 flex items-center gap-1">
+                          <CreditCard className="h-3.5 w-3.5 text-primary" />
+                          Payment Plan Option:
+                        </span>
+                        <span className="text-muted-foreground font-mono">{pkg.paymentPlan}</span>
+                      </div>
+                    ) : (
+                      <div className="bg-background/60 rounded-xl p-3.5 border border-border/40 text-xs">
+                        <span className="font-semibold text-foreground block mb-0.5">
+                          Consulting Partner:
+                        </span>
+                        <a
+                          href={pkg.linkUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-primary hover:underline font-mono"
+                        >
+                          {pkg.linkText} ↗
+                        </a>
+                      </div>
+                    )}
+                    <a
+                      href={pkg.ctaHref}
+                      target={pkg.external ? "_blank" : undefined}
+                      rel={pkg.external ? "noopener noreferrer" : undefined}
+                      className={`block w-full text-center rounded-xl py-3 px-4 text-sm font-semibold transition-all ${
+                        pkg.highlight
+                          ? "bg-primary text-black hover:bg-primary-hover shadow-md shadow-primary/10"
+                          : "border border-border bg-white/5 hover:bg-white/10 text-foreground"
+                      }`}
+                    >
+                      {pkg.ctaText}
+                    </a>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* Dedicated Partner Subsection */}
-          <div className="pt-6 border-t border-border/60 space-y-6">
-            <div className="space-y-2">
-              <h3 className="text-2xl font-bold text-foreground">Enterprise & Automation Systems (via Zen AI Co)</h3>
-              <p className="text-sm text-muted-foreground max-w-3xl leading-relaxed">
-                Collaborative systems engineering, custom AI pipelines, and internal tools delivered in partnership with Zen AI Co.
-              </p>
+          {/* Category B: Custom Enterprise Architecture (Zen AI Co) */}
+          <div id="enterprise" className="space-y-8 scroll-mt-24">
+            <div className="space-y-1">
+              <h3 className="text-2xl font-bold text-foreground flex items-center gap-2">
+                <Cpu className="h-5 w-5 text-primary" />
+                <span>2. Custom SaaS & Enterprise Architecture (via Zen AI Co)</span>
+              </h3>
+              <p className="text-xs text-muted-foreground">Collaborative systems engineering, proprietary AI pipelines, and internal tools.</p>
             </div>
 
-            {/* 3 Structured Project Proof Blocks */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Proof Block 1 */}
-              <div className="rounded-2xl border border-border bg-background/60 p-6 space-y-4 flex flex-col justify-between">
+              <div className="rounded-2xl border border-border bg-card/40 p-6 space-y-4 flex flex-col justify-between hover:border-primary/40 transition-all">
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-mono font-semibold text-primary px-2.5 py-0.5 rounded bg-primary/10 border border-primary/20">
@@ -513,7 +379,7 @@ export default function WorkPage() {
               </div>
 
               {/* Proof Block 2 */}
-              <div className="rounded-2xl border border-border bg-background/60 p-6 space-y-4 flex flex-col justify-between">
+              <div className="rounded-2xl border border-border bg-card/40 p-6 space-y-4 flex flex-col justify-between hover:border-primary/40 transition-all">
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-mono font-semibold text-primary px-2.5 py-0.5 rounded bg-primary/10 border border-primary/20">
@@ -546,7 +412,7 @@ export default function WorkPage() {
               </div>
 
               {/* Proof Block 3 */}
-              <div className="rounded-2xl border border-border bg-background/60 p-6 space-y-4 flex flex-col justify-between">
+              <div className="rounded-2xl border border-border bg-card/40 p-6 space-y-4 flex flex-col justify-between hover:border-primary/40 transition-all">
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-mono font-semibold text-primary px-2.5 py-0.5 rounded bg-primary/10 border border-primary/20">
@@ -574,86 +440,83 @@ export default function WorkPage() {
             </div>
           </div>
 
-          <div className="pt-2">
-            <a
-              href="https://zenai.world/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl bg-primary text-black font-semibold text-sm px-6 py-3.5 hover:bg-primary-hover transition-all shadow-md shadow-primary/10"
-            >
-              <span>Schedule Custom Software Scope Call (ZEN AI Co.) ↗</span>
-            </a>
-          </div>
-        </section>
+          {/* Category C: Web3 & High-Throughput Ecosystem Systems */}
+          <div id="portfolio" className="space-y-8 scroll-mt-24">
+            <div className="space-y-1">
+              <h3 className="text-2xl font-bold text-foreground flex items-center gap-2">
+                <Layers className="h-5 w-5 text-primary" />
+                <span>3. Digital Assets & High-Throughput Web3 Systems</span>
+              </h3>
+              <p className="text-xs text-muted-foreground">Solana smart contracts, digital collectibles, and real-world sanctuary rails.</p>
+            </div>
 
-        {/* Proof & Portfolio Section (Structured 3-Part Cards) */}
-        <section id="portfolio" className="space-y-8 scroll-mt-24">
-          <div className="border-b border-border pb-4">
-            <h2 className="text-3xl font-bold text-foreground">Proof & Portfolio</h2>
-            <p className="text-sm text-muted-foreground mt-1">
-              Scannable case studies across local business sites, custom software, and Web3 builds.
-            </p>
-          </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {portfolio.map((item) => (
+                <div
+                  key={item.name}
+                  className="rounded-2xl border border-border bg-card/30 p-6 sm:p-8 flex flex-col justify-between space-y-6 hover:border-primary/30 transition-all"
+                >
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="text-xs font-mono font-semibold text-primary px-2.5 py-0.5 rounded bg-primary/10 border border-primary/20">
+                        {item.category}
+                      </span>
+                      <a
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1 font-mono"
+                      >
+                        <span>Visit Live</span>
+                        <ArrowUpRight className="h-3.5 w-3.5" />
+                      </a>
+                    </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {portfolio.map((item) => (
-              <div
-                key={item.name}
-                className="rounded-2xl border border-border bg-card/30 p-6 sm:p-8 flex flex-col justify-between space-y-6 hover:border-primary/30 transition-all"
-              >
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="text-xs font-mono font-semibold text-primary px-2.5 py-0.5 rounded bg-primary/10 border border-primary/20">
-                      {item.category}
-                    </span>
+                    <h4 className="text-xl font-bold text-foreground">{item.name}</h4>
+
+                    <div className="space-y-3 text-xs leading-relaxed">
+                      <div className="bg-background/60 p-3 rounded-xl border border-border/40">
+                        <strong className="text-foreground block mb-0.5">The Client / Challenge:</strong>
+                        <span className="text-muted-foreground">{item.challenge}</span>
+                      </div>
+
+                      <div className="bg-background/60 p-3 rounded-xl border border-border/40">
+                        <strong className="text-foreground block mb-0.5">The Architecture:</strong>
+                        <span className="text-primary font-mono">{item.architecture}</span>
+                      </div>
+
+                      <div className="bg-background/60 p-3 rounded-xl border border-border/40">
+                        <strong className="text-foreground block mb-0.5">The Result / Live Link:</strong>
+                        <span className="text-muted-foreground">{item.result}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="pt-2 border-t border-border/40">
                     <a
                       href={item.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1 font-mono"
+                      className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1"
                     >
-                      <span>Visit Live</span>
-                      <ArrowUpRight className="h-3.5 w-3.5" />
+                      <span>{item.url.replace(/^https?:\/\//, "")}</span>
+                      <ArrowUpRight className="h-3 w-3" />
                     </a>
                   </div>
-
-                  <h3 className="text-xl font-bold text-foreground">{item.name}</h3>
-
-                  <div className="space-y-3 text-xs leading-relaxed">
-                    <div className="bg-background/60 p-3 rounded-xl border border-border/40">
-                      <strong className="text-foreground block mb-0.5">The Client / Challenge:</strong>
-                      <span className="text-muted-foreground">{item.challenge}</span>
-                    </div>
-
-                    <div className="bg-background/60 p-3 rounded-xl border border-border/40">
-                      <strong className="text-foreground block mb-0.5">The Architecture:</strong>
-                      <span className="text-primary font-mono">{item.architecture}</span>
-                    </div>
-
-                    <div className="bg-background/60 p-3 rounded-xl border border-border/40">
-                      <strong className="text-foreground block mb-0.5">The Result / Live Link:</strong>
-                      <span className="text-muted-foreground">{item.result}</span>
-                    </div>
-                  </div>
                 </div>
-
-                <div className="pt-2 border-t border-border/40">
-                  <a
-                    href={item.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1"
-                  >
-                    <span>{item.url.replace(/^https?:\/\//, "")}</span>
-                    <ArrowUpRight className="h-3 w-3" />
-                  </a>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
+
         </section>
 
-        {/* Direct Universal Lead Form Section */}
+        {/* Managed Care Retainers */}
+        <ManagedCareRetainers />
+
+        {/* Audit Lead Capture */}
+        <AuditLeadForm />
+
+        {/* Universal Direct Contact Intake */}
         <WorkContactForm />
 
       </div>
