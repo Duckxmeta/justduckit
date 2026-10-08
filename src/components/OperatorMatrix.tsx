@@ -1,4 +1,4 @@
-import { XCircle, CheckCircle2, AlertTriangle, ShieldCheck, Cpu, ArrowRight } from "lucide-react";
+import { XCircle, CheckCircle2, AlertTriangle, ShieldCheck, Cpu } from "lucide-react";
 
 export default function OperatorMatrix() {
   return (
@@ -9,10 +9,10 @@ export default function OperatorMatrix() {
           <span>The Systems Advantage</span>
         </div>
         <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-foreground">
-          Why Random Funnels Fail. <span className="text-gradient-gold">Why Systems Win.</span>
+          Why Random Websites Fail. <span className="text-gradient-gold">Why Automated Systems Win.</span>
         </h2>
         <p className="text-sm text-muted-foreground leading-relaxed">
-          Comparing traditional ad-hoc website management against modern engineered system architecture.
+          Comparing traditional ad-hoc website management against modern business automation architecture.
         </p>
       </div>
 
@@ -24,8 +24,8 @@ export default function OperatorMatrix() {
               <AlertTriangle className="h-6 w-6" />
             </div>
             <div>
-              <h3 className="text-lg font-bold text-foreground">Operator A (Ad-Hoc Funnels)</h3>
-              <p className="text-xs text-red-400 font-mono">Traditional Agency & Plugin Stack</p>
+              <h3 className="text-lg font-bold text-foreground">Operator A (Ad-Hoc Setup)</h3>
+              <p className="text-xs text-red-400 font-mono">Traditional Agency & Fragile Tools</p>
             </div>
           </div>
 
@@ -33,25 +33,25 @@ export default function OperatorMatrix() {
             <li className="flex items-start gap-3">
               <XCircle className="h-4 w-4 text-red-400 flex-shrink-0 mt-0.5" />
               <span>
-                <strong className="text-foreground block">3–5s Mobile Latency:</strong> Unoptimized plugins and heavy database calls destroy visitor retention.
+                <strong className="text-foreground block">Slow Load Speed & Crashes:</strong> Unoptimized setups destroy visitor retention and lose potential clients.
               </span>
             </li>
             <li className="flex items-start gap-3">
               <XCircle className="h-4 w-4 text-red-400 flex-shrink-0 mt-0.5" />
               <span>
-                <strong className="text-foreground block">Manual Lead Traps:</strong> Leads sit in unseen email inboxes for hours instead of firing instant SMS notifications.
+                <strong className="text-foreground block">Manual Lead Traps:</strong> Leads sit in unseen inboxes for hours instead of notifying your phone instantly.
               </span>
             </li>
             <li className="flex items-start gap-3">
               <XCircle className="h-4 w-4 text-red-400 flex-shrink-0 mt-0.5" />
               <span>
-                <strong className="text-foreground block">Agency Middle Layer:</strong> Paying high monthly retainers to account managers who just update plugins.
+                <strong className="text-foreground block">Agency Middle Layer:</strong> Paying high monthly retainers to account managers who provide slow responses.
               </span>
             </li>
             <li className="flex items-start gap-3">
               <XCircle className="h-4 w-4 text-red-400 flex-shrink-0 mt-0.5" />
               <span>
-                <strong className="text-foreground block">Fragile Security Surface:</strong> Constant vulnerability patches and database crash risks.
+                <strong className="text-foreground block">Repetitive Daily Work:</strong> Hours wasted manually emailing back and forth, copying spreadsheet rows, and invoicing.
               </span>
             </li>
           </ul>
@@ -64,8 +64,8 @@ export default function OperatorMatrix() {
               <ShieldCheck className="h-6 w-6" />
             </div>
             <div>
-              <h3 className="text-lg font-bold text-foreground">Operator B (Systemic Architecture)</h3>
-              <p className="text-xs text-primary font-mono font-semibold">JustDuckIt Next.js 16 Edge Stack</p>
+              <h3 className="text-lg font-bold text-foreground">Operator B (Automated System)</h3>
+              <p className="text-xs text-primary font-mono font-semibold">JustDuckIt Automated Systems Stack</p>
             </div>
           </div>
 
@@ -73,25 +73,25 @@ export default function OperatorMatrix() {
             <li className="flex items-start gap-3">
               <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
               <span>
-                <strong className="text-foreground block">Sub-Second Pre-rendered Speed:</strong> 100/100 Core Web Vitals served globally via Vercel Edge.
+                <strong className="text-foreground block">Maximum Uptime & High Speed:</strong> Fast, reliable systems that never crash when traffic spikes.
               </span>
             </li>
             <li className="flex items-start gap-3">
               <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
               <span>
-                <strong className="text-foreground block">Automated Instant Dispatch:</strong> Leads trigger real-time SMS webhooks directly to your phone.
+                <strong className="text-foreground block">Instant Lead Routing:</strong> Automated lead capture that pipes inquiries straight to your phone & CRM.
               </span>
             </li>
             <li className="flex items-start gap-3">
               <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
               <span>
-                <strong className="text-foreground block">1-on-1 Engineer Direct:</strong> Build directly with Kyle Kinkin. Zero agency fluff, fixed pricing.
+                <strong className="text-foreground block">Direct Partner Support:</strong> Work directly with your dedicated systems designer—zero agency fluff.
               </span>
             </li>
             <li className="flex items-start gap-3">
               <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
               <span>
-                <strong className="text-foreground block">Unhackable Static Core:</strong> Zero database vulnerabilities with custom API & AI workflow readiness.
+                <strong className="text-foreground block">Hands-Off Workflows:</strong> Hands-off workflows that eliminate manual data entry, invoicing, and scheduling.
               </span>
             </li>
           </ul>
@@ -100,3 +100,4 @@ export default function OperatorMatrix() {
     </section>
   );
 }
+

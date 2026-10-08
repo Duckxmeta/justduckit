@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Sparkles, CheckCircle2, ArrowRight, RotateCcw, ArrowLeft, Calendar, Send } from "lucide-react";
+import { Sparkles, ArrowRight, RotateCcw, ArrowLeft, Send } from "lucide-react";
 
 interface StepOption {
   label: string;
@@ -10,64 +10,64 @@ interface StepOption {
 }
 
 interface Step {
-  id: "clientType" | "bottleneck" | "timeline";
+  id: "businessModel" | "headache" | "desiredOutcome";
   title: string;
   options: StepOption[];
 }
 
 const steps: Step[] = [
   {
-    id: "clientType",
-    title: "1. What best describes your business?",
+    id: "businessModel",
+    title: "1. What type of business are you operating?",
     options: [
-      { label: "Local Business / Main Street", value: "local", desc: "Brick & mortar, local service, booking/lead capture" },
-      { label: "Growth Agency / Creator Brand", value: "growth", desc: "Content funnels, high-volume automation, digital sales" },
-      { label: "Enterprise / Custom Platform", value: "enterprise", desc: "Scalable web apps, complex API workflows, Web3/database systems" },
+      { label: "Client & Service Provider", value: "service", desc: "Consultants, contractors, professional services, local operators" },
+      { label: "High-Volume Digital / Creator Brand", value: "creator", desc: "Online courses, digital products, high-traffic media, e-commerce" },
+      { label: "Custom Operations / Enterprise", value: "enterprise", desc: "Multi-location teams, internal portals, custom operational software" },
     ],
   },
   {
-    id: "bottleneck",
-    title: "2. What is your primary technical bottleneck?",
+    id: "headache",
+    title: "2. What is your biggest daily headache?",
     options: [
-      { label: "Lead Capture & Funnel Conversion", value: "funnel", desc: "Getting views/traffic, but failing to capture and convert qualified leads" },
-      { label: "Outdated Site & Poor Infrastructure", value: "infrastructure", desc: "Slow, clunky design, poor mobile UX, or missing key integrations" },
-      { label: "Custom App / Automations Needed", value: "custom_tech", desc: "Need bespoke web software, database pipelines, or AI integrations" },
+      { label: "Losing Potential Clients", value: "leads", desc: "People visit our site or view our content, but they don’t book or call" },
+      { label: "Manual, Repetitive Work", value: "manual", desc: "Too much time spent emailing back and forth, invoicing, or tracking spreadsheets" },
+      { label: "Outdated & Embarrassing Website", value: "outdated", desc: "Current setup looks old, breaks on mobile, and doesn’t represent our quality" },
     ],
   },
   {
-    id: "timeline",
-    title: "3. What is your implementation target?",
+    id: "desiredOutcome",
+    title: "3. What does success look like for this sprint?",
     options: [
-      { label: "Immediate Sprint (Next 1–2 weeks)", value: "sprint", desc: "Ready to launch an MVP, optimize a funnel, or fix a broken system" },
-      { label: "Planned Roadmap (Next 30–60 days)", value: "roadmap", desc: "Full custom design, backend overhaul, or complex deployment" },
-      { label: "Consultation & Architecture First", value: "consult", desc: "Need high-level strategy and system scoping before building" },
+      { label: "Hands-off Lead Generation", value: "leadGen", desc: "A clear landing page and automatic scheduler that fills the calendar" },
+      { label: "Full Operational Automation", value: "automation", desc: "Connect all my tools together so work happens automatically in the background" },
+      { label: "Turnkey Digital Overhaul", value: "overhaul", desc: "Rebuild our online presence from the ground up with ongoing support" },
     ],
   },
 ];
 
 const recommendations = {
-  local: {
-    headline: "High-Converting Local Lead Engine",
-    summary: "A fast, mobile-first web footprint with automated lead delivery and direct booking workflows.",
-    recommendedSprint: "Rapid Deployment / Core Infrastructure Tier",
+  service: {
+    headline: "The Client Engine",
+    summary: "Turn attention into paid calls with a conversion-focused web design, frictionless mobile booking, and zero technical maintenance.",
+    recommendedSprint: "The Client Engine Package",
   },
-  growth: {
-    headline: "Direct-Response Funnel & Capture System",
-    summary: "DM-to-web funnel automation, conversion-tuned landing page, and frictionless qualified lead routing.",
-    recommendedSprint: "Growth Engine Tier",
+  creator: {
+    headline: "Automation Suite",
+    summary: "Eliminate manual data entry with instant lead notifications, automated email/SMS follow-up, and unified calendar & payment sync.",
+    recommendedSprint: "Automation Suite Package",
   },
   enterprise: {
-    headline: "Custom Full-Stack & Systems Architecture",
-    summary: "Bespoke web architecture, database design, or cross-platform integrations built to scale.",
-    recommendedSprint: "Custom Engineering Tier",
+    headline: "Bespoke Platforms",
+    summary: "Custom systems built to scale: private client portals, centralized operations hubs, and end-to-end custom workflows.",
+    recommendedSprint: "Bespoke Platforms Package",
   },
 };
 
 export default function ProjectScopeQuiz() {
   const [currentStep, setCurrentStep] = useState(0);
-  const [selections, setSelections] = useState({ clientType: "", bottleneck: "", timeline: "" });
+  const [selections, setSelections] = useState({ businessModel: "", headache: "", desiredOutcome: "" });
 
-  const handleSelect = (key: "clientType" | "bottleneck" | "timeline", value: string) => {
+  const handleSelect = (key: "businessModel" | "headache" | "desiredOutcome", value: string) => {
     const updated = { ...selections, [key]: value };
     setSelections(updated);
     if (currentStep < steps.length - 1) {
@@ -78,14 +78,14 @@ export default function ProjectScopeQuiz() {
   };
 
   const reset = () => {
-    setSelections({ clientType: "", bottleneck: "", timeline: "" });
+    setSelections({ businessModel: "", headache: "", desiredOutcome: "" });
     setCurrentStep(0);
   };
 
-  const selectedType = (selections.clientType as keyof typeof recommendations) || "growth";
-  const result = recommendations[selectedType] || recommendations.growth;
+  const selectedType = (selections.businessModel as keyof typeof recommendations) || "service";
+  const result = recommendations[selectedType] || recommendations.service;
 
-  const smsText = `JustDuckIt Scope Assessment:\nClient Type: ${selections.clientType}\nBottleneck: ${selections.bottleneck}\nTimeline: ${selections.timeline}`;
+  const smsText = `JustDuckIt Scope Assessment:\nBusiness: ${selections.businessModel}\nHeadache: ${selections.headache}\nDesired Outcome: ${selections.desiredOutcome}`;
   const smsUrl = `sms:+16156694135?body=${encodeURIComponent(smsText)}`;
 
   return (
@@ -145,7 +145,7 @@ export default function ProjectScopeQuiz() {
           <div className="flex items-center justify-between gap-4 border-b border-border/40 pb-4">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-mono font-semibold uppercase tracking-wider">
               <Sparkles className="h-3.5 w-3.5" />
-              <span>Diagnostic Complete</span>
+              <span>System Scope Complete</span>
             </div>
             <button
               onClick={reset}
@@ -162,7 +162,7 @@ export default function ProjectScopeQuiz() {
           </div>
 
           <div className="p-5 rounded-2xl bg-background/70 border border-primary/30 text-sm space-y-1">
-            <div className="text-primary text-xs font-mono font-bold uppercase tracking-wider">Recommended Architecture Path</div>
+            <div className="text-primary text-xs font-mono font-bold uppercase tracking-wider">Recommended System Plan</div>
             <div className="text-foreground font-semibold text-base">{result.recommendedSprint}</div>
           </div>
 
@@ -172,7 +172,7 @@ export default function ProjectScopeQuiz() {
               className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-primary hover:bg-primary-hover text-black font-bold text-sm transition shadow-lg shadow-primary/10 cursor-pointer"
             >
               <Send className="h-4 w-4" />
-              <span>Book Architecture Session</span>
+              <span>Book Strategy Session</span>
             </a>
             <a
               href={smsUrl}
@@ -186,3 +186,4 @@ export default function ProjectScopeQuiz() {
     </div>
   );
 }
+

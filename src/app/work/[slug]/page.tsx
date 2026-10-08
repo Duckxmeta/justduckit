@@ -50,7 +50,7 @@ const geoMarkets: Record<string, GeoMarket> = {
     lng: -85.9733,
     serviceRadiusMiles: 20,
     description:
-      "Mobile layout, fast DNS architecture, and automated client booking for Liberty, TN service businesses and contractors.",
+      "Mobile layout, fast website performance, and automated client booking for Liberty, TN service businesses and contractors.",
     keywords: [
       "Liberty TN web design",
       "Liberty TN website developer",

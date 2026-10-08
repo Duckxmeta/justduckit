@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Check, ArrowUpRight, Video, Globe, Shield, Sparkles, Clock, CreditCard, Cpu, Layers, ArrowRight, Phone, Code2, MapPin } from "lucide-react";
+import { Check, ArrowUpRight, Globe, Shield, Sparkles, Clock, CreditCard, Cpu, Layers, Send, Zap, Bot, Smartphone, CheckCircle2 } from "lucide-react";
 import WorkContactForm from "@/components/WorkContactForm";
 import ValueContrast from "@/components/ValueContrast";
 import AuditLeadForm from "@/components/AuditLeadForm";
@@ -9,35 +9,66 @@ import ProjectScopeQuiz from "@/components/ProjectScopeQuiz";
 import OperatorMatrix from "@/components/OperatorMatrix";
 
 export const metadata: Metadata = {
-  title: "High-Performance Systems & Web Engineering | Kyle Kinkin — JustDuckIt",
+  title: "Systems Architecture & Automation | Kyle Kinkin — JustDuckIt",
   description:
-    "High-performance websites, custom SaaS architecture, and lead automation systems. Built directly with Kyle Kinkin — zero agency fluff.",
+    "We design custom websites, automated booking funnels, and backend workflows that handle repetitive operations so you can focus on running your business. Partnering nationwide.",
   keywords: [
-    "Middle Tennessee web developer",
-    "Smithville TN web design",
-    "DeKalb County IT solutions",
-    "Murfreesboro web developer",
-    "Cookeville custom software",
+    "Systems Architecture",
+    "Business Automation",
+    "Custom Web Design",
+    "Automated Booking Funnels",
+    "Backend Workflows",
     "Kyle Kinkin",
     "JustDuckIt",
-    "Duck on X",
-    "Zen AI Co",
-    "Solana Web3 developer",
+    "Nationwide Business Automation",
   ],
   alternates: { canonical: "https://justduckit.xyz/work" },
 };
 
 export default function WorkPage() {
+  const pillarGrid = [
+    {
+      title: "THE CLIENT ENGINE",
+      tagline: "Turn attention into paid calls.",
+      bullets: [
+        "Conversion-focused web design",
+        "Frictionless mobile booking",
+        "Zero technical maintenance",
+      ],
+      icon: Globe,
+    },
+    {
+      title: "AUTOMATION SUITE",
+      tagline: "Eliminate manual data entry.",
+      bullets: [
+        "Instant lead notifications",
+        "Automated email/SMS follow-up",
+        "Unified calendar & payment sync",
+      ],
+      icon: Zap,
+    },
+    {
+      title: "BESPOKE PLATFORMS",
+      tagline: "Custom systems built to scale.",
+      bullets: [
+        "Private client portals",
+        "Centralized operations hubs",
+        "End-to-end custom workflows",
+      ],
+      icon: Cpu,
+    },
+  ];
+
   const packages = [
     {
       name: "Starter",
       price: "$900",
-      description: "Up to 5 pages. Mobile, contact form, basic SEO, 2 revision rounds.",
+      description: "Up to 5 pages. Mobile layout, contact form, basic search setup, 2 revision rounds.",
       delivery: "2–3 days",
       features: [
         "Up to 5 pages",
         "Mobile layout & contact form",
-        "Basic SEO titles & schema",
+        "Basic search titles & structure",
         "2 revision rounds",
       ],
       paymentPlan: "$450 now, then $150/mo for 3 months",
@@ -49,14 +80,14 @@ export default function WorkPage() {
     {
       name: "Business",
       price: "$1,600",
-      description: "Up to 10 pages. Service pages, gallery, reviews, Google listing and map links, analytics.",
+      description: "Up to 10 pages. Service pages, gallery, reviews, business listing links, analytics.",
       delivery: "about 2–3 days",
       features: [
         "Up to 10 pages",
         "Service pages & package listings",
         "Gallery & reviews section",
-        "Google listing and map links",
-        "Analytics integration",
+        "Business listing & map links",
+        "Performance analytics integration",
       ],
       paymentPlan: "$800 now, then $200/mo for 4 months",
       highlight: true,
@@ -67,12 +98,12 @@ export default function WorkPage() {
     {
       name: "Enterprise",
       price: "call first",
-      description: "For larger clients who need more than one piece of software working together. This is a consulting call, not a fixed site package. We scope it on the phone, then quote it.",
+      description: "For larger clients who need custom operational software working together. Scoped directly on a phone call, then quoted.",
       delivery: "Scoped on call",
       features: [
         "Multi-software integrations",
-        "Scoped on phone call",
-        "Enterprise scope & quote",
+        "Scoped on strategy call",
+        "Custom scope & quote",
       ],
       paymentPlan: null,
       linkText: "consulting through ZEN AI Co.",
@@ -88,16 +119,16 @@ export default function WorkPage() {
     {
       name: "Glow's Haven",
       category: "Local Service & Custom Web",
-      challenge: "Client: Glow's Haven (glowshaven.com) needed a modern, mobile-first design with reliable DNS architecture.",
-      architecture: "Custom Web Design, Mobile Layout & Domain Architecture",
-      result: "Responsive mobile navigation, custom CSS layout, fast DNS/static deployment.",
+      challenge: "Client needed a modern, mobile-first web design to capture new client bookings.",
+      architecture: "Conversion-Focused Web Design & Mobile Experience",
+      result: "Responsive mobile navigation, custom design, fast static performance.",
       url: "https://glowshaven.com",
     },
     {
       name: "Relentless Mobile Details",
       category: "Local Service & Auto Detailing",
       challenge: "Local auto detailer needed a high-speed booking site to capture search traffic and replace lost phone inquiries.",
-      architecture: "Next.js, Tailwind CSS, Local Business Schema.org, Formspree API.",
+      architecture: "Custom Mobile Web App, Business Search Optimization & Direct Form Routing.",
       result: "Sub-second mobile load time with direct tap-to-call and form conversions.",
       url: "https://relentlessmobiledetails.com",
     },
@@ -105,7 +136,7 @@ export default function WorkPage() {
       name: "Kit Kat Alley Rescue",
       category: "Non-Profit Animal Rescue",
       challenge: "Regional cat rescue required an intuitive adoption portal and streamlined donor intake system.",
-      architecture: "Next.js, React, Tailwind CSS, Stripe integration, Vercel Edge.",
+      architecture: "Custom Web Design & Streamlined Payment Rails.",
       result: "Simplified adoption intake workflows and zero-friction donor routing.",
       url: "https://kitkatalleyrescue.org",
     },
@@ -113,39 +144,39 @@ export default function WorkPage() {
       name: "Beauty by Rilee",
       category: "Stylist & Salon",
       challenge: "Independent salon stylist needed a mobile-first service menu and appointment booking hub.",
-      architecture: "Next.js, Vercel, Tailwind CSS, Google Business Profile alignment.",
-      result: "Delivered in 2 days with automated client booking and high local search rank.",
+      architecture: "Custom Mobile Site & Automated Client Booking Alignment.",
+      result: "Delivered in 2 days with automated client booking and top search rank.",
       url: "https://beautyby-rilee-bol99850f-flowmarket1-3159s-projects.vercel.app/",
     },
     {
       name: "Hidden Harbor Marina",
       category: "Marina & Marine Services",
       challenge: "Regional marina needed a modern web portal for slip reservations and service inquiries.",
-      architecture: "Next.js, Tailwind CSS, Dynamic Google Maps API, Vercel Analytics.",
-      result: "High-converting landing surface for regional boaters across Middle Tennessee.",
+      architecture: "Custom Web Design, Interactive Mapping & Analytics.",
+      result: "High-converting landing surface for boaters nationwide.",
       url: "https://hidden-harbor-8j3ysrtkj-flowmarket1-3159s-projects.vercel.app/",
     },
     {
       name: "Vee",
-      category: "Personal brand",
+      category: "Personal Brand",
       challenge: "Digital content creator needed a lightweight, high-impact personal brand landing hub.",
-      architecture: "Next.js, Vercel Edge, Tailwind CSS, Glassmorphic UI design.",
+      architecture: "High-Performance Personal Web Design & Brand Hub.",
       result: "Sub-second mobile rendering with unified social & portfolio links.",
       url: "https://veesite-bb4i0ane3-flowmarket1-3159s-projects.vercel.app/",
     },
     {
       name: "ZEN AI Co. / Arsenal OS",
       category: "Enterprise AI & Automation",
-      challenge: "Growing organizations needing proprietary AI intake agents, custom web apps, and automated workflows.",
-      architecture: "Arsenal Agent OS, Multi-model AI routing (OpenAI/Anthropic/Gemini), Next.js, Supabase.",
-      result: "Unified agentic execution environment that automates repetitive back-office operations.",
+      challenge: "Growing organizations needing proprietary intake agents, custom web apps, and automated workflows.",
+      architecture: "Custom Operations Platform, Multi-Model Routing & Automated Database Pipelines.",
+      result: "Unified execution environment that automates repetitive back-office operations.",
       url: "https://zenai.world/",
     },
     {
       name: "Decent Ducks Sanctuary",
-      category: "Web3 & Wildlife Sanctuary",
-      challenge: "On-chain digital asset project bridging digital collectibles with physical sanctuary operations.",
-      architecture: "Solana Smart Contracts, Next.js, Waterfowl Rescue Infrastructure, Stripe Merch Rails.",
+      category: "Digital Assets & Wildlife Sanctuary",
+      challenge: "Digital asset project bridging digital collectibles with physical sanctuary operations.",
+      architecture: "Digital Asset Infrastructure, Waterfowl Rescue Support & Online Sales Rails.",
       result: "888-piece sold-out collection funding real-world animal care & digital advocacy.",
       url: "https://adoptaduck.org",
     },
@@ -157,17 +188,17 @@ export default function WorkPage() {
         
         {/* 1. HERO SECTION */}
         <div className="text-center max-w-4xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-6 duration-700">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-mono font-semibold">
-            <Code2 className="h-3.5 w-3.5" />
-            <span>High-Performance Systems & Web Engineering</span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-mono font-semibold uppercase tracking-wider">
+            <Cpu className="h-3.5 w-3.5" />
+            <span>SYSTEMS ARCHITECTURE & AUTOMATION</span>
           </div>
 
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl text-foreground leading-tight">
-            High-Performance Systems & Web Engineering for <span className="text-gradient-gold">Modern Brands</span>
+            Build a business that captures clients and runs smoothly—<span className="text-gradient-gold">without the tech headaches.</span>
           </h1>
 
           <p className="text-lg leading-8 text-muted-foreground max-w-3xl mx-auto">
-            From high-converting local business footprints and custom SaaS architecture to high-volume lead automation and Web3 platforms. Built directly with Kyle Kinkin — zero agency fluff.
+            "We design custom websites, automated booking funnels, and backend workflows that handle repetitive operations so you can focus on running your business."
           </p>
 
           <div className="pt-2">
@@ -180,37 +211,36 @@ export default function WorkPage() {
             </a>
           </div>
 
-          {/* Quick Category Badges */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 text-left">
-            <div className="rounded-2xl border border-border bg-card/40 backdrop-blur-md p-6 space-y-2 hover:border-primary/40 transition-all">
-              <div className="flex items-center gap-2 text-primary font-bold text-base">
-                <Globe className="h-5 w-5" />
-                <span>Local & Regional Platforms</span>
-              </div>
-              <p className="text-xs text-muted-foreground leading-relaxed">
-                Fast, mobile-first sites, local search ranking, and instant SMS lead dispatch.
-              </p>
-            </div>
+          {/* 3-Pillar Capability Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8 text-left">
+            {pillarGrid.map((pillar) => {
+              const IconComp = pillar.icon;
+              return (
+                <div
+                  key={pillar.title}
+                  className="rounded-3xl border border-border bg-card/40 backdrop-blur-md p-6 sm:p-8 space-y-4 hover:border-primary/40 transition-all flex flex-col justify-between"
+                >
+                  <div className="space-y-3">
+                    <div className="p-3 rounded-2xl bg-primary/10 border border-primary/20 text-primary w-fit">
+                      <IconComp className="h-6 w-6" />
+                    </div>
+                    <div>
+                      <h3 className="font-extrabold text-base tracking-wider text-foreground uppercase">{pillar.title}</h3>
+                      <p className="text-xs font-semibold text-primary mt-1">{pillar.tagline}</p>
+                    </div>
+                  </div>
 
-            <div className="rounded-2xl border border-border bg-card/40 backdrop-blur-md p-6 space-y-2 hover:border-primary/40 transition-all">
-              <div className="flex items-center gap-2 text-primary font-bold text-base">
-                <Cpu className="h-5 w-5" />
-                <span>Custom SaaS & AI Workflows</span>
-              </div>
-              <p className="text-xs text-muted-foreground leading-relaxed">
-                Bespoke web applications, AI agent integration, and database pipelines via Zen AI Co.
-              </p>
-            </div>
-
-            <div className="rounded-2xl border border-border bg-card/40 backdrop-blur-md p-6 space-y-2 hover:border-primary/40 transition-all">
-              <div className="flex items-center gap-2 text-primary font-bold text-base">
-                <Layers className="h-5 w-5" />
-                <span>Web3 & Digital Systems</span>
-              </div>
-              <p className="text-xs text-muted-foreground leading-relaxed">
-                High-throughput on-chain assets, Solana smart contracts, and sanctuary rails.
-              </p>
-            </div>
+                  <ul className="space-y-2.5 pt-2 border-t border-border/40 text-xs text-muted-foreground">
+                    {pillar.bullets.map((bullet, idx) => (
+                      <li key={idx} className="flex items-center gap-2">
+                        <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0" />
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })}
           </div>
         </div>
 
@@ -230,24 +260,24 @@ export default function WorkPage() {
           <div className="border-b border-border pb-6 text-center sm:text-left space-y-2">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-mono font-semibold">
               <Shield className="h-3.5 w-3.5" />
-              <span>Proven Architecture</span>
+              <span>Proven Results</span>
             </div>
             <h2 className="text-3xl font-bold tracking-tight text-foreground">
               Streamlined Proof & Capabilities
             </h2>
             <p className="text-sm text-muted-foreground max-w-2xl">
-              Scannable proof blocks across local business platforms, custom enterprise engineering, and Web3 infrastructure.
+              Real outcomes delivered for service providers, modern brands, and growing operators nationwide.
             </p>
           </div>
 
-          {/* Category A: Local & Regional Business Platforms */}
+          {/* Category A: Turnkey Client Systems & Website Packages */}
           <div id="packages" className="space-y-8 scroll-mt-24">
             <div className="space-y-1">
               <h3 className="text-2xl font-bold text-foreground flex items-center gap-2">
                 <Globe className="h-5 w-5 text-primary" />
-                <span>1. Local & Regional Business Platforms</span>
+                <span>1. Turnkey Website Packages & Lead Engines</span>
               </h3>
-              <p className="text-xs text-muted-foreground">Fixed-scope website packages and high-converting local footprints.</p>
+              <p className="text-xs text-muted-foreground">Fixed-scope systems designed to convert visitors into paid calls.</p>
             </div>
 
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
@@ -334,14 +364,14 @@ export default function WorkPage() {
             </div>
           </div>
 
-          {/* Category B: Custom Enterprise Architecture (Zen AI Co) */}
+          {/* Category B: Custom Operations & Enterprise Systems (Zen AI Co) */}
           <div id="enterprise" className="space-y-8 scroll-mt-24">
             <div className="space-y-1">
               <h3 className="text-2xl font-bold text-foreground flex items-center gap-2">
                 <Cpu className="h-5 w-5 text-primary" />
-                <span>2. Custom SaaS & Enterprise Architecture (via Zen AI Co)</span>
+                <span>2. Custom Operational Platforms (via Zen AI Co)</span>
               </h3>
-              <p className="text-xs text-muted-foreground">Collaborative systems engineering, proprietary AI pipelines, and internal tools.</p>
+              <p className="text-xs text-muted-foreground">Internal portals, automated workflows, and multi-location operations hubs.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -350,18 +380,18 @@ export default function WorkPage() {
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-mono font-semibold text-primary px-2.5 py-0.5 rounded bg-primary/10 border border-primary/20">
-                      Engineering & Automation Partner
+                      Automation Partner
                     </span>
                   </div>
                   <h4 className="text-lg font-bold text-foreground">Thinkrr.ai</h4>
                   <div className="space-y-2 text-xs leading-relaxed">
                     <div>
                       <strong className="text-foreground block">Problem Solved:</strong>
-                      <span className="text-muted-foreground">Automating complex AI intake, document reasoning, and multi-model agent execution pipelines.</span>
+                      <span className="text-muted-foreground">Automating complex intake, document reasoning, and multi-agent execution pipelines.</span>
                     </div>
                     <div>
-                      <strong className="text-foreground block">Technical Stack:</strong>
-                      <span className="text-primary font-mono">Next.js, TypeScript, Arsenal Agent OS, Multi-Model AI Router, Supabase</span>
+                      <strong className="text-foreground block">Systems Architecture:</strong>
+                      <span className="text-primary font-mono">Custom Web Architecture, Multi-Model AI Router, Operations Hub</span>
                     </div>
                   </div>
                 </div>
@@ -383,7 +413,7 @@ export default function WorkPage() {
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-mono font-semibold text-primary px-2.5 py-0.5 rounded bg-primary/10 border border-primary/20">
-                      Engineering & Automation Partner
+                      Automation Partner
                     </span>
                   </div>
                   <h4 className="text-lg font-bold text-foreground">Inspect Canada</h4>
@@ -393,8 +423,8 @@ export default function WorkPage() {
                       <span className="text-muted-foreground">Streamlining field inspection intake, automated report dispatching, and client communication workflows.</span>
                     </div>
                     <div>
-                      <strong className="text-foreground block">Technical Stack:</strong>
-                      <span className="text-primary font-mono">Next.js, Node.js, Custom CRM Integrations, Automated SMS/Email Dispatch, Vercel Edge</span>
+                      <strong className="text-foreground block">Systems Architecture:</strong>
+                      <span className="text-primary font-mono">Custom Web Architecture, Inspection Intake, Automated SMS/Email Dispatch</span>
                     </div>
                   </div>
                 </div>
@@ -416,7 +446,7 @@ export default function WorkPage() {
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-mono font-semibold text-primary px-2.5 py-0.5 rounded bg-primary/10 border border-primary/20">
-                      Technical Lead & Automation Partner
+                      Automation Partner
                     </span>
                   </div>
                   <h4 className="text-lg font-bold text-foreground">Pastry Popup Fundraiser</h4>
@@ -426,8 +456,8 @@ export default function WorkPage() {
                       <span className="text-muted-foreground">High-volume flash sale order management with automated inventory locking and real-time payment validation.</span>
                     </div>
                     <div>
-                      <strong className="text-foreground block">Technical Stack:</strong>
-                      <span className="text-primary font-mono">Next.js, Stripe Payments, Webhooks Engine, Tailwind CSS, Vercel Infrastructure</span>
+                      <strong className="text-foreground block">Systems Architecture:</strong>
+                      <span className="text-primary font-mono">Custom Flash Sale Engine, Automated Inventory & Payment Validation</span>
                     </div>
                   </div>
                 </div>
@@ -440,14 +470,14 @@ export default function WorkPage() {
             </div>
           </div>
 
-          {/* Category C: Web3 & High-Throughput Ecosystem Systems */}
+          {/* Category C: Portfolio & Client Case Highlights */}
           <div id="portfolio" className="space-y-8 scroll-mt-24">
             <div className="space-y-1">
               <h3 className="text-2xl font-bold text-foreground flex items-center gap-2">
                 <Layers className="h-5 w-5 text-primary" />
-                <span>3. Digital Assets & High-Throughput Web3 Systems</span>
+                <span>3. Selected Brand & Platform Case Studies</span>
               </h3>
-              <p className="text-xs text-muted-foreground">Solana smart contracts, digital collectibles, and real-world sanctuary rails.</p>
+              <p className="text-xs text-muted-foreground">Custom websites, automated client engines, and operational platforms built nationwide.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -481,12 +511,12 @@ export default function WorkPage() {
                       </div>
 
                       <div className="bg-background/60 p-3 rounded-xl border border-border/40">
-                        <strong className="text-foreground block mb-0.5">The Architecture:</strong>
+                        <strong className="text-foreground block mb-0.5">The Solution:</strong>
                         <span className="text-primary font-mono">{item.architecture}</span>
                       </div>
 
                       <div className="bg-background/60 p-3 rounded-xl border border-border/40">
-                        <strong className="text-foreground block mb-0.5">The Result / Live Link:</strong>
+                        <strong className="text-foreground block mb-0.5">The Business Outcome:</strong>
                         <span className="text-muted-foreground">{item.result}</span>
                       </div>
                     </div>
@@ -523,3 +553,4 @@ export default function WorkPage() {
     </div>
   );
 }
+
