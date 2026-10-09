@@ -86,7 +86,7 @@ const geoMarkets: Record<string, GeoMarket> = {
     lng: -85.5016,
     serviceRadiusMiles: 35,
     description:
-      "Enterprise-grade Next.js web development, proprietary AI workflows, and custom software for Cookeville, TN companies.",
+      "Enterprise-grade web solutions, automated business workflows, and custom software for Cookeville, TN companies.",
     keywords: [
       "Cookeville TN web developer",
       "Cookeville custom software",
