@@ -1,0 +1,56 @@
+---
+title: "The Agent Got a Mailbox. That Is the Part That Matters."
+date: "2026-10-09"
+description: "Google Cloud put a Gemini coworker agent on a real Workspace account on October 8 — its own email, calendar, Drive, and directory seat. For a small operation, the audit trail is the product."
+category: "Tech"
+readTime: "6 min read"
+image: "/media/own-the-software-fire-the-tabs.jpg"
+---
+
+On October 8, Google Cloud CEO Thomas Kurian stood up at Gemini at Work and said the quiet part in a keynote. The new Gemini agent is supposed to take an objective, not a list of clicks, and come back with finished work inside the inbox, the doc, and the code you already use. Then the blog said the line that actually changes a small shop: a coworker agent gets its own Workspace account. Email. Calendar. Drive. A seat in the company directory.
+
+That is not a chatbot with a hat on. It is a name in the same system that already decides who can open the feed bill, the vet folder, and the donor list.
+
+## What shipped on Thursday
+
+Kurian’s post calls Gemini “your new single, universal agent for work.” One prompt box for questions, knowledge work, images, and code. It plans the job, picks tools, and is supposed to land the result where the work already lives: Gmail, Drive, Docs, Slides, Sheets, Chat, Calendar. Same memory and controls if you open it on the web, a phone, a desktop, the command line, Microsoft 365, or Slack. Google says it keeps running in the cloud after you close the laptop.
+
+The coworker version is the sharper cut. You describe a role. Gemini creates the agent. That agent gets its own identity, including an address on the pattern `@agents.company.com`, its own storage, and only the context you or the team hand it. Colleagues add it to a Chat space or @mention it. In the example Google used, a marketing manager asks an events-coordinator agent for a launch-readiness doc. The agent posts the draft back to the group. Tag it in a document comment and the suggested edit shows up under the agent’s name in version history, not under yours.
+
+Sub-agents are the other shape. Temporary, job-specific, each with an identity, spun up for a multi-step task that can run hours or days. The coworker is the one that stays. Persistent role. Persistent mailbox.
+
+Under the agent, the model is a separate choice. Google says it routes across the Gemini family and Anthropic’s Claude today, with other private and open models later. The agent is the employee. The model is the shift it pulls.
+
+## The audit trail is the product
+
+A sanctuary is a small company that happens to have water. The same person who writes the grant also checks the fence, answers the odd email about a dumped bird, and keeps the receipt for the feed run. When something goes wrong, the question is never “was the model clever.” It is “who did this, and can I see it.”
+
+Google’s claim is that the coworker acts under its own identity, sees only what you share, and follows the sharing and membership the team already uses. No outside connector holds the data, in their words. That is the right shape if it holds. An agent that sends mail as you is a ghost with your keys. An agent that sends mail as itself leaves a name on the message, a name on the file version, and a place to revoke the seat when the experiment is over.
+
+We already live in the other version. Staff become the wire between apps. Copy from the inbox, paste into the sheet, forget which tab had the real date. An agent that can sit in the thread and the sheet at once is useful only if the log says the agent did it. Otherwise you have hired a very fast intern and thrown away the sign-in sheet.
+
+The memory design is the other half of that log. Google lists four kinds: session memory for the task in front of it, even across days; semantic memory built from documents, people, and other agents; procedural memory for how a job gets done, including skills it writes for itself; and episodic memory of what it has already done. “Onboards itself the way a new hire would” is their phrase. A new hire on a farm still does not get the gate code on day one. Access follows what you share. If that sentence is marketing, the mailbox is just a costume.
+
+## Connectors are where the day actually breaks
+
+The agent is supposed to reach the software a company already runs. Google names Confluence, Microsoft Office, Teams, Slack, Workspace, Git, Jira, Salesforce, ServiceNow, BigQuery, Databricks, Postgres, Snowflake, files on a desktop, and any Model Context Protocol server inside or outside the network. There is a tools registry so a team can publish a tool for the rest of the company, and a skills registry for reusable multi-step instructions.
+
+That list is the enterprise brochure. The useful version for us is shorter. Mail. Calendar. The shared drive where intake notes live. One database if we ever stop keeping the important number in a spreadsheet named FINAL-v7. A skill is a written procedure the agent can run without you retyping it: how a rescue intake gets logged, who gets the photo, which folder the receipt goes in. The skill is only as good as the procedure. A vague skill produces a vague employee with a corporate email address.
+
+Google also says Workspace can notice a delegatable ask — a manager wants the project update as a deck — and offer a one-click handoff. Proactive is fine when the handoff is visible. Proactive is a problem when the agent decides the feed order was a task and answers the vendor. Identity does not fix judgment. It only makes the judgment attributable.
+
+## Not generally available, and not free of other people’s models
+
+Read the launch as a product announcement, not as a switch you can flip this morning. Google is talking to Cloud customers. Named early use is at companies the size of On, Shopify, PayPal, Orange Spain, and a state-owned utility in South Carolina. Orange Spain’s note, dated the same day, is about more than a thousand custom Gemini Enterprise agents. That is a telco. It is not a one-truck operation in Tennessee.
+
+Third-party writeups describe early access and a business-first rollout, with consumer later. We are not treating “private preview” as a date Google printed. If the coworker mailbox is not in your admin console, it is not in your admin console.
+
+The model picker matters for the same reason the mailbox does. If a job can land on Claude or on a Gemini model you did not pick, you need to know which one wrote the email that went to a donor. Google says the choice is open so your context and skills stay put when the leading model changes. Good. Also a place to check the spend cap before a long-running sub-agent discovers your Drive.
+
+## What we would actually turn on
+
+We would not hand an agent the gate, the meds log, or the bank. We would hand it a role with a name, a mailbox we can read, and a folder we chose. Intake sorting. A draft reply that waits. A calendar hold for the farrier or the vet, sent from the agent’s address so the thread is not pretending to be a person. Version history that says the agent touched the doc.
+
+If Google’s identity story is real, that is a tool. If the agent still acts as you the moment a connector gets involved, it is another tab with better marketing. The test is boring and specific: create the coworker, share one folder, have it email the team, then revoke the seat and confirm the mailbox dies with it.
+
+Work did not start in the prompt window. Work starts when something with a name can be fired.
