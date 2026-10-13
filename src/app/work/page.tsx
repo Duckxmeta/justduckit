@@ -144,10 +144,12 @@ export default function WorkPage() {
 
               <div className="pt-4 border-t border-border/40">
                 <a
-                  href="#track-2"
+                  href="https://arsenal.world/?ref=KYLE-ACDF"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:underline font-mono uppercase tracking-wider"
                 >
-                  <span>See Automation Solution</span>
+                  <span>Enterprise? Start Here</span>
                   <ArrowRight className="h-3.5 w-3.5" />
                 </a>
               </div>
@@ -251,6 +253,16 @@ export default function WorkPage() {
                   Hundreds of payroll hours saved and an error-free operational backbone.
                 </div>
               </div>
+
+              <a
+                href="https://arsenal.world/?ref=KYLE-ACDF"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 w-full py-4 rounded-xl bg-primary hover:bg-primary-hover text-black font-extrabold text-sm transition shadow-lg shadow-primary/20"
+              >
+                <span>Enterprise Teams: Get Started</span>
+                <ArrowRight className="h-4 w-4 text-black" />
+              </a>
             </div>
 
           </div>

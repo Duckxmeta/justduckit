@@ -174,6 +174,16 @@ export default function About() {
                     ZEN AI Co. ↗
                   </a>
                 </div>
+                <div className="flex items-center gap-2 pl-8 -mt-1">
+                  <a
+                    href="https://arsenal.world/?ref=KYLE-ACDF"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-muted-foreground hover:text-primary transition-colors hover:underline"
+                  >
+                    Sovereign AI ↗
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -226,6 +236,9 @@ export default function About() {
                     <p className="text-muted-foreground">
                       Creative consultants at <a href="https://zenai.world/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">ZEN AI Co.</a>
                     </p>
+                    <a href="https://arsenal.world/?ref=KYLE-ACDF" target="_blank" rel="noopener noreferrer" className="inline-block text-xs text-muted-foreground hover:text-primary hover:underline">
+                      Sovereign AI ↗
+                    </a>
                   </div>
                 </div>
               </div>
