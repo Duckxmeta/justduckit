@@ -1,0 +1,40 @@
+---
+title: "The Chip That Read the Seed Off the Screen"
+date: "2026-10-13"
+description: "Ledger confirmed an unauthorized hardware implant in devices sold by CryptoBilis that captured 24-word recovery phrases from the screen and transmitted them over LTE."
+category: "Crypto"
+readTime: "8 min read"
+image: "/media/is-ledger-worth-it.png"
+---
+
+On October 13, Ledger's Donjon team posted the mechanics of the attack that started draining wallets four days earlier. Devices sold through CryptoBilis, a Southeast Asian reseller Ledger had listed as authorized, contained an extra board inside the enclosure. When a new owner set up the signer and the screen showed the 24-word recovery phrase, the implant's microcontroller recognized those screens, decoded the words, and sent them out over LTE through an eSIM. The Secure Element stayed untouched. The operating system stayed untouched. No signature was altered. The keys left the device the same way the owner saw them: on the display.
+
+All confirmed losses from the October 9 incident trace to CryptoBilis devices. Ledger has not published a total. Third-party on-chain counts range from roughly $86 million to over $100 million across several hundred wallets on multiple chains. CryptoBilis halted sales. Other hardware makers cut ties. Reports of similar implants in devices bought elsewhere are still under review.
+
+## What the Implant Actually Did
+
+The hardware was a separate component. It sat inside the case, watched the data that went to the screen, and used a cellular radio that did not need the user's phone or computer. During the one moment the device is designed to display the master secret in clear text, the implant read it and exfiltrated it. After that, the attacker could restore the wallet on any other device and wait.
+
+Ledger's genuine-device check passed because the original Secure Element was still there. The check confirms the chip Ledger put in the box. It does not confirm that nothing else was added. Buyers who followed the usual advice—buy from an authorized seller, verify the packaging, run the genuine check—still received devices that could phone home with the seed.
+
+## Why This Hits Builders Harder Than a Remote Exploit
+
+Most of us who hold keys for projects, DAOs, or personal stacks already treat browser wallets and exchange accounts as temporary. Hardware is the step we take when the amount matters. The threat model for years has been "don't type the seed on a computer" and "don't fall for the support call." This attack skips both. The seed never touches a host machine. No one has to social-engineer the owner into entering it. The device itself broadcasts it the first time the screen shows the words.
+
+For anyone shipping products that assume users will self-custody, or for anyone who recommended a specific hardware brand to a team, the supply-chain gap is now concrete. An authorized reseller channel was enough. The packaging looked intact. The firmware and Secure Element behaved as designed. The extra board was invisible to the verification path the manufacturer published.
+
+## What Ledger Said and What It Didn't
+
+Ledger's October 13 update is clear on the mechanism for the devices it examined: screen-reading microcontroller, LTE + eSIM, no modification to the Secure Element or OS. It is also clear that every verified drain from the October 9 wave came through CryptoBilis. It has not confirmed the dollar total circulating online, and it has not yet said whether implants exist outside that reseller. The investigation continues. Users who bought from CryptoBilis are being told to move funds and contact support.
+
+That is the operational boundary. The company treated the incident as a physical supply-chain attack rather than a software or internal systems breach. For builders, the practical takeaway is narrower: the trust boundary is not just the manufacturer. It includes every hand the device passes through before it reaches the user, and the verification tools do not currently see added circuitry that leaves the Secure Element alone.
+
+## What Changes for the Rest of Us
+
+We already tell people to buy direct when possible and to treat any request for a seed as an attack. This case adds a step before that. If the device can leave the factory or the authorized channel with an implant that never touches the Secure Element, then "authorized" and "genuine check" are incomplete filters. Multisig across different manufacturers reduces the blast radius if one brand or one channel is hit. Air-gapped generation of seeds on a device that never connects, or on paper and metal, removes the screen-display window entirely for the initial setup. Neither is new advice. Both look more necessary once a cellular modem can sit behind the display.
+
+The sanctuary angle is simple. We run systems that have to stay up when the network is noisy—feeders, gates, records, payments. We do not keep the master keys for those systems on a single device that phones home during setup. The same discipline applies when the asset is a project treasury or a personal stack that funds the work. The chip did not need to break cryptography. It only needed to be present when the screen showed the words.
+
+Ledger will keep analyzing the units it receives. Until the full scope is public, the confirmed facts are the ones in the Donjon update: the implant read the recovery phrase off the screen of CryptoBilis devices and transmitted it over LTE, the Secure Element was not modified, and the verified losses from the October 9 incident stayed inside that reseller channel.
+
+Proof it. Drop the thumbnail. Then say merge.
