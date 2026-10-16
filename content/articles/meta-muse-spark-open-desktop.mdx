@@ -1,0 +1,50 @@
+---
+title: "Meta Dropped Muse Spark Open. It Runs on Two Macs."
+date: "2026-10-16"
+description: "Meta released Muse Spark Open yesterday — 816B-parameter open-weight model for coding and agents that Meta says runs locally on two M5 Ultra Mac Studios."
+category: "AI & Tech"
+readTime: "7 min read"
+image: "/media/own-the-software-fire-the-tabs.jpg"
+---
+
+Yesterday Meta released the weights for Muse Spark Open.
+
+Not a teaser. Weights. Downloadable. An 816-billion-parameter mixture-of-experts model that activates 42 billion of those parameters per token. Natively multimodal. One-million-token context window. Built for coding and long-horizon agent work. Meta calls it the most capable U.S. open-weight model to date.
+
+The line that matters for people who actually ship things is the hardware claim: it is optimized to run on two Apple M5 Ultra Mac Studios via MLX. Two desktops. Unified memory. No data-center lease required for the inference pass.
+
+That is the event. Everything else is commentary.
+
+## What actually shipped
+
+Muse Spark Open is derived from the earlier Muse Spark series Meta put out this year. The open version adds safety post-training so the model is more robust when it is not sitting behind Meta’s own service guardrails. It takes text, images, video, and audio in, and returns text. Weights are on Hugging Face. API access is live on several platforms the same day. Local run is the new part.
+
+Meta’s own comparison table shows it leading on some agent and tool-use benches (MCP-Atlas at 89.2, JobBench at 61.8) while trailing Chinese open models like GLM 5.3 and Kimi K3 on pure coding and terminal tasks. That is the honest read. It is not the absolute frontier on every metric. It is a high-capability U.S. open option that a single operator can put on hardware they already own or can buy.
+
+Nvidia also dropped new open Nemotron models the same window, and Mistral is still rolling out Large 4 later this month. The open-weight lane is not empty. Meta’s contribution is the desktop configuration and the agent focus.
+
+## Why a barn in Tennessee cares
+
+We run a sanctuary and we build software. Those are not separate jobs. The ducks need feed, water, predator control, and someone who shows up when the weather turns. The software side needs tools that do not vanish when a provider changes pricing, rate-limits the endpoint, or decides the data has to stay on their servers.
+
+Most of the useful agent work we do is not generating a one-shot paragraph. It is holding a codebase, a set of farm records, a client workflow, or a media pipeline across hours or days. Context window size matters. Ability to call tools and stay on the job matters. Ability to do it without shipping every intermediate step off the property matters more when the work involves real animals, real invoices, or client files that are not supposed to leave.
+
+A model that can live on two Mac Studios changes the calculation. You are no longer purely renting the inference. You can still use the API when the job is light or when you want the latest safety layer. You can also keep the heavy pass local when the data or the continuity needs to stay in the room. That is not romantic self-hosting. It is the same practical move as keeping a spare generator and not relying only on the grid when the storm is already on the radar.
+
+## The builder angle, not the press release
+
+Open weights mean you can fine-tune, quantize, or wrap the model for a specific workflow. Meta’s license is free for most development and shipping use, with attribution and a higher-revenue clause if you are selling API access at scale. For a two-person shop or a sanctuary that also ships sites and agents, the license is workable.
+
+The practical limits are still there. Two M5 Ultra Mac Studios with the full memory configuration are not cheap, and the highest-memory versions were not yet widely available on launch day. Smaller quantized builds exist for people who want to experiment without the full pair. Running an 816B MoE locally is still a hardware commitment. The point is that the commitment is now on the table instead of gated behind a lab’s API terms.
+
+For anyone building agent systems that have to survive contact with the real world — whether that world is a client’s back office or a flock that needs the lights on — the new option is control over the runtime. You can route the sensitive or long-running pieces to hardware you operate. You can still call out for the pieces that benefit from the cloud. The decision is yours instead of the platform’s default.
+
+## What to watch next
+
+The immediate tests are simple. Does the two-Mac setup actually stay stable on multi-hour agent loops? How much does the local latency and throughput compare to the API versions on the same prompts? What does the license look like once people start shipping commercial products on top of it? Those answers will come from people who run the weights, not from the announcement post.
+
+Meta also has a closed model still in the mix. The open drop does not retire the paid tier. It adds a parallel path. For builders who already own or can justify the Macs, that path is now open.
+
+We will keep the ducks watered either way. The software side just got one more way to keep the work on the property when it needs to stay there.
+
+Sources: Meta AI Research blog (October 15, 2026), Guardian, SiliconANGLE, VentureBeat, and the model card materials released with the weights.
