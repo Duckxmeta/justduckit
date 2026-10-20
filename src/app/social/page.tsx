@@ -22,7 +22,7 @@ export default function SocialPage() {
         </h1>
         <p className="text-lg leading-relaxed text-muted-foreground">
           Local businesses can request a visit. We show up, film a short vlog at the location, and shoot photos for
-          posts across Instagram, Facebook, TikTok, and X. $50 value — cash, store credit, or a meal. Close enough to
+          posts across Instagram, Facebook, TikTok, and X. Close enough to
           drive to.
         </p>
       </div>
