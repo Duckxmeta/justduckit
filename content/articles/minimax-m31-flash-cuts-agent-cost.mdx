@@ -1,0 +1,46 @@
+---
+title: "MiniMax M3.1 Flash Cuts the Cost of Agentic Work in Half"
+date: "2026-10-20"
+description: "Chinese lab MiniMax shipped M3.1 Flash on October 19: a 1M-context agent model at $0.15/$0.60 per million tokens that claims 70% lower agent task costs and nearly 3x speed. Weights promised October 23."
+category: "Tech"
+readTime: "7 min read"
+image: "/media/minimax-m31-flash.jpg"
+---
+
+Yesterday MiniMax put a new model on the wire.
+
+M3.1 Flash. API live the same day. Flat pricing: fifteen cents in, sixty cents out, a cent and a half for cached input. One million token context. Text, images, video. Reasoning always on; you pick how hard it thinks. The company says agentic jobs now cost about 70 percent less than on the previous M3, and inference is close to three times faster, with everyday output north of 200 tokens a second.
+
+Weights are promised for October 23. Until then it is an API product. Space Bunny, the anonymous stealth model that had been chewing through tokens on OpenRouter, was an early build of this thing.
+
+That is the concrete event. A lab that already ships open weights decided the next move was not another bigger closed frontier model. It was a cheaper, faster agent model that still scores near the top of the Chinese pack on computer-use and long-chain coding benches.
+
+## What actually changed
+
+Agent work is expensive because it is chatty. A single useful job can burn dozens of model calls: plan, tool, check, revise, tool again. Token price compounds. Latency compounds. The labs that only optimize for the single-turn benchmark leave the people who actually run agents holding the bag.
+
+MiniMax’s own numbers put M3.1 Flash at 73.7 on DeepSWE v1.1, 61.7 on OSWorld V2, 76.2 on BankerToolBench, and 82 on CyberGym. Artificial Analysis scored it around 42–43 on their Intelligence Index, up from 29 on M3. Third-party notes also flag a higher rate of confident wrong answers; that is the usual trade when you push sparsity and speed.
+
+The company attributes the jump to more aggressive sparsity at inference time. Same rough size class as M3 (around 428 billion total, ~23 billion active in the prior model; exact count for Flash not yet public). Reasoning effort is tunable across five levels so a simple lookup does not pay for a full chain-of-thought. Cached input is an order of magnitude cheaper, which matters when an agent keeps the same long context across steps.
+
+For a builder who also runs a place with animals, the relevant part is not the leaderboard. It is whether the cost of an always-on assistant that watches feeds, drafts intake notes, or checks a protocol drops enough that you can leave it running without treating it like a second electric bill.
+
+## Why the price matters more than the score
+
+Open weights are useful when you want to fine-tune or run local. They are less useful when the job is multi-step tool use against live systems and you just need it to be cheap enough to call repeatedly. MiniMax is keeping the weights back a few days, which is the pragmatic order: prove the API economics first, then let people download the checkpoint.
+
+Compare the sticker to the prior M3: roughly half the input price, half the output price, and a steeper discount on cache. The claimed 70 percent drop in end-to-end agent task cost is larger than the per-token cut because fewer tokens are wasted on low-effort steps and the model finishes faster. Whether that holds outside their harness is the thing to test, not to assume.
+
+Nvidia shipped its own open Nemotron 3.5 Super VL and Bolt edge models five days earlier, aimed at always-on agents on their hardware. MiniMax is coming from the other direction: cheap API first, weights second, Chinese lab price pressure. Both are responding to the same shift. The unit of work is no longer the prompt. It is the agent that stays on the job.
+
+## What a sanctuary operator actually does with it
+
+We keep birds. We keep notes. We keep track of who needs what, when the feeders go empty, which protocol changed. None of that is glamorous. All of it is multi-step and recurring.
+
+An agent that can read a photo of a water trough, cross it against the last log, and draft the update without burning a dollar per check starts to look like infrastructure instead of a demo. The same agent that can pull yesterday’s intake, check against the current protocol, and flag the outlier before the morning round. The cost has to be low enough that you do not ration the calls.
+
+M3.1 Flash does not solve the hard parts: verification, liability, the fact that a model will still invent a number if you let it. It does make the experiment cheaper to run. That is the only change that matters to someone who already has a list of animals that need care before the model finishes its thought.
+
+Weights on the 23rd will let people who want local control download it. Until then the API is the product. Either way, the direction is the same: agent work is getting cheaper, and the labs that treat cost as a first-class feature are the ones builders will actually leave running overnight.
+
+Proof it on a real workflow. Then decide if the next model is worth swapping in.
