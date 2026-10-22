@@ -44,6 +44,16 @@ export default function SocialPage() {
         </div>
         <p className="text-sm font-semibold text-foreground">Support the trip</p>
         <SupportButtons />
+
+        <div className="pt-4 border-t border-border/60 space-y-3">
+          <p className="text-sm font-semibold text-foreground">Follow along</p>
+          <div className="flex flex-wrap gap-3">
+            <a href="https://www.instagram.com/justduckits?psln=MWlqa3F1dGc1d24wdg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">Instagram</a>
+            <a href="https://www.facebook.com/share/18Zh8XnFWX/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">Facebook</a>
+            <a href="https://www.tiktok.com/@ducksontiktok?_r=1&_t=ZP-9Am0q6HhNeQ" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">TikTok</a>
+            <a href="https://x.com/ducksonx?s=11" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">X</a>
+          </div>
+        </div>
       </div>
 
       <SocialVisitForm />
