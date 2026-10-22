@@ -30,9 +30,18 @@ export default function SocialPage() {
 
       <div className="rounded-3xl border border-primary/40 bg-card/40 p-6 sm:p-10 space-y-6">
         <h2 className="text-2xl font-extrabold text-foreground">Love ALWAYS Wins</h2>
-        <p className="text-base leading-relaxed text-muted-foreground">
-          The main goal is the most ikonic 1st date ever. Duck has fallen in love and for a first date wants to fly out this woman to Chicago, and travel the entire Route 66 with her, connecting the entire community in a way that’s never been done before. She said yes — now we need to figure out how to secure this financially. Thank you for being a part of this and make sure to reach out!
-        </p>
+        <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
+          <p>Some first dates are dinner and a movie.</p>
+          <p>This one starts in Chicago and doesn’t stop until we’ve driven the full length of Route 66.</p>
+          <p>She said yes anyway.</p>
+          <p>
+            Yes to the risk. Yes to the unknown. Yes to building something real in front of a camera and a community that gets to ride along. Every mile will be filmed — not as content for content’s sake, but as a living bridge between old friends and new ones, between America’s past and the world we’re stepping into. All of it because two people decided a dream was worth chasing.
+          </p>
+          <p>
+            If you’ve ever been head-over-heels and wanted the person you care about to feel how serious you are… this is that moment.
+          </p>
+          <p>Help us turn the yes into the road.</p>
+        </div>
         <p className="text-sm font-semibold text-foreground">Support the trip</p>
         <SupportButtons />
       </div>
