@@ -43,6 +43,18 @@ export default function SupportButtons() {
         Cash App
       </a>
 
+      <a
+        href="https://buy.stripe.com/5kQ4gA6r1dLdbPY8peg7e00"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center justify-center gap-3 w-full sm:w-auto px-6 py-4 rounded-2xl bg-[#635BFF] hover:bg-[#4b45d6] text-white font-semibold text-sm transition"
+      >
+        <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+          <path d="M13.3 9.6c0-.7.6-1 1.5-1 1.3 0 2.9.4 4.2 1.1V6.2C17.6 5.6 16.1 5.3 14.6 5.3 11.5 5.3 9.4 6.9 9.4 9.5c0 4.1 5.6 3.4 5.6 5.2 0 .8-.7 1.1-1.7 1.1-1.5 0-3.3-.6-4.8-1.4v3.6c1.6.7 3.3 1 4.9 1 3.3 0 5.5-1.6 5.5-4.3-.1-4.4-5.6-3.6-5.6-5.1z" />
+        </svg>
+        Stripe
+      </a>
+
       <button
         type="button"
         onClick={copySol}
