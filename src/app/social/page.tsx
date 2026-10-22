@@ -27,6 +27,35 @@ export default function SocialPage() {
         </p>
       </div>
 
+      <div className="rounded-3xl border border-primary/40 bg-card/40 p-6 sm:p-10 space-y-6">
+        <h2 className="text-2xl font-extrabold text-foreground">Love ALWAYS Wins</h2>
+        <p className="text-base leading-relaxed text-muted-foreground">
+          The main goal is the most ikonic 1st date ever. Duck has fallen in love and for a first date wants to fly out this woman to Chicago, and travel the entire Route 66 with her, connecting the entire community in a way that’s never been done before. She said yes — now we need to figure out how to secure this financially. Thank you for being a part of this and make sure to reach out!
+        </p>
+        <p className="text-sm font-semibold text-foreground">Support the trip</p>
+        <div className="flex flex-col sm:flex-row flex-wrap gap-3">
+          <a
+            href="https://www.paypal.com/ncp/payment/PLB-VXAQGRVZ8E69"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-primary text-black font-bold text-sm hover:bg-primary-hover"
+          >
+            PayPal
+          </a>
+          <a
+            href="https://cash.app/$Duckxmeta"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-primary text-black font-bold text-sm hover:bg-primary-hover"
+          >
+            Cash App
+          </a>
+          <div className="text-sm text-muted-foreground break-all">
+            <span className="font-semibold text-foreground">Solana:</span> CwZDNu744EPtZzDNvhdgrxFJmKq9GHygZHQb6z4ToD6n
+          </div>
+        </div>
+      </div>
+
       <SocialVisitForm />
     </div>
   );
