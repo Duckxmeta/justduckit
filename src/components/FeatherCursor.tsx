@@ -12,7 +12,6 @@ type Feather = {
   size: number;
   rot: number;
   spin: number;
-  lean: number;
 };
 
 export default function FeatherCursor() {
@@ -57,62 +56,55 @@ export default function FeatherCursor() {
           vy: Math.sin(a) * s * 0.6 - (burst ? 0.6 : 0.15) - Math.random() * 0.4,
           life: 0,
           max: burst ? 50 + Math.random() * 40 : 70 + Math.random() * 50,
-          size: (burst ? 14 : 10) + Math.random() * (burst ? 8 : 6),
+          size: (burst ? 16 : 12) + Math.random() * (burst ? 6 : 5),
           rot: Math.random() * Math.PI * 2,
-          spin: (Math.random() - 0.5) * (burst ? 0.14 : 0.05),
-          lean: (Math.random() - 0.5) * 0.35,
+          spin: (Math.random() - 0.5) * (burst ? 0.12 : 0.04),
         });
       }
-      if (feathers.length > 140) feathers.splice(0, feathers.length - 140);
+      if (feathers.length > 120) feathers.splice(0, feathers.length - 120);
     };
 
     const drawFeather = (f: Feather) => {
       const t = 1 - f.life / f.max;
-      const len = f.size;
-      const wide = len * 0.28;
-      const lean = f.lean;
+      const s = f.size;
 
       ctx.save();
       ctx.translate(f.x, f.y);
       ctx.rotate(f.rot);
-      ctx.globalAlpha = Math.max(0, t) * 0.9;
+      ctx.globalAlpha = Math.max(0, t) * 0.92;
 
-      // Soft vane body, pointed tip, rounded base
+      // Curved quill / shaft that sticks out below the vane
+      ctx.strokeStyle = "rgba(255,255,255,0.95)";
+      ctx.lineWidth = Math.max(1.2, s * 0.06);
+      ctx.lineCap = "round";
       ctx.beginPath();
-      ctx.moveTo(0, -len * 0.5);
-      ctx.bezierCurveTo(wide, -len * 0.2, wide * 0.85, len * 0.15, lean * wide, len * 0.42);
-      ctx.bezierCurveTo(-wide * 0.55, len * 0.28, -wide, -len * 0.05, 0, -len * 0.5);
+      ctx.moveTo(0, -s * 0.55);
+      ctx.quadraticCurveTo(s * 0.08, s * 0.05, -s * 0.02, s * 0.62);
+      ctx.stroke();
+
+      // Vane: pointed tip, rounded bottom, slightly asymmetric like the illustration
+      ctx.beginPath();
+      ctx.moveTo(0, -s * 0.58);
+      ctx.bezierCurveTo(s * 0.38, -s * 0.22, s * 0.32, s * 0.12, s * 0.06, s * 0.28);
+      ctx.bezierCurveTo(-s * 0.02, s * 0.22, -s * 0.28, s * 0.08, -s * 0.32, -s * 0.08);
+      ctx.bezierCurveTo(-s * 0.34, -s * 0.28, -s * 0.16, -s * 0.42, 0, -s * 0.58);
       ctx.closePath();
-      ctx.fillStyle = "rgba(255,255,255,0.92)";
+      ctx.fillStyle = "rgba(255,255,255,0.96)";
       ctx.fill();
 
-      // Inner vane shading so it reads as a feather, not a grain
+      // Soft highlight oval, like the illustration
       ctx.beginPath();
-      ctx.moveTo(0, -len * 0.38);
-      ctx.bezierCurveTo(wide * 0.45, -len * 0.08, wide * 0.4, len * 0.08, lean * wide * 0.4, len * 0.28);
-      ctx.bezierCurveTo(-wide * 0.25, len * 0.16, -wide * 0.45, -len * 0.02, 0, -len * 0.38);
-      ctx.closePath();
+      ctx.ellipse(-s * 0.02, -s * 0.12, s * 0.09, s * 0.18, -0.4, 0, Math.PI * 2);
       ctx.fillStyle = "rgba(255,255,255,0.55)";
       ctx.fill();
 
-      // Central shaft
-      ctx.strokeStyle = "rgba(40,40,40,0.35)";
-      ctx.lineWidth = 0.8;
+      // Darker shaft running through the vane
+      ctx.strokeStyle = "rgba(0,0,0,0.18)";
+      ctx.lineWidth = Math.max(0.8, s * 0.04);
       ctx.beginPath();
-      ctx.moveTo(0, -len * 0.46);
-      ctx.quadraticCurveTo(lean * 4, 0, lean * wide * 0.4, len * 0.46);
+      ctx.moveTo(0, -s * 0.48);
+      ctx.quadraticCurveTo(s * 0.04, -s * 0.05, s * 0.02, s * 0.22);
       ctx.stroke();
-
-      // A few barb marks
-      ctx.strokeStyle = "rgba(0,0,0,0.12)";
-      ctx.lineWidth = 0.5;
-      for (let i = -2; i <= 2; i++) {
-        const y = i * (len * 0.12);
-        ctx.beginPath();
-        ctx.moveTo(-wide * 0.15, y);
-        ctx.lineTo(wide * 0.35, y + 1.2);
-        ctx.stroke();
-      }
 
       ctx.restore();
     };
@@ -138,13 +130,13 @@ export default function FeatherCursor() {
 
     const onMove = (e: MouseEvent) => {
       const now = performance.now();
-      if (now - last < 22) return;
+      if (now - last < 24) return;
       last = now;
       spawn(e.clientX, e.clientY, 1);
     };
 
     const onClick = (e: MouseEvent) => {
-      spawn(e.clientX, e.clientY, 8, true);
+      spawn(e.clientX, e.clientY, 7, true);
     };
 
     resize();
