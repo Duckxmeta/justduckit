@@ -1,0 +1,60 @@
+---
+title: "Gemini 4 Carbon Ships to Cyber Defenders First"
+date: "2026-10-29"
+description: "Google announced Gemini 4 Carbon on October 28 as its strongest model, with top scores on cybersecurity benchmarks, but access starts with Fairwind Program cyber defenders only."
+category: "Tech"
+readTime: "7 min read"
+image: "/media/gemini-4-carbon-placeholder.jpg"
+---
+
+Google dropped Gemini 4 Carbon on October 28. Koray Kavukcuoglu called it the strongest model they have, with state-of-the-art cybersecurity and long-horizon work. It sits at 59 on the updated Artificial Analysis Intelligence Index v5.0. That is the number one spot according to Google’s announcement.
+
+The model is not for the general public yet. Starting this week, a subset of cyber defenders gets it. Then trusted partners through the Fairwind Program. Developers, businesses, and consumers come later, “as soon as possible,” after more guardrail work and the U.S. government’s voluntary pre-release testing process.
+
+Introductory pricing matches Argon: $2 per million input tokens and $10 per million output tokens. Cached input is 95% off. After the introductory period it goes to $4 and $20. No end date given for the promo.
+
+## What the numbers actually say
+
+External cybersecurity benchmarks, run without guardrails:
+
+- 88.2% on SEC-bench Pro for finding real vulnerabilities in real software.
+- 54.8% on ExploitGym for checking which ones are actually exploitable.
+- 71.0% on Collinear’s CWE-bench for turning those findings into working root-cause fixes.
+
+On internal tests, Google says Carbon more than doubles Argon’s success rate at generating secure code. The Chrome team reported it did more than 10x better than another lab’s large frontier model at producing high-quality patches. Wiz saw it leading on web penetration testing benchmarks.
+
+It also gained 89 Elo points on WebDev Arena to land at #4 (1768). Long-horizon coding is the other headline. Internal teams have watched it run for days on multi-step engineering jobs—root-causing subtle bugs across large codebases, pushing through dead ends.
+
+Safety numbers from Google: reduced successful cheating on Terminal-Bench 4.0 to 0.0%, high-severity misalignment alerts down almost 80% in live coding environments, unsupported claims cut roughly 2x, prompt-injection attack success rate at 0.0% on Gray Swan’s IPI benchmark. Overreach down 26%, under-service down 29%.
+
+These are vendor figures. Independent evaluators will sort the ranking later. The restricted access is the part that already changed the rules for who gets the strongest tools.
+
+## Why the gate matters to a builder
+
+Fairwind is not a random early-access list. Google DeepMind describes it as giving defenders an early advantage so they can protect vital infrastructure. Priority goes to governments, national cyber authorities, critical infrastructure operators (healthcare, telecom, energy, finance), and core technology platforms. The program page lists more than 650 partners worldwide.
+
+Two weeks ago Argon launched and moved into broader availability. Carbon is tighter. The capabilities that make it useful for finding and fixing holes are the same ones that make dual-use risk higher. Google is keeping it with the people whose job is to close those holes first.
+
+If you build software, agents, or any system that touches the open internet, this is the model the people trying to break your stack will not have on day one—and the people trying to defend it will. That window is the practical difference.
+
+We run a sanctuary in rural Tennessee. The animals do not care about token prices or benchmark tables. The water, the fencing, the feed, the daily checks still have to happen whether the model of the week is open or locked. But the same internet that lets us order parts or share a photo of a recovered bird is the same one that gets scanned for weak points. A model that is measurably better at finding and patching those points, released first to the organizations that run the infrastructure we rely on, is a concrete shift in the defensive posture of the systems we use.
+
+It does not mean the backyard is suddenly safe. It means the gap between “someone published a vulnerability” and “someone can exploit it at scale” has a new tool on the defender side for a little while.
+
+## What builders actually get (and do not get)
+
+You cannot put Carbon in an agent this morning. The Gemini API pricing page does not list it. Fairwind partners can request access; the form is on the program page. Governments and critical infrastructure get priority. Everyone else waits while Google iterates on the guardrails with the first cohort.
+
+When it does open, the pricing is known. The long-horizon behavior is the one that will matter for real work—agents that stay on a multi-day engineering task instead of looping or fabricating a fix. The cybersecurity numbers matter if you are shipping code that other people will attack. The honesty and reduced shortcut numbers matter if you are tired of models that look busy while they invent evidence.
+
+Argon reached general availability roughly two weeks after its announcement. Carbon could follow a similar path, or the tighter controls could stretch it. Google has not committed to a date.
+
+## The closer
+
+The announcement is short. The model is strong on the benches Google chose to show. Access is gated to the people whose job is to keep the pipes from bursting. That is the event.
+
+For anyone building tools, agents, or the small systems that keep a sanctuary running—ordering, tracking, documenting, communicating—the practical question is simple: when the strongest defensive model is in the hands of the operators of the networks you use, do you treat that as a temporary window or as the new baseline for what “secure enough” looks like?
+
+The ducks still need the gate closed and the water changed. The code still needs the holes closed before the next person finds them. Carbon does not do either of those jobs. It changes who gets the better tool first.
+
+Proof it. Drop the thumbnail. Then say merge.
