@@ -1,10 +1,10 @@
 import Image from "next/image";
-import { MessageSquare, Calendar, Mic, Sparkles, Heart, Building, Award, Target, HelpCircle, Users } from "lucide-react";
+import { Mic, Heart, Building, Award, Target, HelpCircle, Users } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About Kyle Kinkin — Duck, Decent Ducks, DDNYC",
-  description: "Kyle Kinkin is a Nashville-based media and events builder, founder of Decent Ducks, and a DDNYC 2026 speaker. Online he is known as Duck and JustDuckIt.",
+  description: "Kyle Kinkin is based in Tennessee, founder of Decent Ducks, and a DDNYC 2026 speaker. Online he is known as Duck and JustDuckIt.",
 };
 
 export default function About() {
@@ -19,7 +19,7 @@ export default function About() {
     "jobTitle": "Media and events builder",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Nashville",
+      "addressLocality": "Tennessee",
       "addressRegion": "Tennessee"
     },
     "sameAs": [
@@ -27,7 +27,6 @@ export default function About() {
       "https://www.instagram.com/justduckits",
       "https://www.tiktok.com/@ducksontiktok",
       "https://www.tiktok.com/@just.duckit",
-      "https://discord.gg/Ry8zBm5Yvb",
       "https://adoptaduck.org",
       "https://zenai.world"
     ],
@@ -77,23 +76,12 @@ export default function About() {
             <div className="text-center lg:text-left space-y-2">
               <h2 className="text-2xl font-bold text-foreground">Kyle Kinkin</h2>
               <p className="text-sm font-mono text-primary font-semibold">Media & Events Builder</p>
-              <p className="text-xs text-muted-foreground">Greater Nashville area, Tennessee</p>
+              <p className="text-xs text-muted-foreground">Based in Tennessee</p>
             </div>
 
             <div className="w-full max-w-sm rounded-2xl border border-border bg-card/20 p-6 space-y-4">
               <h3 className="text-sm font-bold text-foreground uppercase tracking-wider">Professional Info</h3>
               <div className="space-y-3 text-sm text-muted-foreground font-sans">
-                <div className="flex items-center gap-2">
-                  <MessageSquare className="h-4 w-4 text-primary" />
-                  <a
-                    href="https://discord.gg/Ry8zBm5Yvb"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-primary transition-colors hover:underline"
-                  >
-                    Discord Server ↗
-                  </a>
-                </div>
                 <div className="flex items-center gap-2">
                   <Building className="h-4 w-4 text-primary" />
                   <span>Decent Ducks & ZEN AI Co.</span>
@@ -184,7 +172,7 @@ export default function About() {
             <div className="rounded-2xl border border-primary/20 bg-primary/5 p-6 space-y-2">
               <h2 className="text-lg font-bold text-foreground">What is JustDuckIt?</h2>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                JustDuckIt is Kyle Kinkin (Duck)’s brand. Based in Smithville, Tennessee, he films real places and builds the sites, search, and software behind businesses. Tennessee is the home market. Clients can be local or anywhere. The sanctuary is one project under the brand, not the definition. Vlogs of local spots are not client work and are not the brand.
+                Based in Tennessee, he shares local history, connects community, helps with web development, tells stories, and cares for animals. He also consults with Zen AI Co.
               </p>
             </div>
 
@@ -198,13 +186,7 @@ export default function About() {
               </div>
               <div className="space-y-4 text-sm text-muted-foreground leading-relaxed font-sans">
                 <p>
-                  Based in Smithville, Tennessee, we build media, software, and digital infrastructure — from web development and search optimization to custom AI workflows and waterfowl rescue.
-                </p>
-                <p>
-                  Spoke at DDNYC 2026 in New York on ‘Betting on Yourself.’
-                </p>
-                <p>
-                  Before this, we spent years in marketing, brand development, and live events. That operating background still shapes how we build today.
+                  Based in Tennessee, he shares local history, connects community, helps with web development, tells stories, and cares for animals. He also consults with Zen AI Co.
                 </p>
               </div>
 
@@ -216,7 +198,7 @@ export default function About() {
                     <h4 className="font-bold text-foreground text-base">
                       <a href="https://adoptaduck.org" target="_blank" rel="noopener noreferrer" className="hover:text-primary underline">Decent Ducks</a>
                     </h4>
-                    <p className="text-muted-foreground">On-chain project that supports a real-life duck sanctuary.</p>
+                    <p className="text-muted-foreground">Animal sanctuary work continues with local partners at Broken Fence Farms.</p>
                   </div>
                   <div className="space-y-1">
                     <h4 className="font-bold text-foreground text-base">
@@ -306,10 +288,7 @@ export default function About() {
               </div>
               <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
                 <p>
-                  Today, our focus is centered on three core pillars: media production, scaling the Decent Ducks sanctuary and on-chain project, and building in public on the JustDuckIt journey.
-                </p>
-                <p>
-                  By taking the execution principles of physical events and combining them with direct digital storytelling, we build authentic brand connections and share every step of the journey with our community.
+                  Based in Tennessee, he shares local history, connects community, helps with web development, tells stories, and cares for animals. He also consults with Zen AI Co.
                 </p>
               </div>
             </section>
@@ -354,13 +333,13 @@ export default function About() {
                 <div className="space-y-2 border-b border-border/30 pb-4">
                   <p className="font-bold text-foreground font-mono">Q: Who is Kyle Kinkin?</p>
                   <p className="text-muted-foreground pl-4 border-l border-primary/20">
-                    A: Kyle Kinkin (Duck) is based in Smithville, Tennessee, where he films real places and builds the sites, search, and software behind businesses. He is also the founder of Decent Ducks.
+                    A: Kyle Kinkin (Duck) is based in Tennessee. He shares local history, connects community, helps with web development, tells stories, and cares for animals. He also consults with Zen AI Co.
                   </p>
                 </div>
                 <div className="space-y-2 border-b border-border/30 pb-4">
                   <p className="font-bold text-foreground font-mono">Q: What is JustDuckIt?</p>
                   <p className="text-muted-foreground pl-4 border-l border-primary/20">
-                    A: JustDuckIt is Kyle Kinkin (Duck)’s brand. Based in Smithville, Tennessee, he films real places and builds the sites, search, and software behind businesses. Tennessee is the home market. Clients can be local or anywhere. The sanctuary is one project under the brand, not the definition.
+                    A: JustDuckIt is Kyle Kinkin (Duck)’s brand. Based in Tennessee, he shares local history, connects community, helps with web development, tells stories, and cares for animals. He also consults with Zen AI Co.
                   </p>
                 </div>
                 <div className="space-y-2 border-b border-border/30 pb-4">
@@ -372,7 +351,7 @@ export default function About() {
                 <div className="space-y-2">
                   <p className="font-bold text-foreground font-mono">Q: Where are services offered?</p>
                   <p className="text-muted-foreground pl-4 border-l border-primary/20">
-                    A: JustDuckIt is based in Smithville, Tennessee. Tennessee is the home market, and services are available to clients locally or anywhere.
+                    A: JustDuckIt is based in Tennessee.
                   </p>
                 </div>
               </div>

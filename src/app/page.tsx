@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, BookOpen, Star, HelpCircle } from "lucide-react";
 import { getAllArticles } from "@/lib/articles";
-import NewsletterForm from "@/components/NewsletterForm";
 
 export default function Home() {
   const articles = getAllArticles();
@@ -87,7 +86,7 @@ export default function Home() {
           </h1>
 
           <p className="text-base sm:text-lg leading-relaxed text-foreground font-medium max-w-2xl mx-auto">
-            JustDuckIt is Kyle Kinkin (Duck)’s brand. Based in Smithville, Tennessee, he films real places and builds the sites, search, and software behind businesses. Tennessee is the home market. Clients can be local or anywhere.
+            JustDuckIt is Kyle Kinkin (Duck)’s brand. Based in Tennessee, he shares local history, connects community, helps with web development, tells stories, and cares for animals. He also consults with Zen AI Co.
           </p>
 
           <p className="text-sm text-muted-foreground font-mono">
@@ -118,7 +117,7 @@ export default function Home() {
               <span>Featured Initiatives</span>
             </h2>
             <p className="text-sm text-muted-foreground mt-2">
-              Sanctuary, Pack, CSN, ZEN AI, and the stage.
+              Personal brand, local stories, animals, and consulting.
             </p>
           </div>
 
@@ -174,8 +173,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-24 sm:mt-32 grid grid-cols-1 gap-12 lg:grid-cols-3">
-          <div className="lg:col-span-2 space-y-8">
+        <div className="mt-24 sm:mt-32">
+          <div className="space-y-8">
             <div className="border-b border-border pb-4 flex justify-between items-baseline">
               <h2 className="text-xl font-bold text-foreground flex items-center gap-2">
                 <BookOpen className="h-5 w-5 text-primary" />
@@ -231,16 +230,6 @@ export default function Home() {
               )}
             </div>
           </div>
-
-          <div className="flex flex-col justify-center h-fit space-y-6 lg:sticky lg:top-24">
-            <div className="space-y-2">
-              <span className="px-2.5 py-1 rounded bg-primary/10 text-primary text-sm font-mono border border-primary/20">
-                Direct Updates
-              </span>
-              <h2 className="text-xl font-bold text-foreground">The Duck Digest</h2>
-            </div>
-            <NewsletterForm />
-          </div>
         </div>
 
         <div className="mt-24 sm:mt-32 border-t border-border/50 pt-16 max-w-4xl mx-auto">
@@ -257,25 +246,25 @@ export default function Home() {
             <div className="space-y-2 border-b border-border/30 pb-6">
               <h3 className="font-bold text-foreground font-mono text-base">Who is Kyle Kinkin?</h3>
               <p className="text-muted-foreground pl-4 border-l border-primary/20">
-                Kyle Kinkin (Duck) is based in Smithville, Tennessee, where he films real places and builds the sites, search, and software behind businesses. He is also the founder of Decent Ducks.
+                Kyle Kinkin (Duck) is based in Tennessee. He shares local history, connects community, helps with web development, tells stories, and cares for animals. He also consults with Zen AI Co.
               </p>
             </div>
             <div className="space-y-2 border-b border-border/30 pb-6">
               <h3 className="font-bold text-foreground font-mono text-base">Who is Duck on X (@ducksonx)?</h3>
               <p className="text-muted-foreground pl-4 border-l border-primary/20">
-                Duck on X (@ducksonx) is the personal X account of Kyle Kinkin, focusing on software development, web engineering, and community building.
+                Duck on X (@ducksonx) is the personal X account of Kyle Kinkin. Based in Tennessee, he shares local history, connects community, helps with web development, tells stories, and cares for animals. He also consults with Zen AI Co.
               </p>
             </div>
             <div className="space-y-2 border-b border-border/30 pb-6">
               <h3 className="font-bold text-foreground font-mono text-base">What is JustDuckIt?</h3>
               <p className="text-muted-foreground pl-4 border-l border-primary/20">
-                JustDuckIt is Kyle Kinkin (Duck)’s brand. Based in Smithville, Tennessee, he films real places and builds the sites, search, and software behind businesses. Tennessee is the home market. Clients can be local or anywhere. The sanctuary is one project under the brand, not the definition.
+                JustDuckIt is Kyle Kinkin (Duck)’s brand. Based in Tennessee, he shares local history, connects community, helps with web development, tells stories, and cares for animals. He also consults with Zen AI Co.
               </p>
             </div>
             <div className="space-y-2">
               <h3 className="font-bold text-foreground font-mono text-base">Where are services offered?</h3>
               <p className="text-muted-foreground pl-4 border-l border-primary/20">
-                JustDuckIt is based in Smithville, Tennessee. Tennessee is the home market, and services are available to clients locally or anywhere.
+                JustDuckIt is based in Tennessee.
               </p>
             </div>
           </div>
