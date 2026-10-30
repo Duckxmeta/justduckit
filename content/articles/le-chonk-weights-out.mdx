@@ -1,0 +1,46 @@
+---
+title: "Le Chonk’s Weights Are Out. You Can Run the Trillion-Parameter Model Yourself."
+date: "2026-10-30"
+description: "Mistral released the open weights for its 1T-parameter Large 4 model yesterday. For builders who need control over the tools they run, that is the part that matters."
+category: "AI & Tech"
+readTime: "7 min read"
+image: "/media/le-chonk-weights-placeholder.jpg"
+---
+
+Yesterday Mistral put the weights for Mistral Large 4 on Hugging Face.
+
+The model is nicknamed Le Chonk. One trillion total parameters, about 52 billion active on any given token. Natively multimodal. One-million-token context. Trained from scratch on their own European hardware. Three weeks after the public preview, the improved version is now downloadable under a modified MIT license that still restricts pure model-as-a-service commercial use.
+
+That is the concrete thing that happened. The rest is why a builder who also runs animals notices.
+
+## The control part
+
+Closed models stay on someone else’s servers. You send the prompt, you get the answer, and the provider can change the rules, the price, the refusal behavior, or the uptime without asking you. Open weights mean the numbers that make the model work are on a disk you control. You can run them on hardware you own or rent, fine-tune them on your own data, and decide what happens when the job is sensitive.
+
+Mistral is pitching this hardest for cybersecurity. On the Artificial Analysis Cyber Index the model scores 51 percent. On one reproduce-and-patch test it hit the high 70s to low 80s while some closed frontier models scored near zero because they simply refuse the task. The company also reports a 96.6 percent refusal rate on malicious cyber prompts, the highest they measure among open models. Security teams at Booz Allen, Cisco, Cloudflare, CrowdStrike, and others have been testing it. The pitch is that you can keep the model inside your own perimeter instead of shipping code or incident data out to a third-party API.
+
+For the rest of us the same property holds. If you are writing custom software that touches real operations, customer data, or anything you do not want logged on someone else’s side, the ability to run the model yourself is not a luxury feature. It is the difference between renting the tool and owning the setup.
+
+## Coding agents that do not need a second mortgage in tokens
+
+The other headline number is efficiency. On Artificial Analysis’ Coding Agent Index, Le Chonk sits effectively tied with GLM-5.3 while using 47 percent fewer tokens per task on average. On Terminal-Bench 4.0 it moved from 28 percent in preview to 41 percent after the extra reinforcement learning. Cognition’s private FrontierCode 2.0, which asks whether a maintainer would actually merge the agent’s patch, has it at 19.7 percent, ahead of the open models Mistral compared it against.
+
+Token cost compounds when an agent is grinding on a repo for hours. Fewer tokens for the same quality is the difference between an experiment you can afford to leave running and one you kill after the first afternoon. Three reasoning modes (low, medium, high) let you dial the tradeoff instead of always paying for maximum effort.
+
+We already route across multiple model providers when we build. Having a strong open option that does not force every call through a single API is useful even if you never download the full weights yourself. It keeps the vendors honest and gives you a fallback that cannot be switched off by a policy change on the other side of an ocean.
+
+## What the license actually says
+
+It is not OSI open source. The Mistral Ecosystem Open-Weight License is a modified MIT that lets you download, modify, and use the model. If you want to offer the model itself as a hosted service to third parties, you need a separate commercial license. Internal use, fine-tuning for your own products, and research are in bounds. That is the same pattern Mistral has used on recent releases. Read the card before you plan a product around redistributing inference.
+
+Practical size is the other constraint. A trillion-parameter MoE is still large. Mistral says a quantized version runs on as few as four Nvidia B200 or B300 GPUs. That is not a laptop, but it is also not a national lab cluster. For a sanctuary operator or a small shop that already keeps local servers for cameras, logs, and inventory, the incremental cost of a couple of GPUs is now in range of something that can actually do useful work instead of just chat.
+
+## Why this lands here
+
+We do not run a model lab. We run animals and we build the tools that keep the rest of the operation from turning into pure busywork. The same principle applies to both: control the things that matter. You do not want a feed mill or a fence vendor that can change the rules mid-season. You do not want an AI vendor that can silently alter refusal behavior or pricing on the agent that handles your customer intake or your internal ops notes.
+
+Le Chonk is not going to replace the closed frontier models on every task. Independent scores still show it trailing the top closed systems and some Chinese open models on pure general intelligence. What it does is give builders a high-capability open option that was trained outside the US-China duopoly, with explicit attention to defensive security work and token efficiency. That expands the set of tools you can actually own instead of merely subscribe to.
+
+The weights are on Hugging Face. The API is still there if you prefer not to host. The choice is the point.
+
+If you are already stitching agents into real work, pull the card, read the license, and decide whether this one belongs in the rotation. The animals will still need feeding either way. The software that helps you do it should answer to you.
