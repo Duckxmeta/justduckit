@@ -61,19 +61,22 @@ export default function SocialVisitForm() {
       className="rounded-3xl border border-primary/40 bg-card/40 p-6 sm:p-10 space-y-5 scroll-mt-24"
     >
       <h2 className="text-2xl font-extrabold text-foreground">Request a visit</h2>
+      <p className="text-sm text-muted-foreground -mt-2">
+        A business, a landmark, or a story. Anyone can request a visit.
+      </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label htmlFor="sv-name" className={labelClass}>Name *</label>
-          <input id="sv-name" required disabled={loading} value={f.name} onChange={set("name")} className={inputClass} />
+          <label htmlFor="sv-name" className={labelClass}>Your name *</label>
+          <input id="sv-name" required disabled={loading} value={f.name} onChange={set("name")} className={inputClass} placeholder="Kyle" />
         </div>
         <div>
-          <label htmlFor="sv-business" className={labelClass}>Business name *</label>
-          <input id="sv-business" required disabled={loading} value={f.business} onChange={set("business")} className={inputClass} />
+          <label htmlFor="sv-business" className={labelClass}>Place, landmark, or business *</label>
+          <input id="sv-business" required disabled={loading} value={f.business} onChange={set("business")} className={inputClass} placeholder="The old mill, my farm, Main Street Cafe" />
         </div>
         <div>
-          <label htmlFor="sv-address" className={labelClass}>Business address / town *</label>
-          <input id="sv-address" required disabled={loading} value={f.address} onChange={set("address")} className={inputClass} />
+          <label htmlFor="sv-address" className={labelClass}>Location / town *</label>
+          <input id="sv-address" required disabled={loading} value={f.address} onChange={set("address")} className={inputClass} placeholder="Smithville, TN" />
         </div>
         <div>
           <label htmlFor="sv-contact" className={labelClass}>Best contact (phone or email) *</label>
@@ -82,8 +85,8 @@ export default function SocialVisitForm() {
       </div>
 
       <div>
-        <label htmlFor="sv-request" className={labelClass}>What you want filmed or highlighted *</label>
-        <textarea id="sv-request" required rows={3} disabled={loading} value={f.request} onChange={set("request")} className={`${inputClass} resize-none`} />
+        <label htmlFor="sv-request" className={labelClass}>What should we film or talk about? *</label>
+        <textarea id="sv-request" required rows={3} disabled={loading} value={f.request} onChange={set("request")} className={`${inputClass} resize-none`} placeholder="The story behind this place, what makes it special, anything we should know." />
       </div>
 
       <div>
