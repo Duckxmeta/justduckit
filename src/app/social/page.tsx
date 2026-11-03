@@ -6,7 +6,7 @@ import SupportButtons from "@/components/SupportButtons";
 export const metadata: Metadata = {
   title: "Request a Visit | JustDuckIt",
   description:
-    "Local businesses can request a visit. We film a short vlog and shoot photos for Instagram, Facebook, TikTok, and X.",
+    "Got a story, landmark, or business worth visiting? Leave a message and we’ll come film it.",
   alternates: { canonical: "https://justduckit.xyz/social" },
 };
 
@@ -67,30 +67,22 @@ export default function SocialPage() {
           <span>Local visits</span>
         </div>
         <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-foreground">
-          Come by. <span className="text-gradient-gold">We’ll film it.</span>
+          Got a story? <span className="text-gradient-gold">We’ll come film it.</span>
         </h1>
         <p className="text-lg leading-relaxed text-muted-foreground">
-          Local businesses can request a visit. We show up, film a short vlog at the location, and shoot photos for
-          posts across Instagram, Facebook, TikTok, and X. Close enough to
-          drive to.
+          Have a story, landmark, or business you want us to visit? Leave a message below so we can keep making content. Gratuity is always appreciated.
         </p>
       </div>
 
       <div className="rounded-3xl border border-primary/40 bg-card/40 p-6 sm:p-10 space-y-6">
-        <h2 className="text-2xl font-extrabold text-foreground">Love ALWAYS Wins</h2>
+        <h2 className="text-2xl font-extrabold text-foreground">Request a visit</h2>
         <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
-          <p>Some first dates are dinner and a movie.</p>
-          <p>This one starts in Chicago and doesn’t stop until we’ve driven the full length of Route 66.</p>
-          <p>She said yes anyway.</p>
           <p>
-            Yes to the risk. Yes to the unknown. Yes to building something real in front of a camera and a community that gets to ride along. Every mile will be filmed — not as content for content’s sake, but as a living bridge between old friends and new ones, between America’s past and the world we’re stepping into. All of it because two people decided a dream was worth chasing.
+            If you have a place, a business, or a story worth showing, drop the details in the form below. We film a short vlog on site and take photos for Instagram, Facebook, TikTok, X, and YouTube.
           </p>
-          <p>
-            If you’ve ever been head-over-heels and wanted the person you care about to feel how serious you are… this is that moment.
-          </p>
-          <p>Help us turn the yes into the road.</p>
+          <p>Gratuity is always appreciated. It helps cover the drive and keeps the content coming.</p>
         </div>
-        <p className="text-sm font-semibold text-foreground">Support the trip</p>
+        <p className="text-sm font-semibold text-foreground">Support the work</p>
         <SupportButtons />
 
         <div className="pt-4 border-t border-border/60 space-y-3">
