@@ -1,0 +1,48 @@
+---
+title: "Tencent Hy4 Sees Charts and Drives the Desktop. Same Price as the Preview."
+date: "2026-11-04"
+description: "Tencent released Hy4 on November 4 with vision and computer-use for the first time in the series. Weights later. Builders get a cheaper path to agents that read screens and click."
+category: "AI & Tech"
+readTime: "7 min read"
+image: "/media/own-the-software-fire-the-tabs.jpg"
+---
+
+Tencent shipped Hy4 this morning. Not a preview. The full release. First model in the Hy line that can see images and operate a computer, both the terminal and the graphical interface. Same API price as the August preview. Weights promised in the coming days.
+
+That is the concrete thing. Vision plus computer use on a model already in the open-weight conversation, at a price that does not require a lab budget. For anyone building agents that have to look at a screen or drive software that never got an API, the clock just moved.
+
+## What landed
+
+Hy4 is live on Tencent Cloud TokenHub, WorkBuddy, CodeBuddy, Yuanbao, and third-party routes including OpenRouter. List price holds at roughly $0.83 per million input tokens and $2.50 per million output, with cached input cheaper still. Through December 31 the TokenHub rate is half that. WorkBuddy and CodeBuddy stay free for the next eleven days. A lighter Hy4 Flash is scheduled next.
+
+The new pieces are the ones that matter. Visual understanding for the first time: fine-grained image detail, complex charts, mathematical visual reasoning. Computer use for the first time: command-line and GUI, with extra training on Blender, CAD, and long workflows that jump between applications. Instruction following, long-context, and long-horizon agent work all improved. Context stays at one million tokens. The preview was 770 billion total parameters with 49 billion active; Tencent has not published a new card yet, so treat those numbers as the prior generation until the weights drop.
+
+Tencent’s own numbers are the ones they want quoted. On 579 real finance tasks rated by 213 professionals (153 of them external experts), Hy4 scored 3.04 and ranked first among the open-weight models they tested, ahead of DeepSeek-V4.1-Flash-1017 at 2.97 and both Kimi K3.1 Pro and GLM-5.3 at 2.68. GameDev improved 19.1 percent over the preview, GameLogic 9.8 percent. Internal search hallucination fell from 15.76 percent to 5.45 percent. Speculative errors dropped from 23.1 percent to 5.6 percent. Take the self-evals as directional until independent benches land.
+
+They also spent ink on safeguards. Cybersecurity training stayed defensive; offensive exploit material was left out. Biosafety review found solid foundational knowledge but limited open-ended experimental design relative to frontier closed models. Weights and a system card are still coming. Until then you are renting the hosted version.
+
+## Why a builder cares
+
+Most of the agent work we actually need is not pure text. It is looking at a spreadsheet screenshot, a CAD drawing, a Blender viewport, a custom admin panel that never grew an API, then doing the next step. Closed labs have been shipping computer-use agents for months. The open side has been catching up on chat and coding. Hy4 is one of the first large open-weight candidates that claims both vision and desktop control in the same release, at a price that sits well below the closed frontier output rates.
+
+That changes the arithmetic for a small shop. You can point an agent at a chart, a floor plan, a feed schedule screenshot, or a broken UI without first building a parser or waiting for the vendor to open an endpoint. The specialized training on Blender and CAD is a signal, not a guarantee: they expect people to use this for professional multi-step work, not just “describe this image.” When the weights arrive, the same model can move from their cloud onto whatever hardware you already pay for, or onto a fine-tune for the specific software your operation runs.
+
+The price is the other half. Output at $2.50 per million is a different conversation from the $10–$20 range still common at the closed frontier. For an agent that runs all day watching a process or generating reports from screenshots, the delta is real money. The 50 percent TokenHub discount through year-end is just a window; the list price is the lasting one.
+
+## What it does not do yet
+
+Weights are not public. You cannot self-host or inspect today. The system card is still coming, so the usual questions about training data, refusals, and eval methodology stay open. Context is one million, which is plenty for most screen-driven tasks, but computer-use agents still burn tokens fast when they reason over pixels and tool traces. Tencent’s finance and game numbers are internal. Independent replication will take days or weeks after the weights drop.
+
+Computer use remains brittle everywhere. GUI agents still miss buttons, misread coordinates, and loop when the interface changes. Extra training on Blender and CAD helps on those specific surfaces; it does not magically solve every custom farm-management screen or sanctuary intake form. You will still write the guardrails, the approval gates, and the fallbacks. The model just gives you a stronger starting point than pure text models had yesterday.
+
+## The sanctuary angle without the care guide
+
+Out here the software is rarely modern. Feed logs live in spreadsheets. Water tests get photographed. Cage cards get scribbled. Veterinary notes arrive as PDFs. The person who also runs the place does not have an integration team. An agent that can read the photo of the log, flag the number that drifted, and then drive the desktop form that still has no API is not theoretical. It is the difference between staying on top of the work and staying up later.
+
+Hy4 does not solve animal care. It does not replace walking the pens. It does give a cheaper, soon-to-be-open path to the class of agents that can look at the physical-world artifacts we already produce and act on the software we already own. That is the builder problem, not the care-guide problem.
+
+## Next
+
+Watch for the weights and the system card. Until then the hosted routes on OpenRouter and Tencent Cloud are the place to measure whether the vision and computer-use claims hold on your own screens. The price is already public. The capability set just expanded by two firsts in one morning.
+
+If you are already routing agents across models, add Hy4 to the strip and see what it does with a real screenshot of work you actually do. The rest of the labs will ship their own vision-plus-desktop updates. This one is already priced and dated.
