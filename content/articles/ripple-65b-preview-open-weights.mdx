@@ -1,0 +1,42 @@
+---
+title: "Ripple-65B Preview Drops Open Weights Under Apache 2.0"
+date: "2026-11-05"
+description: "Ricursive Intelligence released Ripple-65B Preview on November 4: a dense 65B model trained from scratch that claims the U.S. open-weight lead on agentic coding, at a fraction of the usual cost."
+category: "AI & Tech"
+readTime: "7 min read"
+image: "/media/own-the-software-fire-the-tabs.jpg"
+---
+
+On November 4, Ricursive Intelligence put the weights for Ripple-65B Preview on Hugging Face under Apache 2.0. The model is dense, 65 billion parameters, pretrained from scratch on 12 trillion tokens, and it claims 80.52 on Terminal-Bench 2.1. That number edges Reflection’s Beam 501B and sits ahead of several much larger U.S. open-weight models. Hosted access went live the same day on Together AI, GMI Cloud, and OpenRouter.
+
+We run agents against real work from a barn in Tennessee. Feed bills do not care about leaderboard position. What matters is whether the model can finish a terminal task without us babysitting every command, and whether we can actually download the weights instead of renting another API key. This drop checks both boxes on paper.
+
+## What landed
+
+Ripple is not a mixture-of-experts model. Every parameter is active on every token. Ricursive says they chose the dense layout to cut training and serving complexity. Architecture is a thin, deep Transformer: 80 layers, width 5120. Post-training was light and focused on agentic coding. The company reports the Terminal-Bench score after 1.4 million reinforcement-learning rollouts. Full R&D cost, they say, was $32 million—roughly a tenth of what the previous open-weight leader on that benchmark is estimated to have spent.
+
+Checkpoints include an instruction-tuned BF16 model, an experimental NVFP4 version, and a BF16 base. All Apache 2.0. Context window is listed up to 1 million tokens. Ricursive notes the NVFP4 build targets something like an NVIDIA DGX Spark for local runs. Hosted pricing on GMI Cloud and OpenRouter sits at $0.20 input / $0.60 output per million tokens.
+
+The comparison table on their site puts Ripple at 80.5 on Terminal-Bench 2.1 versus Beam’s 80.1, Muse Spark Open 816B at 76.4, Inkling 975B at 63.8, and Nemotron 3 Ultra 550B at 56.4. On SWE-bench Pro v2.0 Hard they list 79.1. Those are self-reported numbers. The model card also shows it trailing Beam on SWE-bench Verified (76.5 vs 81.6) and sitting last on SciCode among the five models they charted.
+
+## Why the size gap matters to us
+
+Most open-weight coding models that post high agent scores are MoE beasts with hundreds of billions of total parameters and only a fraction active. They need serious multi-GPU setups or heavy routing. A 65B dense model that matches or beats them on terminal tasks is the kind of thing you can actually consider running yourself if you already have a couple of B200s or a Spark-class box. For the rest of us it means the hosted version is cheap enough that an agent loop does not eat the margin on a small client job.
+
+We already route across several providers inside the tools we use for sanctuary ops and client systems. Adding another Apache-licensed option that is strong on the exact work agents do—navigating a shell, managing dependencies, finishing a coding task without constant hand-holding—is useful. The narrow lead on Terminal-Bench is not a free pass. It is a signal that dense models trained with a focused recipe can still compete when the metric is actual task completion instead of raw parameter count.
+
+## The chip-design origin
+
+Ricursive builds AI for chip design. Ripple is described as a general-purpose variant of the proprietary model that powers that platform. The lab is small; reporting says the team grew from one to five researchers during development. That context matters. This is not a consumer chat product spun up for the leaderboard. It is a model that came out of engineering work where the agent has to write and run code against real constraints. The same constraints show up when we automate feed orders, habitat checks, or client invoicing from a rural connection that drops packets.
+
+Apache 2.0 removes the usual friction. No custom commercial license that kicks in at a revenue threshold. No waitlist. Weights are public and ungated. That is the part that changes the tools for builders who do not want to negotiate terms every time they want to fine-tune or self-host.
+
+## What we have not verified
+
+Every benchmark number comes from Ricursive or from tables they published. Independent runs are not out yet. The $32 million figure and the one-tenth cost comparison are the company’s estimates. Context length and local performance claims need hardware-specific confirmation. Hosted endpoints may throttle long contexts even if the model supports 1M. We have not loaded the weights or run Terminal-Bench ourselves.
+
+## The practical cut
+
+If you are already paying for agent coding loops, check the OpenRouter or GMI listing and compare a few of your actual terminal tasks against whatever you use today. The price is low enough that the test is cheap. If you have the GPUs, the Apache weights are there. If you are just watching the open-weight board, note that a dense 65B model just claimed the U.S. lead on the benchmark that measures whether the agent can finish the job.
+
+We will keep the ducks fed either way. The tools that help us do it without another monthly seat are the ones worth watching.
