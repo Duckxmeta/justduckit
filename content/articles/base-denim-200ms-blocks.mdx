@@ -1,0 +1,46 @@
+---
+title: "Base Denim Is Live. Five Blocks a Second. Flashblocks Is Gone."
+date: "2026-11-07"
+description: "Base shipped Denim on mainnet November 5. Native 200ms blocks replace the old Flashblocks preview layer. Builders who treated block.number as a clock or subscribed to pending streams have work to do."
+category: "Crypto"
+readTime: "7 min read"
+image: "/media/base-denim-placeholder.jpg"
+---
+
+Base flipped Denim on mainnet at 18:00 UTC on November 5. The chain that used to seal one canonical block every two seconds now seals five complete blocks every second. Each one carries its own number, hash, state root, and receipts. Flashblocks, the 200-millisecond preview stream that had filled the gap since July 2025, is retired.
+
+That is not a marketing tweak. It is a change in how the sequencer works and how every app that talks to Base has to listen.
+
+## What actually shipped
+
+Before Denim, Base produced one real block every two seconds. Inside that window the sequencer streamed incremental pending-state updates called Flashblocks. Apps could subscribe to newFlashblocks, newFlashblockTransactions, or pendingLogs and show users a preview of what was about to land. The pending block tag existed for the same reason.
+
+Denim turns the 200-millisecond interval into the block itself. Five full canonical blocks per second. The protocol, not the sequencer’s clock, enforces the cadence. Each block starts with two deposit transactions: the usual L1 attributes deposit and a new BaseTime deposit that carries the sub-second offset (0, 200, 400, 600, or 800 milliseconds). Contracts can read that offset. RPC responses can now return timestampMs fields. The classic Ethereum block.timestamp stays in whole seconds so existing contracts do not break.
+
+B20, Base’s token standard, also gained tighter transfer rules. Issuers can require a designated party to approve every transfer, and the same address list can act as a whitelist or a blacklist. Direct transfers that previously slipped past some checks now hit the same policy.
+
+## Why builders have to move
+
+If your app still listens for Flashblocks or reads the pending tag, those streams are silent. The migration path is the ordinary newHeads subscription or a plain eth_getBlockByNumber on the latest canonical block. There is no pending state left to reconcile.
+
+Contracts that treated block.number as a rough clock are now off by a factor of ten. A loop that waited 30 blocks used to be about a minute. It is now six seconds. Anything that measured timeouts, vesting, or rate limits in blocks instead of timestamps needs a look. BaseTime gives you the millisecond piece if you want it; most contracts will still want to lean on the seconds-based timestamp and do the arithmetic themselves.
+
+RPC providers feel it too. Rate limits and billing rules that counted blocks now cover one-tenth the wall-clock time they used to. An archive request that cost extra beyond 127 blocks is now looking at roughly 25 seconds of history instead of four minutes. eth_getLogs ranges shrink in the same proportion. If you were already close to a provider’s block-count ceiling, you just got closer.
+
+## The sanctuary parallel
+
+We run animals and we run software. Both hate surprise changes in the timing of the day. A gate that used to open at a predictable interval now opens five times as often. You do not get to keep the old schedule and pretend the birds will sort it out. You rewrite the schedule, test the new cadence, and accept that a few things that used to fit will need a different fence.
+
+Same on Base. The upgrade is live. The Flashblocks endpoints are empty. The block numbers are racing. If you ship on this chain you either update the listeners and the contracts or you watch the UI lag and the timeouts fire early. There is no middle state where the old preview layer still works “for now.”
+
+## What we are watching
+
+Horizen’s L3, which settles to Base, said it could not follow the change and stopped accepting user transactions roughly forty minutes after activation. That is one data point, not a pattern, but it is the kind of downstream breakage you expect when the parent chain’s block rate multiplies. Other L3s and appchains that assumed a two-second parent will be doing the same math this week.
+
+We are also watching the B20 changes. Extra approval hooks and reusable compliance policies are useful when you need them and friction when you do not. Teams that already had transfer agents in the flow will notice less. Teams that treated the token as a plain ERC-20 with Base branding will discover the new rules the first time a transfer reverts.
+
+## The closer
+
+Denim is the fourth named upgrade Base has shipped this year. Each one has been a concrete shift in the rules the chain enforces, not a roadmap slide. 200-millisecond native blocks is the latest. The work for anyone building on it is the same work we do when the sanctuary schedule changes: open the gate on the new interval, measure what breaks, and fix the fences before the next load of animals shows up.
+
+If you are still subscribed to Flashblocks, unsubscribe. If your contract counts blocks for time, switch to timestamps. Then ship.
