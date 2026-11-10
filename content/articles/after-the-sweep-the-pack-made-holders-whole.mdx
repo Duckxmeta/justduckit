@@ -1,0 +1,48 @@
+---
+title: "After the Sweep: The Pack Made Holders Whole"
+date: "2026-11-10"
+description: "On October 26 a marketplace listing flaw let 264 Doginal Dogs get swept. Leadership replaced them from personal holdings. That is the story."
+category: "Web3"
+readTime: "7 min read"
+image: "/media/after-the-sweep-placeholder.png"
+---
+
+On October 26 six Dogecoin transactions spent 264 Doginal Dogs that had been listed on the official marketplace. The total paid out across those transactions was 0.338582 DOGE. Trading paused. An independent archive later tracked the inputs, the signature type, and where the inscriptions landed. A week later the team announced it had replaced the stolen pieces from its own holdings, covering an estimated more than $500,000.
+
+That sequence is the story.
+
+## The listings that did not lock the price
+
+Sellers signed listings with signature type 0x82. That is SIGHASH_NONE|ANYONECANPAY. It commits to the input being signed and to nothing else. It does not fix a price. It does not fix a payee. The marketplace client used that type. Those signatures sat on the server and were available to visitors. Anyone who held one could construct a transaction that moved the dog and paid whatever they chose, including nearly nothing.
+
+The six transactions that did the work landed in blocks 6431226 and 6431231. They spent 264 inscription-carrying inputs from wallets that had listed. One recipient address received the bulk. Some inscriptions went to miner coinbase outputs instead. The marketplace site put up a notice that trading was temporarily paused while upgraded protections rolled out. View and share still worked. Buying and selling did not.
+
+None of that is a rumor. The chain is public. The independent archive at doginaldogs.info collected the transaction list, the timeline, and the code comments. Holders posted the same facts on X within hours.
+
+## What the numbers actually say
+
+Two hundred sixty-four dogs. One hundred ninety-four addresses in the early reports. Roughly forty seconds for the sweep. The independent estimate of value ran from a few hundred thousand dollars to roughly 1.5 million depending on which price basis you used. Those are estimates, not cash that left anyone’s pocket in a single transfer. The only amount that actually moved on-chain in the six transactions was the 0.338582 DOGE paid to the recipient.
+
+The rest was the dogs themselves.
+
+By early November the leadership team had opened a support ticket system, contacted affected holders, and started matching or swapping pieces from personal collections. Christian Barker, Damien Galvin, and David Chaboki put their own dogs into the replacement process. The press release dated November 3 put the total covered at more than $500,000. Holders posted receipts. Some received trait-matched replacements. Some preferred a different dog and got a swap. The process ran from the late-October incidents through the announcement date.
+
+Barker’s line in the release was short: a true community is there for you when times get tough. We wanted to exemplify this as crypto goes through these trying times.
+
+## The part that costs something
+
+Most collections issue a statement and point at the attacker. Some pause the site and wait for the floor to recover. A few open a ticket form. The pack did the thing that is harder to screenshot: it moved dogs out of the wallets of the people who built it and into the wallets of the people who listed on the market they ran.
+
+That is not free. Personal holdings are personal holdings. An estimate north of half a million dollars is still an estimate, but the direction is clear. The same three names that appear on the free mint, the events, the TCG, and Gigatron are the names that appear on the replacement announcement. Bark, Shield, Shibo. No outside fund. No insurance claim that anyone has published. The dogs came from the people who already own the brand in public.
+
+The marketplace is still paused as of the latest independent note. Upgraded protections are the stated next step. The technical debt of a signature that did not commit to price or payee is real and documented. Fixing the code matters. Making the holders whole while the fix is written is the part that separates a project from a product that people will keep holding after the next hard week.
+
+## What we take from the room
+
+The pack has spent two years proving that free mint plus showing up can fill a hotel and ship a physical card game. This week proved the same thing under pressure. When the listings on our own market got swept because the signature type left the price open, the response was not a thread about future roadmap items. It was dogs moving from leadership wallets to holder wallets.
+
+That is the concrete room. The lesson sits right after it. Community-owned culture is not a slogan until it has a cost. The cost this time was personal holdings. The receipt is public. The chain still has the original transactions. The press release still has the estimate and the names. Holders still have the dogs that replaced the ones that left.
+
+The market can stay paused. The cards can keep moving. Gigatron can keep running. The test that mattered was whether the people who built the thing would treat a loss on their platform as their problem. They did.
+
+Proof it. Drop the thumbnail. Then say merge.
