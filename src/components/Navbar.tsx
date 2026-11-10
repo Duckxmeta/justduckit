@@ -17,7 +17,6 @@ export default function Navbar() {
     { name: "Social", href: "/social" },
     { name: "Articles", href: "/articles" },
     { name: "News", href: "/news" },
-    { name: "Newsletter", href: "/newsletter" },
   ];
 
   return (
