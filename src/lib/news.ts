@@ -98,7 +98,7 @@ function parseItems(xml: string, source: Source): NewsItem[] {
 async function fetchSource(source: Source): Promise<NewsItem[]> {
   try {
     const res = await fetch(source.url, {
-      next: { revalidate: 60 * 60 * 6 },
+      next: { revalidate: 60 * 15 },
       headers: { "User-Agent": "JustDuckIt/1.0" },
     });
     if (!res.ok) return [];
