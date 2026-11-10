@@ -16,6 +16,7 @@ export default function Navbar() {
     { name: "Work with me", href: "/work" },
     { name: "Social", href: "/social" },
     { name: "Articles", href: "/articles" },
+    { name: "News", href: "/news" },
     { name: "Newsletter", href: "/newsletter" },
   ];
 
