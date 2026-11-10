@@ -54,13 +54,13 @@ const SOURCES: Source[] = [
   {
     name: "Cointelegraph",
     category: "Crypto",
-    url: "https://cointelegraph.com/rss/tag/dogecoin",
+    url: "https://cointelegraph.com/rss",
     limit: 1,
   },
   {
-    name: "NewsBTC",
+    name: "Decrypt",
     category: "Crypto",
-    url: "https://www.newsbtc.com/news/dogecoin/feed/",
+    url: "https://decrypt.co/feed",
     limit: 1,
   },
 ];
