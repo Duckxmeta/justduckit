@@ -3,9 +3,16 @@ import Image from "next/image";
 import { ArrowRight, BookOpen, Star, HelpCircle } from "lucide-react";
 import { getAllArticles } from "@/lib/articles";
 
+function formatDate(d: string) {
+  if (!d) return "";
+  const date = new Date(d);
+  if (isNaN(date.getTime())) return d;
+  return date.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+}
+
 export default function Home() {
   const articles = getAllArticles();
-  const recentArticles = articles.slice(0, 2);
+  const recentArticles = articles.slice(0, 5);
 
   const initiatives = [
     {
@@ -79,193 +86,127 @@ export default function Home() {
         />
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto space-y-6 animate-in fade-in slide-in-from-bottom-6 duration-700">
-          <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl text-foreground animate-in fade-in zoom-in duration-500">
+      <div className="mx-auto max-w-5xl px-6 py-20 sm:py-28 lg:px-8">
+        <div className="text-center max-w-2xl mx-auto space-y-5">
+          <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl text-foreground">
             JustDuckIt<span className="text-primary font-black">.</span>
           </h1>
-
-          <p className="text-base sm:text-lg leading-relaxed text-foreground font-medium max-w-2xl mx-auto">
-            JustDuckIt is Kyle Kinkin (Duck)’s brand. Based in Tennessee, he shares local history, connects community, helps with web development, tells stories, and cares for animals. He also consults with Zen AI Co.
+          <p className="text-base sm:text-lg leading-relaxed text-foreground font-medium">
+            Kyle Kinkin (Duck) shares local history, builds community, helps with web development, tells stories, and cares for animals. Based in Tennessee. Also consults with Zen AI Co.
           </p>
-
-          <p className="text-sm text-muted-foreground font-mono">
-            It started with a duck.
-          </p>
-
-          <div className="flex flex-wrap items-center justify-center gap-4">
+          <p className="text-sm text-muted-foreground font-mono">It started with a duck.</p>
+          <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
             <Link
-              href="/about"
-              className="flex items-center gap-2 rounded-xl bg-primary text-black font-semibold text-sm px-6 py-3.5 hover:bg-primary-hover active:scale-[0.98] transition-all cursor-pointer shadow-lg shadow-primary/10"
+              href="/articles"
+              className="flex items-center gap-2 rounded-xl bg-primary text-black font-semibold text-sm px-5 py-3 hover:bg-primary-hover transition cursor-pointer"
             >
-              <span>About</span>
+              <span>Latest articles</span>
+              <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               href="/work"
-              className="flex items-center gap-2 rounded-xl border border-border glass-panel text-sm px-6 py-3.5 hover:bg-white/5 active:scale-[0.98] transition-all cursor-pointer"
+              className="flex items-center gap-2 rounded-xl border border-border text-sm px-5 py-3 hover:bg-white/5 transition cursor-pointer"
             >
               <span>Work with me</span>
-              <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
 
-        <div className="mt-24 sm:mt-32">
-          <div className="border-b border-border pb-6 mb-12 text-center sm:text-left">
-            <h2 className="text-2xl font-bold tracking-tight text-foreground flex items-center justify-center sm:justify-start gap-2">
-              <Star className="h-5 w-5 text-primary fill-primary/10" />
-              <span>Featured Initiatives</span>
+        <div className="mt-20">
+          <div className="flex items-baseline justify-between border-b border-border pb-3 mb-6">
+            <h2 className="text-lg font-bold text-foreground flex items-center gap-2">
+              <BookOpen className="h-4 w-4 text-primary" />
+              Latest
             </h2>
-            <p className="text-sm text-muted-foreground mt-2">
-              Personal brand, local stories, animals, and consulting.
-            </p>
+            <Link href="/articles" className="text-sm font-semibold text-primary hover:underline">
+              View all
+            </Link>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
-            {initiatives.map((item) => {
-              const linkClass =
-                "text-sm font-semibold text-primary hover:underline inline-flex items-center gap-1";
-              const cta = (
-                <>
-                  <span>{item.cta}</span>
-                  <ArrowRight className="h-3 w-3" />
-                </>
-              );
-              return (
-                <div
-                  key={item.title}
-                  className="group overflow-hidden rounded-2xl border border-border bg-card/40 backdrop-blur-md hover:border-primary/20 transition-all flex flex-col"
+          <div className="divide-y divide-border/60">
+            {recentArticles.length > 0 ? (
+              recentArticles.map((article) => (
+                <Link
+                  key={article.slug}
+                  href={`/articles/${article.slug}`}
+                  className="group block py-5 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded"
                 >
-                  <div className="relative aspect-square w-full overflow-hidden bg-black/30">
-                    <Image
-                      src={item.image}
-                      alt={item.alt}
-                      fill
-                      className="object-contain object-center"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                    />
-                    <div className="absolute bottom-3 left-3 z-10">
-                      <span className="px-2 py-0.5 rounded bg-amber-500/10 text-primary text-xs font-mono border border-primary/20 backdrop-blur-md">
-                        {item.badge}
-                      </span>
-                    </div>
+                  <div className="flex items-center gap-2 text-xs font-mono text-muted-foreground mb-1.5">
+                    <span className="text-primary">{article.category}</span>
+                    <span>·</span>
+                    <time dateTime={article.date}>{formatDate(article.date)}</time>
+                    {article.source === "x" && (
+                      <>
+                        <span>·</span>
+                        <span>From X</span>
+                      </>
+                    )}
                   </div>
-                  <div className="p-6 flex flex-col flex-grow space-y-2">
-                    <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm leading-relaxed text-muted-foreground flex-grow whitespace-pre-line">{item.body}</p>
-                    <div className="pt-3">
-                      {item.external ? (
-                        <a href={item.href} target="_blank" rel="noopener noreferrer" className={linkClass}>
-                          {cta}
-                        </a>
-                      ) : (
-                        <Link href={item.href} className={linkClass}>
-                          {cta}
-                        </Link>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
+                  <h3 className="text-base font-semibold text-foreground group-hover:text-primary transition-colors">
+                    {article.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground mt-1 line-clamp-2 leading-relaxed">
+                    {article.description}
+                  </p>
+                  <span className="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-primary">
+                    Read <ArrowRight className="h-3 w-3" />
+                  </span>
+                </Link>
+              ))
+            ) : (
+              <p className="py-8 text-sm text-muted-foreground">Drafting new articles. Check back shortly.</p>
+            )}
           </div>
         </div>
 
-        <div className="mt-24 sm:mt-32">
-          <div className="space-y-8">
-            <div className="border-b border-border pb-4 flex justify-between items-baseline">
-              <h2 className="text-xl font-bold text-foreground flex items-center gap-2">
-                <BookOpen className="h-5 w-5 text-primary" />
-                <span>Published Articles</span>
-              </h2>
-              <Link href="/articles" className="text-sm font-semibold text-primary hover:underline">
-                View all articles
-              </Link>
-            </div>
-
-            <div className="space-y-6">
-              {recentArticles.length > 0 ? (
-                recentArticles.map((article) => (
-                  <Link
-                    key={article.slug}
-                    href={`/articles/${article.slug}`}
-                    className="group p-6 rounded-2xl border border-border bg-card/20 hover:bg-card/45 hover:border-primary/10 transition-all flex flex-col sm:flex-row gap-6 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-                  >
-                    <div className="relative h-32 w-full sm:w-44 overflow-hidden rounded-xl flex-shrink-0">
-                      <Image
-                        src={article.image}
-                        alt=""
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 640px) 100vw, 176px"
-                      />
-                    </div>
-                    <div className="flex flex-col justify-between space-y-2 flex-grow">
-                      <div>
-                        <div className="flex items-center gap-2 text-xs text-muted-foreground font-mono">
-                          <span className="text-primary">{article.category}</span>
-                          <span>&bull;</span>
-                          <span>{article.date}</span>
-                        </div>
-                        <h3 className="text-base font-bold text-foreground mt-1 group-hover:text-primary transition-colors">
-                          {article.title}
-                        </h3>
-                        <p className="text-sm text-muted-foreground line-clamp-2 mt-1 leading-relaxed">
-                          {article.description}
-                        </p>
-                      </div>
-                      <span className="text-sm font-semibold text-primary group-hover:underline inline-flex items-center gap-1 mt-1">
-                        <span>Read full article</span>
-                        <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
-                      </span>
-                    </div>
-                  </Link>
-                ))
-              ) : (
-                <div className="text-center py-12 border border-dashed border-border rounded-2xl text-muted-foreground">
-                  Drafting new articles. Check back shortly!
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-24 sm:mt-32 border-t border-border/50 pt-16 max-w-4xl mx-auto">
-          <div className="text-center space-y-2 mb-12">
-            <h2 className="text-2xl font-bold tracking-tight text-foreground flex items-center justify-center gap-2">
-              <HelpCircle className="h-5 w-5 text-primary" />
-              <span>Frequently Asked Questions</span>
+        <div className="mt-20">
+          <div className="border-b border-border pb-3 mb-6">
+            <h2 className="text-lg font-bold text-foreground flex items-center gap-2">
+              <Star className="h-4 w-4 text-primary" />
+              Featured
             </h2>
-            <p className="text-sm text-muted-foreground">
-              Direct verification footprints and project background definitions.
-            </p>
           </div>
-          <div className="space-y-8 text-sm leading-relaxed">
-            <div className="space-y-2 border-b border-border/30 pb-6">
-              <h3 className="font-bold text-foreground font-mono text-base">Who is Kyle Kinkin?</h3>
-              <p className="text-muted-foreground pl-4 border-l border-primary/20">
-                Kyle Kinkin (Duck) is based in Tennessee. He shares local history, connects community, helps with web development, tells stories, and cares for animals. He also consults with Zen AI Co.
-              </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {initiatives.slice(0, 3).map((item) => (
+              <div key={item.title} className="rounded-xl border border-border p-4 space-y-2">
+                <span className="text-xs font-mono text-primary">{item.badge}</span>
+                <h3 className="text-sm font-semibold text-foreground">{item.title}</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed line-clamp-3">{item.body}</p>
+                {item.external ? (
+                  <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1">
+                    {item.cta} <ArrowRight className="h-3 w-3" />
+                  </a>
+                ) : (
+                  <Link href={item.href} className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1">
+                    {item.cta} <ArrowRight className="h-3 w-3" />
+                  </Link>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-20 border-t border-border/50 pt-12 max-w-2xl mx-auto">
+          <h2 className="text-lg font-bold text-foreground flex items-center justify-center gap-2 mb-8">
+            <HelpCircle className="h-4 w-4 text-primary" />
+            FAQ
+          </h2>
+          <div className="space-y-6 text-sm leading-relaxed">
+            <div>
+              <h3 className="font-semibold text-foreground">Who is Kyle Kinkin?</h3>
+              <p className="text-muted-foreground mt-1">Kyle Kinkin (Duck) is based in Tennessee. He shares local history, connects community, helps with web development, tells stories, and cares for animals. He also consults with Zen AI Co.</p>
             </div>
-            <div className="space-y-2 border-b border-border/30 pb-6">
-              <h3 className="font-bold text-foreground font-mono text-base">Who is Duck on X (@ducksonx)?</h3>
-              <p className="text-muted-foreground pl-4 border-l border-primary/20">
-                Duck on X (@ducksonx) is the personal X account of Kyle Kinkin. Based in Tennessee, he shares local history, connects community, helps with web development, tells stories, and cares for animals. He also consults with Zen AI Co.
-              </p>
+            <div>
+              <h3 className="font-semibold text-foreground">Who is Duck on X (@ducksonx)?</h3>
+              <p className="text-muted-foreground mt-1">Duck on X (@ducksonx) is the personal X account of Kyle Kinkin.</p>
             </div>
-            <div className="space-y-2 border-b border-border/30 pb-6">
-              <h3 className="font-bold text-foreground font-mono text-base">What is JustDuckIt?</h3>
-              <p className="text-muted-foreground pl-4 border-l border-primary/20">
-                JustDuckIt is Kyle Kinkin (Duck)’s brand. Based in Tennessee, he shares local history, connects community, helps with web development, tells stories, and cares for animals. He also consults with Zen AI Co.
-              </p>
+            <div>
+              <h3 className="font-semibold text-foreground">What is JustDuckIt?</h3>
+              <p className="text-muted-foreground mt-1">JustDuckIt is Kyle Kinkin (Duck)’s brand.</p>
             </div>
-            <div className="space-y-2">
-              <h3 className="font-bold text-foreground font-mono text-base">Where are services offered?</h3>
-              <p className="text-muted-foreground pl-4 border-l border-primary/20">
-                JustDuckIt is based in Tennessee.
-              </p>
+            <div>
+              <h3 className="font-semibold text-foreground">Where are services offered?</h3>
+              <p className="text-muted-foreground mt-1">JustDuckIt is based in Tennessee.</p>
             </div>
           </div>
         </div>
