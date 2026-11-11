@@ -21,8 +21,8 @@ export default function Home() {
       body: "How starting the Decent Ducks Sanctuary (and Web3 NFT project) broke the mold of traditional marketing management, sparking a full pivot into digital media production and active brand building.",
       href: "/about#pivot",
       cta: "The Pivot Story",
-      image: "/media/decent-ducks-nft-solana.png",
-      alt: "JustDuckIt black duck logo",
+      image: "/media/Banditselfie.jpg",
+      alt: "Kyle with Bandit",
     },
     {
       badge: "Media & Content",
@@ -42,36 +42,6 @@ export default function Home() {
       image: "/media/DDMiami.gif",
       alt: "DDMiami 2026",
     },
-    {
-      badge: "CSN",
-      title: "Crypto Spaces Network",
-      body: "Building and showing up inside CSN — live rooms, culture, and the network layer that keeps Pack conversations on the air instead of trapped in a group chat.",
-      href: "https://cryptospaces.net",
-      cta: "Visit CSN",
-      external: true,
-      image: "/media/CSNsquare.png",
-      alt: "Crypto Spaces Network",
-    },
-    {
-      badge: "Doginal Dogs",
-      title: "Doginal Partnership",
-      body: "In the pack: Rise of the Pack / Legends TCG, community lead work, and the IRL-to-on-chain loop that started as inscriptions and now lives on kitchen tables.",
-      href: "https://doginaldogs.com",
-      cta: "Doginal Dogs",
-      external: true,
-      image: "/media/DDlogo.png",
-      alt: "Doginal Dogs",
-    },
-    {
-      badge: "ZEN AI",
-      title: "ZEN AI Co.",
-      body: "Creative consulting, AI-driven media strategies, and digital transformation — bridging technology, brand architecture, and modern content production.",
-      href: "https://zenai.world/",
-      cta: "Visit ZEN AI",
-      external: true,
-      image: "/media/zen-ai-logo.jpg",
-      alt: "ZEN AI Co.",
-    },
   ];
 
   return (
@@ -89,34 +59,27 @@ export default function Home() {
       <div className="mx-auto max-w-5xl px-6 py-20 sm:py-28 lg:px-8">
         <div className="text-center max-w-2xl mx-auto space-y-5">
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl text-foreground">
-            JustDuckIt<span className="text-primary font-black">.</span>
+            Websites and automations for Middle Tennessee businesses
           </h1>
           <p className="text-base sm:text-lg leading-relaxed text-foreground font-medium">
-            Kyle Kinkin (Duck) shares local history, builds community, helps with web development, tells stories, and cares for animals. Based in Tennessee. Also consults with Zen AI Co.
+            Custom sites, local search, and simple back-office systems for Smithville, Cookeville, and the surrounding area. Based in Tennessee.
           </p>
-          <p className="text-sm text-muted-foreground font-mono">It started with a duck.</p>
+          <p className="text-sm text-muted-foreground">
+            Serving Smithville, DeKalb County, Cookeville, and Middle Tennessee.
+          </p>
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
             <Link
-              href="/articles"
+              href="/work"
               className="flex items-center gap-2 rounded-xl bg-primary text-black font-semibold text-sm px-5 py-3 hover:bg-primary-hover transition cursor-pointer"
             >
-              <span>Latest articles</span>
+              <span>Get a custom plan</span>
               <ArrowRight className="h-4 w-4" />
             </Link>
-            <a
-              href="https://www.solonchain.io/marketplace/collection/decent_ducks"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-xl border border-border text-sm px-5 py-3 hover:bg-white/5 transition cursor-pointer"
-            >
-              <span>Decent Ducks NFTs</span>
-              <ArrowRight className="h-4 w-4" />
-            </a>
             <Link
-              href="/work"
-              className="flex items-center gap-2 rounded-xl border border-border text-sm px-5 py-3 hover:bg-white/5 transition cursor-pointer"
+              href="/articles"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground underline-offset-4 hover:underline"
             >
-              <span>Work with me</span>
+              See latest work and articles
             </Link>
           </div>
         </div>
@@ -176,32 +139,16 @@ export default function Home() {
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {initiatives.slice(0, 3).map((item) => (
+            {initiatives.map((item) => (
               <div key={item.title} className="rounded-xl border border-border p-4 space-y-2">
                 <span className="text-xs font-mono text-primary">{item.badge}</span>
                 <h3 className="text-sm font-semibold text-foreground">{item.title}</h3>
                 <p className="text-xs text-muted-foreground leading-relaxed line-clamp-3">{item.body}</p>
-                {item.external ? (
-                  <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1">
-                    {item.cta} <ArrowRight className="h-3 w-3" />
-                  </a>
-                ) : (
-                  <Link href={item.href} className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1">
-                    {item.cta} <ArrowRight className="h-3 w-3" />
-                  </Link>
-                )}
+                <Link href={item.href} className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1">
+                  {item.cta} <ArrowRight className="h-3 w-3" />
+                </Link>
               </div>
             ))}
-          </div>
-          <div className="mt-4 text-center">
-            <a
-              href="https://www.solonchain.io/marketplace/collection/decent_ducks"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-semibold text-primary hover:underline inline-flex items-center gap-1"
-            >
-              Decent Ducks NFT collection <ArrowRight className="h-3 w-3" />
-            </a>
           </div>
         </div>
 
@@ -213,7 +160,7 @@ export default function Home() {
           <div className="space-y-6 text-sm leading-relaxed">
             <div>
               <h3 className="font-semibold text-foreground">Who is Kyle Kinkin?</h3>
-              <p className="text-muted-foreground mt-1">Kyle Kinkin (Duck) is based in Tennessee. He shares local history, connects community, helps with web development, tells stories, and cares for animals. He also consults with Zen AI Co.</p>
+              <p className="text-muted-foreground mt-1">Kyle Kinkin (Duck) is based in Smithville, Tennessee. He builds websites and simple automations for local businesses while running Decent Ducks Sanctuary.</p>
             </div>
             <div>
               <h3 className="font-semibold text-foreground">Who is Duck on X (@ducksonx)?</h3>
@@ -221,11 +168,11 @@ export default function Home() {
             </div>
             <div>
               <h3 className="font-semibold text-foreground">What is JustDuckIt?</h3>
-              <p className="text-muted-foreground mt-1">JustDuckIt is Kyle Kinkin (Duck)’s brand.</p>
+              <p className="text-muted-foreground mt-1">JustDuckIt is Kyle Kinkin (Duck)’s brand for web work, content, and the sanctuary.</p>
             </div>
             <div>
               <h3 className="font-semibold text-foreground">Where are services offered?</h3>
-              <p className="text-muted-foreground mt-1">JustDuckIt is based in Tennessee.</p>
+              <p className="text-muted-foreground mt-1">Serving Smithville, DeKalb County, Cookeville, and Middle Tennessee. Remote work available for the right project.</p>
             </div>
           </div>
         </div>
