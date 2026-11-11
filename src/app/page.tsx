@@ -103,6 +103,15 @@ export default function Home() {
               <span>Latest articles</span>
               <ArrowRight className="h-4 w-4" />
             </Link>
+            <a
+              href="https://www.solonchain.io/marketplace/collection/decent_ducks"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 rounded-xl border border-border text-sm px-5 py-3 hover:bg-white/5 transition cursor-pointer"
+            >
+              <span>Decent Ducks NFTs</span>
+              <ArrowRight className="h-4 w-4" />
+            </a>
             <Link
               href="/work"
               className="flex items-center gap-2 rounded-xl border border-border text-sm px-5 py-3 hover:bg-white/5 transition cursor-pointer"
@@ -183,6 +192,16 @@ export default function Home() {
                 )}
               </div>
             ))}
+          </div>
+          <div className="mt-4 text-center">
+            <a
+              href="https://www.solonchain.io/marketplace/collection/decent_ducks"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-semibold text-primary hover:underline inline-flex items-center gap-1"
+            >
+              Decent Ducks NFT collection <ArrowRight className="h-3 w-3" />
+            </a>
           </div>
         </div>
 
