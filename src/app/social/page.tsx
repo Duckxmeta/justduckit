@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Video } from "lucide-react";
+import { Video, ArrowRight } from "lucide-react";
 import SocialVisitForm from "@/components/SocialVisitForm";
 import SupportButtons from "@/components/SupportButtons";
 
@@ -72,6 +72,14 @@ export default function SocialPage() {
         <p className="text-lg leading-relaxed text-muted-foreground">
           Have a story, landmark, or business you want us to visit? Leave a message below so we can keep making content. Gratuity is always appreciated.
         </p>
+        <a
+          href="https://www.solonchain.io/marketplace/collection/decent_ducks"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
+        >
+          Decent Ducks NFT collection <ArrowRight className="h-4 w-4" />
+        </a>
       </div>
 
       <div className="rounded-3xl border border-primary/40 bg-card/40 p-6 sm:p-10 space-y-6">
