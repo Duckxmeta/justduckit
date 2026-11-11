@@ -1,20 +1,19 @@
 import type { Metadata } from "next";
-import { Check, ArrowRight, ShieldCheck, AlertTriangle, Sparkles, Globe, Zap, Clock, Key, FileText, CheckCircle2 } from "lucide-react";
+import { Check, ArrowRight, ShieldCheck, AlertTriangle, Sparkles, Globe, Zap, Clock, Key, FileText } from "lucide-react";
 import ProjectScopeQuiz from "@/components/ProjectScopeQuiz";
 import MobileStickyCTA from "@/components/MobileStickyCTA";
 
 export const metadata: Metadata = {
   title: "Websites That Bring in Customers. Automations That Run Your Back Office. | Kyle Kinkin — JustDuckIt",
   description:
-    "We eliminate the two biggest profit leaks in modern business: lost sales from outdated websites and wasted payroll from manual administrative work.",
+    "Custom websites and simple automations for Middle Tennessee businesses. Serving Smithville, Cookeville, and the surrounding area.",
   keywords: [
     "High-Converting Websites",
     "Business Automation",
-    "Automated SOPs",
-    "Lead Capture",
     "Kyle Kinkin",
     "JustDuckIt",
-    "Nationwide Web Solutions",
+    "Smithville TN web design",
+    "Cookeville web developer",
   ],
   alternates: { canonical: "https://justduckit.xyz/work" },
 };
@@ -53,20 +52,37 @@ export default function WorkPage() {
     },
   ];
 
+  const recentWork = [
+    {
+      name: "Local business sites",
+      result: "Clean, fast sites built for real local clients.",
+      href: "/articles",
+      image: "/media/Banditselfie.jpg",
+    },
+    {
+      name: "Sanctuary & content",
+      result: "Ongoing digital work tied to real-world animal care.",
+      href: "/about",
+      image: "/media/DDMiami.gif",
+    },
+    {
+      name: "Automation projects",
+      result: "Simple systems that remove repetitive admin.",
+      href: "/work#intake-form",
+      image: "/media/Banditselfie.jpg",
+    },
+  ];
+
   return (
     <div className="relative isolate overflow-hidden min-h-screen pb-20 md:pb-0 font-sans">
       <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 space-y-24">
         
-        {/* ==================================================================== */}
-        {/* SECTION 1: THE PROBLEM WE SOLVE (Hero & Diagnosis) */}
-        {/* ==================================================================== */}
+        {/* Hero */}
         <section id="problem" className="space-y-12 animate-in fade-in slide-in-from-bottom-6 duration-700">
-          
-          {/* Hero Header */}
           <div className="text-center max-w-4xl mx-auto space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs font-mono font-bold uppercase tracking-wider">
               <Sparkles className="h-4 w-4" />
-              <span>Turnkey Web & Operations Architecture</span>
+              <span>Turnkey Web & Operations</span>
             </div>
 
             <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl text-foreground leading-[1.15]">
@@ -74,232 +90,153 @@ export default function WorkPage() {
             </h1>
 
             <p className="text-lg sm:text-xl leading-relaxed text-muted-foreground max-w-3xl mx-auto font-normal">
-              We eliminate the two biggest profit leaks in modern business: lost sales from outdated websites and wasted payroll from manual administrative work.
+              Custom sites, local search, and simple systems that reduce manual work. Serving Smithville, DeKalb County, Cookeville, and Middle Tennessee.
             </p>
 
-            <div className="pt-2">
+            <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
                 href="#intake-form"
                 className="inline-flex items-center gap-2 rounded-xl bg-primary text-black font-extrabold text-sm px-8 py-4 hover:bg-primary-hover active:scale-[0.98] transition-all shadow-xl shadow-primary/20 cursor-pointer"
               >
-                <span>Get Your Custom Plan & Quote</span>
+                <span>Get a custom plan</span>
                 <ArrowRight className="h-4 w-4 text-black" />
+              </a>
+              <a href="tel:+16156694135" className="text-sm font-semibold text-primary hover:underline">
+                (615) 669-4135
               </a>
             </div>
           </div>
 
-          {/* Side-by-Side Pain Points (High Contrast Cards) */}
+          {/* Recent work */}
+          <div className="pt-8">
+            <h2 className="text-xl font-bold text-foreground mb-4 text-center">Recent work</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {recentWork.map((item) => (
+                <a key={item.name} href={item.href} className="rounded-2xl border border-border p-4 space-y-2 hover:border-primary/40 transition block">
+                  <div className="aspect-video rounded-lg overflow-hidden bg-muted">
+                    <img src={item.image} alt="" className="w-full h-full object-cover" />
+                  </div>
+                  <h3 className="text-sm font-semibold text-foreground">{item.name}</h3>
+                  <p className="text-xs text-muted-foreground">{item.result}</p>
+                  <span className="text-xs font-semibold text-primary inline-flex items-center gap-1">
+                    View <ArrowRight className="h-3 w-3" />
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Pain points - keep but shortened */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 pt-4">
-            
-            {/* Card A: SMBs */}
-            <div className="rounded-3xl border border-border/80 bg-card/40 backdrop-blur-md p-8 sm:p-10 space-y-6 hover:border-primary/40 transition-all flex flex-col justify-between">
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-mono font-bold uppercase tracking-widest text-primary px-3 py-1 rounded-full bg-primary/10 border border-primary/20">
-                    For Small & Medium Businesses
-                  </span>
-                  <div className="p-2.5 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400">
-                    <AlertTriangle className="h-5 w-5" />
-                  </div>
-                </div>
-
-                <h2 className="text-2xl font-bold text-foreground">Losing Easy Business to Competitors</h2>
-
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  <strong className="text-foreground block mb-1">The Problem:</strong>
-                  You do great work, but your website looks dated, doesn't show up on search, and fails to turn clicks into paying customers. You are losing easy business to competitors with better storefronts.
-                </p>
+            <div className="rounded-3xl border border-border/80 bg-card/40 backdrop-blur-md p-8 sm:p-10 space-y-6">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-mono font-bold uppercase tracking-widest text-primary px-3 py-1 rounded-full bg-primary/10 border border-primary/20">
+                  For Small Businesses
+                </span>
+                <AlertTriangle className="h-5 w-5 text-red-400" />
               </div>
-
-              <div className="pt-4 border-t border-border/40">
-                <a
-                  href="#track-1"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:underline font-mono uppercase tracking-wider"
-                >
-                  <span>See Web Solution</span>
-                  <ArrowRight className="h-3.5 w-3.5" />
-                </a>
-              </div>
+              <h2 className="text-2xl font-bold text-foreground">Losing Easy Business to Competitors</h2>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                You do great work, but your website looks dated, doesn't show up on search, and fails to turn clicks into customers.
+              </p>
             </div>
-
-            {/* Card B: Operations & Enterprise Teams */}
-            <div className="rounded-3xl border border-border/80 bg-card/40 backdrop-blur-md p-8 sm:p-10 space-y-6 hover:border-primary/40 transition-all flex flex-col justify-between">
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-mono font-bold uppercase tracking-widest text-primary px-3 py-1 rounded-full bg-primary/10 border border-primary/20">
-                    For Operations & Enterprise Teams
-                  </span>
-                  <div className="p-2.5 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400">
-                    <AlertTriangle className="h-5 w-5" />
-                  </div>
-                </div>
-
-                <h2 className="text-2xl font-bold text-foreground">Wasted Payroll Eating Your Margin</h2>
-
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  <strong className="text-foreground block mb-1">The Problem:</strong>
-                  Your staff wastes dozens of hours each week copying data between software, tracking down approvals, and managing routine steps manually. Human error and back-office friction are eating your margin.
-                </p>
+            <div className="rounded-3xl border border-border/80 bg-card/40 backdrop-blur-md p-8 sm:p-10 space-y-6">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-mono font-bold uppercase tracking-widest text-primary px-3 py-1 rounded-full bg-primary/10 border border-primary/20">
+                  For Operations
+                </span>
+                <AlertTriangle className="h-5 w-5 text-red-400" />
               </div>
-
-              <div className="pt-4 border-t border-border/40">
-                <a
-                  href="#track-2"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:underline font-mono uppercase tracking-wider"
-                >
-                  <span>See Automation Solution</span>
-                  <ArrowRight className="h-3.5 w-3.5" />
-                </a>
-              </div>
+              <h2 className="text-2xl font-bold text-foreground">Wasted Time on Manual Work</h2>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Staff spends hours copying data, chasing approvals, and managing routine steps by hand.
+              </p>
             </div>
-
           </div>
         </section>
 
-
-        {/* ==================================================================== */}
-        {/* SECTION 2: HOW WE SOLVE IT (The Solution) */}
-        {/* ==================================================================== */}
+        {/* Solutions - softened claim */}
         <section id="solution" className="space-y-12 scroll-mt-24">
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-mono font-semibold uppercase tracking-wider">
               <ShieldCheck className="h-3.5 w-3.5" />
-              <span>Proven Business Impact</span>
+              <span>Practical Solutions</span>
             </div>
             <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground">
-              Straightforward Solutions. <span className="text-gradient-gold">Built to Deliver ROI.</span>
+              Straightforward Solutions. <span className="text-gradient-gold">Built to Work.</span>
             </h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            
-            {/* Track 1 Solution */}
-            <div
-              id="track-1"
-              className="rounded-3xl border border-primary/30 bg-card/40 backdrop-blur-md p-8 sm:p-10 space-y-8 hover:border-primary/60 transition-all flex flex-col justify-between scroll-mt-24"
-            >
-              <div className="space-y-6">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-mono font-bold uppercase tracking-widest text-primary px-3 py-1 rounded-full bg-primary/10 border border-primary/20">
-                    Track 1
-                  </span>
-                  <div className="p-3 rounded-2xl bg-primary/10 border border-primary/20 text-primary">
-                    <Globe className="h-6 w-6" />
-                  </div>
-                </div>
-
-                <h3 className="text-2xl font-extrabold text-foreground tracking-tight">
-                  High-Converting Websites & Brand Identity
-                </h3>
-
-                <ul className="space-y-3.5 text-sm text-muted-foreground">
-                  {track1Bullets.map((bullet, idx) => (
-                    <li key={idx} className="flex items-start gap-3">
-                      <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="leading-relaxed">{bullet}</span>
-                    </li>
-                  ))}
-                </ul>
+            <div id="track-1" className="rounded-3xl border border-primary/30 bg-card/40 p-8 sm:p-10 space-y-8 scroll-mt-24">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-mono font-bold uppercase tracking-widest text-primary">Track 1</span>
+                <Globe className="h-6 w-6 text-primary" />
               </div>
-
-              {/* The Result Box */}
-              <div className="p-5 rounded-2xl bg-primary/10 border border-primary/30 space-y-1">
-                <div className="text-xs font-mono font-bold text-primary uppercase tracking-wider">
-                  The Result:
-                </div>
-                <div className="text-sm sm:text-base font-bold text-foreground">
-                  A turnkey online asset that pays for itself in customer conversions.
-                </div>
+              <h3 className="text-2xl font-extrabold text-foreground">High-Converting Websites & Brand Identity</h3>
+              <ul className="space-y-3.5 text-sm text-muted-foreground">
+                {track1Bullets.map((bullet, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="p-5 rounded-2xl bg-primary/10 border border-primary/30">
+                <div className="text-xs font-mono font-bold text-primary uppercase tracking-wider">The Result:</div>
+                <div className="text-sm font-bold text-foreground">A clear online presence that turns visitors into inquiries.</div>
               </div>
             </div>
-
-            {/* Track 2 Solution */}
-            <div
-              id="track-2"
-              className="rounded-3xl border border-primary/30 bg-card/40 backdrop-blur-md p-8 sm:p-10 space-y-8 hover:border-primary/60 transition-all flex flex-col justify-between scroll-mt-24"
-            >
-              <div className="space-y-6">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-mono font-bold uppercase tracking-widest text-primary px-3 py-1 rounded-full bg-primary/10 border border-primary/20">
-                    Track 2
-                  </span>
-                  <div className="p-3 rounded-2xl bg-primary/10 border border-primary/20 text-primary">
-                    <Zap className="h-6 w-6" />
-                  </div>
-                </div>
-
-                <h3 className="text-2xl font-extrabold text-foreground tracking-tight">
-                  Automated Standard Operating Procedures (SOPs)
-                </h3>
-
-                <ul className="space-y-3.5 text-sm text-muted-foreground">
-                  {track2Bullets.map((bullet, idx) => (
-                    <li key={idx} className="flex items-start gap-3">
-                      <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="leading-relaxed">{bullet}</span>
-                    </li>
-                  ))}
-                </ul>
+            <div id="track-2" className="rounded-3xl border border-primary/30 bg-card/40 p-8 sm:p-10 space-y-8 scroll-mt-24">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-mono font-bold uppercase tracking-widest text-primary">Track 2</span>
+                <Zap className="h-6 w-6 text-primary" />
               </div>
-
-              {/* The Result Box */}
-              <div className="p-5 rounded-2xl bg-primary/10 border border-primary/30 space-y-1">
-                <div className="text-xs font-mono font-bold text-primary uppercase tracking-wider">
-                  The Result:
-                </div>
-                <div className="text-sm sm:text-base font-bold text-foreground">
-                  Hundreds of payroll hours saved and an error-free operational backbone.
-                </div>
+              <h3 className="text-2xl font-extrabold text-foreground">Automated Standard Operating Procedures</h3>
+              <ul className="space-y-3.5 text-sm text-muted-foreground">
+                {track2Bullets.map((bullet, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="p-5 rounded-2xl bg-primary/10 border border-primary/30">
+                <div className="text-xs font-mono font-bold text-primary uppercase tracking-wider">The Result:</div>
+                <div className="text-sm font-bold text-foreground">Less manual work and fewer errors on routine tasks.</div>
               </div>
             </div>
-
           </div>
         </section>
 
-
-        {/* ==================================================================== */}
-        {/* SECTION 3: HOW TO BUY (3-Step Purchase Process & Intake) */}
-        {/* ==================================================================== */}
+        {/* How to buy + form */}
         <section id="how-to-buy" className="space-y-12 scroll-mt-24">
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-mono font-semibold uppercase tracking-wider">
               <Clock className="h-3.5 w-3.5" />
               <span>Simple 3-Step Process</span>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground">
-              How to Work With Us
-            </h2>
+            <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground">How to Work With Us</h2>
           </div>
-
-          {/* 3 Step Process Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {buySteps.map((step) => {
               const IconComp = step.icon;
               return (
-                <div
-                  key={step.num}
-                  className="rounded-3xl border border-border bg-card/40 backdrop-blur-md p-8 space-y-4 hover:border-primary/40 transition-all flex flex-col justify-between"
-                >
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                      <span className="text-3xl font-extrabold font-mono text-primary">{step.num}</span>
-                      <div className="p-3 rounded-2xl bg-primary/10 border border-primary/20 text-primary">
-                        <IconComp className="h-5 w-5" />
-                      </div>
-                    </div>
-                    <h3 className="text-xl font-bold text-foreground">{step.title}</h3>
-                    <p className="text-xs text-muted-foreground leading-relaxed">{step.desc}</p>
+                <div key={step.num} className="rounded-3xl border border-border bg-card/40 p-8 space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-3xl font-extrabold font-mono text-primary">{step.num}</span>
+                    <IconComp className="h-5 w-5 text-primary" />
                   </div>
+                  <h3 className="text-xl font-bold text-foreground">{step.title}</h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed">{step.desc}</p>
                 </div>
               );
             })}
           </div>
-
-          {/* The Conversion Anchor Intake Form */}
           <ProjectScopeQuiz />
         </section>
 
-        {/* Standalone: Sovereign SI */}
+        {/* Sovereign SI - keep */}
         <section id="sovereign-si" className="scroll-mt-24">
           <div className="rounded-3xl border border-border bg-card/30 p-8 sm:p-10 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
             <div className="space-y-2">
@@ -322,8 +259,6 @@ export default function WorkPage() {
         </section>
 
       </div>
-
-      {/* Persistent Mobile Bottom CTA */}
       <MobileStickyCTA />
     </div>
   );
