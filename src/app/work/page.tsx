@@ -15,7 +15,7 @@ const questions = [
     prompt: "What do you need most right now?",
     options: [
       { id: "site", label: "A simple website for a local business" },
-      { id: "agents", label: "Build agents or custom systems" },
+      { id: "learn", label: "I want to learn to build agents or systems" },
       { id: "automate", label: "Automate work in software I already use" },
     ],
   },
@@ -40,27 +40,35 @@ const questions = [
 ];
 
 function recommend(a: Answers) {
-  if (a.need === "site") {
+  // Local, small, or simple → contact Duck
+  if (a.need === "site" || a.scale === "small") {
     return {
-      title: "Simple local website",
-      body: "Start with Zen for a clean site built for a local business.",
-      href: "https://www.zenai.world/start",
-      cta: "Start with Zen",
+      title: "Talk to Duck",
+      body: "Local, small, or simple work goes through us directly.",
+      href: "/social",
+      cta: "Request a visit or message",
+      external: false,
     };
   }
-  if (a.need === "agents") {
+
+  // Want to learn to build → Arsenal
+  if (a.need === "learn") {
     return {
-      title: "Agents & custom systems",
-      body: "Talk through agent builds and workflows with Zen.",
-      href: "https://www.zenai.world/start",
-      cta: "Talk to Zen",
+      title: "Learn on Arsenal",
+      body: "Explore the platform and tools to build your own systems.",
+      href: "https://arsenal.world/?ref=KYLE-ACDF",
+      cta: "Explore Arsenal",
+      external: true,
     };
   }
+
+  // Automate existing software → Zen AI
   return {
-    title: "Automate existing software",
-    body: "Connect the tools you already use. Explore Arsenal or start a conversation with Zen.",
-    href: a.scale === "complex" ? "https://arsenal.world/?ref=KYLE-ACDF" : "https://www.zenai.world/start",
-    cta: a.scale === "complex" ? "Explore Arsenal" : "Start with Zen",
+    title: "Automations with Zen AI",
+    body: "Connect and automate the software you already use.",
+    href: "https://www.zenai.world/start",
+    cta: "Start with Zen",
+    external: true,
   };
 }
 
@@ -92,8 +100,8 @@ export default function WorkPage() {
           <p className="text-sm text-muted-foreground leading-relaxed">{rec.body}</p>
           <a
             href={rec.href}
-            target="_blank"
-            rel="noopener noreferrer"
+            target={rec.external ? "_blank" : undefined}
+            rel={rec.external ? "noopener noreferrer" : undefined}
             className="inline-flex items-center gap-2 rounded-xl bg-primary text-black font-semibold text-sm px-6 py-3.5 hover:bg-primary-hover transition"
           >
             {rec.cta} <ArrowRight className="h-4 w-4" />
