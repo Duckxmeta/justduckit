@@ -7,6 +7,7 @@ type Answers = {
   need?: string;
   scale?: string;
   ready?: string;
+  check?: string;
 };
 
 const questions = [
@@ -29,6 +30,15 @@ const questions = [
     ],
   },
   {
+    key: "check" as const,
+    prompt: "How should the work be checked?",
+    options: [
+      { id: "simple", label: "Keep it simple — just run it" },
+      { id: "format", label: "Check the format and required steps" },
+      { id: "double", label: "Double-check before it goes out" },
+    ],
+  },
+  {
     key: "ready" as const,
     prompt: "How soon do you want to start?",
     options: [
@@ -40,32 +50,36 @@ const questions = [
 ];
 
 function recommend(a: Answers) {
-  // Local, small, or simple → contact Duck
+  const checkNote =
+    a.check === "double"
+      ? " We’ll add a stronger check before anything finishes."
+      : a.check === "format"
+      ? " We’ll check the format and required steps."
+      : "";
+
   if (a.need === "site" || a.scale === "small") {
     return {
       title: "Talk to Duck",
-      body: "Local, small, or simple work goes through us directly.",
+      body: "Local, small, or simple work goes through us directly." + checkNote,
       href: "/social",
       cta: "Request a visit or message",
       external: false,
     };
   }
 
-  // Want to learn to build → Arsenal
   if (a.need === "learn") {
     return {
       title: "Learn on Arsenal",
-      body: "Explore the platform and tools to build your own systems.",
+      body: "Explore the platform and tools to build your own systems." + checkNote,
       href: "https://arsenal.world/?ref=KYLE-ACDF",
       cta: "Explore Arsenal",
       external: true,
     };
   }
 
-  // Automate existing software → Zen AI
   return {
     title: "Automations with Zen AI",
-    body: "Connect and automate the software you already use.",
+    body: "Connect and automate the software you already use." + checkNote,
     href: "https://www.zenai.world/start",
     cta: "Start with Zen",
     external: true,
