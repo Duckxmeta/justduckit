@@ -6,13 +6,19 @@ import { ArrowRight } from "lucide-react";
 type Answers = {
   need?: string;
   scale?: string;
-  ready?: string;
   check?: string;
+  ready?: string;
 };
 
-const questions = [
-  {
-    key: "need" as const,
+type Question = {
+  key: keyof Answers;
+  prompt: string;
+  options: { id: string; label: string }[];
+};
+
+const questions: Record<string, Question> = {
+  need: {
+    key: "need",
     prompt: "What do you need most right now?",
     options: [
       { id: "site", label: "A simple website for a local business" },
@@ -20,8 +26,8 @@ const questions = [
       { id: "automate", label: "Automate work in software I already use" },
     ],
   },
-  {
-    key: "scale" as const,
+  scale: {
+    key: "scale",
     prompt: "How big is the project?",
     options: [
       { id: "small", label: "Just me or a small team" },
@@ -29,8 +35,8 @@ const questions = [
       { id: "complex", label: "Larger or multi-tool setup" },
     ],
   },
-  {
-    key: "check" as const,
+  check: {
+    key: "check",
     prompt: "How should the work be checked?",
     options: [
       { id: "simple", label: "Keep it simple — just run it" },
@@ -38,8 +44,8 @@ const questions = [
       { id: "double", label: "Double-check before it goes out" },
     ],
   },
-  {
-    key: "ready" as const,
+  ready: {
+    key: "ready",
     prompt: "How soon do you want to start?",
     options: [
       { id: "now", label: "As soon as possible" },
@@ -47,7 +53,30 @@ const questions = [
       { id: "exploring", label: "Just exploring" },
     ],
   },
-];
+};
+
+function nextQuestion(a: Answers): keyof Answers | null {
+  if (!a.need) return "need";
+
+  // Learn path — short
+  if (a.need === "learn") {
+    if (!a.ready) return "ready";
+    return null;
+  }
+
+  // Local / simple site — ask size then ready
+  if (a.need === "site") {
+    if (!a.scale) return "scale";
+    if (!a.ready) return "ready";
+    return null;
+  }
+
+  // Automate — size, check, ready
+  if (!a.scale) return "scale";
+  if (!a.check) return "check";
+  if (!a.ready) return "ready";
+  return null;
+}
 
 function recommend(a: Answers) {
   const checkNote =
@@ -70,7 +99,7 @@ function recommend(a: Answers) {
   if (a.need === "learn") {
     return {
       title: "Learn on Arsenal",
-      body: "Explore the platform and tools to build your own systems." + checkNote,
+      body: "Explore the platform and tools to build your own systems.",
       href: "https://arsenal.world/?ref=KYLE-ACDF",
       cta: "Explore Arsenal",
       external: true,
@@ -87,20 +116,32 @@ function recommend(a: Answers) {
 }
 
 export default function WorkPage() {
-  const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<Answers>({});
-  const [done, setDone] = useState(false);
+  const [history, setHistory] = useState<(keyof Answers)[]>(["need"]);
 
-  const current = questions[step];
+  const currentKey = nextQuestion(answers);
+  const done = currentKey === null;
+  const current = currentKey ? questions[currentKey] : null;
 
   function choose(optionId: string) {
+    if (!current) return;
     const next = { ...answers, [current.key]: optionId };
     setAnswers(next);
-    if (step < questions.length - 1) {
-      setStep(step + 1);
-    } else {
-      setDone(true);
+    const following = nextQuestion(next);
+    if (following) {
+      setHistory((h) => [...h, following]);
     }
+  }
+
+  function back() {
+    if (history.length <= 1) return;
+    const prev = history[history.length - 2];
+    setHistory((h) => h.slice(0, -1));
+    setAnswers((a) => {
+      const copy = { ...a };
+      delete copy[history[history.length - 1]];
+      return copy;
+    });
   }
 
   if (done) {
@@ -122,9 +163,8 @@ export default function WorkPage() {
           </a>
           <button
             onClick={() => {
-              setDone(false);
-              setStep(0);
               setAnswers({});
+              setHistory(["need"]);
             }}
             className="block text-xs text-muted-foreground hover:text-foreground mt-4"
           >
@@ -135,12 +175,14 @@ export default function WorkPage() {
     );
   }
 
+  if (!current) return null;
+
   return (
     <div className="mx-auto max-w-xl px-6 py-24 sm:py-32">
       <div className="space-y-8">
         <div className="space-y-2">
           <div className="text-xs font-mono text-muted-foreground">
-            {step + 1} / {questions.length}
+            Step {history.length}
           </div>
           <h1 className="text-2xl font-extrabold tracking-tight text-foreground">
             {current.prompt}
@@ -160,9 +202,9 @@ export default function WorkPage() {
           ))}
         </div>
 
-        {step > 0 && (
+        {history.length > 1 && (
           <button
-            onClick={() => setStep(step - 1)}
+            onClick={back}
             className="text-xs text-muted-foreground hover:text-foreground"
           >
             ← Back
