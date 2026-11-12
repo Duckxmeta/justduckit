@@ -3,17 +3,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { getArticleBySlug, getAllArticles } from "@/lib/articles";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import { Calendar, Clock, ArrowLeft, Heart, Share2 } from "lucide-react";
+import { Calendar, Clock, ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
 
-// Props definition matching Next.js 15 async params rule
 interface ArticlePageProps {
   params: Promise<{
     slug: string;
   }>;
 }
 
-// Generate Dynamic Metadata for Article SEO
 export async function generateMetadata({ params }: ArticlePageProps): Promise<Metadata> {
   const { slug } = await params;
   const article = getArticleBySlug(slug);
@@ -49,7 +47,6 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
   };
 }
 
-// Pre-render static paths for performance
 export async function generateStaticParams() {
   const articles = getAllArticles();
   return articles.map((article) => ({
@@ -57,7 +54,6 @@ export async function generateStaticParams() {
   }));
 }
 
-// Custom MDX styling components mapping
 const mdxComponents = {
   h1: (props: any) => <h1 className="text-3xl font-extrabold tracking-tight mt-8 mb-4 text-foreground" {...props} />,
   h2: (props: any) => <h2 className="text-2xl font-bold tracking-tight mt-8 mb-4 text-foreground border-b border-border/50 pb-2" {...props} />,
@@ -85,7 +81,11 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     notFound();
   }
 
-  // Schema.org JSON-LD BlogPosting
+  const isHistory =
+    article.category?.toLowerCase().includes("history") ||
+    article.category?.toLowerCase().includes("local") ||
+    article.title?.toLowerCase().includes("tennessee");
+
   const blogJsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -122,17 +122,14 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       </head>
 
       <div className="mx-auto max-w-3xl px-6 py-24 sm:py-32 lg:px-8">
-        
-        {/* Back Link */}
         <Link
-          href="/articles"
+          href={isHistory ? "/history" : "/articles"}
           className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-12 group"
         >
           <ArrowLeft className="h-4 w-4 group-hover:-translate-x-0.5 transition-transform" />
-          <span>Back to articles</span>
+          <span>{isHistory ? "Back to history" : "Back to articles"}</span>
         </Link>
 
-        {/* Article Meta Header */}
         <header className="space-y-6 mb-12">
           <div className="flex flex-wrap items-center gap-4 text-xs font-mono">
             <span className="px-2.5 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">
@@ -172,7 +169,6 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             {article.description}
           </p>
 
-          {/* Featured Image */}
           <div className="relative h-96 w-full overflow-hidden rounded-3xl border border-border mt-8 shadow-xl">
             <Image
               src={article.image}
@@ -185,32 +181,41 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           </div>
         </header>
 
-        {/* Article Content */}
         <div className="prose dark:prose-invert max-w-none">
           <MDXRemote source={article.content} components={mdxComponents} />
         </div>
 
-        {/* Footer actions */}
-        <footer className="mt-16 pt-8 border-t border-border flex flex-wrap items-center justify-between gap-4">
-          <div className="flex items-center gap-4">
-            <button className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-border hover:border-primary/25 hover:bg-white/5 text-xs text-muted-foreground hover:text-foreground transition-all">
-              <Heart className="h-3.5 w-3.5" />
-              <span>Like article</span>
-            </button>
-            <button className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-border hover:border-primary/25 hover:bg-white/5 text-xs text-muted-foreground hover:text-foreground transition-all">
-              <Share2 className="h-3.5 w-3.5" />
-              <span>Share</span>
-            </button>
+        {/* Soft close / connective tissue */}
+        <div className="mt-12 pt-8 border-t border-border/50 space-y-4 text-sm text-muted-foreground leading-relaxed">
+          {isHistory && (
+            <p>
+              These are the same roads the sanctuary sits on. Filming the spots is part of documenting the region.
+            </p>
+          )}
+          <p>
+            If you have a local business or a place worth filming, or if you need a website or simple systems that help people find you:
+          </p>
+          <div className="flex flex-wrap gap-4 pt-1">
+            <Link href="/work" className="text-primary font-semibold hover:underline">
+              Get a custom plan
+            </Link>
+            <Link href="/social" className="text-primary font-semibold hover:underline">
+              Request a visit
+            </Link>
+            <a href="https://adoptaduck.org" target="_blank" rel="noopener noreferrer" className="text-primary font-semibold hover:underline">
+              Sanctuary
+            </a>
           </div>
-          
+        </div>
+
+        <footer className="mt-10 pt-6 border-t border-border flex flex-wrap items-center justify-between gap-4">
           <Link
-            href="/newsletter"
-            className="text-xs font-semibold text-primary hover:underline"
+            href={isHistory ? "/history" : "/articles"}
+            className="text-xs font-semibold text-muted-foreground hover:text-primary"
           >
-            Join the newsletter flock &rarr;
+            ← {isHistory ? "More history" : "More articles"}
           </Link>
         </footer>
-
       </div>
     </div>
   );
