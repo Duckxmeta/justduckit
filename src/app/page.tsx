@@ -1,6 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
-import { ArrowRight, BookOpen, Star, HelpCircle } from "lucide-react";
+import { ArrowRight, MapPin, Feather, Briefcase } from "lucide-react";
 import { getAllArticles } from "@/lib/articles";
 
 function formatDate(d: string) {
@@ -12,35 +11,31 @@ function formatDate(d: string) {
 
 export default function Home() {
   const articles = getAllArticles();
-  const recentArticles = articles.slice(0, 5);
+  const historyArticles = articles.filter((a) => a.category?.toLowerCase().includes("history") || a.category?.toLowerCase().includes("local")).slice(0, 3);
+  const recentArticles = articles.slice(0, 4);
 
-  const initiatives = [
+  const paths = [
     {
-      badge: "Decent Ducks",
-      title: "The Sanctuary Pivot",
-      body: "How starting the Decent Ducks Sanctuary (and Web3 NFT project) broke the mold of traditional marketing management, sparking a full pivot into digital media production and active brand building.",
-      href: "/about#pivot",
-      cta: "The Pivot Story",
-      image: "/media/Banditselfie.jpg",
-      alt: "Kyle with Bandit",
+      icon: MapPin,
+      title: "Local History",
+      body: "Places you drive past. The full story behind the markers, towns, and superlatives.",
+      href: "/history",
+      cta: "See the spots",
     },
     {
-      badge: "Media & Content",
-      title: "Building in Public",
-      body: "Documenting the journey of scaling Decent Ducks, content creation, and media production — sharing real-world lessons from waterfowl rescue to digital brand building.",
-      href: "/articles",
-      cta: "Read Essays",
-      image: "/media/Banditselfie.jpg",
-      alt: "Kyle with Bandit selfie",
+      icon: Feather,
+      title: "Sanctuary",
+      body: "Decent Ducks Sanctuary. Real animals, real land, the origin that started the work.",
+      href: "https://adoptaduck.org",
+      external: true,
+      cta: "Visit the sanctuary",
     },
     {
-      badge: "Next Event",
-      title: "DDMiami",
-      body: "Dec 7–8. Duck will be there.\nNext stop after New York. More soon.",
-      href: "/about",
-      cta: "About the journey",
-      image: "/media/DDMiami.gif",
-      alt: "DDMiami 2026",
+      icon: Briefcase,
+      title: "Web & Systems",
+      body: "Custom sites and simple automations for local businesses. Filming these spots is part of how we help the area get found.",
+      href: "/work",
+      cta: "Get a custom plan",
     },
   ];
 
@@ -56,125 +51,110 @@ export default function Home() {
         />
       </div>
 
-      <div className="mx-auto max-w-5xl px-6 py-20 sm:py-28 lg:px-8">
+      <div className="mx-auto max-w-5xl px-6 py-16 sm:py-24 lg:px-8">
         <div className="text-center max-w-2xl mx-auto space-y-5">
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl text-foreground">
-            Websites and automations for Middle Tennessee businesses
+            Local history, the land, and practical help for Middle Tennessee
           </h1>
           <p className="text-base sm:text-lg leading-relaxed text-foreground font-medium">
-            Custom sites, local search, and simple back-office systems for Smithville, Cookeville, and the surrounding area. Based in Tennessee.
+            Short videos about places you drive past. The fuller story lives here. The same roads connect the sanctuary and the work we do for local businesses.
           </p>
           <p className="text-sm text-muted-foreground">
-            Serving Smithville, DeKalb County, Cookeville, and Middle Tennessee.
+            Smithville, DeKalb County, Cookeville, and surrounding Middle Tennessee.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
             <Link
-              href="/work"
+              href="/history"
               className="flex items-center gap-2 rounded-xl bg-primary text-black font-semibold text-sm px-5 py-3 hover:bg-primary-hover transition cursor-pointer"
             >
-              <span>Get a custom plan</span>
+              <span>Local history</span>
               <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
-              href="/articles"
+              href="/work"
               className="text-sm font-medium text-muted-foreground hover:text-foreground underline-offset-4 hover:underline"
             >
-              See latest work and articles
+              Websites & systems
             </Link>
           </div>
         </div>
 
-        <div className="mt-20">
+        {/* Three paths */}
+        <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {paths.map((p) => {
+            const Icon = p.icon;
+            const inner = (
+              <div className="rounded-2xl border border-border p-5 space-y-2 h-full hover:border-primary/40 transition">
+                <Icon className="h-5 w-5 text-primary" />
+                <h2 className="text-base font-semibold text-foreground">{p.title}</h2>
+                <p className="text-sm text-muted-foreground leading-relaxed">{p.body}</p>
+                <span className="text-sm font-semibold text-primary inline-flex items-center gap-1">
+                  {p.cta} <ArrowRight className="h-3 w-3" />
+                </span>
+              </div>
+            );
+            return p.external ? (
+              <a key={p.title} href={p.href} target="_blank" rel="noopener noreferrer" className="block">
+                {inner}
+              </a>
+            ) : (
+              <Link key={p.title} href={p.href} className="block">
+                {inner}
+              </Link>
+            );
+          })}
+        </div>
+
+        {/* History highlight if any */}
+        {historyArticles.length > 0 && (
+          <div className="mt-16">
+            <div className="flex items-baseline justify-between border-b border-border pb-3 mb-6">
+              <h2 className="text-lg font-bold text-foreground">Places you drive past</h2>
+              <Link href="/history" className="text-sm font-semibold text-primary hover:underline">
+                All history
+              </Link>
+            </div>
+            <div className="divide-y divide-border/60">
+              {historyArticles.map((article) => (
+                <Link key={article.slug} href={`/articles/${article.slug}`} className="group block py-5">
+                  <div className="text-xs font-mono text-muted-foreground mb-1">
+                    <span className="text-primary">{article.category}</span>
+                    {article.date && <span> · {formatDate(article.date)}</span>}
+                  </div>
+                  <h3 className="text-base font-semibold text-foreground group-hover:text-primary">{article.title}</h3>
+                  <p className="text-sm text-muted-foreground mt-1 line-clamp-2">{article.description}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Recent articles */}
+        <div className="mt-16">
           <div className="flex items-baseline justify-between border-b border-border pb-3 mb-6">
-            <h2 className="text-lg font-bold text-foreground flex items-center gap-2">
-              <BookOpen className="h-4 w-4 text-primary" />
-              Latest
-            </h2>
+            <h2 className="text-lg font-bold text-foreground">Latest</h2>
             <Link href="/articles" className="text-sm font-semibold text-primary hover:underline">
               View all
             </Link>
           </div>
-
           <div className="divide-y divide-border/60">
-            {recentArticles.length > 0 ? (
-              recentArticles.map((article) => (
-                <Link
-                  key={article.slug}
-                  href={`/articles/${article.slug}`}
-                  className="group block py-5 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded"
-                >
-                  <div className="flex items-center gap-2 text-xs font-mono text-muted-foreground mb-1.5">
-                    <span className="text-primary">{article.category}</span>
-                    <span>·</span>
-                    <time dateTime={article.date}>{formatDate(article.date)}</time>
-                    {article.source === "x" && (
-                      <>
-                        <span>·</span>
-                        <span>From X</span>
-                      </>
-                    )}
-                  </div>
-                  <h3 className="text-base font-semibold text-foreground group-hover:text-primary transition-colors">
-                    {article.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground mt-1 line-clamp-2 leading-relaxed">
-                    {article.description}
-                  </p>
-                  <span className="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-primary">
-                    Read <ArrowRight className="h-3 w-3" />
-                  </span>
-                </Link>
-              ))
-            ) : (
-              <p className="py-8 text-sm text-muted-foreground">Drafting new articles. Check back shortly.</p>
-            )}
-          </div>
-        </div>
-
-        <div className="mt-20">
-          <div className="border-b border-border pb-3 mb-6">
-            <h2 className="text-lg font-bold text-foreground flex items-center gap-2">
-              <Star className="h-4 w-4 text-primary" />
-              Featured
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {initiatives.map((item) => (
-              <div key={item.title} className="rounded-xl border border-border p-4 space-y-2">
-                <span className="text-xs font-mono text-primary">{item.badge}</span>
-                <h3 className="text-sm font-semibold text-foreground">{item.title}</h3>
-                <p className="text-xs text-muted-foreground leading-relaxed line-clamp-3">{item.body}</p>
-                <Link href={item.href} className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1">
-                  {item.cta} <ArrowRight className="h-3 w-3" />
-                </Link>
-              </div>
+            {recentArticles.map((article) => (
+              <Link key={article.slug} href={`/articles/${article.slug}`} className="group block py-5">
+                <div className="text-xs font-mono text-muted-foreground mb-1">
+                  <span className="text-primary">{article.category}</span>
+                  {article.date && <span> · {formatDate(article.date)}</span>}
+                </div>
+                <h3 className="text-base font-semibold text-foreground group-hover:text-primary">{article.title}</h3>
+                <p className="text-sm text-muted-foreground mt-1 line-clamp-2">{article.description}</p>
+              </Link>
             ))}
           </div>
         </div>
 
-        <div className="mt-20 border-t border-border/50 pt-12 max-w-2xl mx-auto">
-          <h2 className="text-lg font-bold text-foreground flex items-center justify-center gap-2 mb-8">
-            <HelpCircle className="h-4 w-4 text-primary" />
-            FAQ
-          </h2>
-          <div className="space-y-6 text-sm leading-relaxed">
-            <div>
-              <h3 className="font-semibold text-foreground">Who is Kyle Kinkin?</h3>
-              <p className="text-muted-foreground mt-1">Kyle Kinkin (Duck) is based in Smithville, Tennessee. He builds websites and simple automations for local businesses while running Decent Ducks Sanctuary.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-foreground">Who is Duck on X (@ducksonx)?</h3>
-              <p className="text-muted-foreground mt-1">Duck on X (@ducksonx) is the personal X account of Kyle Kinkin.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-foreground">What is JustDuckIt?</h3>
-              <p className="text-muted-foreground mt-1">JustDuckIt is Kyle Kinkin (Duck)’s brand for web work, content, and the sanctuary.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-foreground">Where are services offered?</h3>
-              <p className="text-muted-foreground mt-1">Serving Smithville, DeKalb County, Cookeville, and Middle Tennessee. Remote work available for the right project.</p>
-            </div>
-          </div>
+        <div className="mt-16 border-t border-border/50 pt-10 max-w-2xl mx-auto text-sm text-muted-foreground leading-relaxed text-center">
+          <p>
+            Filming local spots is part of how we document the same region the sanctuary sits on. The work for local businesses is the practical side of the same roads.
+          </p>
         </div>
       </div>
     </div>
