@@ -85,6 +85,7 @@ export default function Footer() {
                   <li><Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Home</Link></li>
                   <li><Link href="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">About</Link></li>
                   <li><Link href="/work" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Work with me</Link></li>
+                  <li><Link href="/featured" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Get featured</Link></li>
                   <li><Link href="/articles" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Articles</Link></li>
                 </ul>
               </nav>
@@ -114,11 +115,13 @@ export default function Footer() {
               <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
                 Kyle Kinkin<br />
                 <a href="tel:+16156694135" className="text-primary hover:underline font-semibold">(615) 669-4135</a><br />
-                <a href="mailto:ducksonx@duck.com" className="text-primary hover:underline font-semibold">ducksonx@duck.com</a>
+                <a href="mailto:duck@justduckit.xyz" className="text-primary hover:underline font-semibold">duck@justduckit.xyz</a>
               </p>
               <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
                 Sites and listings:{" "}
-                <Link href="/work" className="text-primary hover:underline font-semibold">Work with me</Link>.
+                <Link href="/work" className="text-primary hover:underline font-semibold">Work with me</Link>
+                {" · "}
+                <Link href="/featured" className="text-primary hover:underline font-semibold">Get featured</Link>.
               </p>
             </div>
           </div>

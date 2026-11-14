@@ -4,7 +4,7 @@ import type { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://justduckit.xyz";
 
-  const routes = ["", "/about", "/work", "/articles", "/newsletter"].map((route) => ({
+  const routes = ["", "/about", "/work", "/featured", "/articles", "/newsletter"].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: "weekly" as const,
