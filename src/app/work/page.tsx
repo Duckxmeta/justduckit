@@ -90,7 +90,7 @@ function recommend(a: Answers) {
     return {
       title: "Talk to Duck",
       body: "Local, small, or simple work goes through us directly." + checkNote,
-      href: "/social",
+      href: "/featured#visit",
       cta: "Request a visit or message",
       external: false,
     };
