@@ -4,5 +4,12 @@
       "path": "/api/newsletter/send",
       "schedule": "0 14 1 * *"
     }
+  ],
+  "redirects": [
+    {
+      "source": "/social",
+      "destination": "/featured",
+      "permanent": true
+    }
   ]
 }
