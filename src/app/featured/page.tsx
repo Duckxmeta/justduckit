@@ -18,8 +18,9 @@ export const metadata: Metadata = {
   },
 };
 
-const FEATURE_150 = "https://buy.stripe.com/bJebJ12OAbcQfyH3P37ok02";
-const FEATURE_300 = "https://buy.stripe.com/aFa4gz1Kw4Os9aj4T77ok03";
+const VIDEO_75 = "https://buy.stripe.com/eVqfZh2OA0yc86fadr7ok07";
+const FEATURE_150 = "https://buy.stripe.com/6oUaEX4WIcgU2LVdpD7ok08";
+const FEATURE_300 = "https://buy.stripe.com/cNi9AT74Qep2gCL4T77ok09";
 const DEPOSIT_300 = "https://buy.stripe.com/5kQaEX74Q3Ko0DNdpD7ok04";
 
 const socials = [
@@ -32,25 +33,33 @@ const socials = [
 
 const offers = [
   {
-    name: "Local Feature",
-    term: "1 month",
-    price: "$150",
-    href: FEATURE_150,
-    cta: "Pay $150",
-    body: "Your business name in the descriptions of the videos and posts already being made about this Middle Tennessee landscape during that month, plus a thank-you and a short, honest mention when it actually fits the story. This is the work already happening on Facebook, Instagram, TikTok, and X — not a separate ad campaign, and not a promise of a certain number of views or customers.",
+    name: "Video Spotlight",
+    term: "one-time",
+    price: "$75",
+    href: VIDEO_75,
+    cta: "Pay $75",
+    body: "One dedicated short video about your business, posted on Facebook, Instagram, and TikTok. This is a one-time job, not a monthly plan, and not a promise of a certain number of views or customers.",
   },
   {
-    name: "Premium Local Feature",
-    term: "1 month",
-    price: "$300",
+    name: "Monthly Feature",
+    term: "$150 every month, cancel anytime",
+    price: "$150/mo",
+    href: FEATURE_150,
+    cta: "Subscribe for $150/month",
+    body: "Four posts per month across Facebook, Instagram, and TikTok — short features or mentions of your business in the work already being made about this landscape. Billed $150 every month until you cancel. This is not a media kit and not a guarantee of reach.",
+  },
+  {
+    name: "Premium Feature",
+    term: "$300 every month, cancel anytime",
+    price: "$300/mo",
     href: FEATURE_300,
-    cta: "Pay $300",
+    cta: "Subscribe for $300/month",
     highlight: true,
-    body: "Everything in the $150 feature, plus a dedicated thank-you post about your business on those same public pages, and a more prominent mention in that month’s work. Still a local feature, not a media kit and not a guarantee of reach.",
+    body: "Eight posts per month across Facebook, Instagram, and TikTok, plus one dedicated short video about your business each month. Billed $300 every month until you cancel. Still not a promise of a certain number of views or customers.",
   },
   {
     name: "Funnel Website Deposit",
-    term: "toward a site starting at $900",
+    term: "one-time deposit, toward a site starting at $900",
     price: "$300",
     href: DEPOSIT_300,
     cta: "Pay $300 deposit",
@@ -80,7 +89,7 @@ export default function FeaturedPage() {
           . I film a short vlog on site and take photos for Instagram, Facebook, TikTok, X, and YouTube. Gratuity is always appreciated.
         </p>
         <p className="text-sm text-muted-foreground leading-relaxed">
-          This page does not invent follower counts, view numbers, or testimonials. A feature is a month of honest mentions in work already being made. A website is a site you own, with a written scope first. A visit is a filmed stop, not a promise of a certain audience.
+          This page does not invent follower counts, view numbers, or testimonials. A monthly feature is a set number of posts each month until you cancel. A video spotlight is a single dedicated video. A website is a site you own, with a written scope first. A visit is a filmed stop, not a promise of a certain audience.
         </p>
       </div>
 
@@ -111,11 +120,11 @@ export default function FeaturedPage() {
       </div>
 
       <p className="mt-6 text-xs text-muted-foreground leading-relaxed">
-        Checkout for a feature or a site deposit collects your name, phone, email, and business name or website so Duck can follow up. After payment you will be sent to a thank-you page. Questions before you pay:{" "}
+        Checkout collects your name, phone, email, and business name or website so Duck can follow up. After payment you will be sent to a thank-you page. The Monthly Feature and Premium Feature are subscriptions billed every month. You can cancel anytime — write to{" "}
         <a href="mailto:duck@justduckit.xyz" className="text-primary hover:underline font-semibold">
           duck@justduckit.xyz
-        </a>
-        .
+        </a>{" "}
+        and Duck will stop the billing before the next month. The Video Spotlight and the website deposit are one-time payments.
       </p>
 
       <div className="mt-16 space-y-4">
@@ -215,7 +224,7 @@ export default function FeaturedPage() {
           .
         </p>
         <p>
-          A monthly feature is not exclusive, and it is not a promise of tourist-bus traffic. A funnel site starts with a written scope; the $300 is a deposit toward that work, not the full project price. A visit request is not a paid booking until we agree on one.
+          A monthly or premium feature is not exclusive, and it is not a promise of tourist-bus traffic. Subscriptions can be canceled anytime. A funnel site starts with a written scope; the $300 is a deposit toward that work, not the full project price. A visit request is not a paid booking until we agree on one.
         </p>
       </div>
     </div>
