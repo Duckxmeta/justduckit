@@ -32,7 +32,7 @@ export default function ThanksPage() {
       </p>
       <div className="flex flex-wrap gap-4 pt-2">
         <Link href="/featured" className="text-sm font-semibold text-primary hover:underline">
-          Back to offers
+          Back to Featured
         </Link>
         <Link href="/" className="text-sm font-medium text-muted-foreground hover:text-foreground hover:underline">
           Home

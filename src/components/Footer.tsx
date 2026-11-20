@@ -85,7 +85,7 @@ export default function Footer() {
                   <li><Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Home</Link></li>
                   <li><Link href="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">About</Link></li>
                   <li><Link href="/work" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Work with me</Link></li>
-                  <li><Link href="/featured" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Get featured</Link></li>
+                  <li><Link href="/featured" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Featured</Link></li>
                   <li><Link href="/articles" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Articles</Link></li>
                 </ul>
               </nav>
@@ -121,7 +121,7 @@ export default function Footer() {
                 Sites and listings:{" "}
                 <Link href="/work" className="text-primary hover:underline font-semibold">Work with me</Link>
                 {" · "}
-                <Link href="/featured" className="text-primary hover:underline font-semibold">Get featured</Link>.
+                <Link href="/featured" className="text-primary hover:underline font-semibold">Featured</Link>.
               </p>
             </div>
           </div>

@@ -1,27 +1,28 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, MapPin, Video } from "lucide-react";
+import { ArrowRight, Heart, MapPin, Video } from "lucide-react";
 import SocialVisitForm from "@/components/SocialVisitForm";
 import SupportButtons from "@/components/SupportButtons";
 import { guides } from "@/lib/guides";
 
 export const metadata: Metadata = {
-  title: "Get featured, request a visit, or build your site",
+  title: "Support the work, visit the sanctuary, or get a Decent Duck",
   description:
-    "A one-month local feature on Just Duck It’s public pages, a request for Duck to come film a place or business, or a deposit toward a funnel website you own. Independent work for Middle Tennessee. No invented audience numbers.",
+    "Tip Just Duck It, get involved at the Decent Ducks sanctuary, pick up a Decent Duck NFT, or explore Zen Arsenal. Request a visit and preview the local pocket field guides. Independent work for Middle Tennessee.",
   alternates: { canonical: "https://www.justduckit.xyz/featured" },
   openGraph: {
-    title: "Get featured, request a visit, or build your site | Just Duck It",
+    title: "Support the work, visit the sanctuary, or get a Decent Duck | Just Duck It",
     description:
-      "A one-month local feature, a visit request, or a deposit toward a funnel website you own.",
+      "Tip Just Duck It, get involved at the sanctuary, get a Decent Duck NFT, or explore Zen Arsenal.",
     url: "https://www.justduckit.xyz/featured",
   },
 };
 
-const VIDEO_75 = "https://buy.stripe.com/eVqfZh2OA0yc86fadr7ok07";
-const FEATURE_150 = "https://buy.stripe.com/6oUaEX4WIcgU2LVdpD7ok08";
-const FEATURE_300 = "https://buy.stripe.com/cNi9AT74Qep2gCL4T77ok09";
 const DEPOSIT_300 = "https://buy.stripe.com/5kQaEX74Q3Ko0DNdpD7ok04";
+const ZEN_ARSENAL_AFFILIATE = "https://arsenal.world/?ref=KYLE-ACDF";
+const ADOPT_A_DUCK = "https://adoptaduck.org";
+const ADOPT_A_RESIDENT = "https://adoptaduck.org/adopt";
+const DECENT_DUCKS_NFT = "https://www.solonchain.io/marketplace/collection/decent_ducks";
 
 const socials = [
   { name: "Facebook", handle: "At JustDuckit", href: "https://www.facebook.com/share/18Zh8XnFWX/" },
@@ -29,42 +30,6 @@ const socials = [
   { name: "TikTok", handle: "@ducksontiktok", href: "https://www.tiktok.com/@ducksontiktok" },
   { name: "X", handle: "@Ducksonx", href: "https://x.com/ducksonx" },
   { name: "YouTube", handle: "@justduckits", href: "https://youtube.com/@justduckits" },
-];
-
-const offers = [
-  {
-    name: "Video Spotlight",
-    term: "one-time",
-    price: "$75",
-    href: VIDEO_75,
-    cta: "Pay $75",
-    body: "One dedicated short video about your business, posted on Facebook, Instagram, and TikTok. This is a one-time job, not a monthly plan, and not a promise of a certain number of views or customers.",
-  },
-  {
-    name: "Monthly Feature",
-    term: "$150 every month, cancel anytime",
-    price: "$150/mo",
-    href: FEATURE_150,
-    cta: "Subscribe for $150/month",
-    body: "Four posts per month across Facebook, Instagram, and TikTok — short features or mentions of your business in the work already being made about this landscape. Billed $150 every month until you cancel. This is not a media kit and not a guarantee of reach.",
-  },
-  {
-    name: "Premium Feature",
-    term: "$300 every month, cancel anytime",
-    price: "$300/mo",
-    href: FEATURE_300,
-    cta: "Subscribe for $300/month",
-    highlight: true,
-    body: "Eight posts per month across Facebook, Instagram, and TikTok, plus one dedicated short video about your business each month. Billed $300 every month until you cancel. Still not a promise of a certain number of views or customers.",
-  },
-  {
-    name: "Funnel Website Deposit",
-    term: "one-time deposit, toward a site starting at $900",
-    price: "$300",
-    href: DEPOSIT_300,
-    cta: "Pay $300 deposit",
-    body: "A deposit toward a client-owned funnel website, starting at $900. You own the finished site; it is not rented from Just Duck It. The deposit holds the start of work after a written scope. The remaining balance depends on the agreed pages and is due as set out in that scope. This is not a promise of search ranking or walk-in traffic.",
-  },
 ];
 
 export default function FeaturedPage() {
@@ -76,56 +41,92 @@ export default function FeaturedPage() {
           <span>Smithville · Center Hill · Middle Tennessee</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-foreground">
-          Get featured. Request a visit. Or build a site you own.
+          Support the work. Get involved in the sanctuary.
         </h1>
         <p className="text-base text-muted-foreground leading-relaxed">
-          I’m Duck. I live near Smithville and Center Hill Lake, and I document this landscape — the square, the lake, the roads in between — on the public pages people around here actually use. Local businesses have already paid to put their name in front of that work. I also build funnel websites for clients in the area. Those sites are fully owned by the client, not rented.
+          I’m Duck. I live near Smithville and Center Hill Lake, and I document this landscape — the square, the lake, the roads in between — on the public pages people around here actually use. If that work is useful to you, a tip is always appreciated. You can also get involved at the Decent Ducks sanctuary, pick up a Decent Duck NFT, or explore Zen Arsenal through my affiliate link.
         </p>
         <p className="text-sm text-muted-foreground leading-relaxed">
           Have a story, landmark, or business you want filmed?{" "}
           <a href="#visit" className="text-primary font-semibold hover:underline">
             Request a visit
           </a>
-          . I film a short vlog on site and take photos for Instagram, Facebook, TikTok, X, and YouTube. Gratuity is always appreciated.
+          . I film a short vlog on site and take photos for Instagram, Facebook, TikTok, X, and YouTube.
         </p>
+      </div>
+
+      <section id="support" className="scroll-mt-24 rounded-3xl border border-primary/40 bg-card/40 p-6 sm:p-10 space-y-4">
+        <h2 className="text-2xl font-extrabold tracking-tight text-foreground">Support / Tip</h2>
         <p className="text-sm text-muted-foreground leading-relaxed">
-          This page does not invent follower counts, view numbers, or testimonials. A monthly feature is a set number of posts each month until you cancel. A video spotlight is a single dedicated video. A website is a site you own, with a written scope first. A visit is a filmed stop, not a promise of a certain audience.
+          Gratuity helps cover the drive and keeps the local videos and guides coming. Use whichever option is easiest: PayPal, Cash App, Stripe, or Solana.
         </p>
-      </div>
+        <SupportButtons />
+      </section>
 
-      <div className="grid grid-cols-1 gap-4">
-        {offers.map((offer) => (
-          <div
-            key={offer.name}
-            className={`rounded-2xl border p-6 space-y-4 ${
-              offer.highlight ? "border-primary/50 bg-white/5" : "border-border"
-            }`}
+      <section id="nft" className="mt-10 rounded-3xl border border-primary/50 bg-white/5 p-6 sm:p-10 space-y-4">
+        <h2 className="text-2xl font-extrabold tracking-tight text-foreground">Get a Decent Duck NFT</h2>
+        <p className="text-sm text-muted-foreground leading-relaxed">
+          The Decent Ducks collection lives on Solana. This is the straightforward way to get one.
+        </p>
+        <a
+          href={DECENT_DUCKS_NFT}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary text-black font-extrabold text-sm px-6 py-4 hover:bg-primary-hover transition"
+        >
+          Get a Decent Duck NFT <ArrowRight className="h-4 w-4" />
+        </a>
+      </section>
+
+      <section id="sanctuary" className="mt-10 rounded-3xl border border-border p-6 sm:p-10 space-y-4">
+        <div className="inline-flex items-center gap-2 text-primary text-xs font-mono uppercase tracking-wider">
+          <Heart className="h-4 w-4" />
+          <span>Decent Ducks Sanctuary</span>
+        </div>
+        <h2 className="text-2xl font-extrabold tracking-tight text-foreground">Adopt a Duck</h2>
+        <p className="text-sm text-muted-foreground leading-relaxed">
+          Decent Ducks is a virtual adoption sanctuary for ducks and animals. Physical care is handled by Broken Fence Farms, our grounds partner in DeKalb County, Tennessee. Virtual adoption supports real residents. Visit the sanctuary site to get involved, or adopt a resident directly.
+        </p>
+        <div className="flex flex-wrap gap-3">
+          <a
+            href={ADOPT_A_DUCK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-xl bg-primary text-black font-semibold text-sm px-5 py-3 hover:bg-primary-hover transition"
           >
-            <div className="flex flex-wrap items-baseline justify-between gap-2">
-              <div>
-                <h2 className="text-lg font-semibold text-foreground">{offer.name}</h2>
-                <p className="text-xs font-mono text-muted-foreground mt-1">{offer.term}</p>
-              </div>
-              <p className="text-2xl font-extrabold text-foreground">{offer.price}</p>
-            </div>
-            <p className="text-sm text-muted-foreground leading-relaxed">{offer.body}</p>
-            <a
-              href={offer.href}
-              className="inline-flex items-center gap-2 rounded-xl bg-primary text-black font-semibold text-sm px-5 py-3 hover:bg-primary-hover transition"
-            >
-              {offer.cta} <ArrowRight className="h-4 w-4" />
-            </a>
-          </div>
-        ))}
-      </div>
+            Visit adoptaduck.org <ArrowRight className="h-4 w-4" />
+          </a>
+          <a
+            href={ADOPT_A_RESIDENT}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-xl border border-border px-5 py-3 text-sm font-medium text-foreground hover:bg-white/5 transition"
+          >
+            Adopt a resident
+          </a>
+          <Link
+            href="/duck"
+            className="inline-flex items-center gap-2 rounded-xl border border-border px-5 py-3 text-sm font-medium text-foreground hover:bg-white/5 transition"
+          >
+            Read the story
+          </Link>
+        </div>
+      </section>
 
-      <p className="mt-6 text-xs text-muted-foreground leading-relaxed">
-        Checkout collects your name, phone, email, and business name or website so Duck can follow up. After payment you will be sent to a thank-you page. The Monthly Feature and Premium Feature are subscriptions billed every month. You can cancel anytime — write to{" "}
-        <a href="mailto:duck@justduckit.xyz" className="text-primary hover:underline font-semibold">
-          duck@justduckit.xyz
-        </a>{" "}
-        and Duck will stop the billing before the next month. The Video Spotlight and the website deposit are one-time payments.
-      </p>
+      <section id="zen-arsenal" className="mt-10 rounded-3xl border border-border p-6 sm:p-10 space-y-4">
+        <h2 className="text-2xl font-extrabold tracking-tight text-foreground">Zen Arsenal</h2>
+        <p className="text-sm text-muted-foreground leading-relaxed">
+          Zen Arsenal is a platform for building custom AI agents and workflows. If you want to explore it, this is my affiliate link.
+        </p>
+        <a
+          href={ZEN_ARSENAL_AFFILIATE}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-xl bg-primary text-black font-semibold text-sm px-5 py-3 hover:bg-primary-hover transition"
+        >
+          Explore Zen Arsenal <ArrowRight className="h-4 w-4" />
+        </a>
+      </section>
 
       <div className="mt-16 space-y-4">
         <h2 className="text-lg font-bold text-foreground">Pocket field guides</h2>
@@ -157,6 +158,20 @@ export default function FeaturedPage() {
         </p>
       </div>
 
+      <div className="mt-16 rounded-2xl border border-border/70 p-5 sm:p-6 space-y-3">
+        <h2 className="text-base font-semibold text-foreground">Funnel website deposit</h2>
+        <p className="text-xs font-mono text-muted-foreground">One-time $300 deposit, toward a site starting at $900</p>
+        <p className="text-sm text-muted-foreground leading-relaxed">
+          A deposit toward a client-owned funnel website. You own the finished site; it is not rented from Just Duck It. The deposit holds the start of work after a written scope. The remaining balance depends on the agreed pages and is due as set out in that scope. This is not a promise of search ranking or walk-in traffic.
+        </p>
+        <a
+          href={DEPOSIT_300}
+          className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
+        >
+          Pay the $300 deposit <ArrowRight className="h-3 w-3" />
+        </a>
+      </div>
+
       <section id="visit" className="mt-16 scroll-mt-24 space-y-8">
         <div className="space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-mono font-semibold uppercase tracking-wider">
@@ -170,21 +185,8 @@ export default function FeaturedPage() {
             Have a story, landmark, or business you want us to visit? Leave a message below so we can keep making content. If you have a place, a business, or a story worth showing, drop the details in the form. We film a short vlog on site and take photos for Instagram, Facebook, TikTok, X, and YouTube.
           </p>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            Gratuity is always appreciated. It helps cover the drive and keeps the content coming.
+            A visit request is not a paid booking. Gratuity is always appreciated if you want to support the trip.
           </p>
-          <a
-            href="https://www.solonchain.io/marketplace/collection/decent_ducks"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
-          >
-            Decent Ducks NFT collection <ArrowRight className="h-4 w-4" />
-          </a>
-        </div>
-
-        <div className="rounded-3xl border border-primary/40 bg-card/40 p-6 sm:p-10 space-y-4">
-          <p className="text-sm font-semibold text-foreground">Support the work</p>
-          <SupportButtons />
         </div>
 
         <SocialVisitForm />
@@ -193,7 +195,7 @@ export default function FeaturedPage() {
       <div className="mt-16 space-y-4">
         <h2 className="text-lg font-bold text-foreground">Follow along</h2>
         <p className="text-sm text-muted-foreground leading-relaxed">
-          Features and visit films run on the same accounts already in use. Look at the work first, then decide.
+          Visit films run on the same accounts already in use. Look at the work first, then decide.
         </p>
         <ul className="flex flex-wrap gap-3">
           {socials.map((s) => (
@@ -224,7 +226,7 @@ export default function FeaturedPage() {
           .
         </p>
         <p>
-          A monthly or premium feature is not exclusive, and it is not a promise of tourist-bus traffic. Subscriptions can be canceled anytime. A funnel site starts with a written scope; the $300 is a deposit toward that work, not the full project price. A visit request is not a paid booking until we agree on one.
+          A visit request is not a paid booking until we agree on one. A funnel site starts with a written scope; the $300 is a deposit toward that work, not the full project price.
         </p>
       </div>
     </div>
