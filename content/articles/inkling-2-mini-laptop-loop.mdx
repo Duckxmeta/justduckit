@@ -1,0 +1,36 @@
+---
+title: "Inkling 2 Mini Lands on a Laptop: Looping Layers for Local Agents"
+date: "2026-11-22"
+description: "Thinking Machines released Inkling 2 Mini on November 20 — a 26.4B open-weight looped model that runs on a 32GB Mac and leads sub-100B models on agentic coding. Here is what that changes for builders who also run real operations."
+category: "AI & Tech"
+readTime: "7 min read"
+image: "/media/own-the-software-fire-the-tabs.jpg"
+---
+
+On November 20, 2026, Thinking Machines Lab put Inkling 2 Mini on Hugging Face under Apache 2.0. The model is a 26.4-billion-parameter mixture-of-experts that runs its middle layers three times per token. The checkpoint sits around 20 GB. It fits on a Mac with 32 GB of memory or a single 32 GB GPU / DGX Spark.
+
+That is the concrete thing that shipped. Not a blog post about “AI tools you should try.” A specific open-weight model from Mira Murati’s lab that is small enough to load tonight and still scores ahead of other open models under 100 billion parameters on several agentic coding benchmarks.
+
+## The loop is the product
+
+Most models get more capable by getting bigger. Inkling 2 Mini gets extra reasoning passes without storing extra weights. The middle twelve layers are reused three times for every token. The lab says this lets the model reach the right answer with fewer output tokens on tasks that need multi-step work—especially agentic coding and tool use.
+
+Their numbers: it leads open-weight models under 100B on DeepSWE v1.1 (48.2 %) and Vals Index v2.2 (46.5 %). On SWE-bench Verified (bash only) they report 79.2 %. Artificial Analysis scores it near 20 on their Intelligence Index, roughly level with the dense Qwen3.8-27B but at a fraction of the cost and time per task. The model also ships with a research sibling that lets you choose the number of loops at inference time so people can study how extra passes change behavior.
+
+Local paths at launch include Ollama on Apple silicon, Unsloth and llama.cpp GGUF builds, vLLM, and SGLang. Hosted sampling and fine-tuning are available on their Tinker platform. The weights are Apache 2.0, so you can download, quantize, and fine-tune without waiting for a vendor to care about your use case.
+
+## What changes when the model lives next to the work
+
+If you build software that touches real operations—feed inventory, volunteer shifts, intake notes, weather windows for outdoor work—you have been stuck between two options. Send every token to a frontier API and watch the monthly bill, or run something too weak to do multi-step work on the hardware you already own.
+
+A 20 GB model that can handle tool-using coding tasks on a laptop changes the second option. The agent that drafts the daily ops note or flags which enclosure needs attention can live next to the data instead of phoning home. That matters on a rural connection that drops, or when the API invoice does not care that duck feed prices just moved. It is not a care guide. It is a cost and latency shift for the person who also keeps the birds watered and the fences fixed.
+
+Open weights under a clean license mean you can fine-tune on your own logs. The research loop variant is for people who want to watch how extra passes change what the model does before it writes anything down. Both are usable today.
+
+## The limits that still matter
+
+It is still early. Most of the headline numbers come from the lab or from early third-party runs. Local inference needs the right runtime and enough RAM; a 16 GB machine is not going to be comfortable. Vision is supported but is not the headline. The larger Inkling 2 Small is stronger if you can pay for it or wait for wider hosting. This one is the model you can actually load on hardware a small operation already has.
+
+## The bottom line
+
+The interesting part is not another leaderboard tick. It is a capable agent model that fits on the machine sitting in the shop. If your stack has to survive a rural internet drop or a monthly API bill that does not care about the price of feed, that is the move that actually landed this week.
