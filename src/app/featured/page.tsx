@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Heart, MapPin, Video } from "lucide-react";
+import { ArrowRight, Heart, Video } from "lucide-react";
 import SocialVisitForm from "@/components/SocialVisitForm";
 import SupportButtons from "@/components/SupportButtons";
 import { guides } from "@/lib/guides";
@@ -8,7 +8,7 @@ import { guides } from "@/lib/guides";
 export const metadata: Metadata = {
   title: "Support the work, visit the sanctuary, or get a Decent Duck",
   description:
-    "Tip Just Duck It, get involved at the Decent Ducks sanctuary, pick up a Decent Duck NFT, or explore Zen Arsenal. Request a visit and preview the local pocket field guides. Independent work for Middle Tennessee.",
+    "Tip Just Duck It, get involved at the Decent Ducks sanctuary, pick up a Decent Duck NFT, or explore Zen Arsenal. Request a visit and preview the pocket field guides.",
   alternates: { canonical: "https://www.justduckit.xyz/featured" },
   openGraph: {
     title: "Support the work, visit the sanctuary, or get a Decent Duck | Just Duck It",
@@ -36,15 +36,11 @@ export default function FeaturedPage() {
   return (
     <div className="mx-auto max-w-3xl px-6 py-16 sm:py-24">
       <div className="space-y-4 mb-12">
-        <div className="inline-flex items-center gap-2 text-primary text-xs font-mono uppercase tracking-wider">
-          <MapPin className="h-4 w-4" />
-          <span>Smithville · Center Hill · Middle Tennessee</span>
-        </div>
         <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-foreground">
           Support the work. Get involved in the sanctuary.
         </h1>
         <p className="text-base text-muted-foreground leading-relaxed">
-          I’m Duck. I live near Smithville and Center Hill Lake, and I document this landscape — the square, the lake, the roads in between — on the public pages people around here actually use. If that work is useful to you, a tip is always appreciated. You can also get involved at the Decent Ducks sanctuary, pick up a Decent Duck NFT, or explore Zen Arsenal through my affiliate link.
+          I’m Duck. I run Decent Ducks Sanctuary, make videos and guides, and build in public. If the work is useful to you, a tip is always appreciated. You can also get involved at the sanctuary, pick up a Decent Duck NFT, or explore Zen Arsenal through my affiliate link.
         </p>
         <p className="text-sm text-muted-foreground leading-relaxed">
           Have a story, landmark, or business you want filmed?{" "}
@@ -58,7 +54,7 @@ export default function FeaturedPage() {
       <section id="support" className="scroll-mt-24 rounded-3xl border border-primary/40 bg-card/40 p-6 sm:p-10 space-y-4">
         <h2 className="text-2xl font-extrabold tracking-tight text-foreground">Support / Tip</h2>
         <p className="text-sm text-muted-foreground leading-relaxed">
-          Gratuity helps cover the drive and keeps the local videos and guides coming. Use whichever option is easiest: PayPal, Cash App, Stripe, or Solana.
+          Gratuity helps cover the work and keeps the videos and guides coming. Use whichever option is easiest: PayPal, Cash App, Stripe, or Solana.
         </p>
         <SupportButtons />
       </section>
@@ -85,7 +81,7 @@ export default function FeaturedPage() {
         </div>
         <h2 className="text-2xl font-extrabold tracking-tight text-foreground">Adopt a Duck</h2>
         <p className="text-sm text-muted-foreground leading-relaxed">
-          Decent Ducks is a virtual adoption sanctuary for ducks and animals. Physical care is handled by Broken Fence Farms, our grounds partner in DeKalb County, Tennessee. Virtual adoption supports real residents. Visit the sanctuary site to get involved, or adopt a resident directly.
+          Decent Ducks is a virtual adoption sanctuary for ducks and animals. Real care happens at the physical site in Tennessee with our grounds partner, Broken Fence Farms. Virtual adoption supports real residents. Visit the sanctuary site to get involved, or adopt a resident directly.
         </p>
         <div className="flex flex-wrap gap-3">
           <a
@@ -176,7 +172,7 @@ export default function FeaturedPage() {
         <div className="space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-mono font-semibold uppercase tracking-wider">
             <Video className="h-3.5 w-3.5" />
-            <span>Local visits</span>
+            <span>Visit requests</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-foreground">
             Got a story? <span className="text-gradient-gold">We’ll come film it.</span>
